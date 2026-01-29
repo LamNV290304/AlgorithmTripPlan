@@ -14,6 +14,5 @@ namespace AlgorithmPlan.Controllers
             _logger = logger;
         }
 
-     
     }
 }
