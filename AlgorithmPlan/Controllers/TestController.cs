@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AlgorithmPlan.Controllers
 {
-    public class TestController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TestController : ControllerBase
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }
