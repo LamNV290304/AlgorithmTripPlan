@@ -7,5 +7,11 @@ namespace AlgorithmPlan.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
+        }
     }
 }
