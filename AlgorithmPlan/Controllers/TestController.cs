@@ -16,6 +16,7 @@ namespace AlgorithmPlan.Controllers
         // Model cho yêu cầu từ người dùng
         public class UserPreference { public string TagName { get; set; } = ""; public double InterestLevel { get; set; } }
 
+
         [HttpPost("score-module-1")]
         public IActionResult TestModule1([FromBody] List<UserPreference> userPrefs)
         {
