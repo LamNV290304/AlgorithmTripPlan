@@ -1,0 +1,558 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Văn Miếu Quốc Tử Giám",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 0.95
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.6
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Phố Tạ Hiện",
+    "Tags": [
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Sôi động",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 0.7
+      },
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.85
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Bảo tàng Dân tộc học",
+    "Tags": [
+      {
+        "TagName": "Văn hóa",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Lịch sử",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Lăng Chủ tịch Hồ Chí Minh",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Tâm linh",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Hồ Hoàn Kiếm",
+    "Tags": [
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.5
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Nhà tù Hỏa Lò",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.6
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.5
+      }
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Hoàng thành Thăng Long",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.85
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.9
+      }
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "Chùa Trấn Quốc",
+    "Tags": [
+      {
+        "TagName": "Tâm linh",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Lịch sử",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.75
+      }
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Nhà Thờ Lớn Hà Nội",
+    "Tags": [
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.95
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Cầu Long Biên",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.95
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 11,
+    "Name": "Chợ Đồng Xuân",
+    "Tags": [
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.85
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.7
+      },
+      {
+        "TagName": "Sôi động",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 12,
+    "Name": "Hồ Tây",
+    "Tags": [
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Chill",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 13,
+    "Name": "Làng gốm Bát Tràng",
+    "Tags": [
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 14,
+    "Name": "Bảo tàng Mỹ thuật Việt Nam",
+    "Tags": [
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.9
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "Name": "Công viên Thủ Lệ",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Gia đình",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "Name": "Lotte Center Observatory",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.95
+      },
+      {
+        "TagName": "Hiện đại",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 17,
+    "Name": "Phố đi bộ Hồ Gươm",
+    "Tags": [
+      {
+        "TagName": "Sôi động",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 18,
+    "Name": "Đường Phan Đình Phùng",
+    "Tags": [
+      {
+        "TagName": "Sống ảo",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.7
+      },
+      {
+        "TagName": "Chill",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 19,
+    "Name": "Bảo tàng Lịch sử Quốc gia",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.9
+      }
+    ]
+  },
+  {
+    "Id": 20,
+    "Name": "Aeon Mall Long Biên",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Hiện đại",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 21,
+    "Name": "Phủ Tây Hồ",
+    "Tags": [
+      {
+        "TagName": "Tâm linh",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 22,
+    "Name": "Thiên đường Bảo Sơn",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Gia đình",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Sôi động",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 23,
+    "Name": "Thủy cung Times City",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Hiện đại",
+        "Weight": 0.85
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 24,
+    "Name": "Royal City",
+    "Tags": [
+      {
+        "TagName": "Giải trí",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Hiện đại",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 25,
+    "Name": "Quán Bún Chả Hương Liên",
+    "Tags": [
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.6
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 0.7
+      }
+    ]
+  },
+  {
+    "Id": 26,
+    "Name": "Ga Hà Nội",
+    "Tags": [
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Lịch sử",
+        "Weight": 0.75
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 27,
+    "Name": "Nhà Hát Lớn Hà Nội",
+    "Tags": [
+      {
+        "TagName": "Kiến trúc",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Sống ảo",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 28,
+    "Name": "Làng cổ Đường Lâm",
+    "Tags": [
+      {
+        "TagName": "Lịch sử",
+        "Weight": 1.0
+      },
+      {
+        "TagName": "Văn hóa",
+        "Weight": 0.95
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 29,
+    "Name": "Công viên Bách Thảo",
+    "Tags": [
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Chill",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Giá rẻ",
+        "Weight": 1.0
+      }
+    ]
+  },
+  {
+    "Id": 30,
+    "Name": "Hồ Trúc Bạch",
+    "Tags": [
+      {
+        "TagName": "Chill",
+        "Weight": 0.9
+      },
+      {
+        "TagName": "Ẩm thực",
+        "Weight": 0.8
+      },
+      {
+        "TagName": "Yên tĩnh",
+        "Weight": 0.7
+      }
+    ]
+  }
+]
