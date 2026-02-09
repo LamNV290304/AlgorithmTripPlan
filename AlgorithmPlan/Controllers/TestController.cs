@@ -7,6 +7,7 @@ namespace AlgorithmPlan.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
+        private readonly string _dataPath = "dataPattern.json";
         private readonly ILogger<TestController> _logger;
 
         public TestController(ILogger<TestController> logger)
