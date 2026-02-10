@@ -46,6 +46,7 @@ namespace AlgorithmPlan.Controllers
 
             // 3. Sắp xếp theo điểm số từ cao xuống thấp
             var result = destinations.OrderByDescending(d => d.FinalScore).ToList();
+
             return Ok(result);
         }
     }
