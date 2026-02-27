@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Test/score-module-1": {
+    "/api/Test/generate": {
       "post": {
         "tags": [
           "Test"
@@ -14,26 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/UserPreference"
-                }
+                "$ref": "#/components/schemas/ItineraryRequest"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/UserPreference"
-                }
+                "$ref": "#/components/schemas/ItineraryRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/UserPreference"
-                }
+                "$ref": "#/components/schemas/ItineraryRequest"
               }
             }
           }
@@ -48,14 +39,41 @@
   },
   "components": {
     "schemas": {
-      "UserPreference": {
+      "ItineraryRequest": {
         "type": "object",
         "properties": {
-          "tagName": {
+          "startLat": {
+            "type": "number",
+            "format": "double"
+          },
+          "startLon": {
+            "type": "number",
+            "format": "double"
+          },
+          "destination": {
             "type": "string",
             "nullable": true
           },
-          "interestLevel": {
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "days": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "totalBudget": {
             "type": "number",
             "format": "double"
           }

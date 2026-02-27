@@ -1,15 +1,15 @@
 [
   {
     "ContainingType": "AlgorithmPlan.Controllers.TestController",
-    "Method": "TestModule1",
-    "RelativePath": "api/Test/score-module-1",
+    "Method": "GenerateItinerary",
+    "RelativePath": "api/Test/generate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userPrefs",
-        "Type": "System.Collections.Generic.List\u00601[[AlgorithmPlan.Controllers.TestController\u002BUserPreference, AlgorithmPlan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Name": "request",
+        "Type": "AlgorithmPlan.Controllers.TestController\u002BItineraryRequest",
         "IsRequired": true
       }
     ],

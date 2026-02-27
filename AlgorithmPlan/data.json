@@ -1,0 +1,2515 @@
+[
+    {
+        "Id":  1,
+        "Name":  "Hoan Kiem Lake",
+        "Description":  "Famous lake in the heart of Hanoi.",
+        "Latitude":  21.0285,
+        "Longitude":  105.8522,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Sightseeing",
+                     "Park",
+                     "Nature"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  2,
+        "Name":  "Temple of Literature",
+        "Description":  "Historic temple and university.",
+        "Latitude":  21.0293,
+        "Longitude":  105.8360,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "History",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  30000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  3,
+        "Name":  "Ho Chi Minh Mausoleum",
+        "Description":  "Final resting place of Ho Chi Minh.",
+        "Latitude":  21.0368,
+        "Longitude":  105.8347,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "10:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "10:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "10:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "11:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "11:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Culture"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  4,
+        "Name":  "Hanoi Opera House",
+        "Description":  "Beautiful French architecture.",
+        "Latitude":  21.0242,
+        "Longitude":  105.8579,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Art",
+                     "Architecture",
+                     "Culture"
+                 ],
+        "AverageBudget":  50000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  5,
+        "Name":  "Dong Xuan Market",
+        "Description":  "Large indoor market.",
+        "Latitude":  21.0392,
+        "Longitude":  105.8491,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "18:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Shopping",
+                     "Local Life",
+                     "Food"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  6,
+        "Name":  "Tran Quoc Pagoda",
+        "Description":  "Oldest pagoda in Hanoi.",
+        "Latitude":  21.0478,
+        "Longitude":  105.8368,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "History",
+                     "Religion"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  7,
+        "Name":  "Hanoi Old Quarter",
+        "Description":  "Historic city center.",
+        "Latitude":  21.0333,
+        "Longitude":  105.8500,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Shopping",
+                     "Food",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  8,
+        "Name":  "Thang Long Imperial Citadel",
+        "Description":  "UNESCO World Heritage site.",
+        "Latitude":  21.0345,
+        "Longitude":  105.8398,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Culture"
+                 ],
+        "AverageBudget":  30000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  9,
+        "Name":  "One Pillar Pagoda",
+        "Description":  "Unique architectural design.",
+        "Latitude":  21.0358,
+        "Longitude":  105.8333,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "History",
+                     "Religion"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  10,
+        "Name":  "Vietnam Museum of Ethnology",
+        "Description":  "Museum focused on ethnic groups in Vietnam.",
+        "Latitude":  21.0406,
+        "Longitude":  105.7986,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:30:00",
+                                 "CloseTime":  "17:30:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "Museum",
+                     "History"
+                 ],
+        "AverageBudget":  40000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  11,
+        "Name":  "West Lake",
+        "Description":  "Largest lake in Hanoi.",
+        "Latitude":  21.0583,
+        "Longitude":  105.8236,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Sightseeing",
+                     "Nature",
+                     "Park"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  12,
+        "Name":  "Lotte Observation Deck",
+        "Description":  "Panoramic view of Hanoi.",
+        "Latitude":  21.0319,
+        "Longitude":  105.8122,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "09:00:00",
+                                 "CloseTime":  "23:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Sightseeing",
+                     "View",
+                     "Entertainment"
+                 ],
+        "AverageBudget":  230000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  13,
+        "Name":  "St. Joseph\u0027s Cathedral",
+        "Description":  "Neo-Gothic church.",
+        "Latitude":  21.0287,
+        "Longitude":  105.8490,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "21:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "Religion",
+                     "Architecture"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  14,
+        "Name":  "B52 Victory Museum",
+        "Description":  "War history museum.",
+        "Latitude":  21.0354,
+        "Longitude":  105.8248,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Museum"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  15,
+        "Name":  "Water Puppet Theatre",
+        "Description":  "Traditional art performance.",
+        "Latitude":  21.0317,
+        "Longitude":  105.8524,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "15:00:00",
+                                 "CloseTime":  "21:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Art",
+                     "Culture",
+                     "Entertainment"
+                 ],
+        "AverageBudget":  100000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  16,
+        "Name":  "Cong Caphe",
+        "Description":  "Popular retro-themed coffee chain.",
+        "Latitude":  21.0289,
+        "Longitude":  105.8502,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "23:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Coffee",
+                     "Local Life",
+                     "Relax"
+                 ],
+        "AverageBudget":  50000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  17,
+        "Name":  "Bun Cha Huong Lien",
+        "Description":  "Famous bun cha restaurant visited by Obama.",
+        "Latitude":  21.0198,
+        "Longitude":  105.8521,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "20:30:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Food",
+                     "Local Life"
+                 ],
+        "AverageBudget":  100000.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  18,
+        "Name":  "Note Coffee",
+        "Description":  "Unique cafe covered in sticky notes.",
+        "Latitude":  21.0305,
+        "Longitude":  105.8515,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "06:30:00",
+                                 "CloseTime":  "23:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Coffee",
+                     "View",
+                     "Relax"
+                 ],
+        "AverageBudget":  60000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  19,
+        "Name":  "Hanoi Night Market",
+        "Description":  "Vibrant weekend night market in the Old Quarter.",
+        "Latitude":  21.0340,
+        "Longitude":  105.8510,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Shopping",
+                     "Food",
+                     "Entertainment"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  20,
+        "Name":  "Quang Ba Flower Market",
+        "Description":  "Wholesale flower market active late at night.",
+        "Latitude":  21.0650,
+        "Longitude":  105.8280,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "23:00:00",
+                                 "CloseTime":  "06:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Shopping",
+                     "Local Life",
+                     "Nature"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  21,
+        "Name":  "Independence Palace",
+        "Description":  "Historical landmark in Ho Chi Minh City.",
+        "Latitude":  10.7770,
+        "Longitude":  106.6954,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "History",
+                     "Culture",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  40000.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  22,
+        "Name":  "Ben Thanh Market",
+        "Description":  "Iconic market in HCMC.",
+        "Latitude":  10.7725,
+        "Longitude":  106.6980,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "06:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Shopping",
+                     "Food",
+                     "Local Life"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  23,
+        "Name":  "War Remnants Museum",
+        "Description":  "Museum showing the history of the Vietnam War.",
+        "Latitude":  10.7795,
+        "Longitude":  106.6921,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:30:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "History",
+                     "Museum",
+                     "Culture"
+                 ],
+        "AverageBudget":  40000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  24,
+        "Name":  "Notre-Dame Cathedral Basilica of Saigon",
+        "Description":  "Historic cathedral in the center of HCMC.",
+        "Latitude":  10.7797,
+        "Longitude":  106.6990,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Architecture",
+                     "Religion",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  25,
+        "Name":  "Saigon Central Post Office",
+        "Description":  "Beautiful post office building from French colonial times.",
+        "Latitude":  10.7799,
+        "Longitude":  106.6999,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Architecture",
+                     "Sightseeing",
+                     "History"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  26,
+        "Name":  "Bui Vien Walking Street",
+        "Description":  "Famous backpacker area with nightlife.",
+        "Latitude":  10.7674,
+        "Longitude":  106.6934,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "18:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Entertainment",
+                     "Food",
+                     "Local Life"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  27,
+        "Name":  "Bitexco Financial Tower",
+        "Description":  "Skyline landmark with observation deck.",
+        "Latitude":  10.7717,
+        "Longitude":  106.7044,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "21:30:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "View",
+                     "Sightseeing",
+                     "Architecture"
+                 ],
+        "AverageBudget":  200000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  28,
+        "Name":  "Saigon Zoo and Botanical Gardens",
+        "Description":  "Oldest zoo and botanical garden in Vietnam.",
+        "Latitude":  10.7877,
+        "Longitude":  106.7053,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "17:30:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Nature",
+                     "Park",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  60000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  29,
+        "Name":  "Tan Dinh Church",
+        "Description":  "Famous pink church in HCMC.",
+        "Latitude":  10.7890,
+        "Longitude":  106.6903,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Architecture",
+                     "Religion",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  30,
+        "Name":  "Suoi Tien Theme Park",
+        "Description":  "Large amusement park with Buddhist themes.",
+        "Latitude":  10.8614,
+        "Longitude":  106.8028,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Entertainment",
+                     "Park"
+                 ],
+        "AverageBudget":  120000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  31,
+        "Name":  "Hanoi Railway Street",
+        "Description":  "Unique street where trains pass very close to houses.",
+        "Latitude":  21.0298,
+        "Longitude":  105.8427,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Sightseeing",
+                     "Local Life"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  32,
+        "Name":  "Phu Tay Ho",
+        "Description":  "Popular temple on West Lake.",
+        "Latitude":  21.0620,
+        "Longitude":  105.8285,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Religion",
+                     "Culture",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  33,
+        "Name":  "Ba Dinh Square",
+        "Description":  "Large square where Ho Chi Minh read the Declaration of Independence.",
+        "Latitude":  21.0360,
+        "Longitude":  105.8340,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Sightseeing"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  34,
+        "Name":  "Long Bien Bridge",
+        "Description":  "Historic bridge crossing the Red River.",
+        "Latitude":  21.0400,
+        "Longitude":  105.8560,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Architecture",
+                     "View"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  35,
+        "Name":  "Lighthouse Cafe",
+        "Description":  "Cafe with a great view of Hanoi Old Quarter.",
+        "Latitude":  21.0325,
+        "Longitude":  105.8530,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "23:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Coffee",
+                     "View"
+                 ],
+        "AverageBudget":  70000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  36,
+        "Name":  "Nguyen Hue Walking Street",
+        "Description":  "Central walking plaza in HCMC.",
+        "Latitude":  10.7745,
+        "Longitude":  106.7032,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Sightseeing",
+                     "Local Life",
+                     "Entertainment"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  37,
+        "Name":  "Jade Emperor Pagoda",
+        "Description":  "Ornate temple visited by Obama in HCMC.",
+        "Latitude":  10.7918,
+        "Longitude":  106.7042,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "07:00:00",
+                                 "CloseTime":  "18:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Religion",
+                     "Culture",
+                     "History"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  38,
+        "Name":  "Tao Dan Park",
+        "Description":  "Large green space in HCMC.",
+        "Latitude":  10.7740,
+        "Longitude":  106.6910,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Nature",
+                     "Park",
+                     "Relax"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  39,
+        "Name":  "The Cafe Apartments",
+        "Description":  "Unique apartment building filled with cafes.",
+        "Latitude":  10.7741,
+        "Longitude":  106.7030,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Coffee",
+                     "Architecture",
+                     "View"
+                 ],
+        "AverageBudget":  50000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  40,
+        "Name":  "Phan Xich Long Food Street",
+        "Description":  "Area famous for diverse food options.",
+        "Latitude":  10.7960,
+        "Longitude":  106.6850,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Food",
+                     "Local Life"
+                 ],
+        "AverageBudget":  100000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  41,
+        "Name":  "Ho Chi Minh Museum",
+        "Description":  "Museum dedicated to the life of Ho Chi Minh.",
+        "Latitude":  21.0354,
+        "Longitude":  105.8315,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "12:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "12:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "12:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "12:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "12:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Culture"
+                 ],
+        "AverageBudget":  40000.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  42,
+        "Name":  "Vietnam Military History Museum",
+        "Description":  "Showcasing the military history of Vietnam.",
+        "Latitude":  21.0326,
+        "Longitude":  105.8394,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "16:30:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "History",
+                     "Museum"
+                 ],
+        "AverageBudget":  40000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  43,
+        "Name":  "Ta Hien Beer Street",
+        "Description":  "Famous nightlife spot in Hanoi Old Quarter.",
+        "Latitude":  21.0348,
+        "Longitude":  105.8524,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "17:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Food",
+                     "Entertainment",
+                     "Local Life"
+                 ],
+        "AverageBudget":  100000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  44,
+        "Name":  "Quan Thanh Temple",
+        "Description":  "Ancient Taoist temple in Hanoi.",
+        "Latitude":  21.0436,
+        "Longitude":  105.8386,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Culture",
+                     "Religion",
+                     "History"
+                 ],
+        "AverageBudget":  10000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  45,
+        "Name":  "Hanoi Botanical Garden",
+        "Description":  "Green lung in the center of Hanoi.",
+        "Latitude":  21.0396,
+        "Longitude":  105.8290,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "Hanoi",
+        "Tags":  [
+                     "Nature",
+                     "Park",
+                     "Relax"
+                 ],
+        "AverageBudget":  5000.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  46,
+        "Name":  "Ho Chi Minh City Museum of Fine Arts",
+        "Description":  "Elegant museum showcasing Vietnamese art.",
+        "Latitude":  10.7699,
+        "Longitude":  106.6976,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "17:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Art",
+                     "Culture",
+                     "Museum"
+                 ],
+        "AverageBudget":  30000.0,
+        "AverageStayDuration":  90
+    },
+    {
+        "Id":  47,
+        "Name":  "Landmark 81",
+        "Description":  "Tallest building in Vietnam with an observation deck.",
+        "Latitude":  10.7950,
+        "Longitude":  106.7219,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "09:30:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "View",
+                     "Shopping",
+                     "Architecture"
+                 ],
+        "AverageBudget":  400000.0,
+        "AverageStayDuration":  120
+    },
+    {
+        "Id":  48,
+        "Name":  "Ho Chi Minh City Opera House",
+        "Description":  "Historical opera house in HCMC.",
+        "Latitude":  10.7766,
+        "Longitude":  106.7032,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "08:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Architecture",
+                     "Culture",
+                     "Art"
+                 ],
+        "AverageBudget":  150000.0,
+        "AverageStayDuration":  150
+    },
+    {
+        "Id":  49,
+        "Name":  "Turtle Lake",
+        "Description":  "Popular gathering spot for local youth.",
+        "Latitude":  10.7825,
+        "Longitude":  106.6961,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "00:00:00",
+                                 "CloseTime":  "23:59:59"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Local Life",
+                     "Relax"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  60
+    },
+    {
+        "Id":  50,
+        "Name":  "Ky Hoa Park",
+        "Description":  "Peaceful park in District 10.",
+        "Latitude":  10.7765,
+        "Longitude":  106.6780,
+        "OpeningHours":  [
+                             {
+                                 "DayOfWeek":  0,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  1,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  2,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  3,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  4,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  5,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             },
+                             {
+                                 "DayOfWeek":  6,
+                                 "OpenTime":  "05:00:00",
+                                 "CloseTime":  "22:00:00"
+                             }
+                         ],
+        "Destination":  "HCMC",
+        "Tags":  [
+                     "Nature",
+                     "Park",
+                     "Relax"
+                 ],
+        "AverageBudget":  0.0,
+        "AverageStayDuration":  90
+    }
+]

@@ -1,6 +1,5 @@
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\appsettings.Development.json
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\appsettings.json
-D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\dataPattern.json
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\AlgorithmPlan.staticwebassets.endpoints.json
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\AlgorithmPlan.exe
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\AlgorithmPlan.deps.json
@@ -29,10 +28,11 @@ D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.b
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.development.json
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\swae.build.ex.cache
-D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\Algorith.2A7F4FE3.Up2Date
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\AlgorithmPlan.dll
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\refint\AlgorithmPlan.dll
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\AlgorithmPlan.pdb
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\AlgorithmPlan.genruntimeconfig.cache
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\ref\AlgorithmPlan.dll
+D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\data.json
+D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
