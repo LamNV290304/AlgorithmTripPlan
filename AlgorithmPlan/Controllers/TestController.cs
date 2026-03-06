@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,32 +18,18 @@ namespace AlgorithmPlan.Controllers
             _itineraryService = itineraryService;
         }
 
-        [HttpPost("generate")]
-        public IActionResult GenerateItinerary([FromBody] ItineraryRequest request)
+        [HttpPost("generate-smart")]
+        public IActionResult GenerateSmartItinerary([FromBody] ItineraryRequest request)
         {
-            var result = _itineraryService.GenerateMultiDayItinerary(
-                request.StartLat,
-                request.StartLon,
-                request.Destination,
-                request.Tags,
-                request.Days,
-                request.StartTime,
-                request.EndTime,
-                request.TotalBudget
-            );
-            return Ok(result);
-        }
-
-        public class ItineraryRequest
-        {
-            public double StartLat { get; set; }
-            public double StartLon { get; set; }
-            public string Destination { get; set; }
-            public List<string> Tags { get; set; }
-            public int Days { get; set; }
-            public TimeSpan StartTime { get; set; }
-            public TimeSpan EndTime { get; set; }
-            public double TotalBudget { get; set; }
+            try
+            {
+                var result = _itineraryService.GenerateSmartItinerary(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
     }
 }
