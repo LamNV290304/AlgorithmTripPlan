@@ -24,8 +24,9 @@ namespace AlgorithmPlan.Model
 
     public class TimelineItem
     {
-        public string Type { get; set; } = string.Empty; // "Transport" or "Visit"
+        public string Type { get; set; } = string.Empty; // "Transport", "Visit", or "Rest"
         public string Time { get; set; } = string.Empty; // "HH:mm - HH:mm"
+        public string TimeBlock { get; set; } = string.Empty; // "Morning", "Lunch Break", "Afternoon", "Evening"
         public string Description { get; set; } = string.Empty;
         public double? Cost { get; set; } // For Transport
         public double? TicketCost { get; set; } // For Visit
@@ -40,7 +41,7 @@ namespace AlgorithmPlan.Model
 
     public class ItineraryRequest
     {
-        public string TargetCity { get; set; } = string.Empty;
+        public List<string> Destinations { get; set; } = new List<string>();
         public int GroupSize { get; set; }
         public double TotalBudget { get; set; }
         public DateTime StartDate { get; set; }

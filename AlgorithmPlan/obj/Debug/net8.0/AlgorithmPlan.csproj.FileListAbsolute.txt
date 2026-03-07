@@ -35,3 +35,4 @@ D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\AlgorithmPlan.pdb
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\AlgorithmPlan.genruntimeconfig.cache
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\ref\AlgorithmPlan.dll
 D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\bin\Debug\net8.0\data.json
+D:\Dotnet Project\AlgorithmPlan\AlgorithmPlan\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

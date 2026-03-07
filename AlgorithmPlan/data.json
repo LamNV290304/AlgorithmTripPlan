@@ -2511,5 +2511,76 @@
                  ],
         "AverageBudget":  0.0,
         "AverageStayDuration":  90
+    },
+    {
+        "OpeningHours":  [
+
+                         ],
+        "AverageStayDuration":  240,
+        "Id":  41,
+        "Tags":  [
+                     "Sightseeing",
+                     "Nature",
+                     "Cruise"
+                 ],
+        "Longitude":  107.1839,
+        "Destination":  "Quang Ninh",
+        "Description":  "UNESCO World Heritage site.",
+        "Name":  "Ha Long Bay",
+        "AverageBudget":  500000,
+        "Latitude":  20.9101
+    },
+    {
+        "OpeningHours":  [
+
+                         ],
+        "AverageStayDuration":  120,
+        "Id":  42,
+        "Tags":  [
+                     "Nature",
+                     "Sightseeing"
+                 ],
+        "Longitude":  107.12,
+        "Destination":  "Quang Ninh",
+        "Description":  "Largest cave in Ha Long Bay.",
+        "Name":  "Sung Sot Cave",
+        "AverageBudget":  100000,
+        "Latitude":  20.85
+    },
+    {
+        "OpeningHours":  [
+
+                         ],
+        "AverageStayDuration":  180,
+        "Id":  43,
+        "Tags":  [
+                     "Nature",
+                     "Sightseeing",
+                     "Culture"
+                 ],
+        "Longitude":  105.8944,
+        "Destination":  "Ninh Binh",
+        "Description":  "UNESCO World Heritage site.",
+        "Name":  "Trang An",
+        "AverageBudget":  250000,
+        "Latitude":  20.2522
+    },
+    {
+        "OpeningHours":  [
+
+                         ],
+        "AverageStayDuration":  150,
+        "Id":  44,
+        "Tags":  [
+                     "Religion",
+                     "Culture",
+                     "History"
+                 ],
+        "Longitude":  105.834,
+        "Destination":  "Ninh Binh",
+        "Description":  "Large Buddhist temple complex.",
+        "Name":  "Bai Dinh Pagoda",
+        "AverageBudget":  50000,
+        "Latitude":  20.273
     }
 ]

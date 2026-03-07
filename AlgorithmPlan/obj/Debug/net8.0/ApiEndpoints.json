@@ -1,15 +1,15 @@
 [
   {
     "ContainingType": "AlgorithmPlan.Controllers.TestController",
-    "Method": "GenerateItinerary",
-    "RelativePath": "api/Test/generate",
+    "Method": "GenerateSmartItinerary",
+    "RelativePath": "api/Test/generate-smart",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "AlgorithmPlan.Controllers.TestController\u002BItineraryRequest",
+        "Type": "AlgorithmPlan.Model.ItineraryRequest",
         "IsRequired": true
       }
     ],

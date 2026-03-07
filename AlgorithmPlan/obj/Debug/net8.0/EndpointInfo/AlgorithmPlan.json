@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Test/generate": {
+    "/api/Test/generate-smart": {
       "post": {
         "tags": [
           "Test"
@@ -42,40 +42,45 @@
       "ItineraryRequest": {
         "type": "object",
         "properties": {
-          "startLat": {
-            "type": "number",
-            "format": "double"
-          },
-          "startLon": {
-            "type": "number",
-            "format": "double"
-          },
-          "destination": {
-            "type": "string",
-            "nullable": true
-          },
-          "tags": {
+          "destinations": {
             "type": "array",
             "items": {
               "type": "string"
             },
             "nullable": true
           },
-          "days": {
+          "groupSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "startTime": {
-            "type": "string",
-            "format": "date-span"
-          },
-          "endTime": {
-            "type": "string",
-            "format": "date-span"
           },
           "totalBudget": {
             "type": "number",
             "format": "double"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userFavoriteTags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "startLatitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "startLongitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false
