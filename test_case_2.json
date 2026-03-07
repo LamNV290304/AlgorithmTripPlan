@@ -1,0 +1,10 @@
+{
+"destinations": ["Hanoi"],
+"groupSize": 2,
+"totalBudget": 10000000,
+"startDate": "2026-03-19T08:00:00Z",
+"endDate": "2026-03-22T20:00:00Z",
+"userFavoriteTags": ["Culture", "History"],
+"startLatitude": 21.0285,
+"startLongitude": 105.8522
+}

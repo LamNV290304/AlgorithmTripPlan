@@ -2517,7 +2517,7 @@
 
                          ],
         "AverageStayDuration":  240,
-        "Id":  41,
+        "Id":  51,
         "Tags":  [
                      "Sightseeing",
                      "Nature",
@@ -2535,7 +2535,7 @@
 
                          ],
         "AverageStayDuration":  120,
-        "Id":  42,
+        "Id":  52,
         "Tags":  [
                      "Nature",
                      "Sightseeing"
@@ -2552,7 +2552,7 @@
 
                          ],
         "AverageStayDuration":  180,
-        "Id":  43,
+        "Id":  53,
         "Tags":  [
                      "Nature",
                      "Sightseeing",
@@ -2566,11 +2566,7 @@
         "Latitude":  20.2522
     },
     {
-        "OpeningHours":  [
-
-                         ],
-        "AverageStayDuration":  150,
-        "Id":  44,
+        "Id":  54,
         "Tags":  [
                      "Religion",
                      "Culture",
@@ -2582,5 +2578,29 @@
         "Name":  "Bai Dinh Pagoda",
         "AverageBudget":  50000,
         "Latitude":  20.273
+    },
+    {
+        "Id":  55,
+        "Name":  "My Khe Beach",
+        "Description":  "Beautiful beach in Da Nang.",
+        "Latitude":  16.0601,
+        "Longitude":  108.2435,
+        "Destination":  "Da Nang",
+        "Tags":  ["Beach", "Nature", "Relax"],
+        "AverageBudget": 0,
+        "AverageStayDuration": 180,
+        "OpeningHours": []
+    },
+    {
+        "Id":  56,
+        "Name":  "Marble Mountains",
+        "Description":  "Group of five limestone and marble hills.",
+        "Latitude":  15.9904,
+        "Longitude":  108.2635,
+        "Destination":  "Da Nang",
+        "Tags": ["Sightseeing", "Nature", "History"],
+        "AverageBudget": 40000,
+        "AverageStayDuration": 150,
+        "OpeningHours": []
     }
 ]

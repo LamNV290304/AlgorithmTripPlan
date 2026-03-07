@@ -1,0 +1,10 @@
+{
+"destinations": ["Ninh Binh"],
+"groupSize": 15,
+"totalBudget": 20000000,
+"startDate": "2026-05-10T08:00:00Z",
+"endDate": "2026-05-11T18:00:00Z",
+"userFavoriteTags": ["Nature", "Photography"],
+"startLatitude": 21.0285,
+"startLongitude": 105.8522
+}

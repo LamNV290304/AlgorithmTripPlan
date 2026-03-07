@@ -1,0 +1,10 @@
+{
+"destinations": ["Ho Chi Minh City"],
+"groupSize": 2,
+"totalBudget": 5000000,
+"startDate": "2026-04-15T08:00:00Z",
+"endDate": "2026-04-15T23:30:00Z",
+"userFavoriteTags": ["History", "Nightlife", "Beer"],
+"startLatitude": 10.7769,
+"startLongitude": 106.7009
+}

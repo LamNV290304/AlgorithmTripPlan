@@ -123,9 +123,10 @@ namespace AlgorithmPlan.Services
                             
                             currentTime = transportArrival;
                             dailyPlan.DailyBudgetStatus.Spent += transport.TotalCost;
-                            currentLat = destCenter.Lat;
-                            currentLon = destCenter.Lon;
                         }
+                        
+                        currentLat = destCenter.Lat;
+                        currentLon = destCenter.Lon;
                         currentDestination = destinationName;
                     }
 
@@ -244,7 +245,8 @@ namespace AlgorithmPlan.Services
         // New Helper: Determine Visiting Order (Greedy Nearest Neighbor)
         private List<string> DetermineBestVisitingOrder(List<string> destinations, List<ScoredLocation> candidates, double startLat, double startLon)
         {
-            var remaining = destinations.Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            var normalizedDestinations = destinations.Select(d => d.Equals("Ho Chi Minh City", StringComparison.OrdinalIgnoreCase) ? "HCMC" : d).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            var remaining = normalizedDestinations;
             var ordered = new List<string>();
             double currentLat = startLat;
             double currentLon = startLon;
@@ -337,8 +339,9 @@ namespace AlgorithmPlan.Services
         // Updated FilterAndScoreLocations to handle list of destinations
         private List<ScoredLocation> FilterAndScoreLocations(List<Location> allLocations, List<string> destinations, List<string> favoriteTags)
         {
+            var normalizedDestinations = destinations.Select(d => d.Equals("Ho Chi Minh City", StringComparison.OrdinalIgnoreCase) ? "HCMC" : d).ToList();
             return allLocations
-                .Where(l => destinations.Contains(l.Destination, StringComparer.OrdinalIgnoreCase))
+                .Where(l => normalizedDestinations.Contains(l.Destination, StringComparer.OrdinalIgnoreCase))
                 .Select(l => new ScoredLocation
                 {
                     Location = l,

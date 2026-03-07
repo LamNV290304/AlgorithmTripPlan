@@ -1,0 +1,10 @@
+{
+"destinations": ["Hanoi", "Da Nang", "Ho Chi Minh City"],
+"groupSize": 2,
+"totalBudget": 50000000,
+"startDate": "2026-06-01T00:00:00Z",
+"endDate": "2026-06-10T23:59:59Z",
+"userFavoriteTags": ["Museum", "Beach", "Food"],
+"startLatitude": 21.0285,
+"startLongitude": 105.8522
+}

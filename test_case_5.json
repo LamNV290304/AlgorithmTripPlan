@@ -1,0 +1,8 @@
+{
+"destinations": ["Hanoi"],
+"groupSize": 1,
+"totalBudget": 2000000,
+"startDate": "2026-09-01T08:00:00Z",
+"endDate": "2026-09-02T20:00:00Z",
+"userFavoriteTags": ["Walking"]
+}
