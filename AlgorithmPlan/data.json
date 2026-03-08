@@ -2602,5 +2602,113 @@
         "AverageBudget": 40000,
         "AverageStayDuration": 150,
         "OpeningHours": []
+    },
+    {
+        "Id": 100,
+        "Name": "Old Quarter Hotel",
+        "Description": "Comfortable hotel in the heart of Hanoi.",
+        "Latitude": 21.028,
+        "Longitude": 105.852,
+        "Destination": "Hanoi",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 800000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 101,
+        "Name": "Hanoi Hostel",
+        "Description": "Budget-friendly hostel for travelers.",
+        "Latitude": 21.030,
+        "Longitude": 105.850,
+        "Destination": "Hanoi",
+        "Tags": ["Hostel", "Accommodation"],
+        "AverageBudget": 250000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 102,
+        "Name": "Traditional Restaurant",
+        "Description": "Authentic Vietnamese cuisine.",
+        "Latitude": 21.029,
+        "Longitude": 105.851,
+        "Destination": "Hanoi",
+        "Tags": ["Restaurant", "LunchRest"],
+        "AverageBudget": 150000,
+        "AverageStayDuration": 60,
+        "OpeningHours": []
+    },
+    {
+        "Id": 103,
+        "Name": "District 1 Hotel",
+        "Description": "Luxury hotel in District 1, HCMC.",
+        "Latitude": 10.775,
+        "Longitude": 106.701,
+        "Destination": "HCMC",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1000000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 104,
+        "Name": "Saigon Riverside Hotel",
+        "Description": "Hotel with a beautiful river view.",
+        "Latitude": 10.772,
+        "Longitude": 106.705,
+        "Destination": "HCMC",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1500000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 105,
+        "Name": "Ben Thanh Restaurant",
+        "Description": "Popular restaurant near Ben Thanh Market.",
+        "Latitude": 10.771,
+        "Longitude": 106.698,
+        "Destination": "HCMC",
+        "Tags": ["Restaurant", "LunchRest"],
+        "AverageBudget": 200000,
+        "AverageStayDuration": 60,
+        "OpeningHours": []
+    },
+    {
+        "Id": 106,
+        "Name": "My Khe Beach Hotel",
+        "Description": "Beachfront hotel in Da Nang.",
+        "Latitude": 16.060,
+        "Longitude": 108.245,
+        "Destination": "Da Nang",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 900000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 107,
+        "Name": "Da Nang River Hotel",
+        "Description": "Hotel near the Han River.",
+        "Latitude": 16.065,
+        "Longitude": 108.225,
+        "Destination": "Da Nang",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1100000,
+        "AverageStayDuration": 480,
+        "OpeningHours": []
+    },
+    {
+        "Id": 108,
+        "Name": "Seafood Restaurant",
+        "Description": "Fresh seafood restaurant by the beach.",
+        "Latitude": 16.062,
+        "Longitude": 108.240,
+        "Destination": "Da Nang",
+        "Tags": ["Restaurant", "LunchRest"],
+        "AverageBudget": 300000,
+        "AverageStayDuration": 60,
+        "OpeningHours": []
     }
 ]

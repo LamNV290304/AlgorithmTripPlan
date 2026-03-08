@@ -66,6 +66,7 @@ namespace AlgorithmPlan.Services
 
             int dayCounter = 0;
             string currentDestination = null;
+            Location currentHotel = null;
 
             foreach (var destAlloc in destinationDayAllocation)
             {
@@ -82,7 +83,7 @@ namespace AlgorithmPlan.Services
                     
                     var dailyPlan = new DailyItinerary
                     {
-                        Day = $"Day {dayCounter + 1} – {destinationName} ({currentDate:yyyy-MM-dd})",
+                        Day = $"Day {dayCounter + 1} – {destinationName}",
                         DailyBudgetStatus = new DailyBudgetStatus { Limit = Math.Round(dailyLimit, 0), Spent = 0 }
                     };
 
@@ -91,6 +92,7 @@ namespace AlgorithmPlan.Services
                     // Check if moving to a new destination
                     if (currentDestination != destinationName)
                     {
+                        currentHotel = null; // Reset hotel when changing cities
                         // Inter-city movement
                         var destCenter = GetDestinationCenter(destCandidates);
                         double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
@@ -146,13 +148,28 @@ namespace AlgorithmPlan.Services
                     {
                         if (currentTime < LunchStart) currentTime = LunchStart;
                         
+                        var lunchPlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, new[] { "Restaurant", "LunchRest" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                        var cafePlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, new[] { "Cafe", "Coffee", "RestArea" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                        
+                        string lunchDesc = lunchPlace != null ? $"Lunch at {lunchPlace.Location.Name}" : "Lunch at local restaurant";
+                        string cafeDesc = cafePlace != null ? $"Rest at {cafePlace.Location.Name}" : "Rest at nearby café";
+
+                        // If hotel is very close (within 1km), suggest returning to hotel
+                        string hotelOption = "";
+                        if (currentHotel != null && CalculateDistance(currentLat, currentLon, currentHotel.Latitude, currentHotel.Longitude) < 1.0)
+                        {
+                            hotelOption = " or return to hotel for a short break";
+                        }
+
                         dailyPlan.Timeline.Add(new TimelineItem
                         {
                             Type = "Rest",
                             Time = $"{LunchStart:hh\\:mm} - {LunchEnd:hh\\:mm}",
                             TimeBlock = "Lunch Break",
-                            Description = "Lunch and rest period"
+                            Description = $"{lunchDesc}{hotelOption}\nOptional: {cafeDesc}"
                         });
+                        
+                        if (lunchPlace != null) dailyPlan.DailyBudgetStatus.Spent += lunchPlace.Location.AverageBudget * request.GroupSize;
                         currentTime = LunchEnd;
                     }
 
@@ -169,14 +186,65 @@ namespace AlgorithmPlan.Services
 
                     // --- EVENING BLOCK ---
                     if (currentTime < EveningStart) currentTime = EveningStart;
-                    while (currentTime < EveningEnd)
+                    // Allow evening activities to go up to 21:30 or 22:00 if budget allows
+                    TimeSpan eveningActualEnd = new TimeSpan(22, 0, 0);
+                    while (currentTime < eveningActualEnd)
                     {
                         var bestAttraction = FindNextBestAttraction(
                             currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek, 
-                            EveningEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, true);
+                            eveningActualEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, true);
 
                         if (bestAttraction == null) break;
                         ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyLimit, visitedIds, ref currentLat, ref currentLon);
+                    }
+
+                    // --- NIGHT REST ---
+                    TimeSpan nightStart = currentTime > EveningEnd ? (currentTime > eveningActualEnd ? eveningActualEnd : currentTime) : EveningEnd;
+                    TimeSpan nightEnd = new TimeSpan(8, 0, 0); // Next day morning
+
+                    // Determine search center for accommodation (proximity to current location and next day's potential attractions)
+                    double searchLat = currentLat;
+                    double searchLon = currentLon;
+
+                    // Peek into next day's attractions if in the same city
+                    if (d < daysInThisDest - 1)
+                    {
+                        var remainingCandidates = destCandidates.Where(c => !visitedIds.Contains(c.Location.Id)).ToList();
+                        if (remainingCandidates.Any())
+                        {
+                            var nextDayCenter = GetDestinationCenter(remainingCandidates);
+                            // Weight current location more heavily but consider next day
+                            searchLat = (currentLat * 0.7) + (nextDayCenter.Lat * 0.3);
+                            searchLon = (currentLon * 0.7) + (nextDayCenter.Lon * 0.3);
+                        }
+                    }
+
+                    // Find accommodation if not set or if too far from search center (> 8km)
+                    // We allow a larger radius to avoid relocation
+                    if (currentHotel == null || CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0)
+                    {
+                        var accommodation = FindNextBestRestLocation(searchLat, searchLon, destCandidates, new[] { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                        if (accommodation != null)
+                        {
+                            currentHotel = accommodation.Location;
+                        }
+                    }
+
+                    if (currentHotel != null)
+                    {
+                        double hotelCost = currentHotel.AverageBudget * request.GroupSize;
+                        dailyPlan.Timeline.Add(new TimelineItem
+                        {
+                            Type = "Rest",
+                            Time = $"{nightStart:hh\\:mm} - {nightEnd:hh\\:mm}",
+                            TimeBlock = "Night Rest",
+                            Description = $"Accommodation: {currentHotel.Name}\nEstimated Cost: {Math.Round(hotelCost, 0):N0} VND / night"
+                        });
+                        dailyPlan.DailyBudgetStatus.Spent += hotelCost;
+                        
+                        // Update current position to hotel for the start of next day
+                        currentLat = currentHotel.Latitude;
+                        currentLon = currentHotel.Longitude;
                     }
 
                     dailyPlan.DailyBudgetStatus.Spent = Math.Round(dailyPlan.DailyBudgetStatus.Spent, 0);
@@ -499,6 +567,36 @@ namespace AlgorithmPlan.Services
         }
 
         private double ToRadians(double deg) => deg * (Math.PI / 180);
+
+        private BestAttraction FindNextBestRestLocation(
+            double lat, 
+            double lon, 
+            List<ScoredLocation> candidates, 
+            string[] tags,
+            int groupSize,
+            double remainingDailyBudget)
+        {
+            var nearby = candidates
+                .Where(c => c.Location.Tags.Intersect(tags, StringComparer.OrdinalIgnoreCase).Any())
+                .Select(c => new { ScoredLocation = c, Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) })
+                .OrderBy(x => x.Distance)
+                .ToList();
+
+            if (!nearby.Any()) return null;
+
+            // Relaxed budget for accommodation/rest as they are essential
+            var valid = nearby
+                .Where(x => (x.ScoredLocation.Location.AverageBudget * groupSize) <= remainingDailyBudget * 2.5) 
+                .FirstOrDefault();
+
+            if (valid == null) return null;
+
+            return new BestAttraction
+            {
+                Location = valid.ScoredLocation.Location,
+                Distance = valid.Distance
+            };
+        }
 
         private class ScoredLocation
         {
