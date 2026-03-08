@@ -2710,5 +2710,713 @@
         "AverageBudget": 300000,
         "AverageStayDuration": 60,
         "OpeningHours": []
+    },
+    {
+        "Id": 109,
+        "Name": "Hanoi La Paliza Cafe",
+        "Description": "Cozy cafe with vintage decor in Old Quarter.",
+        "Latitude": 21.0345,
+        "Longitude": 105.8512,
+        "Destination": "Hanoi",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 80000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 110,
+        "Name": "Cong Caphe Hoan Kiem",
+        "Description": "Famous Vietnamese coffee chain with retro theme.",
+        "Latitude": 21.0295,
+        "Longitude": 105.8535,
+        "Destination": "Hanoi",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 60000,
+        "AverageStayDuration": 40,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "07:00:00",
+                "CloseTime": "23:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 111,
+        "Name": "Pho Gia Truyen",
+        "Description": "Famous traditional pho restaurant in Bat Dan street.",
+        "Latitude": 21.0355,
+        "Longitude": 105.8475,
+        "Destination": "Hanoi",
+        "Tags": ["Restaurant", "LunchRest", "Food"],
+        "AverageBudget": 50000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "06:00:00",
+                "CloseTime": "20:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 112,
+        "Name": "Hanoi La Siesta Hotel & Spa",
+        "Description": "Luxury hotel in Old Quarter with spa services.",
+        "Latitude": 21.0310,
+        "Longitude": 105.8495,
+        "Destination": "Hanoi",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1200000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 113,
+        "Name": "Old Quarter View Hotel",
+        "Description": "Boutique hotel with rooftop view of Old Quarter.",
+        "Latitude": 21.0325,
+        "Longitude": 105.8505,
+        "Destination": "Hanoi",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 850000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 114,
+        "Name": "Hanoi Backpackers Hostel",
+        "Description": "Budget-friendly hostel in the heart of Old Quarter.",
+        "Latitude": 21.0340,
+        "Longitude": 105.8520,
+        "Destination": "Hanoi",
+        "Tags": ["Hostel", "Accommodation"],
+        "AverageBudget": 250000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 115,
+        "Name": "The Coffee House Trang Tien",
+        "Description": "Modern coffee shop near Hoan Kiem Lake.",
+        "Latitude": 21.0275,
+        "Longitude": 105.8510,
+        "Destination": "Hanoi",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 70000,
+        "AverageStayDuration": 50,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:30:00"
+            }
+        ]
+    },
+    {
+        "Id": 116,
+        "Name": "Highlands Coffee HCMC",
+        "Description": "Popular Vietnamese coffee chain in District 1.",
+        "Latitude": 10.7755,
+        "Longitude": 106.7015,
+        "Destination": "HCMC",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 65000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "06:30:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 117,
+        "Name": "Quan An Ngon",
+        "Description": "Traditional Vietnamese cuisine restaurant in District 1.",
+        "Latitude": 10.7745,
+        "Longitude": 106.7005,
+        "Destination": "HCMC",
+        "Tags": ["Restaurant", "LunchRest", "Food"],
+        "AverageBudget": 150000,
+        "AverageStayDuration": 60,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "08:00:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 118,
+        "Name": "Liberty Central Saigon Hotel",
+        "Description": "4-star hotel in the heart of District 1.",
+        "Latitude": 10.7730,
+        "Longitude": 106.6995,
+        "Destination": "HCMC",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1500000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 119,
+        "Name": "The Common Room Project",
+        "Description": "Trendy cafe and co-working space in District 1.",
+        "Latitude": 10.7765,
+        "Longitude": 106.7025,
+        "Destination": "HCMC",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 80000,
+        "AverageStayDuration": 60,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 120,
+        "Name": "Saigon Backpackers Hostel",
+        "Description": "Lively hostel on Bui Vien street.",
+        "Latitude": 10.7685,
+        "Longitude": 106.6925,
+        "Destination": "HCMC",
+        "Tags": ["Hostel", "Accommodation"],
+        "AverageBudget": 200000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 121,
+        "Name": "Bun Cha Huong Lien",
+        "Description": "Famous bun cha restaurant visited by Obama.",
+        "Latitude": 21.0265,
+        "Longitude": 105.8465,
+        "Destination": "Hanoi",
+        "Tags": ["Restaurant", "LunchRest", "Food"],
+        "AverageBudget": 75000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "08:00:00",
+                "CloseTime": "20:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 122,
+        "Name": "Aria Grand Hotel Da Nang",
+        "Description": "Beachfront luxury hotel in My Khe Beach area.",
+        "Latitude": 16.0615,
+        "Longitude": 108.2435,
+        "Destination": "Da Nang",
+        "Tags": ["Hotel", "Accommodation"],
+        "AverageBudget": 1800000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 123,
+        "Name": "Da Nang Beach Cafe",
+        "Description": "Relaxing beachfront cafe with ocean views.",
+        "Latitude": 16.0625,
+        "Longitude": 108.2445,
+        "Destination": "Da Nang",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 75000,
+        "AverageStayDuration": 50,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "06:00:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 124,
+        "Name": "Mi Quang Ba Mua",
+        "Description": "Famous local mi quang noodle restaurant.",
+        "Latitude": 16.0585,
+        "Longitude": 108.2285,
+        "Destination": "Da Nang",
+        "Tags": ["Restaurant", "LunchRest", "Food"],
+        "AverageBudget": 55000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "06:00:00",
+                "CloseTime": "21:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 125,
+        "Name": "Han Market Rest Stop",
+        "Description": "Rest area near Han Market with local snacks.",
+        "Latitude": 16.0675,
+        "Longitude": 108.2215,
+        "Destination": "Da Nang",
+        "Tags": ["RestArea", "Food"],
+        "AverageBudget": 40000,
+        "AverageStayDuration": 30,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "06:00:00",
+                "CloseTime": "19:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 126,
+        "Name": "Da Nang Homestay",
+        "Description": "Cozy budget homestay near Dragon Bridge.",
+        "Latitude": 16.0655,
+        "Longitude": 108.2265,
+        "Destination": "Da Nang",
+        "Tags": ["Homestay", "Accommodation"],
+        "AverageBudget": 350000,
+        "AverageStayDuration": 600,
+        "OpeningHours": []
+    },
+    {
+        "Id": 127,
+        "Name": "Bep Cuon Restaurant",
+        "Description": "Traditional Vietnamese spring roll restaurant.",
+        "Latitude": 16.0640,
+        "Longitude": 108.2295,
+        "Destination": "Da Nang",
+        "Tags": ["Restaurant", "LunchRest", "Food"],
+        "AverageBudget": 120000,
+        "AverageStayDuration": 50,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "09:00:00",
+                "CloseTime": "21:00:00"
+            }
+        ]
+    },
+    {
+        "Id": 128,
+        "Name": "Starfish Cafe",
+        "Description": "Rooftop cafe with view of My Khe Beach.",
+        "Latitude": 16.0608,
+        "Longitude": 108.2455,
+        "Destination": "Da Nang",
+        "Tags": ["Cafe", "Coffee", "RestArea", "View"],
+        "AverageBudget": 85000,
+        "AverageStayDuration": 55,
+        "OpeningHours": [
+            {
+                "DayOfWeek": 0,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 1,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 2,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 3,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 4,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 5,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            },
+            {
+                "DayOfWeek": 6,
+                "OpenTime": "07:00:00",
+                "CloseTime": "22:00:00"
+            }
+        ]
     }
 ]

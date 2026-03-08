@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace AlgorithmPlan.Model
 {
@@ -31,6 +32,14 @@ namespace AlgorithmPlan.Model
         public double? Cost { get; set; } // For Transport
         public double? TicketCost { get; set; } // For Visit
         public bool? GroupDiscountApplied { get; set; } // For Visit
+        
+        // Multiple transport options for user to choose (only for Transport type)
+        [JsonPropertyName("transportOptions")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+        public List<TransportOption> TransportOptions { get; set; } = new List<TransportOption>();
+        
+        [JsonPropertyName("selectedTransportIndex")]
+        public int? SelectedTransportIndex { get; set; } // User's selected option index
     }
 
     public class TripSummary
@@ -49,5 +58,39 @@ namespace AlgorithmPlan.Model
         public List<string> UserFavoriteTags { get; set; } = new List<string>();
         public double? StartLatitude { get; set; }
         public double? StartLongitude { get; set; }
+    }
+
+    // Transport option with pros/cons for user selection
+    public class TransportOption
+    {
+        [JsonPropertyName("method")]
+        public string Method { get; set; } = string.Empty;
+        
+        [JsonPropertyName("description")]
+        public string Description { get; set; } = string.Empty;
+        
+        [JsonPropertyName("totalCost")]
+        public double TotalCost { get; set; }
+        
+        [JsonPropertyName("travelTimeMinutes")]
+        public double TravelTimeMinutes { get; set; }
+        
+        [JsonPropertyName("vehiclesNeeded")]
+        public int VehiclesNeeded { get; set; }
+        
+        [JsonPropertyName("pros")]
+        public string Pros { get; set; } = string.Empty;
+        
+        [JsonPropertyName("cons")]
+        public string Cons { get; set; } = string.Empty;
+        
+        [JsonPropertyName("recommended")]
+        public bool Recommended { get; set; }
+        
+        [JsonPropertyName("costPerPerson")]
+        public double CostPerPerson => GroupSize > 0 ? TotalCost / GroupSize : 0;
+        
+        [JsonPropertyName("groupSize")]
+        public int GroupSize { get; set; }
     }
 }

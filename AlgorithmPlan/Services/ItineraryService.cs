@@ -46,16 +46,62 @@ namespace AlgorithmPlan.Services
             var allLocations = GetAllLocations();
             var candidateLocations = FilterAndScoreLocations(allLocations, request.Destinations, request.UserFavoriteTags);
 
-            // Determine best visiting order of destinations
+            // Determine best visiting order of destinations (optimize travel distance)
             var orderedDestinations = DetermineBestVisitingOrder(request.Destinations, candidateLocations, request.StartLatitude ?? 21.0285, request.StartLongitude ?? 105.8522);
 
-            // Determine how many days in each destination
+            // Determine how many days in each destination based on attraction count and importance
             int totalDays = (request.EndDate - request.StartDate).Days + 1;
             var destinationDayAllocation = AllocateDaysToDestinations(orderedDestinations, candidateLocations, totalDays);
 
-            // MODULE 3.2 - Daily Weight Allocation
-            var dailyBudgets = AllocateDailyBudgets(request.StartDate, request.EndDate, usableBudget);
+            // MODULE 3.2 - SMART DYNAMIC BUDGET ALLOCATION
+            // Step 1: Calculate inter-city transport costs
+            double totalTransportBudget = CalculateInterCityTransportBudget(orderedDestinations, candidateLocations, request.GroupSize, request.StartLatitude ?? 21.0285, request.StartLongitude ?? 105.8522);
+
+            // Step 2: Estimate accommodation cost per destination (different cities may have different prices)
+            var destinationHotelCosts = new Dictionary<string, double>();
+            double totalAccommodationBudget = 0;
+            int hotelNights = totalDays - 1;
             
+            foreach (var dest in destinationDayAllocation.Keys)
+            {
+                int nightsInDest = destinationDayAllocation[dest] - 1; // Last night doesn't need hotel if leaving
+                if (nightsInDest < 0) nightsInDest = 0;
+                
+                var destCandidates = candidateLocations.Where(c => c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase)).ToList();
+                double avgHotelCostPerNight = EstimateAccommodationCost(destCandidates, request.GroupSize);
+                destinationHotelCosts[dest] = avgHotelCostPerNight;
+                totalAccommodationBudget += avgHotelCostPerNight * nightsInDest;
+            }
+
+            // Step 3: Remaining budget for daily activities (food, transport, tickets)
+            double activityBudget = usableBudget - totalTransportBudget - totalAccommodationBudget;
+            if (activityBudget < 0) activityBudget = usableBudget * 0.4; // Fallback if budgets too high
+
+            // Step 4: Allocate activity budgets dynamically per destination
+            // More attractions = more days = more budget
+            var destinationActivityBudgets = AllocateBudgetToDestinations(destinationDayAllocation, candidateLocations, activityBudget);
+
+            // Step 5: Create daily budgets from destination budgets
+            var dailyActivityBudgets = new List<double>();
+            int dayIndex = 0;
+            foreach (var destAlloc in destinationDayAllocation)
+            {
+                string dest = destAlloc.Key;
+                int daysInDest = destAlloc.Value;
+                double destActivityBudget = destinationActivityBudgets[dest];
+                double dailyAvg = destActivityBudget / daysInDest;
+
+                for (int d = 0; d < daysInDest; d++)
+                {
+                    // Apply weight based on day position (first/last day may need less/more)
+                    double weight = 1.0;
+                    if (d == 0) weight = 1.1; // First day: arrive, more activities
+                    if (d == daysInDest - 1) weight = 0.9; // Last day: depart, less activities
+                    
+                    dailyActivityBudgets.Add(dailyAvg * weight);
+                }
+            }
+
             var output = new SmartItineraryOutput();
             var visitedIds = new HashSet<int>();
             double totalSpent = 0;
@@ -79,12 +125,19 @@ namespace AlgorithmPlan.Services
                     if (dayCounter >= totalDays) break;
 
                     var currentDate = request.StartDate.AddDays(dayCounter);
-                    double dailyLimit = dailyBudgets[dayCounter] + rolloverBudget;
-                    
+
+                    // Daily limit = activity budget + rollover + accommodation budget (if needed)
+                    double dailyLimit = dailyActivityBudgets[dayCounter] + rolloverBudget;
+                    bool needHotelTonight = d < daysInThisDest - 1 || destAlloc.Key != destinationDayAllocation.Last().Key;
+
+                    // Add accommodation budget to tonight's limit if needed
+                    double accommodationBudgetTonight = needHotelTonight ? destinationHotelCosts[destinationName] : 0;
+                    double totalDailyLimit = dailyLimit + accommodationBudgetTonight;
+
                     var dailyPlan = new DailyItinerary
                     {
                         Day = $"Day {dayCounter + 1} – {destinationName}",
-                        DailyBudgetStatus = new DailyBudgetStatus { Limit = Math.Round(dailyLimit, 0), Spent = 0 }
+                        DailyBudgetStatus = new DailyBudgetStatus { Limit = Math.Round(totalDailyLimit, 0), Spent = 0 }
                     };
 
                     TimeSpan currentTime = MorningStart;
@@ -96,18 +149,20 @@ namespace AlgorithmPlan.Services
                         // Inter-city movement
                         var destCenter = GetDestinationCenter(destCandidates);
                         double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
-                        
+
                         if (currentDestination != null) // Don't add transport for the very first city if we are already there
                         {
-                            var transport = GetInterCityTransport(distance, request.GroupSize);
-                            
+                            // Get multiple inter-city transport options
+                            var transportOptions = GetInterCityTransportOptions(distance, request.GroupSize);
+                            var defaultTransport = transportOptions.FirstOrDefault(o => o.Recommended) ?? transportOptions.FirstOrDefault();
+
                             // Add Transport to timeline
-                            TimeSpan transportArrival = currentTime.Add(TimeSpan.FromMinutes(transport.TravelTimeMinutes));
-                            
+                            TimeSpan transportArrival = currentTime.Add(TimeSpan.FromMinutes(defaultTransport.TravelTimeMinutes));
+
                             // Respect Lunch Break for travel
                             if (currentTime < LunchStart && transportArrival > LunchStart)
                             {
-                                // If it overlaps lunch, we either start earlier or arrive later. 
+                                // If it overlaps lunch, we either start earlier or arrive later.
                                 // For simplicity, we just add the lunch duration if it crosses the lunch window.
                                 transportArrival = transportArrival.Add(TimeSpan.FromHours(1));
                             }
@@ -119,38 +174,43 @@ namespace AlgorithmPlan.Services
                                 Type = "Transport",
                                 Time = $"{currentTime:hh\\:mm} - {transportArrival:hh\\:mm}",
                                 TimeBlock = timeBlock,
-                                Description = $"{transport.Description} from {currentDestination} to {destinationName} ({Math.Round(distance, 1)} km)",
-                                Cost = Math.Round(transport.TotalCost, 0)
+                                Description = $"{defaultTransport.Description} from {currentDestination} to {destinationName} ({Math.Round(distance, 1)} km)",
+                                Cost = Math.Round(defaultTransport.TotalCost, 0),
+                                TransportOptions = transportOptions,
+                                SelectedTransportIndex = transportOptions.IndexOf(defaultTransport)
                             });
-                            
+
                             currentTime = transportArrival;
-                            dailyPlan.DailyBudgetStatus.Spent += transport.TotalCost;
+                            dailyPlan.DailyBudgetStatus.Spent += defaultTransport.TotalCost;
                         }
-                        
+
                         currentLat = destCenter.Lat;
                         currentLon = destCenter.Lon;
                         currentDestination = destinationName;
                     }
 
                     // --- MORNING BLOCK ---
-                    while (currentTime < MorningEnd)
+                    // Stop morning activities with enough time before lunch (minimum 30 min buffer)
+                    TimeSpan morningActualEnd = MorningEnd - TimeSpan.FromMinutes(30);
+                    while (currentTime < morningActualEnd)
                     {
                         var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek, 
-                            MorningEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
+                            currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek,
+                            morningActualEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
 
                         if (bestAttraction == null) break;
                         ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyLimit, visitedIds, ref currentLat, ref currentLon);
                     }
 
                     // --- LUNCH BREAK ---
+                    // Always add lunch break between 12:00 - 13:00
                     if (currentTime < LunchEnd)
                     {
                         if (currentTime < LunchStart) currentTime = LunchStart;
-                        
+
                         var lunchPlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, new[] { "Restaurant", "LunchRest" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
                         var cafePlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, new[] { "Cafe", "Coffee", "RestArea" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
-                        
+
                         string lunchDesc = lunchPlace != null ? $"Lunch at {lunchPlace.Location.Name}" : "Lunch at local restaurant";
                         string cafeDesc = cafePlace != null ? $"Rest at {cafePlace.Location.Name}" : "Rest at nearby café";
 
@@ -158,7 +218,7 @@ namespace AlgorithmPlan.Services
                         string hotelOption = "";
                         if (currentHotel != null && CalculateDistance(currentLat, currentLon, currentHotel.Latitude, currentHotel.Longitude) < 1.0)
                         {
-                            hotelOption = " or return to hotel for a short break";
+                            hotelOption = " - or return to hotel";
                         }
 
                         dailyPlan.Timeline.Add(new TimelineItem
@@ -166,9 +226,9 @@ namespace AlgorithmPlan.Services
                             Type = "Rest",
                             Time = $"{LunchStart:hh\\:mm} - {LunchEnd:hh\\:mm}",
                             TimeBlock = "Lunch Break",
-                            Description = $"{lunchDesc}{hotelOption}\nOptional: {cafeDesc}"
+                            Description = $"Lunch: {lunchDesc}{hotelOption} | Optional: {cafeDesc}"
                         });
-                        
+
                         if (lunchPlace != null) dailyPlan.DailyBudgetStatus.Spent += lunchPlace.Location.AverageBudget * request.GroupSize;
                         currentTime = LunchEnd;
                     }
@@ -219,11 +279,24 @@ namespace AlgorithmPlan.Services
                         }
                     }
 
-                    // Find accommodation if not set or if too far from search center (> 8km)
-                    // We allow a larger radius to avoid relocation
-                    if (currentHotel == null || CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0)
+                    // Find accommodation using smart multi-criteria search
+                    // Check if we need to find a new hotel (none set, or current is too far >8km, or significantly better option exists)
+                    bool needNewHotel = currentHotel == null || 
+                        CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0;
+                    
+                    if (needNewHotel)
                     {
-                        var accommodation = FindNextBestRestLocation(searchLat, searchLon, destCandidates, new[] { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                        // Use the accommodation budget allocated for tonight
+                        var accommodation = FindNextBestAccommodation(
+                            currentLat, 
+                            currentLon, 
+                            destCandidates, 
+                            request.GroupSize, 
+                            accommodationBudgetTonight,
+                            currentHotel,
+                            searchLat,
+                            searchLon);
+                        
                         if (accommodation != null)
                         {
                             currentHotel = accommodation.Location;
@@ -238,10 +311,10 @@ namespace AlgorithmPlan.Services
                             Type = "Rest",
                             Time = $"{nightStart:hh\\:mm} - {nightEnd:hh\\:mm}",
                             TimeBlock = "Night Rest",
-                            Description = $"Accommodation: {currentHotel.Name}\nEstimated Cost: {Math.Round(hotelCost, 0):N0} VND / night"
+                            Description = $"Accommodation: {currentHotel.Name} | Cost: {Math.Round(hotelCost, 0):N0} VND/night"
                         });
                         dailyPlan.DailyBudgetStatus.Spent += hotelCost;
-                        
+
                         // Update current position to hotel for the start of next day
                         currentLat = currentHotel.Latitude;
                         currentLon = currentHotel.Longitude;
@@ -250,7 +323,16 @@ namespace AlgorithmPlan.Services
                     dailyPlan.DailyBudgetStatus.Spent = Math.Round(dailyPlan.DailyBudgetStatus.Spent, 0);
                     output.Days.Add(dailyPlan);
                     totalSpent += dailyPlan.DailyBudgetStatus.Spent;
-                    rolloverBudget = dailyLimit - dailyPlan.DailyBudgetStatus.Spent;
+                    
+                    // Rollover only the activity budget portion (not accommodation)
+                    // Accommodation budget is "use it or lose it" since hotel is already booked
+                    rolloverBudget = dailyLimit - (dailyPlan.DailyBudgetStatus.Spent - accommodationBudgetTonight);
+                    
+                    // Cap rollover to prevent excessive accumulation (max 50% of next day's activity budget)
+                    double maxRollover = dailyActivityBudgets[Math.Min(dayCounter + 1, dailyActivityBudgets.Count - 1)] * 0.5;
+                    if (rolloverBudget > maxRollover) rolloverBudget = maxRollover;
+                    if (rolloverBudget < -maxRollover) rolloverBudget = -maxRollover; // Allow some deficit
+                    
                     dayCounter++;
                 }
             }
@@ -266,17 +348,23 @@ namespace AlgorithmPlan.Services
 
         private void ProcessAttraction(BestAttraction bestAttraction, ref TimeSpan currentTime, string block, DailyItinerary dailyPlan, int groupSize, double dailyLimit, HashSet<int> visitedIds, ref double currentLat, ref double currentLon)
         {
-            var transport = OptimizeTransport(bestAttraction.Distance, groupSize);
-            double stepCost = transport.TotalCost + bestAttraction.Location.AverageBudget * groupSize;
+            // Get multiple transport options for user to choose
+            var transportOptions = GetTransportOptions(bestAttraction.Distance, groupSize);
+            var defaultTransport = transportOptions.FirstOrDefault(o => o.Recommended) ?? transportOptions.FirstOrDefault();
+            
+            double stepCost = defaultTransport.TotalCost + bestAttraction.Location.AverageBudget * groupSize;
 
-            TimeSpan arrivalTime = currentTime.Add(TimeSpan.FromMinutes(transport.TravelTimeMinutes));
+            TimeSpan arrivalTime = currentTime.Add(TimeSpan.FromMinutes(defaultTransport.TravelTimeMinutes));
+            
             dailyPlan.Timeline.Add(new TimelineItem
             {
                 Type = "Transport",
                 Time = $"{currentTime:hh\\:mm} - {arrivalTime:hh\\:mm}",
                 TimeBlock = block,
-                Description = $"{transport.Description} to {bestAttraction.Location.Name}",
-                Cost = Math.Round(transport.TotalCost, 0)
+                Description = $"{defaultTransport.Description} to {bestAttraction.Location.Name}",
+                Cost = Math.Round(defaultTransport.TotalCost, 0),
+                TransportOptions = transportOptions,
+                SelectedTransportIndex = transportOptions.IndexOf(defaultTransport)
             });
 
             double actualStayTimeMinutes = bestAttraction.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
@@ -375,33 +463,128 @@ namespace AlgorithmPlan.Services
             return (top.Average(c => c.Location.Latitude), top.Average(c => c.Location.Longitude));
         }
 
-        // New Helper: Inter-city transportation recommendations
+        // New Helper: Inter-city transportation recommendations (returns multiple options)
+        private List<TransportOption> GetInterCityTransportOptions(double distance, int groupSize)
+        {
+            var options = new List<TransportOption>();
+
+            // Bus/Coach option (for distances < 500km)
+            if (distance < 500)
+            {
+                double busCost = 200000 * groupSize;
+                double busTime = (distance / 45.0) * 60.0;
+                options.Add(new TransportOption
+                {
+                    Method = "Bus/Coach",
+                    Description = "Bus / Coach",
+                    TotalCost = busCost,
+                    TravelTimeMinutes = busTime,
+                    VehiclesNeeded = 1,
+                    Pros = "Most economical, direct route",
+                    Cons = "Slower, less comfortable for long distances",
+                    Recommended = distance < 200 && groupSize <= 16,
+                    GroupSize = groupSize
+                });
+            }
+
+            // Train option (for distances 150-800km)
+            if (distance >= 150 && distance <= 800)
+            {
+                double trainCost = 500000 * groupSize;
+                double trainTime = (distance / 60.0) * 60.0;
+                options.Add(new TransportOption
+                {
+                    Method = "Train",
+                    Description = "Train",
+                    TotalCost = trainCost,
+                    TravelTimeMinutes = trainTime,
+                    VehiclesNeeded = 1,
+                    Pros = "Comfortable, scenic views, can move around",
+                    Cons = "Fixed schedule, may be delayed",
+                    Recommended = (distance >= 200 && distance <= 400) || groupSize > 7,
+                    GroupSize = groupSize
+                });
+            }
+
+            // Airplane option (for distances > 400km)
+            if (distance > 400)
+            {
+                double flightCost = 2000000 * groupSize;
+                double flightTime = 120 + 120; // 2h flight + 2h check-in/travel
+                options.Add(new TransportOption
+                {
+                    Method = "Airplane",
+                    Description = "Airplane",
+                    TotalCost = flightCost,
+                    TravelTimeMinutes = flightTime,
+                    VehiclesNeeded = 1,
+                    Pros = "Fastest for long distances, most comfortable",
+                    Cons = "Most expensive, airport transfers needed",
+                    Recommended = distance > 600,
+                    GroupSize = groupSize
+                });
+            }
+
+            // Private Van option (for groups <= 16 and distances < 300km)
+            if (groupSize <= 16 && distance < 300)
+            {
+                int vansNeeded = (int)Math.Ceiling(groupSize / 16.0);
+                double vanCost = vansNeeded * 35000 * distance;
+                double vanTime = (distance / 50.0) * 60.0;
+                options.Add(new TransportOption
+                {
+                    Method = "Private Van",
+                    Description = $"{vansNeeded} x 16-seat van",
+                    TotalCost = vanCost,
+                    TravelTimeMinutes = vanTime,
+                    VehiclesNeeded = vansNeeded,
+                    Pros = "Flexible schedule, door-to-door, group stays together",
+                    Cons = "Driver fatigue on long trips",
+                    Recommended = (groupSize > 7 && groupSize <= 16) && distance < 200,
+                    GroupSize = groupSize
+                });
+            }
+
+            // Sort by cost per person
+            var sortedOptions = options.OrderBy(o => o.TotalCost / Math.Max(groupSize, 1)).ToList();
+
+            // Mark the most suitable option as recommended if none already
+            if (sortedOptions.Any(o => o.Recommended) == false && sortedOptions.Any())
+            {
+                // Recommend based on distance and group size
+                if (distance > 600)
+                    sortedOptions.FirstOrDefault(o => o.Method == "Airplane")!.Recommended = true;
+                else if (distance >= 200 && distance <= 400)
+                    sortedOptions.FirstOrDefault(o => o.Method == "Train")!.Recommended = true;
+                else
+                    sortedOptions[0].Recommended = true;
+            }
+
+            return sortedOptions;
+        }
+
+        // Backward compatible method
         private TransportOptimization GetInterCityTransport(double distance, int groupSize)
         {
-            if (distance > 600)
+            var options = GetInterCityTransportOptions(distance, groupSize);
+            var best = options.FirstOrDefault(o => o.Recommended) ?? options.FirstOrDefault();
+
+            if (best == null)
             {
-                return new TransportOptimization {
-                    Description = "Airplane",
-                    TotalCost = 2000000 * groupSize,
-                    TravelTimeMinutes = 120 + 120 // 2h flight + 2h check-in/travel
-                };
-            }
-            else if (distance >= 200)
-            {
-                return new TransportOptimization {
-                    Description = "Train",
-                    TotalCost = 500000 * groupSize,
-                    TravelTimeMinutes = (distance / 60.0) * 60.0
-                };
-            }
-            else
-            {
-                return new TransportOptimization {
+                return new TransportOptimization
+                {
                     Description = "Bus / Coach",
                     TotalCost = 200000 * groupSize,
                     TravelTimeMinutes = (distance / 45.0) * 60.0
                 };
             }
+
+            return new TransportOptimization
+            {
+                Description = best.Description,
+                TotalCost = best.TotalCost,
+                TravelTimeMinutes = best.TravelTimeMinutes
+            };
         }
 
         // Updated FilterAndScoreLocations to handle list of destinations
@@ -443,6 +626,82 @@ namespace AlgorithmPlan.Services
 
             double totalWeight = weights.Sum();
             return weights.Select(w => (w / totalWeight) * usableBudget).ToList();
+        }
+
+        // Estimate average accommodation cost per night based on available hotels
+        private double EstimateAccommodationCost(List<ScoredLocation> candidates, int groupSize)
+        {
+            var accommodations = candidates
+                .Where(c => c.Location.Tags.Any(t =>
+                    new[] { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation" }
+                    .Contains(t, StringComparer.OrdinalIgnoreCase)))
+                .Select(c => new { Location = c.Location, CostPerNight = c.Location.AverageBudget * groupSize })
+                .OrderBy(x => x.CostPerNight)
+                .ToList();
+
+            if (!accommodations.Any())
+            {
+                // Fallback: estimate 300k per person per night
+                return 300000 * groupSize;
+            }
+
+            // For large groups, prioritize budget-friendly options
+            // Choose from the cheaper half to ensure affordability
+            int budgetOptionCount = Math.Max(1, accommodations.Count / 2);
+            var budgetOptions = accommodations.Take(budgetOptionCount);
+
+            // Return average of budget-friendly options
+            return budgetOptions.Average(x => x.CostPerNight);
+        }
+
+        // Calculate total inter-city transport budget
+        private double CalculateInterCityTransportBudget(List<string> orderedDestinations, List<ScoredLocation> candidates, int groupSize, double startLat, double startLon)
+        {
+            double totalBudget = 0;
+            double currentLat = startLat;
+            double currentLon = startLon;
+
+            foreach (var dest in orderedDestinations)
+            {
+                var destCenter = GetDestinationCenter(candidates.Where(c => c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase)).ToList());
+                double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
+                var transport = GetInterCityTransport(distance, groupSize);
+                totalBudget += transport.TotalCost;
+                
+                currentLat = destCenter.Lat;
+                currentLon = destCenter.Lon;
+            }
+
+            return totalBudget;
+        }
+
+        // Allocate activity budget to each destination based on days and attraction count
+        private Dictionary<string, double> AllocateBudgetToDestinations(Dictionary<string, int> destinationDayAllocation, List<ScoredLocation> allCandidates, double totalActivityBudget)
+        {
+            var destinationBudgets = new Dictionary<string, double>();
+            
+            // Calculate weight for each destination based on days and number of attractions
+            var destinationWeights = new Dictionary<string, double>();
+            foreach (var dest in destinationDayAllocation.Keys)
+            {
+                int days = destinationDayAllocation[dest];
+                int attractionCount = allCandidates.Count(c => c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase));
+                
+                // Weight = days * sqrt(attractionCount) to balance time and content
+                double weight = days * Math.Max(1, Math.Sqrt(attractionCount));
+                destinationWeights[dest] = weight;
+            }
+
+            double totalWeight = destinationWeights.Values.Sum();
+            
+            // Allocate budget proportionally
+            foreach (var dest in destinationDayAllocation.Keys)
+            {
+                double destBudget = (destinationWeights[dest] / totalWeight) * totalActivityBudget;
+                destinationBudgets[dest] = destBudget;
+            }
+
+            return destinationBudgets;
         }
 
         private BestAttraction FindNextBestAttraction(
@@ -514,34 +773,122 @@ namespace AlgorithmPlan.Services
         }
 
         // MODULE 3.3 - Vehicle Packing Optimization
+        // Returns multiple transport options for user to choose
+        private List<TransportOption> GetTransportOptions(double distance, int groupSize)
+        {
+            var options = new List<TransportOption>();
+
+            // Walking for very short distances
+            if (distance < 1.0)
+            {
+                options.Add(new TransportOption
+                {
+                    Method = "Walking",
+                    Description = "Walking",
+                    TotalCost = 0,
+                    TravelTimeMinutes = (distance / 4.0) * 60.0,
+                    VehiclesNeeded = 0,
+                    Pros = "Free, eco-friendly, good for health",
+                    Cons = "Slow, only for short distances",
+                    Recommended = true
+                });
+            }
+            else
+            {
+                // Add Walking as backup for distances up to 2km
+                if (distance <= 2.0)
+                {
+                    options.Add(new TransportOption
+                    {
+                        Method = "Walking",
+                        Description = "Walking",
+                        TotalCost = 0,
+                        TravelTimeMinutes = (distance / 4.0) * 60.0,
+                        VehiclesNeeded = 0,
+                        Pros = "Free, eco-friendly",
+                        Cons = "Slow",
+                        Recommended = distance <= 1.0
+                    });
+                }
+
+                // Calculate options for each vehicle type
+                foreach (var vehicle in _vehicleTypes.Where(v => !v.IsWalking))
+                {
+                    int vehiclesNeeded = (int)Math.Ceiling((double)groupSize / vehicle.Capacity);
+                    double totalCost = vehiclesNeeded * vehicle.CostPerKm * distance;
+                    double travelTimeMinutes = (distance / vehicle.SpeedKmh) * 60.0;
+
+                    string pros = "";
+                    string cons = "";
+                    bool recommended = false;
+
+                    // Determine pros/cons based on vehicle type
+                    if (vehicle.Name.Contains("Taxi"))
+                    {
+                        pros = "Fast, comfortable, door-to-door";
+                        cons = "More expensive for large groups";
+                        recommended = groupSize <= 4 && distance < 50;
+                    }
+                    else if (vehicle.Name.Contains("7-seat"))
+                    {
+                        pros = "Good balance of cost and comfort";
+                        cons = "May need multiple vehicles for large groups";
+                        recommended = (groupSize > 4 && groupSize <= 7) || (distance >= 10 && distance < 100);
+                    }
+                    else if (vehicle.Name.Contains("16-seat"))
+                    {
+                        pros = "Best for large groups, everyone travels together";
+                        cons = "Higher total cost, slower speed";
+                        recommended = groupSize > 7 || groupSize > 4;
+                    }
+
+                    options.Add(new TransportOption
+                    {
+                        Method = vehicle.Name,
+                        Description = $"{vehiclesNeeded} x {vehicle.Name}",
+                        TotalCost = totalCost,
+                        TravelTimeMinutes = travelTimeMinutes,
+                        VehiclesNeeded = vehiclesNeeded,
+                        Pros = pros,
+                        Cons = cons,
+                        Recommended = recommended
+                    });
+                }
+            }
+
+            // Sort by cost per person (best value first)
+            var sortedOptions = options.OrderBy(o => o.TotalCost / Math.Max(groupSize, 1)).ToList();
+
+            // Mark the most cost-effective option as recommended if none already
+            if (sortedOptions.Any(o => o.Recommended) == false && sortedOptions.Any())
+            {
+                sortedOptions[0].Recommended = true;
+            }
+
+            return sortedOptions;
+        }
+
+        // Returns the best transport option (backward compatible)
         private TransportOptimization OptimizeTransport(double distance, int groupSize)
         {
-            if (distance < 1.0)
+            var options = GetTransportOptions(distance, groupSize);
+            var best = options.FirstOrDefault(o => o.Recommended) ?? options.FirstOrDefault();
+
+            if (best == null)
             {
                 return new TransportOptimization
                 {
                     Description = "Walking",
                     TotalCost = 0,
-                    TravelTimeMinutes = (distance / 4.0) * 60.0
+                    TravelTimeMinutes = 0
                 };
             }
 
-            var options = _vehicleTypes.Where(v => !v.IsWalking).Select(v => {
-                int vehiclesNeeded = (int)Math.Ceiling((double)groupSize / v.Capacity);
-                double totalCost = vehiclesNeeded * v.CostPerKm * distance;
-                return new {
-                    Vehicle = v,
-                    Count = vehiclesNeeded,
-                    TotalCost = totalCost,
-                    TravelTimeMinutes = (distance / v.SpeedKmh) * 60.0
-                };
-            }).OrderBy(x => x.TotalCost / groupSize).First();
-
             return new TransportOptimization
             {
-                Description = $"{options.Count} x {options.Vehicle.Name}",
-                TotalCost = options.TotalCost,
-                TravelTimeMinutes = options.TravelTimeMinutes
+                Description = best.Description,
+                TotalCost = best.TotalCost,
+                TravelTimeMinutes = best.TravelTimeMinutes
             };
         }
 
@@ -568,33 +915,151 @@ namespace AlgorithmPlan.Services
 
         private double ToRadians(double deg) => deg * (Math.PI / 180);
 
-        private BestAttraction FindNextBestRestLocation(
-            double lat, 
-            double lon, 
-            List<ScoredLocation> candidates, 
-            string[] tags,
+        // Smart Accommodation Search with Multi-Criteria Scoring
+        private BestAttraction FindNextBestAccommodation(
+            double lat,
+            double lon,
+            List<ScoredLocation> candidates,
             int groupSize,
-            double remainingDailyBudget)
+            double accommodationBudget,
+            Location currentHotel,
+            double searchLat,
+            double searchLon)
         {
-            var nearby = candidates
-                .Where(c => c.Location.Tags.Intersect(tags, StringComparer.OrdinalIgnoreCase).Any())
-                .Select(c => new { ScoredLocation = c, Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) })
-                .OrderBy(x => x.Distance)
+            var accommodationTags = new[] { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation" };
+            
+            // Filter accommodations within budget
+            var accommodations = candidates
+                .Where(c => c.Location.Tags.Any(t => accommodationTags.Contains(t, StringComparer.OrdinalIgnoreCase)))
+                .Where(c => (c.Location.AverageBudget * groupSize) <= accommodationBudget * 1.2) // Allow 20% flexibility
+                .Select(c => new
+                {
+                    Location = c.Location,
+                    Distance = CalculateDistance(searchLat, searchLon, c.Location.Latitude, c.Location.Longitude),
+                    CostPerNight = c.Location.AverageBudget * groupSize,
+                    OriginalScore = c.Score
+                })
                 .ToList();
 
-            if (!nearby.Any()) return null;
+            if (!accommodations.Any()) return null;
 
-            // Relaxed budget for accommodation/rest as they are essential
-            var valid = nearby
-                .Where(x => (x.ScoredLocation.Location.AverageBudget * groupSize) <= remainingDailyBudget * 2.5) 
-                .FirstOrDefault();
+            // Calculate min/max for normalization
+            var minCost = accommodations.Min(a => a.CostPerNight);
+            var maxCost = accommodations.Max(a => a.CostPerNight);
+            var minDistance = accommodations.Min(a => a.Distance);
+            var maxDistance = accommodations.Max(a => a.Distance);
+            var maxScore = accommodations.Max(a => a.OriginalScore);
 
-            if (valid == null) return null;
+            // Score each accommodation (0-100 scale)
+            var scoredAccommodations = accommodations.Select(a =>
+            {
+                // Distance Score (40% weight): Prefer closer hotels
+                double distanceScore = maxDistance == minDistance ? 50 : 
+                    100 * (1 - (a.Distance - minDistance) / (maxDistance - minDistance));
+
+                // Price Score (35% weight): Prefer budget-friendly but not necessarily cheapest
+                // Optimal price is around 60-80% of budget (good value, not cheap luxury)
+                double priceRatio = maxCost == minCost ? 0.5 : (a.CostPerNight - minCost) / (maxCost - minCost);
+                double priceScore = 100 * (1 - Math.Abs(priceRatio - 0.6)); // Optimal at 60% of range
+
+                // Quality Score (25% weight): Based on original score (tags matching, etc.)
+                double qualityScore = maxScore == 0 ? 50 : 100 * a.OriginalScore / maxScore;
+
+                // Apply weights
+                double totalScore = distanceScore * 0.40 + priceScore * 0.35 + qualityScore * 0.25;
+
+                return new
+                {
+                    a.Location,
+                    a.Distance,
+                    a.CostPerNight,
+                    TotalScore = totalScore
+                };
+            }).OrderByDescending(a => a.TotalScore);
+
+            // Select top 3 and pick the closest among them
+            var topCandidates = scoredAccommodations.Take(3).ToList();
+            var bestChoice = topCandidates.OrderBy(a => a.Distance).FirstOrDefault();
+
+            if (bestChoice == null) return null;
+
+            // Check if we should keep current hotel (avoid unnecessary moves)
+            // Only move if new hotel is significantly better (>20% score improvement) or current is too far (>3km)
+            if (currentHotel != null)
+            {
+                double currentHotelDistance = CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude);
+                double currentHotelCost = currentHotel.AverageBudget * groupSize;
+                
+                // If current hotel is within 3km and cost is similar, keep it
+                if (currentHotelDistance <= 3.0 && Math.Abs(currentHotelCost - bestChoice.CostPerNight) / Math.Max(bestChoice.CostPerNight, 1) <= 0.3)
+                {
+                    return null; // Signal to keep current hotel
+                }
+            }
 
             return new BestAttraction
             {
-                Location = valid.ScoredLocation.Location,
-                Distance = valid.Distance
+                Location = bestChoice.Location,
+                Distance = bestChoice.Distance
+            };
+        }
+
+        private BestAttraction FindNextBestRestLocation(
+            double lat,
+            double lon,
+            List<ScoredLocation> candidates,
+            string[] tags,
+            int groupSize,
+            double remainingDailyBudget,
+            bool isAccommodation = false)
+        {
+            // Use smart accommodation search for hotels
+            if (isAccommodation)
+            {
+                // This is a simplified fallback - actual accommodation search uses FindNextBestAccommodation
+                var nearby = candidates
+                    .Where(c => c.Location.Tags.Intersect(tags, StringComparer.OrdinalIgnoreCase).Any())
+                    .Select(c => new { ScoredLocation = c, Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) })
+                    .Where(x => (x.ScoredLocation.Location.AverageBudget * groupSize) <= remainingDailyBudget * 1.2)
+                    .OrderBy(x => x.ScoredLocation.Location.AverageBudget * groupSize)
+                    .ThenBy(x => x.Distance)
+                    .FirstOrDefault();
+
+                if (nearby == null) return null;
+
+                return new BestAttraction
+                {
+                    Location = nearby.ScoredLocation.Location,
+                    Distance = nearby.Distance
+                };
+            }
+
+            // For restaurants/cafes: balance between distance and price
+            var restLocations = candidates
+                .Where(c => c.Location.Tags.Intersect(tags, StringComparer.OrdinalIgnoreCase).Any())
+                .Select(c => new
+                {
+                    ScoredLocation = c,
+                    Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude),
+                    Cost = c.Location.AverageBudget * groupSize
+                })
+                .Where(x => x.Distance <= 2.0) // Within 2km
+                .Where(x => x.Cost <= remainingDailyBudget * 2.5)
+                .ToList();
+
+            if (!restLocations.Any()) return null;
+
+            // Simple scoring: prefer closer and reasonably priced
+            var bestRest = restLocations
+                .OrderBy(x => x.Distance * 0.6 + (x.Cost / Math.Max(remainingDailyBudget, 1)) * 0.4)
+                .FirstOrDefault();
+
+            if (bestRest == null) return null;
+
+            return new BestAttraction
+            {
+                Location = bestRest.ScoredLocation.Location,
+                Distance = bestRest.Distance
             };
         }
 
