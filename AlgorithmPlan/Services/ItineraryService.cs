@@ -38,7 +38,8 @@ namespace AlgorithmPlan.Services
 
         public SmartItineraryOutput GenerateSmartItinerary(ItineraryRequest request)
         {
-            // MODULE 3.1 - Budget Partitioning
+            // MODULE 3.1 - Budget Partitioning (NEW DYNAMIC MODEL)
+            // Step 2.1 - Reserve Fund
             double contingencyFund = request.TotalBudget * 0.1;
             double usableBudget = request.TotalBudget * 0.9;
 
@@ -53,53 +54,32 @@ namespace AlgorithmPlan.Services
             int totalDays = (request.EndDate - request.StartDate).Days + 1;
             var destinationDayAllocation = AllocateDaysToDestinations(orderedDestinations, candidateLocations, totalDays);
 
-            // MODULE 3.2 - SMART DYNAMIC BUDGET ALLOCATION
-            // Step 1: Calculate inter-city transport costs
-            double totalTransportBudget = CalculateInterCityTransportBudget(orderedDestinations, candidateLocations, request.GroupSize, request.StartLatitude ?? 21.0285, request.StartLongitude ?? 105.8522);
-
-            // Step 2: Estimate accommodation cost per destination (different cities may have different prices)
-            var destinationHotelCosts = new Dictionary<string, double>();
-            double totalAccommodationBudget = 0;
-            int hotelNights = totalDays - 1;
-            
-            foreach (var dest in destinationDayAllocation.Keys)
+            // Step 2.2 - Assign Day Weights
+            var dayWeights = new List<double>();
+            for (int i = 0; i < totalDays; i++)
             {
-                int nightsInDest = destinationDayAllocation[dest] - 1; // Last night doesn't need hotel if leaving
-                if (nightsInDest < 0) nightsInDest = 0;
+                var date = request.StartDate.AddDays(i);
+                double w = 1.0; // Base weight for Weekdays
+                if (date.DayOfWeek == DayOfWeek.Friday || date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday)
+                    w = 1.5; // Weekend effect
                 
-                var destCandidates = candidateLocations.Where(c => c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase)).ToList();
-                double avgHotelCostPerNight = EstimateAccommodationCost(destCandidates, request.GroupSize);
-                destinationHotelCosts[dest] = avgHotelCostPerNight;
-                totalAccommodationBudget += avgHotelCostPerNight * nightsInDest;
+                if (i == 0) w += 0.2; // First day
+                if (i == totalDays - 1) w += 0.3; // Last day
+                
+                dayWeights.Add(w);
             }
 
-            // Step 3: Remaining budget for daily activities (food, transport, tickets)
-            double activityBudget = usableBudget - totalTransportBudget - totalAccommodationBudget;
-            if (activityBudget < 0) activityBudget = usableBudget * 0.4; // Fallback if budgets too high
+            // Step 2.3 - Calculate Daily Limits
+            double totalWeights = dayWeights.Sum();
+            double baseLimit = usableBudget / totalWeights;
+            var dailyActivityBudgets = dayWeights.Select(w => baseLimit * w).ToList();
 
-            // Step 4: Allocate activity budgets dynamically per destination
-            // More attractions = more days = more budget
-            var destinationActivityBudgets = AllocateBudgetToDestinations(destinationDayAllocation, candidateLocations, activityBudget);
-
-            // Step 5: Create daily budgets from destination budgets
-            var dailyActivityBudgets = new List<double>();
-            int dayIndex = 0;
-            foreach (var destAlloc in destinationDayAllocation)
+            // Estimate accommodation cost per destination to guide search
+            var destinationHotelCosts = new Dictionary<string, double>();
+            foreach (var dest in destinationDayAllocation.Keys)
             {
-                string dest = destAlloc.Key;
-                int daysInDest = destAlloc.Value;
-                double destActivityBudget = destinationActivityBudgets[dest];
-                double dailyAvg = destActivityBudget / daysInDest;
-
-                for (int d = 0; d < daysInDest; d++)
-                {
-                    // Apply weight based on day position (first/last day may need less/more)
-                    double weight = 1.0;
-                    if (d == 0) weight = 1.1; // First day: arrive, more activities
-                    if (d == daysInDest - 1) weight = 0.9; // Last day: depart, less activities
-                    
-                    dailyActivityBudgets.Add(dailyAvg * weight);
-                }
+                var destCandidates = candidateLocations.Where(c => c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase)).ToList();
+                destinationHotelCosts[dest] = EstimateAccommodationCost(destCandidates, request.GroupSize);
             }
 
             var output = new SmartItineraryOutput();
@@ -126,13 +106,10 @@ namespace AlgorithmPlan.Services
 
                     var currentDate = request.StartDate.AddDays(dayCounter);
 
-                    // Daily limit = activity budget + rollover + accommodation budget (if needed)
-                    double dailyLimit = dailyActivityBudgets[dayCounter] + rolloverBudget;
+                    // Daily limit (Step 2.3 & 2.4)
+                    double totalDailyLimit = dailyActivityBudgets[dayCounter] + rolloverBudget;
                     bool needHotelTonight = d < daysInThisDest - 1 || destAlloc.Key != destinationDayAllocation.Last().Key;
-
-                    // Add accommodation budget to tonight's limit if needed
                     double accommodationBudgetTonight = needHotelTonight ? destinationHotelCosts[destinationName] : 0;
-                    double totalDailyLimit = dailyLimit + accommodationBudgetTonight;
 
                     var dailyPlan = new DailyItinerary
                     {
@@ -141,6 +118,9 @@ namespace AlgorithmPlan.Services
                     };
 
                     TimeSpan currentTime = MorningStart;
+
+                    // Daily limit passed down to search functions
+                    double dailyLimit = totalDailyLimit;
 
                     // Check if moving to a new destination
                     if (currentDestination != destinationName)
@@ -324,14 +304,8 @@ namespace AlgorithmPlan.Services
                     output.Days.Add(dailyPlan);
                     totalSpent += dailyPlan.DailyBudgetStatus.Spent;
                     
-                    // Rollover only the activity budget portion (not accommodation)
-                    // Accommodation budget is "use it or lose it" since hotel is already booked
-                    rolloverBudget = dailyLimit - (dailyPlan.DailyBudgetStatus.Spent - accommodationBudgetTonight);
-                    
-                    // Cap rollover to prevent excessive accumulation (max 50% of next day's activity budget)
-                    double maxRollover = dailyActivityBudgets[Math.Min(dayCounter + 1, dailyActivityBudgets.Count - 1)] * 0.5;
-                    if (rolloverBudget > maxRollover) rolloverBudget = maxRollover;
-                    if (rolloverBudget < -maxRollover) rolloverBudget = -maxRollover; // Allow some deficit
+                    // Step 2.4 - Rollover Logic
+                    rolloverBudget = totalDailyLimit - dailyPlan.DailyBudgetStatus.Spent;
                     
                     dayCounter++;
                 }
@@ -367,7 +341,7 @@ namespace AlgorithmPlan.Services
                 SelectedTransportIndex = transportOptions.IndexOf(defaultTransport)
             });
 
-            double actualStayTimeMinutes = bestAttraction.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
+            double actualStayTimeMinutes = bestAttraction.Location.AverageStayDuration * (1 + 0.05 * Math.Max(0, groupSize - 2));
             TimeSpan visitEndTime = arrivalTime.Add(TimeSpan.FromMinutes(actualStayTimeMinutes));
 
             dailyPlan.Timeline.Add(new TimelineItem
@@ -472,7 +446,7 @@ namespace AlgorithmPlan.Services
             if (distance < 500)
             {
                 double busCost = 200000 * groupSize;
-                double busTime = (distance / 45.0) * 60.0;
+                double busTime = (distance / 45.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2));
                 options.Add(new TransportOption
                 {
                     Method = "Bus/Coach",
@@ -491,7 +465,7 @@ namespace AlgorithmPlan.Services
             if (distance >= 150 && distance <= 800)
             {
                 double trainCost = 500000 * groupSize;
-                double trainTime = (distance / 60.0) * 60.0;
+                double trainTime = (distance / 60.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2));
                 options.Add(new TransportOption
                 {
                     Method = "Train",
@@ -510,7 +484,7 @@ namespace AlgorithmPlan.Services
             if (distance > 400)
             {
                 double flightCost = 2000000 * groupSize;
-                double flightTime = 120 + 120; // 2h flight + 2h check-in/travel
+                double flightTime = (120 + 120) * (1 + 0.05 * Math.Max(0, groupSize - 2)); // 2h flight + 2h check-in/travel
                 options.Add(new TransportOption
                 {
                     Method = "Airplane",
@@ -530,7 +504,7 @@ namespace AlgorithmPlan.Services
             {
                 int vansNeeded = (int)Math.Ceiling(groupSize / 16.0);
                 double vanCost = vansNeeded * 35000 * distance;
-                double vanTime = (distance / 50.0) * 60.0;
+                double vanTime = (distance / 50.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2));
                 options.Add(new TransportOption
                 {
                     Method = "Private Van",
@@ -575,7 +549,7 @@ namespace AlgorithmPlan.Services
                 {
                     Description = "Bus / Coach",
                     TotalCost = 200000 * groupSize,
-                    TravelTimeMinutes = (distance / 45.0) * 60.0
+                    TravelTimeMinutes = (distance / 45.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2))
                 };
             }
 
@@ -745,7 +719,7 @@ namespace AlgorithmPlan.Services
                     TimeSpan arrivalTime = currentTime.Add(TimeSpan.FromMinutes(transport.TravelTimeMinutes));
                     
                     // 2.5 Group Delay Effect
-                    double actualStayTime = c.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
+                    double actualStayTime = c.Location.AverageStayDuration * (1 + 0.05 * Math.Max(0, groupSize - 2));
                     TimeSpan visitEndTime = arrivalTime.Add(TimeSpan.FromMinutes(actualStayTime));
 
                     return new {
@@ -786,7 +760,7 @@ namespace AlgorithmPlan.Services
                     Method = "Walking",
                     Description = "Walking",
                     TotalCost = 0,
-                    TravelTimeMinutes = (distance / 4.0) * 60.0,
+                    TravelTimeMinutes = (distance / 4.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2)),
                     VehiclesNeeded = 0,
                     Pros = "Free, eco-friendly, good for health",
                     Cons = "Slow, only for short distances",
@@ -803,7 +777,7 @@ namespace AlgorithmPlan.Services
                         Method = "Walking",
                         Description = "Walking",
                         TotalCost = 0,
-                        TravelTimeMinutes = (distance / 4.0) * 60.0,
+                        TravelTimeMinutes = (distance / 4.0) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2)),
                         VehiclesNeeded = 0,
                         Pros = "Free, eco-friendly",
                         Cons = "Slow",
@@ -816,7 +790,7 @@ namespace AlgorithmPlan.Services
                 {
                     int vehiclesNeeded = (int)Math.Ceiling((double)groupSize / vehicle.Capacity);
                     double totalCost = vehiclesNeeded * vehicle.CostPerKm * distance;
-                    double travelTimeMinutes = (distance / vehicle.SpeedKmh) * 60.0;
+                    double travelTimeMinutes = (distance / vehicle.SpeedKmh) * 60.0 * (1 + 0.05 * Math.Max(0, groupSize - 2));
 
                     string pros = "";
                     string cons = "";
