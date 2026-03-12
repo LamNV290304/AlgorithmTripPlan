@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "183",
+    "base_id": "14",
+    "longitude": 106.2639852,
+    "latitude": 22.6666369,
+    "name": "Cao Bằng",
+    "english_name": "Cao Bang",
+    "code": "cb",
+    "x_migrate_key": "121",
+    "city_id": "183",
+    "city_name": "Cao Bằng",
+    "city_english_name": "Cao Bang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "14",
+    "state_name": "Cao Bằng",
+    "state_english_name": "Cao Bang",
+    "country_id": "1926",
+    "name_token": "Cao Bằng",
+    "alias": [
+      "caobang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cao Bằng - Cao Bằng",
+    "full_english_name": "Cao Bang - Cao Bang",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 217.73544172981158
+      }
+    ],
+    "train_stations": []
+  }
+}

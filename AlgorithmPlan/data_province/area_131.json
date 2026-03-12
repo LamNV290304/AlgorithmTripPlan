@@ -1,0 +1,137 @@
+{
+  "message": "success",
+  "data": {
+    "id": "131",
+    "base_id": "8",
+    "longitude": 109.2196634,
+    "latitude": 13.7829673,
+    "name": "Quy Nhơn",
+    "english_name": "Quy Nhon",
+    "code": "qn",
+    "x_migrate_key": "68",
+    "city_id": "131",
+    "city_name": "Quy Nhơn",
+    "city_english_name": "Quy Nhon",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "8",
+    "state_name": "Bình Định",
+    "state_english_name": "Binh Dinh",
+    "country_id": "1926",
+    "name_token": "Quy Nhơn",
+    "alias": [
+      "quynhon",
+      "quynhon",
+      "qui nhon",
+      "qui",
+      "qui nhơn"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Quy Nhơn - Bình Định",
+    "full_english_name": "Quy Nhon - Binh Dinh",
+    "airports": [
+      {
+        "bbox": [
+          109.042267,
+          13.954986,
+          109.042267,
+          13.954986
+        ],
+        "geometry": {
+          "coordinates": [
+            109.042267,
+            13.954986
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135545",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phù Cát",
+          "AirportName_En": "Phu Cat Airport",
+          "CityName_Vi": "Qui Nhơn",
+          "CityName_En": "Qui Nhon",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135545,
+          "CITY": "Phucat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "UIH",
+          "ICAO": "VVPC",
+          "NAME": "Phu Cat Airport",
+          "NAME_SHORT": "Phu Cat",
+          "OF_APT_ID": 6193,
+          "Other": "Domestic / Military",
+          "TYPE": "D / M",
+          "TZ": 7,
+          "X": 109.04227,
+          "Y": 13.954986,
+          "Z__feet_": 80,
+          "total_leng": 3051
+        },
+        "type": "Feature",
+        "oldLocation": "Cát Tân, Phù Cát, Bình Định",
+        "parent_id": 500949,
+        "newLocation": "Phù Cát, Gia Lai",
+        "distance": 35.18672717162407
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Quy Nhơn",
+        "lat": 13.7781251,
+        "long": 109.2236174,
+        "id": 122,
+        "code": "QNH",
+        "short_name": "Quy Nhơn",
+        "oldLocation": "Quy Nhơn, Bình Định",
+        "newLocation": "Quy Nhơn, Gia Lai",
+        "distance": 0.8933578331235206
+      },
+      {
+        "name": "Ga Diêu Trì",
+        "lat": 13.8072986,
+        "long": 109.1437949,
+        "id": 43,
+        "code": "DTR",
+        "short_name": "Diêu Trì",
+        "oldLocation": "Tuy Phước, Bình Định",
+        "parent_id": 500970,
+        "newLocation": "Tuy Phước, Gia Lai",
+        "distance": 11.216412795449317,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Bình Định",
+        "lat": 13.8869794,
+        "long": 109.1015097,
+        "id": 6,
+        "code": "BDI",
+        "short_name": "Bình Định",
+        "oldLocation": "An Nhơn, Bình Định",
+        "newLocation": "An Nhơn, Gia Lai",
+        "distance": 22.38503673643655
+      },
+      {
+        "name": "Ga Vân Canh",
+        "lat": 13.620556,
+        "long": 108.996944,
+        "id": 155,
+        "code": "VCA",
+        "short_name": "Vân Canh",
+        "oldLocation": "Vân Canh, Bình Định",
+        "parent_id": 500976,
+        "newLocation": "Vân Canh, Gia Lai",
+        "distance": 39.10916883425538
+      }
+    ]
+  }
+}

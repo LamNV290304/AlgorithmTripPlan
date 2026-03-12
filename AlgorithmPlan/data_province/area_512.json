@@ -1,0 +1,159 @@
+{
+  "message": "success",
+  "data": {
+    "id": "512",
+    "base_id": "41",
+    "longitude": 105.7486874,
+    "latitude": 18.7784704,
+    "name": "Cửa Lò",
+    "english_name": "Cua Lo",
+    "code": "cl",
+    "x_migrate_key": "454",
+    "city_id": "512",
+    "city_name": "Cửa Lò",
+    "city_english_name": "Cua Lo",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "20",
+    "is_search_on_fe": 1,
+    "state_id": "41",
+    "state_name": "Nghệ An",
+    "state_english_name": "Nghe An",
+    "country_id": "1926",
+    "name_token": "Cửa Lò",
+    "alias": [
+      "cualo"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cửa Lò - Nghệ An",
+    "full_english_name": "Cua Lo - Nghe An",
+    "airports": [
+      {
+        "bbox": [
+          105.670764,
+          18.737569,
+          105.670764,
+          18.737569
+        ],
+        "geometry": {
+          "coordinates": [
+            105.670764,
+            18.737569
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135555",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vinh",
+          "AirportName_En": "Vinh Airport",
+          "CityName_Vi": "Vinh",
+          "CityName_En": "Vinh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135555,
+          "CITY": "Vinh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VII",
+          "ICAO": "VVVH",
+          "NAME": "Vinh Airport",
+          "NAME_SHORT": "Vinh",
+          "OF_APT_ID": 6195,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.67076,
+          "Y": 18.73757,
+          "Z__feet_": 23,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Nghi Liên, Vinh, Nghệ An",
+        "parent_id": 502118,
+        "newLocation": "Vinh Hưng, Nghệ An",
+        "distance": 12.194926375264767
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Vinh",
+        "lat": 18.6881571,
+        "long": 105.6640343,
+        "id": 158,
+        "code": "VIN",
+        "short_name": "Vinh",
+        "oldLocation": "Vinh, Nghệ An",
+        "parent_id": 502102,
+        "newLocation": "Thành Vinh, Nghệ An",
+        "distance": 17.456568268596566,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Vĩnh Thủy",
+        "lat": 18.6881571,
+        "long": 105.6640343,
+        "id": 160,
+        "code": "VTH",
+        "short_name": "Vĩnh Thủy",
+        "oldLocation": "Vinh, Nghệ An",
+        "parent_id": 502102,
+        "newLocation": "Thành Vinh, Nghệ An",
+        "distance": 17.456568268596566
+      },
+      {
+        "name": "Ga Yên Xuân",
+        "lat": 18.603889,
+        "long": 105.62,
+        "id": 172,
+        "code": "YXU",
+        "short_name": "Yên Xuân",
+        "oldLocation": "Hưng Nguyên, Nghệ An",
+        "parent_id": 502036,
+        "newLocation": "Hưng Nguyên, Nghệ An",
+        "distance": 30.779473488839766
+      },
+      {
+        "name": "Ga Chợ Sy",
+        "lat": 19.0082921,
+        "long": 105.5761564,
+        "id": 25,
+        "code": "CSY",
+        "short_name": "Chợ Sy",
+        "oldLocation": "Diễn Châu, Nghệ An",
+        "parent_id": 502024,
+        "newLocation": "Đức Châu, Nghệ An",
+        "distance": 40.74862647286532
+      },
+      {
+        "name": "Ga Yên Trung",
+        "lat": 18.523087,
+        "long": 105.5876509,
+        "id": 170,
+        "code": "YTR",
+        "short_name": "Yên Trung",
+        "oldLocation": "Đức Thọ, Hà Tĩnh",
+        "parent_id": 501128,
+        "newLocation": "Đức Thọ, Hà Tĩnh",
+        "distance": 43.003411095267744
+      },
+      {
+        "name": "Ga Đức Lạc",
+        "lat": 18.4830981,
+        "long": 105.5827039,
+        "id": 44,
+        "code": "DUL",
+        "short_name": "Đức Lạc",
+        "oldLocation": "Đức Thọ, Hà Tĩnh",
+        "parent_id": 501128,
+        "newLocation": "Đức Thọ, Hà Tĩnh",
+        "distance": 48.373244114683644
+      }
+    ]
+  }
+}

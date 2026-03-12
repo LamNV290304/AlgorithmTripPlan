@@ -1,0 +1,137 @@
+{
+  "message": "success",
+  "data": {
+    "id": "417",
+    "base_id": "32",
+    "longitude": 109.1967488,
+    "latitude": 12.2387911,
+    "name": "Nha Trang",
+    "english_name": "Nha Trang",
+    "code": "NT",
+    "x_migrate_key": "359",
+    "city_id": "417",
+    "city_name": "Nha Trang",
+    "city_english_name": "Nha Trang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "32",
+    "state_name": "Khánh Hòa",
+    "state_english_name": "Khanh Hoa",
+    "country_id": "1926",
+    "name_token": "Nha Trang",
+    "alias": [
+      "nhatrang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Nha Trang - Khánh Hòa",
+    "full_english_name": "Nha Trang - Khanh Hoa",
+    "airports": [
+      {
+        "bbox": [
+          109.219372,
+          11.998153,
+          109.219372,
+          11.998153
+        ],
+        "geometry": {
+          "coordinates": [
+            109.219372,
+            11.998153
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135552",
+        "properties": {
+          "CITY": "Nha Trang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CXR",
+          "ICAO": "VVCR",
+          "NAME": "Cam Ranh Airport",
+          "NAME_SHORT": "Cam Ranh",
+          "OF_APT_ID": 6189,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 109.219376,
+          "Y": 11.998153,
+          "Z__feet_": 40,
+          "total_leng": 3048,
+          "AirportName_Vi": "Sân bay Cam Ranh",
+          "AirportName_En": "Cam Ranh Airport",
+          "CityName_Vi": "Nha Trang",
+          "CityName_En": "Nha Trang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135552
+        },
+        "type": "Feature",
+        "oldLocation": "Cam Nghĩa, Cam Ranh, Khánh Hòa",
+        "parent_id": 501609,
+        "newLocation": "Bắc Cam Ranh, Khánh Hòa",
+        "distance": 34.931696465666334
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Nha Trang",
+        "lat": 12.2484625,
+        "long": 109.1842369,
+        "id": 101,
+        "code": "NTR",
+        "short_name": "Nha Trang",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501656,
+        "newLocation": "Tây Nha Trang, Khánh Hòa",
+        "distance": 2.2535646908063565,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Lương Sơn",
+        "lat": 12.3375343,
+        "long": 109.1944619,
+        "id": 80,
+        "code": "LUS",
+        "short_name": "Lương Sơn",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501611,
+        "newLocation": "Bắc Nha Trang, Khánh Hòa",
+        "distance": 14.277319996750323
+      },
+      {
+        "es_id": 171693,
+        "name": "Ga Ninh Hoà",
+        "lat": 12.489559,
+        "long": 109.1239841,
+        "id": 95,
+        "code": "NHO",
+        "short_name": "Ninh Hoà",
+        "oldLocation": "Phường Ninh Hiệp, Ninh Hòa, Khánh Hòa",
+        "parent_id": 501643,
+        "base_id": 144497,
+        "newLocation": "Ninh Hòa, Khánh Hòa",
+        "distance": 37.67730443146256
+      },
+      {
+        "name": "Ga Ngã Ba",
+        "lat": 11.9259721,
+        "long": 109.1212084,
+        "id": 92,
+        "code": "NBA",
+        "short_name": "Ngã Ba",
+        "oldLocation": "Xã Cam Phước Đông, Cam Ranh, Khánh Hòa",
+        "parent_id": 501604,
+        "newLocation": "Ba Ngòi, Khánh Hòa",
+        "distance": 46.46263167099679
+      }
+    ]
+  }
+}

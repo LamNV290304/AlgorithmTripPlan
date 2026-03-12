@@ -1,0 +1,123 @@
+{
+  "message": "success",
+  "data": {
+    "id": "482",
+    "base_id": "38",
+    "longitude": 103.8437852,
+    "latitude": 22.3363608,
+    "name": "Sa Pa",
+    "english_name": "SaPa",
+    "code": "sp",
+    "x_migrate_key": "424",
+    "city_id": "482",
+    "city_name": "Sa Pa",
+    "city_english_name": "SaPa",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": null,
+    "is_search_on_fe": 1,
+    "state_id": "38",
+    "state_name": "Lào Cai",
+    "state_english_name": "Lao Cai",
+    "country_id": "1926",
+    "name_token": "Sa Pa",
+    "alias": [
+      "sapa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Sa Pa - Lào Cai",
+    "full_english_name": "SaPa - Lao Cai",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 308.9404414510523
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Lào Cai",
+        "lat": 22.4922323,
+        "long": 103.9782991,
+        "id": 67,
+        "code": "LCA",
+        "short_name": "Lào Cai",
+        "oldLocation": "Phường Lào Cai, Lào Cai, Lào Cai",
+        "parent_id": 501808,
+        "newLocation": "Lào Cai, Lào Cai",
+        "distance": 28.823529960457048,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Thái Niên",
+        "lat": 22.3992117,
+        "long": 104.0868167,
+        "id": 151,
+        "code": "TNI",
+        "short_name": "Thái Niên",
+        "oldLocation": "Bảo Thắng, Lào Cai",
+        "parent_id": 501782,
+        "newLocation": "Bảo Thắng, Lào Cai",
+        "distance": 33.73422808899866
+      },
+      {
+        "name": "Ga Phố Lu",
+        "lat": 22.314265,
+        "long": 104.187589,
+        "id": 110,
+        "code": "PLU",
+        "short_name": "Phố Lu",
+        "oldLocation": "Bảo Thắng, Lào Cai",
+        "parent_id": 501782,
+        "newLocation": "Bảo Thắng, Lào Cai",
+        "distance": 46.083556508050556
+      }
+    ]
+  }
+}

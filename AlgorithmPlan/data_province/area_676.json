@@ -1,0 +1,184 @@
+{
+  "message": "success",
+  "data": {
+    "id": "676",
+    "base_id": "55",
+    "longitude": 105.8252038,
+    "latitude": 21.5671559,
+    "name": "Thái Nguyên",
+    "english_name": "Thai Nguyen",
+    "code": "tn",
+    "x_migrate_key": null,
+    "city_id": "676",
+    "city_name": "Thái Nguyên",
+    "city_english_name": "Thai Nguyen",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "55",
+    "state_name": "Thái Nguyên",
+    "state_english_name": "Thai Nguyen",
+    "country_id": "1926",
+    "name_token": "Thái Nguyên",
+    "alias": [
+      "thainguyen"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Thái Nguyên - Thái Nguyên",
+    "full_english_name": "Thai Nguyen - Thai Nguyen",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 50.0690742684133
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Thái Nguyên",
+        "lat": 21.5868579,
+        "long": 105.8237712,
+        "id": 150,
+        "code": "TNG",
+        "short_name": "Thái Nguyên",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502846,
+        "newLocation": "Phan Đình Phùng, Thái Nguyên",
+        "distance": 2.8544945323777626
+      },
+      {
+        "name": "Ga Lưu Xá",
+        "lat": 21.5622511,
+        "long": 105.8466888,
+        "id": 81,
+        "code": "LXA",
+        "short_name": "Lưu Xá",
+        "oldLocation": "Phường Phú Xá, Thái Nguyên, Thái Nguyên",
+        "parent_id": 502876,
+        "newLocation": "Tích Lương, Thái Nguyên",
+        "distance": 2.9740860021400697
+      },
+      {
+        "name": "Ga Quán Triều",
+        "lat": 21.6038132,
+        "long": 105.8032245,
+        "id": 124,
+        "code": "QTR",
+        "short_name": "Quán Triều",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502859,
+        "newLocation": "Quan Triều, Thái Nguyên",
+        "distance": 6.066878640287184
+      },
+      {
+        "name": "Ga Phổ Yên",
+        "lat": 21.4119225,
+        "long": 105.8766818,
+        "id": 108,
+        "code": "PHY",
+        "short_name": "Phổ Yên",
+        "oldLocation": "Phổ Yên, Thái Nguyên",
+        "parent_id": 502848,
+        "newLocation": "Phổ Yên, Thái Nguyên",
+        "distance": 23.483485413357677
+      },
+      {
+        "es_id": 171735,
+        "name": "Ga Trung Giã",
+        "lat": 21.3148237,
+        "long": 105.8711565,
+        "id": 137,
+        "code": "TGI",
+        "short_name": "Trung Giã",
+        "oldLocation": "Xã Trung Giã, Sóc Sơn, Hà Nội",
+        "base_id": 136974,
+        "parent_id": 501089,
+        "newLocation": "Trung Giã, Hà Nội",
+        "distance": 36.995795320321314
+      },
+      {
+        "name": "Ga Vĩnh Yên",
+        "lat": 21.3094354,
+        "long": 105.6012537,
+        "id": 164,
+        "code": "VYE",
+        "short_name": "Vĩnh Yên",
+        "oldLocation": "Vĩnh Yên, Vĩnh Phúc",
+        "parent_id": 502387,
+        "newLocation": "Vĩnh Phúc, Phú Thọ",
+        "distance": 47.9153407753289
+      },
+      {
+        "name": "Ga Đa Phúc",
+        "lat": 21.2331323,
+        "long": 105.8611465,
+        "id": 27,
+        "code": "DAP",
+        "short_name": "Đa Phúc",
+        "oldLocation": "Xã Tiên Dược, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 48.52596474842897
+      },
+      {
+        "name": "Ga Phúc Yên",
+        "lat": 21.2399885,
+        "long": 105.7124257,
+        "id": 120,
+        "code": "PYE",
+        "short_name": "Phúc Yên",
+        "oldLocation": "Phường Trưng Trắc, Phúc Yên, Vĩnh Phúc",
+        "parent_id": null,
+        "newLocation": "Phúc Yên, Vĩnh Phúc",
+        "distance": 49.66908261109842
+      }
+    ]
+  }
+}

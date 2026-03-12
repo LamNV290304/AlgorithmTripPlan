@@ -1,0 +1,82 @@
+{
+  "message": "success",
+  "data": {
+    "id": "349",
+    "base_id": "27",
+    "name": "Dương Kinh",
+    "english_name": "Duong Kinh",
+    "code": "dk",
+    "x_migrate_key": "289",
+    "city_id": "349",
+    "city_name": "Dương Kinh",
+    "city_english_name": "Duong Kinh",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "18",
+    "is_search_on_fe": 1,
+    "state_id": "27",
+    "state_name": "Hải Phòng",
+    "state_english_name": "Hai Phong",
+    "country_id": "1926",
+    "name_token": "Dương Kinh",
+    "alias": [
+      "duongkinh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Dương Kinh - Hải Phòng",
+    "full_english_name": "Duong Kinh - Hai Phong",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng"
+      }
+    ],
+    "train_stations": []
+  }
+}

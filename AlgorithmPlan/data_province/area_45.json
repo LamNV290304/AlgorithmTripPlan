@@ -1,0 +1,142 @@
+{
+  "message": "success",
+  "data": {
+    "id": "45",
+    "longitude": 109.066370019,
+    "base_id": "1926",
+    "latitude": 13.2002979325001,
+    "name": "Phú Yên",
+    "english_name": "Phu Yen",
+    "code": "PYN",
+    "x_migrate_key": 45,
+    "state_id": "45",
+    "state_name": "Phú Yên",
+    "state_english_name": "Phu Yen",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Phú Yên",
+    "alias": [
+      "phuyen"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Phú Yên",
+    "full_english_name": "Phu Yen",
+    "airports": [
+      {
+        "bbox": [
+          109.333706,
+          13.04955,
+          109.333706,
+          13.04955
+        ],
+        "geometry": {
+          "coordinates": [
+            109.333706,
+            13.04955
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135556",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tuy Hòa",
+          "AirportName_En": "Tuy Hoa Airport",
+          "CityName_Vi": "Phú Yên",
+          "CityName_En": "Tuy Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135556,
+          "CITY": "Tuy Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "TBB",
+          "ICAO": "VVTH",
+          "NAME": "Dong Tac  Airport",
+          "NAME_SHORT": "Dong Tac",
+          "OF_APT_ID": 4158,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 109.33371,
+          "Y": 13.04955,
+          "Z__feet_": 20,
+          "total_leng": 5700
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Thạnh, Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 43.4883048475634
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga La Hai",
+        "lat": 13.3814054,
+        "long": 109.1058389,
+        "id": 72,
+        "code": "LHA",
+        "short_name": "La Hai",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500528,
+        "newLocation": "Đồng Xuân, Đắk Lắk",
+        "distance": 26.762053129362076
+      },
+      {
+        "name": "Ga Tuy Hoà",
+        "lat": 13.0881191,
+        "long": 109.2972793,
+        "id": 138,
+        "code": "THA",
+        "short_name": "Tuy Hoà",
+        "oldLocation": "Tuy Hòa, Phú Yên",
+        "parent_id": 500599,
+        "newLocation": "Tuy Hòa, Đắk Lắk",
+        "distance": 36.32461294387829,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Ðông Tác",
+        "lat": 13.0555768,
+        "long": 109.3220812,
+        "id": 41,
+        "code": "DTA",
+        "short_name": "Ðông Tác",
+        "oldLocation": "Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 41.635203619346235
+      },
+      {
+        "name": "Ga Phước Lãnh",
+        "lat": 13.4863314,
+        "long": 109.0312447,
+        "id": 109,
+        "code": "PLA",
+        "short_name": "Phước Lãnh",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500604,
+        "newLocation": "Xuân Lãnh, Đắk Lắk",
+        "distance": 41.64122101119946
+      },
+      {
+        "name": "Ga Phú Hiệp",
+        "lat": 12.9997413,
+        "long": 109.3620784,
+        "id": 105,
+        "code": "PHI",
+        "short_name": "Phú Hiệp",
+        "oldLocation": "Đông Hòa, Phú Yên",
+        "parent_id": 500558,
+        "newLocation": "Hòa Hiệp, Đắk Lắk",
+        "distance": 50.73273587815477
+      }
+    ]
+  }
+}

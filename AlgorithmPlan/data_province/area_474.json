@@ -1,0 +1,122 @@
+{
+  "message": "success",
+  "data": {
+    "id": "474",
+    "base_id": "37",
+    "longitude": 106.5819789,
+    "latitude": 22.0924829,
+    "name": "Văn Lãng",
+    "english_name": "Van Lang",
+    "code": "vl",
+    "x_migrate_key": "416",
+    "city_id": "474",
+    "city_name": "Văn Lãng",
+    "city_english_name": "Van Lang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "37",
+    "state_name": "Lạng Sơn",
+    "state_english_name": "Lang Son",
+    "country_id": "1926",
+    "name_token": "Văn Lãng",
+    "alias": [
+      "vanlang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Văn Lãng - Lạng Sơn",
+    "full_english_name": "Van Lang - Lang Son",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 163.39574698196537
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Đồng Đăng",
+        "lat": 21.9438019,
+        "long": 106.6971159,
+        "id": 29,
+        "code": "DDA",
+        "short_name": "Đồng Đăng",
+        "oldLocation": "Cao Lộc, Lạng Sơn",
+        "parent_id": 501720,
+        "newLocation": "Đồng Đăng, Lạng Sơn",
+        "distance": 26.457361143888722
+      },
+      {
+        "name": "Ga Lạng Sơn",
+        "lat": 21.8556948,
+        "long": 106.7688565,
+        "id": 78,
+        "code": "LSO",
+        "short_name": "Lạng Sơn",
+        "oldLocation": "Lạng Sơn, Lạng Sơn",
+        "parent_id": 501721,
+        "newLocation": "Đông Kinh, Lạng Sơn",
+        "distance": 42.416501096452514
+      },
+      {
+        "name": "Ga Yên Trạch",
+        "lat": 21.8102696,
+        "long": 106.7624786,
+        "id": 169,
+        "code": "YET",
+        "short_name": "Yên Trạch",
+        "oldLocation": "Lạng Sơn, Lạng Sơn",
+        "parent_id": 501721,
+        "newLocation": "Đông Kinh, Lạng Sơn",
+        "distance": 47.432819493405695
+      }
+    ]
+  }
+}

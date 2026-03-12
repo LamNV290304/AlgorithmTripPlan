@@ -1,0 +1,172 @@
+{
+  "message": "success",
+  "data": {
+    "id": "12",
+    "longitude": 104.970762363,
+    "base_id": "1926",
+    "latitude": 8.97154147650005,
+    "name": "Cà Mau",
+    "english_name": "Ca Mau",
+    "code": "CMU",
+    "x_migrate_key": 12,
+    "state_id": "12",
+    "state_name": "Cà Mau",
+    "state_english_name": "Ca Mau",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Cà Mau",
+    "alias": [
+      "camau"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cà Mau",
+    "full_english_name": "Ca Mau",
+    "airports": [
+      {
+        "bbox": [
+          105.174721,
+          9.188049,
+          105.174721,
+          9.188049
+        ],
+        "geometry": {
+          "coordinates": [
+            105.174721,
+            9.188049
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135546",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cà Mau",
+          "AirportName_En": "Ca Mau Airport",
+          "CityName_Vi": "Ca Mau",
+          "CityName_En": "Ca Mau",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135546,
+          "CITY": "Ca Mau",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CAH",
+          "ICAO": "VVCM",
+          "NAME": "Ca Mau  Airport",
+          "NAME_SHORT": "Ca Mau",
+          "OF_APT_ID": 4156,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.17472,
+          "Y": 9.188049,
+          "Z__feet_": 6,
+          "total_leng": 1500
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 6, Cà Mau, Cà Mau",
+        "parent_id": 500248,
+        "newLocation": "Tân Thành, Cà Mau",
+        "distance": 42.744468084104064
+      },
+      {
+        "bbox": [
+          105.711922,
+          10.085119,
+          105.711922,
+          10.085119
+        ],
+        "geometry": {
+          "coordinates": [
+            105.711922,
+            10.085119
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135547",
+        "properties": {
+          "VxrAreaId": 135547,
+          "AirportName_Vi": "Sân bay Cần Thơ",
+          "AirportName_En": "Can Tho International Airport",
+          "CityName_Vi": "Cần Thơ",
+          "CityName_En": "Can Tho",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "CITY": "Can Tho",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCA",
+          "ICAO": "VVCT",
+          "NAME": "Tra Nuoc Airport",
+          "NAME_SHORT": "Can Tho",
+          "OF_APT_ID": 6191,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.71192,
+          "Y": 10.085119,
+          "Z__feet_": 9,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Trà An, Bình Thủy, Cần Thơ",
+        "parent_id": 500393,
+        "newLocation": "Thới An Đông, Cần Thơ",
+        "distance": 192.54935140709512
+      },
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 358.61793484180976
+      }
+    ],
+    "train_stations": []
+  }
+}

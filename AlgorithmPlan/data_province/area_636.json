@@ -1,0 +1,131 @@
+{
+  "message": "success",
+  "data": {
+    "id": "636",
+    "base_id": "51",
+    "longitude": 105.6177942,
+    "latitude": 9.5215171,
+    "name": "Ngã Năm",
+    "english_name": "Nga Nam",
+    "code": "nn",
+    "x_migrate_key": "578",
+    "city_id": "636",
+    "city_name": "Ngã Năm",
+    "city_english_name": "Nga Nam",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "51",
+    "state_name": "Sóc Trăng",
+    "state_english_name": "Soc Trang",
+    "country_id": "1926",
+    "name_token": "Ngã Năm",
+    "alias": [
+      "nganam"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Ngã Năm - Sóc Trăng",
+    "full_english_name": "Nga Nam - Soc Trang",
+    "airports": [
+      {
+        "bbox": [
+          105.711922,
+          10.085119,
+          105.711922,
+          10.085119
+        ],
+        "geometry": {
+          "coordinates": [
+            105.711922,
+            10.085119
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135547",
+        "properties": {
+          "VxrAreaId": 135547,
+          "AirportName_Vi": "Sân bay Cần Thơ",
+          "AirportName_En": "Can Tho International Airport",
+          "CityName_Vi": "Cần Thơ",
+          "CityName_En": "Can Tho",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "CITY": "Can Tho",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCA",
+          "ICAO": "VVCT",
+          "NAME": "Tra Nuoc Airport",
+          "NAME_SHORT": "Can Tho",
+          "OF_APT_ID": 6191,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.71192,
+          "Y": 10.085119,
+          "Z__feet_": 9,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Trà An, Bình Thủy, Cần Thơ",
+        "parent_id": 500393,
+        "newLocation": "Thới An Đông, Cần Thơ",
+        "distance": 82.56647141661742
+      },
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 238.35237815524232
+      }
+    ],
+    "train_stations": []
+  }
+}

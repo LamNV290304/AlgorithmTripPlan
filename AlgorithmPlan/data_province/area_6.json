@@ -1,0 +1,129 @@
+{
+  "message": "success",
+  "data": {
+    "id": "6",
+    "longitude": 106.1081212885,
+    "base_id": "1926",
+    "latitude": 21.1161069295,
+    "name": "Bắc Ninh",
+    "english_name": "Bac Ninh",
+    "code": "BNH",
+    "x_migrate_key": 6,
+    "state_id": "6",
+    "state_name": "Bắc Ninh",
+    "state_english_name": "Bac Ninh",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Bắc Ninh",
+    "alias": [
+      "bacninh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bắc Ninh",
+    "full_english_name": "Bac Ninh",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 43.31767385316574
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Bắc Ninh",
+        "lat": 21.1783969,
+        "long": 106.0562209,
+        "id": 11,
+        "code": "BNI",
+        "short_name": "Bắc Ninh",
+        "oldLocation": "Bắc Ninh, Bắc Ninh",
+        "parent_id": 500133,
+        "newLocation": "Kinh Bắc, Bắc Ninh",
+        "distance": 11.403336037837967
+      },
+      {
+        "name": "Ga Thị Cầu",
+        "lat": 21.1947399,
+        "long": 106.0812881,
+        "id": 135,
+        "code": "TCA",
+        "short_name": "Thị Cầu",
+        "oldLocation": "Bắc Ninh, Bắc Ninh",
+        "parent_id": 500192,
+        "newLocation": "Vũ Ninh, Bắc Ninh",
+        "distance": 11.928400002880846
+      },
+      {
+        "name": "Ga Từ Sơn",
+        "lat": 21.1199013,
+        "long": 105.9629473,
+        "id": 152,
+        "code": "TSO",
+        "short_name": "Từ Sơn",
+        "oldLocation": "Từ Sơn, Bắc Ninh",
+        "parent_id": 500123,
+        "newLocation": "Đồng Nguyên, Bắc Ninh",
+        "distance": 19.58370462105202
+      },
+      {
+        "name": "Ga Lim",
+        "lat": 7.100265,
+        "long": 12.4777,
+        "id": 73,
+        "code": "LIM",
+        "short_name": "Lim",
+        "oldLocation": "Tiên Du, Bắc Ninh",
+        "parent_id": 500176,
+        "newLocation": "Tiên Du, Bắc Ninh",
+        "distance": 13126.469889988148
+      }
+    ]
+  }
+}

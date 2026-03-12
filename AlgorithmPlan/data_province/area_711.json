@@ -1,0 +1,122 @@
+{
+  "message": "success",
+  "data": {
+    "id": "711",
+    "base_id": "57",
+    "longitude": 107.9394761,
+    "latitude": 16.2725431,
+    "name": "Phú Lộc",
+    "english_name": "Phu Loc",
+    "code": "pl",
+    "x_migrate_key": "653",
+    "city_id": "711",
+    "city_name": "Phú Lộc",
+    "city_english_name": "Phu Loc",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "57",
+    "state_name": "Thừa Thiên Huế",
+    "state_english_name": "Thua Thien Hue",
+    "country_id": "1926",
+    "name_token": "Phú Lộc",
+    "alias": [
+      "phuloc"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Phú Lộc - Thừa Thiên Huế",
+    "full_english_name": "Phu Loc - Thua Thien Hue",
+    "airports": [
+      {
+        "bbox": [
+          107.702614,
+          16.4015,
+          107.702614,
+          16.4015
+        ],
+        "geometry": {
+          "coordinates": [
+            107.702614,
+            16.4015
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135559",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phú Bài",
+          "AirportName_En": "Phu Bai International Airport",
+          "CityName_Vi": "Huế",
+          "CityName_En": "Hue",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135559,
+          "CITY": "Hue",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HUI",
+          "ICAO": "VVPB",
+          "NAME": "Phubai  Airport",
+          "NAME_SHORT": "Phubai",
+          "OF_APT_ID": 3201,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 107.702614,
+          "Y": 16.4015,
+          "Z__feet_": 48,
+          "total_leng": 2675
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Bài, Hương Thủy, Thừa Thiên Huế",
+        "parent_id": 501485,
+        "newLocation": "Phú Bài, Thừa Thiên Huế",
+        "distance": 37.77644140696075
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Lăng Cô",
+        "lat": 16.2217772,
+        "long": 108.0820036,
+        "id": 68,
+        "code": "LCO",
+        "short_name": "Lăng Cô",
+        "oldLocation": "Phú Lộc, Thừa Thiên Huế",
+        "parent_id": 501466,
+        "newLocation": "Chân Mây - Lăng Cô, Thừa Thiên Huế",
+        "distance": 21.097431248830407
+      },
+      {
+        "name": "Ga Kim Liên",
+        "lat": 16.13275,
+        "long": 108.120447,
+        "id": 61,
+        "code": "KLI",
+        "short_name": "Kim Liên",
+        "oldLocation": "Phường Hòa Hiệp Nam, Liên Chiểu, Đà Nẵng",
+        "parent_id": 500444,
+        "newLocation": "Hải Vân, Đà Nẵng",
+        "distance": 32.23981020760953
+      },
+      {
+        "name": "Ga Đà Nẵng",
+        "lat": 16.0716481,
+        "long": 108.2093203,
+        "id": 37,
+        "code": "DNA",
+        "short_name": "Đà Nẵng",
+        "oldLocation": "Thanh Khê, Đà Nẵng",
+        "parent_id": 500443,
+        "newLocation": "Hải Châu, Đà Nẵng",
+        "distance": 47.400708895769284
+      }
+    ]
+  }
+}

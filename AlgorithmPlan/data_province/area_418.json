@@ -1,0 +1,149 @@
+{
+  "message": "success",
+  "data": {
+    "id": "418",
+    "base_id": "32",
+    "longitude": 109.1345811,
+    "latitude": 12.4864955,
+    "name": "Ninh Hòa",
+    "english_name": "Ninh Hoa",
+    "code": "nh",
+    "x_migrate_key": "360",
+    "city_id": "418",
+    "city_name": "Ninh Hòa",
+    "city_english_name": "Ninh Hoa",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "20",
+    "is_search_on_fe": 1,
+    "state_id": "32",
+    "state_name": "Khánh Hòa",
+    "state_english_name": "Khanh Hoa",
+    "country_id": "1926",
+    "name_token": "Ninh Hòa",
+    "alias": [
+      "ninhhoa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Ninh Hòa - Khánh Hòa",
+    "full_english_name": "Ninh Hoa - Khanh Hoa",
+    "airports": [
+      {
+        "bbox": [
+          109.219372,
+          11.998153,
+          109.219372,
+          11.998153
+        ],
+        "geometry": {
+          "coordinates": [
+            109.219372,
+            11.998153
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135552",
+        "properties": {
+          "CITY": "Nha Trang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CXR",
+          "ICAO": "VVCR",
+          "NAME": "Cam Ranh Airport",
+          "NAME_SHORT": "Cam Ranh",
+          "OF_APT_ID": 6189,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 109.219376,
+          "Y": 11.998153,
+          "Z__feet_": 40,
+          "total_leng": 3048,
+          "AirportName_Vi": "Sân bay Cam Ranh",
+          "AirportName_En": "Cam Ranh Airport",
+          "CityName_Vi": "Nha Trang",
+          "CityName_En": "Nha Trang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135552
+        },
+        "type": "Feature",
+        "oldLocation": "Cam Nghĩa, Cam Ranh, Khánh Hòa",
+        "parent_id": 501609,
+        "newLocation": "Bắc Cam Ranh, Khánh Hòa",
+        "distance": 71.60058298925834
+      }
+    ],
+    "train_stations": [
+      {
+        "es_id": 171693,
+        "name": "Ga Ninh Hoà",
+        "lat": 12.489559,
+        "long": 109.1239841,
+        "id": 95,
+        "code": "NHO",
+        "short_name": "Ninh Hoà",
+        "oldLocation": "Phường Ninh Hiệp, Ninh Hòa, Khánh Hòa",
+        "parent_id": 501643,
+        "base_id": 144497,
+        "newLocation": "Ninh Hòa, Khánh Hòa",
+        "distance": 1.5597754726972144
+      },
+      {
+        "name": "Ga Lương Sơn",
+        "lat": 12.3375343,
+        "long": 109.1944619,
+        "id": 80,
+        "code": "LUS",
+        "short_name": "Lương Sơn",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501611,
+        "newLocation": "Bắc Nha Trang, Khánh Hòa",
+        "distance": 23.132831228160594
+      },
+      {
+        "name": "Ga Giã",
+        "lat": 12.70003574,
+        "long": 109.2236767,
+        "id": 47,
+        "code": "GIA",
+        "short_name": "Giã",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501664,
+        "newLocation": "Vạn Ninh, Khánh Hòa",
+        "distance": 33.32891974493615
+      },
+      {
+        "name": "Ga Nha Trang",
+        "lat": 12.2484625,
+        "long": 109.1842369,
+        "id": 101,
+        "code": "NTR",
+        "short_name": "Nha Trang",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501656,
+        "newLocation": "Tây Nha Trang, Khánh Hòa",
+        "distance": 35.11555784187806,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Tu Bông",
+        "lat": 12.7779475,
+        "long": 109.3009695,
+        "id": 134,
+        "code": "TBO",
+        "short_name": "Tu Bông",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501662,
+        "newLocation": "Tu Bông, Khánh Hòa",
+        "distance": 48.2265403149681
+      }
+    ]
+  }
+}

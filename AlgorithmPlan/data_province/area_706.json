@@ -1,0 +1,135 @@
+{
+  "message": "success",
+  "data": {
+    "id": "706",
+    "base_id": "57",
+    "longitude": 107.6772521,
+    "latitude": 16.4089569,
+    "name": "Hương Thủy",
+    "english_name": "Huong Thuy",
+    "code": "ht",
+    "x_migrate_key": "648",
+    "city_id": "706",
+    "city_name": "Hương Thủy",
+    "city_english_name": "Huong Thuy",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "20",
+    "is_search_on_fe": 1,
+    "state_id": "57",
+    "state_name": "Thừa Thiên Huế",
+    "state_english_name": "Thua Thien Hue",
+    "country_id": "1926",
+    "name_token": "Hương Thủy",
+    "alias": [
+      "huongthuy"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hương Thủy - Thừa Thiên Huế",
+    "full_english_name": "Huong Thuy - Thua Thien Hue",
+    "airports": [
+      {
+        "bbox": [
+          107.702614,
+          16.4015,
+          107.702614,
+          16.4015
+        ],
+        "geometry": {
+          "coordinates": [
+            107.702614,
+            16.4015
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135559",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phú Bài",
+          "AirportName_En": "Phu Bai International Airport",
+          "CityName_Vi": "Huế",
+          "CityName_En": "Hue",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135559,
+          "CITY": "Hue",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HUI",
+          "ICAO": "VVPB",
+          "NAME": "Phubai  Airport",
+          "NAME_SHORT": "Phubai",
+          "OF_APT_ID": 3201,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 107.702614,
+          "Y": 16.4015,
+          "Z__feet_": 48,
+          "total_leng": 2675
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Bài, Hương Thủy, Thừa Thiên Huế",
+        "parent_id": 501485,
+        "newLocation": "Phú Bài, Thừa Thiên Huế",
+        "distance": 3.6783762607925237
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Huế",
+        "lat": 16.456436,
+        "long": 107.5780693,
+        "id": 59,
+        "code": "HUE",
+        "short_name": "Huế",
+        "oldLocation": "Phường Thuận Hòa, Huế, Thừa Thiên Huế",
+        "parent_id": 501470,
+        "newLocation": "Hương An, Thừa Thiên Huế",
+        "distance": 15.369131782966749,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga An Hòa",
+        "lat": 16.4820612,
+        "long": 107.5522,
+        "id": 1,
+        "code": "AHO",
+        "short_name": "An Hòa",
+        "oldLocation": "Huế, Thừa Thiên Huế",
+        "parent_id": 501470,
+        "newLocation": "Hương An, Thừa Thiên Huế",
+        "distance": 20.303921343655873
+      },
+      {
+        "name": "Ga Văn Xá",
+        "lat": 16.5083685,
+        "long": 107.5036433,
+        "id": 162,
+        "code": "VXA",
+        "short_name": "Văn Xá",
+        "oldLocation": "Hương Trà, Thừa Thiên Huế",
+        "parent_id": 501472,
+        "newLocation": "Hương Trà, Thừa Thiên Huế",
+        "distance": 28.03116227042694
+      },
+      {
+        "name": "Ga Hiền Sỹ",
+        "lat": 16.5293338,
+        "long": 107.4320756,
+        "id": 57,
+        "code": "HSY",
+        "short_name": "Hiền Sỹ",
+        "oldLocation": "Phong Điền, Thừa Thiên Huế",
+        "parent_id": 501484,
+        "newLocation": "Phong Thái, Thừa Thiên Huế",
+        "distance": 38.18257699893707
+      }
+    ]
+  }
+}

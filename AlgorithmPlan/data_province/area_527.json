@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "527",
+    "base_id": "41",
+    "longitude": 104.5655273,
+    "latitude": 19.2640131,
+    "name": "Tương Dương",
+    "english_name": "Tuong Duong",
+    "code": "td",
+    "x_migrate_key": "469",
+    "city_id": "527",
+    "city_name": "Tương Dương",
+    "city_english_name": "Tuong Duong",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "41",
+    "state_name": "Nghệ An",
+    "state_english_name": "Nghe An",
+    "country_id": "1926",
+    "name_token": "Tương Dương",
+    "alias": [
+      "tuongduong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Tương Dương - Nghệ An",
+    "full_english_name": "Tuong Duong - Nghe An",
+    "airports": [
+      {
+        "bbox": [
+          105.670764,
+          18.737569,
+          105.670764,
+          18.737569
+        ],
+        "geometry": {
+          "coordinates": [
+            105.670764,
+            18.737569
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135555",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vinh",
+          "AirportName_En": "Vinh Airport",
+          "CityName_Vi": "Vinh",
+          "CityName_En": "Vinh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135555,
+          "CITY": "Vinh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VII",
+          "ICAO": "VVVH",
+          "NAME": "Vinh Airport",
+          "NAME_SHORT": "Vinh",
+          "OF_APT_ID": 6195,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.67076,
+          "Y": 18.73757,
+          "Z__feet_": 23,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Nghi Liên, Vinh, Nghệ An",
+        "parent_id": 502118,
+        "newLocation": "Vinh Hưng, Nghệ An",
+        "distance": 169.14537418068443
+      }
+    ],
+    "train_stations": []
+  }
+}

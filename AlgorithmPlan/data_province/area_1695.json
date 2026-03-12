@@ -1,0 +1,130 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1695",
+    "parent_id": 502963,
+    "name": "Tĩnh Gia",
+    "english_name": null,
+    "code": "TG",
+    "address": "Tĩnh Gia",
+    "english_address": "",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "5",
+    "x_migrate_key": 5206,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 105.778391,
+    "latitude": 19.446326,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "142456",
+    "root_id": "4041",
+    "city_id": "701",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Tĩnh Gia",
+    "city_english_name": "Tinh Gia",
+    "city_migrate_key": "643",
+    "state_id": "56",
+    "state_type": 3,
+    "state_code": "THA",
+    "state_name": "Thanh Hóa",
+    "state_english_name": "Thanh Hoa",
+    "state_migrate_key": 56,
+    "ward_id": "142456",
+    "ward_name": "Thị trấn Tĩnh Gia",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Tĩnh Gia",
+    "alias": [
+      "tinhgia"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Tĩnh Gia - Thị trấn Tĩnh Gia - Tĩnh Gia - Thanh Hóa",
+    "airports": [
+      {
+        "bbox": [
+          105.467778,
+          19.901667,
+          105.467778,
+          19.901667
+        ],
+        "geometry": {
+          "coordinates": [
+            105.467778,
+            19.901667
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135558",
+        "properties": {
+          "AirportName_Vi": "Sân bay Thọ Xuân",
+          "AirportName_En": "Tho Xuan Airport",
+          "CityName_Vi": "Thanh Hóa",
+          "CityName_En": "Thanh Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135558,
+          "CITY": "Thanh Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": null,
+          "IATA_FAA": "THD",
+          "ICAO": "VVTX",
+          "NAME": "Tho  Xuan  Airport",
+          "NAME_SHORT": "Tho  Xuan",
+          "OF_APT_ID": 0,
+          "Other": "Domestic",
+          "TYPE": "D / M",
+          "TZ": 0,
+          "X": 105.46778,
+          "Y": 19.901667,
+          "Z__feet_": 0,
+          "total_leng": 3200
+        },
+        "type": "Feature",
+        "oldLocation": "Xuân Thắng, Thọ Xuân, Thanh Hóa",
+        "parent_id": 502989,
+        "newLocation": "Sao Vàng, Thanh Hóa",
+        "distance": 78.22992154353697
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Minh Khôi",
+        "lat": 19.6331354,
+        "long": 105.701877,
+        "id": 87,
+        "code": "MKH",
+        "short_name": "Minh Khôi",
+        "oldLocation": "Thị trấn Nông Cống, Nông Cống, Thanh Hóa",
+        "parent_id": 502973,
+        "newLocation": "Nông Cống, Thanh Hóa",
+        "distance": 28.945801695426564
+      },
+      {
+        "name": "Ga Cầu Giát",
+        "lat": 19.1567711,
+        "long": 105.6247581,
+        "id": 17,
+        "code": "CGI",
+        "short_name": "Cầu Giát",
+        "oldLocation": "Quỳnh Lưu, Nghệ An",
+        "parent_id": 502085,
+        "newLocation": "Quỳnh Sơn, Nghệ An",
+        "distance": 46.8108149569034
+      }
+    ]
+  }
+}

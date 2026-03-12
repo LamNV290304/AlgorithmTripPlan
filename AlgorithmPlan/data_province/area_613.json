@@ -1,0 +1,79 @@
+{
+  "message": "success",
+  "data": {
+    "id": "613",
+    "base_id": "49",
+    "longitude": 107.71625,
+    "latitude": 21.4182232,
+    "name": "Hải Hà",
+    "english_name": "Hai Ha",
+    "code": "hh",
+    "x_migrate_key": "555",
+    "city_id": "613",
+    "city_name": "Hải Hà",
+    "city_english_name": "Hai Ha",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "49",
+    "state_name": "Quảng Ninh",
+    "state_english_name": "Quang Ninh",
+    "country_id": "1926",
+    "name_token": "Hải Hà",
+    "alias": [
+      "haiha"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hải Hà - Quảng Ninh",
+    "full_english_name": "Hai Ha - Quang Ninh",
+    "airports": [
+      {
+        "geometry": {
+          "coordinates": [
+            107.4166092,
+            21.1163002
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "149325",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vân Đồn",
+          "AirportName_En": "Van Don Airport",
+          "CityName_Vi": "Quảng Ninh",
+          "CityName_En": "Quang Ninh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 149325,
+          "CITY": "Quang Ninh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDO",
+          "ICAO": "VVVD",
+          "NAME": "Van Don Airport",
+          "NAME_SHORT": "Quang Ninh",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 107.4166092,
+          "Y": 21.1163002,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Xã Đoàn Kết, Vân Đồn, Quảng Ninh",
+        "parent_id": 502550,
+        "newLocation": "Vân Đồn, Quảng Ninh",
+        "distance": 59.4480713702464
+      }
+    ],
+    "train_stations": []
+  }
+}

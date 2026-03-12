@@ -1,0 +1,135 @@
+{
+  "message": "success",
+  "data": {
+    "id": "513",
+    "base_id": "41",
+    "longitude": 105.5987365,
+    "latitude": 18.9765611,
+    "name": "Diễn Châu",
+    "english_name": "Dien Chau",
+    "code": "dc",
+    "x_migrate_key": "455",
+    "city_id": "513",
+    "city_name": "Diễn Châu",
+    "city_english_name": "Dien Chau",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "41",
+    "state_name": "Nghệ An",
+    "state_english_name": "Nghe An",
+    "country_id": "1926",
+    "name_token": "Diễn Châu",
+    "alias": [
+      "dienchau"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Diễn Châu - Nghệ An",
+    "full_english_name": "Dien Chau - Nghe An",
+    "airports": [
+      {
+        "bbox": [
+          105.670764,
+          18.737569,
+          105.670764,
+          18.737569
+        ],
+        "geometry": {
+          "coordinates": [
+            105.670764,
+            18.737569
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135555",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vinh",
+          "AirportName_En": "Vinh Airport",
+          "CityName_Vi": "Vinh",
+          "CityName_En": "Vinh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135555,
+          "CITY": "Vinh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VII",
+          "ICAO": "VVVH",
+          "NAME": "Vinh Airport",
+          "NAME_SHORT": "Vinh",
+          "OF_APT_ID": 6195,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.67076,
+          "Y": 18.73757,
+          "Z__feet_": 23,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Nghi Liên, Vinh, Nghệ An",
+        "parent_id": 502118,
+        "newLocation": "Vinh Hưng, Nghệ An",
+        "distance": 35.92471217713007
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Chợ Sy",
+        "lat": 19.0082921,
+        "long": 105.5761564,
+        "id": 25,
+        "code": "CSY",
+        "short_name": "Chợ Sy",
+        "oldLocation": "Diễn Châu, Nghệ An",
+        "parent_id": 502024,
+        "newLocation": "Đức Châu, Nghệ An",
+        "distance": 5.528513379830646
+      },
+      {
+        "name": "Ga Cầu Giát",
+        "lat": 19.1567711,
+        "long": 105.6247581,
+        "id": 17,
+        "code": "CGI",
+        "short_name": "Cầu Giát",
+        "oldLocation": "Quỳnh Lưu, Nghệ An",
+        "parent_id": 502085,
+        "newLocation": "Quỳnh Sơn, Nghệ An",
+        "distance": 26.291442953752135
+      },
+      {
+        "name": "Ga Vinh",
+        "lat": 18.6881571,
+        "long": 105.6640343,
+        "id": 158,
+        "code": "VIN",
+        "short_name": "Vinh",
+        "oldLocation": "Vinh, Nghệ An",
+        "parent_id": 502102,
+        "newLocation": "Thành Vinh, Nghệ An",
+        "distance": 42.63623943156425,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Vĩnh Thủy",
+        "lat": 18.6881571,
+        "long": 105.6640343,
+        "id": 160,
+        "code": "VTH",
+        "short_name": "Vĩnh Thủy",
+        "oldLocation": "Vinh, Nghệ An",
+        "parent_id": 502102,
+        "newLocation": "Thành Vinh, Nghệ An",
+        "distance": 42.63623943156425
+      }
+    ]
+  }
+}

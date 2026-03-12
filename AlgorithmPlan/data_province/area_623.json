@@ -1,0 +1,228 @@
+{
+  "message": "success",
+  "data": {
+    "id": "623",
+    "base_id": "50",
+    "longitude": 107.0893798,
+    "latitude": 16.8088928,
+    "name": "Đông Hà",
+    "english_name": "Dong Ha",
+    "code": "dh",
+    "x_migrate_key": "565",
+    "city_id": "623",
+    "city_name": "Đông Hà",
+    "city_english_name": "Dong Ha",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "50",
+    "state_name": "Quảng Trị",
+    "state_english_name": "Quang Tri",
+    "country_id": "1926",
+    "name_token": "Đông Hà",
+    "alias": [
+      "dongha"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đông Hà - Quảng Trị",
+    "full_english_name": "Dong Ha - Quang Tri",
+    "airports": [
+      {
+        "bbox": [
+          107.702614,
+          16.4015,
+          107.702614,
+          16.4015
+        ],
+        "geometry": {
+          "coordinates": [
+            107.702614,
+            16.4015
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135559",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phú Bài",
+          "AirportName_En": "Phu Bai International Airport",
+          "CityName_Vi": "Huế",
+          "CityName_En": "Hue",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135559,
+          "CITY": "Hue",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HUI",
+          "ICAO": "VVPB",
+          "NAME": "Phubai  Airport",
+          "NAME_SHORT": "Phubai",
+          "OF_APT_ID": 3201,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 107.702614,
+          "Y": 16.4015,
+          "Z__feet_": 48,
+          "total_leng": 2675
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Bài, Hương Thủy, Thừa Thiên Huế",
+        "parent_id": 501485,
+        "newLocation": "Phú Bài, Thừa Thiên Huế",
+        "distance": 103.36441705618716
+      },
+      {
+        "bbox": [
+          106.590556,
+          17.515,
+          106.590556,
+          17.515
+        ],
+        "geometry": {
+          "coordinates": [
+            106.590556,
+            17.515
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135557",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đồng Hới",
+          "AirportName_En": "Dong Hoi Airport",
+          "CityName_Vi": "Quảng Bình",
+          "CityName_En": "Quang Binh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135557,
+          "CITY": "Dong Hoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDH",
+          "ICAO": "VVDH",
+          "NAME": "Dong Hoi  Airport",
+          "NAME_SHORT": "Dong Hoi",
+          "OF_APT_ID": 4154,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.59055,
+          "Y": 17.515,
+          "Z__feet_": 59,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Lộc Ninh, Đồng Hới, Quảng Bình",
+        "parent_id": 502572,
+        "newLocation": "Đồng Hới, Quảng Trị",
+        "distance": 123.14592110847806
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Đông Hà",
+        "lat": 16.811249,
+        "long": 107.1118245,
+        "id": 30,
+        "code": "DHA",
+        "short_name": "Đông Hà",
+        "oldLocation": "Đông Hà, Quảng Trị",
+        "parent_id": 502598,
+        "newLocation": "Nam Đông Hà, Quảng Trị",
+        "distance": 3.124437635973389
+      },
+      {
+        "name": "Ga Hà Thanh",
+        "lat": 16.9082465,
+        "long": 107.0775014,
+        "id": 58,
+        "code": "HTH",
+        "short_name": "Hà Thanh",
+        "oldLocation": "Gio Linh, Quảng Trị",
+        "parent_id": 502577,
+        "newLocation": "Gio Linh, Quảng Trị",
+        "distance": 14.45562017470853
+      },
+      {
+        "name": "Ga Quảng Trị",
+        "lat": 16.7385833,
+        "long": 107.1862105,
+        "id": 123,
+        "code": "QTI",
+        "short_name": "Quảng Trị",
+        "oldLocation": "Quảng Trị, Quảng Trị",
+        "parent_id": 502607,
+        "newLocation": "Quảng Trị, Quảng Trị",
+        "distance": 16.81964724097277
+      },
+      {
+        "name": "Ga Tiên An",
+        "lat": 16.9777392,
+        "long": 107.0306601,
+        "id": 132,
+        "code": "TAN",
+        "short_name": "Tiên An",
+        "oldLocation": "Vĩnh Linh, Quảng Trị",
+        "parent_id": 502630,
+        "newLocation": "Vĩnh Thủy, Quảng Trị",
+        "distance": 25.72317486534933
+      },
+      {
+        "name": "Ga Diên Sanh",
+        "lat": 16.686926,
+        "long": 107.2479987,
+        "id": 40,
+        "code": "DSA",
+        "short_name": "Diên Sanh",
+        "oldLocation": "Hải Lăng, Quảng Trị",
+        "parent_id": 502569,
+        "newLocation": "Diên Sanh, Quảng Trị",
+        "distance": 28.158853864121006
+      },
+      {
+        "name": "Ga Mỹ Chánh",
+        "lat": 16.628501,
+        "long": 107.3052333,
+        "id": 85,
+        "code": "MCH",
+        "short_name": "Mỹ Chánh",
+        "oldLocation": "Hải Lăng, Quảng Trị",
+        "parent_id": 502600,
+        "newLocation": "Nam Hải Lăng, Quảng Trị",
+        "distance": 39.660899114567485
+      },
+      {
+        "name": "Ga Sa Lung",
+        "lat": 17.0591642,
+        "long": 106.9661307,
+        "id": 128,
+        "code": "SLU",
+        "short_name": "Sa Lung",
+        "oldLocation": "Vĩnh Linh, Quảng Trị",
+        "parent_id": 502561,
+        "newLocation": "Bến Quan, Quảng Trị",
+        "distance": 39.99125800455065
+      },
+      {
+        "name": "Ga Phò Trạch",
+        "lat": 16.5846086,
+        "long": 107.3615558,
+        "id": 107,
+        "code": "PHR",
+        "short_name": "Phò Trạch",
+        "oldLocation": "Thị trấn Phong Điền, Phong Điền, Thừa Thiên Huế",
+        "parent_id": 501484,
+        "newLocation": "Phong Thái, Thừa Thiên Huế",
+        "distance": 49.712113930515876
+      }
+    ]
+  }
+}

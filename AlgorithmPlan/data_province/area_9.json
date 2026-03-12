@@ -1,0 +1,105 @@
+{
+  "message": "success",
+  "data": {
+    "id": "9",
+    "longitude": 106.6468486695,
+    "base_id": "1926",
+    "latitude": 11.182716084000049,
+    "name": "Bình Dương",
+    "english_name": "Binh Duong",
+    "code": "BDG",
+    "x_migrate_key": 9,
+    "state_id": "9",
+    "state_name": "Bình Dương",
+    "state_english_name": "Binh Duong",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Bình Dương",
+    "alias": [
+      "binhduong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bình Dương",
+    "full_english_name": "Binh Duong",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 52.61054077350406
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Dĩ An",
+        "lat": 10.9079211,
+        "long": 106.7694136,
+        "id": 32,
+        "code": "DIA",
+        "short_name": "Dĩ An",
+        "oldLocation": "Dĩ An, Bình Dương",
+        "parent_id": 501348,
+        "newLocation": "Dĩ An, Hồ Chí Minh",
+        "distance": 43.36193192282486
+      },
+      {
+        "name": "Ga Sóng Thần",
+        "lat": 10.8779164,
+        "long": 106.7511083,
+        "id": 131,
+        "code": "STH",
+        "short_name": "Sóng Thần",
+        "oldLocation": "Dĩ An, Bình Dương",
+        "parent_id": 501348,
+        "newLocation": "Dĩ An, Hồ Chí Minh",
+        "distance": 46.47678012973204
+      }
+    ]
+  }
+}

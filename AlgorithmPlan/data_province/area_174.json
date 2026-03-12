@@ -1,0 +1,82 @@
+{
+  "message": "success",
+  "data": {
+    "id": "174",
+    "base_id": "13",
+    "name": "Cờ Đỏ",
+    "english_name": "Co Do",
+    "code": "cd",
+    "x_migrate_key": "111",
+    "city_id": "174",
+    "city_name": "Cờ Đỏ",
+    "city_english_name": "Co Do",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": null,
+    "state_id": "13",
+    "state_name": "Cần Thơ",
+    "state_english_name": "Can Tho",
+    "country_id": "1926",
+    "name_token": "Cờ Đỏ",
+    "alias": [
+      "codo"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cờ Đỏ - Cần Thơ",
+    "full_english_name": "Co Do - Can Tho",
+    "airports": [
+      {
+        "bbox": [
+          105.711922,
+          10.085119,
+          105.711922,
+          10.085119
+        ],
+        "geometry": {
+          "coordinates": [
+            105.711922,
+            10.085119
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135547",
+        "properties": {
+          "VxrAreaId": 135547,
+          "AirportName_Vi": "Sân bay Cần Thơ",
+          "AirportName_En": "Can Tho International Airport",
+          "CityName_Vi": "Cần Thơ",
+          "CityName_En": "Can Tho",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "CITY": "Can Tho",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCA",
+          "ICAO": "VVCT",
+          "NAME": "Tra Nuoc Airport",
+          "NAME_SHORT": "Can Tho",
+          "OF_APT_ID": 6191,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.71192,
+          "Y": 10.085119,
+          "Z__feet_": 9,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Trà An, Bình Thủy, Cần Thơ",
+        "parent_id": 500393,
+        "newLocation": "Thới An Đông, Cần Thơ"
+      }
+    ],
+    "train_stations": []
+  }
+}

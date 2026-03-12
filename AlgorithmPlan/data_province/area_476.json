@@ -1,0 +1,159 @@
+{
+  "message": "success",
+  "data": {
+    "id": "476",
+    "base_id": "38",
+    "longitude": 104.1466046,
+    "latitude": 22.3266996,
+    "name": "Bảo Thắng",
+    "english_name": "Bao Thang",
+    "code": "bt",
+    "x_migrate_key": "418",
+    "city_id": "476",
+    "city_name": "Bảo Thắng",
+    "city_english_name": "Bao Thang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "38",
+    "state_name": "Lào Cai",
+    "state_english_name": "Lao Cai",
+    "country_id": "1926",
+    "name_token": "Bảo Thắng",
+    "alias": [
+      "baothang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bảo Thắng - Lào Cai",
+    "full_english_name": "Bao Thang - Lao Cai",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 274.2740310580618
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phố Lu",
+        "lat": 22.314265,
+        "long": 104.187589,
+        "id": 110,
+        "code": "PLU",
+        "short_name": "Phố Lu",
+        "oldLocation": "Bảo Thắng, Lào Cai",
+        "parent_id": 501782,
+        "newLocation": "Bảo Thắng, Lào Cai",
+        "distance": 5.767772451127634
+      },
+      {
+        "name": "Ga Thái Niên",
+        "lat": 22.3992117,
+        "long": 104.0868167,
+        "id": 151,
+        "code": "TNI",
+        "short_name": "Thái Niên",
+        "oldLocation": "Bảo Thắng, Lào Cai",
+        "parent_id": 501782,
+        "newLocation": "Bảo Thắng, Lào Cai",
+        "distance": 13.181448575985131
+      },
+      {
+        "name": "Ga Thái Văn",
+        "lat": 22.234444,
+        "long": 104.284722,
+        "id": 153,
+        "code": "TVA",
+        "short_name": "Thái Văn",
+        "oldLocation": "Bắc Hà, Lào Cai",
+        "parent_id": 501780,
+        "newLocation": "Bảo Hà, Lào Cai",
+        "distance": 22.78506977814368
+      },
+      {
+        "name": "Ga Lào Cai",
+        "lat": 22.4922323,
+        "long": 103.9782991,
+        "id": 67,
+        "code": "LCA",
+        "short_name": "Lào Cai",
+        "oldLocation": "Phường Lào Cai, Lào Cai, Lào Cai",
+        "parent_id": 501808,
+        "newLocation": "Lào Cai, Lào Cai",
+        "distance": 32.839731626383994,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Bảo Hà",
+        "lat": 22.1782663,
+        "long": 104.3552749,
+        "id": 8,
+        "code": "BHA",
+        "short_name": "Bảo Hà",
+        "oldLocation": "Bảo Yên, Lào Cai",
+        "parent_id": 501780,
+        "newLocation": "Bảo Hà, Lào Cai",
+        "distance": 35.21036350198872
+      },
+      {
+        "name": "Ga Lang Thíp",
+        "lat": 22.1492424,
+        "long": 104.4373961,
+        "id": 79,
+        "code": "LTH",
+        "short_name": "Lang Thíp",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501810,
+        "newLocation": "Lâm Giang, Lào Cai",
+        "distance": 46.603479190915444
+      }
+    ]
+  }
+}

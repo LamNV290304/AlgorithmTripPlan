@@ -1,0 +1,99 @@
+{
+  "message": "success",
+  "data": {
+    "id": "514",
+    "base_id": "41",
+    "longitude": 105.311655,
+    "latitude": 18.9055259,
+    "name": "Đô Lương",
+    "english_name": "Do Luong",
+    "code": "dl",
+    "x_migrate_key": "456",
+    "city_id": "514",
+    "city_name": "Đô Lương",
+    "city_english_name": "Do Luong",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "41",
+    "state_name": "Nghệ An",
+    "state_english_name": "Nghe An",
+    "country_id": "1926",
+    "name_token": "Đô Lương",
+    "alias": [
+      "doluong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đô Lương - Nghệ An",
+    "full_english_name": "Do Luong - Nghe An",
+    "airports": [
+      {
+        "bbox": [
+          105.670764,
+          18.737569,
+          105.670764,
+          18.737569
+        ],
+        "geometry": {
+          "coordinates": [
+            105.670764,
+            18.737569
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135555",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vinh",
+          "AirportName_En": "Vinh Airport",
+          "CityName_Vi": "Vinh",
+          "CityName_En": "Vinh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135555,
+          "CITY": "Vinh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VII",
+          "ICAO": "VVVH",
+          "NAME": "Vinh Airport",
+          "NAME_SHORT": "Vinh",
+          "OF_APT_ID": 6195,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.67076,
+          "Y": 18.73757,
+          "Z__feet_": 23,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Nghi Liên, Vinh, Nghệ An",
+        "parent_id": 502118,
+        "newLocation": "Vinh Hưng, Nghệ An",
+        "distance": 54.80575094440347
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Chợ Sy",
+        "lat": 19.0082921,
+        "long": 105.5761564,
+        "id": 25,
+        "code": "CSY",
+        "short_name": "Chợ Sy",
+        "oldLocation": "Diễn Châu, Nghệ An",
+        "parent_id": 502024,
+        "newLocation": "Đức Châu, Nghệ An",
+        "distance": 39.09327081312808,
+        "is_station_default": true
+      }
+    ]
+  }
+}

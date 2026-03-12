@@ -1,0 +1,122 @@
+{
+  "message": "success",
+  "data": {
+    "id": "97",
+    "base_id": "4",
+    "longitude": 105.7791327,
+    "latitude": 21.8809712,
+    "name": "Chợ Mới",
+    "english_name": "Cho Moi",
+    "code": "cm",
+    "x_migrate_key": "34",
+    "city_id": "97",
+    "city_name": "Chợ Mới",
+    "city_english_name": "Cho Moi",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": null,
+    "is_search_on_fe": 1,
+    "state_id": "4",
+    "state_name": "Bắc Kạn",
+    "state_english_name": "Bac Kan",
+    "country_id": "1926",
+    "name_token": "Chợ Mới",
+    "alias": [
+      "chomoi"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Chợ Mới - Bắc Kạn",
+    "full_english_name": "Cho Moi - Bac Kan",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 95.44783607390173
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Quán Triều",
+        "lat": 21.6038132,
+        "long": 105.8032245,
+        "id": 124,
+        "code": "QTR",
+        "short_name": "Quán Triều",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502859,
+        "newLocation": "Quan Triều, Thái Nguyên",
+        "distance": 40.19450965941254
+      },
+      {
+        "name": "Ga Thái Nguyên",
+        "lat": 21.5868579,
+        "long": 105.8237712,
+        "id": 150,
+        "code": "TNG",
+        "short_name": "Thái Nguyên",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502846,
+        "newLocation": "Phan Đình Phùng, Thái Nguyên",
+        "distance": 42.93552453397827
+      },
+      {
+        "name": "Ga Lưu Xá",
+        "lat": 21.5622511,
+        "long": 105.8466888,
+        "id": 81,
+        "code": "LXA",
+        "short_name": "Lưu Xá",
+        "oldLocation": "Phường Phú Xá, Thái Nguyên, Thái Nguyên",
+        "parent_id": 502876,
+        "newLocation": "Tích Lương, Thái Nguyên",
+        "distance": 46.956766233395626
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "message": "success",
+  "data": {
+    "id": "562",
+    "base_id": "45",
+    "longitude": 109.0215438,
+    "latitude": 12.8072932,
+    "name": "Sông Hinh",
+    "english_name": "Song Hinh",
+    "code": "sh",
+    "x_migrate_key": "504",
+    "city_id": "562",
+    "city_name": "Sông Hinh",
+    "city_english_name": "Song Hinh",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "45",
+    "state_name": "Phú Yên",
+    "state_english_name": "Phu Yen",
+    "country_id": "1926",
+    "name_token": "Sông Hinh",
+    "alias": [
+      "songhinh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Sông Hinh - Phú Yên",
+    "full_english_name": "Song Hinh - Phu Yen",
+    "airports": [
+      {
+        "bbox": [
+          109.333706,
+          13.04955,
+          109.333706,
+          13.04955
+        ],
+        "geometry": {
+          "coordinates": [
+            109.333706,
+            13.04955
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135556",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tuy Hòa",
+          "AirportName_En": "Tuy Hoa Airport",
+          "CityName_Vi": "Phú Yên",
+          "CityName_En": "Tuy Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135556,
+          "CITY": "Tuy Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "TBB",
+          "ICAO": "VVTH",
+          "NAME": "Dong Tac  Airport",
+          "NAME_SHORT": "Dong Tac",
+          "OF_APT_ID": 4158,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 109.33371,
+          "Y": 13.04955,
+          "Z__feet_": 20,
+          "total_leng": 5700
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Thạnh, Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 56.21912815891085
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Giã",
+        "lat": 12.70003574,
+        "long": 109.2236767,
+        "id": 47,
+        "code": "GIA",
+        "short_name": "Giã",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501664,
+        "newLocation": "Vạn Ninh, Khánh Hòa",
+        "distance": 32.442711817829824
+      },
+      {
+        "name": "Ga Tu Bông",
+        "lat": 12.7779475,
+        "long": 109.3009695,
+        "id": 134,
+        "code": "TBO",
+        "short_name": "Tu Bông",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501662,
+        "newLocation": "Tu Bông, Khánh Hòa",
+        "distance": 39.617083504841936
+      },
+      {
+        "name": "Ga Ðại Lãnh",
+        "lat": 12.8348561,
+        "long": 109.3613118,
+        "id": 33,
+        "code": "DLA",
+        "short_name": "Ðại Lãnh",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501625,
+        "newLocation": "Đại Lãnh, Khánh Hòa",
+        "distance": 48.055537080847046
+      },
+      {
+        "es_id": 171693,
+        "name": "Ga Ninh Hoà",
+        "lat": 12.489559,
+        "long": 109.1239841,
+        "id": 95,
+        "code": "NHO",
+        "short_name": "Ninh Hoà",
+        "oldLocation": "Phường Ninh Hiệp, Ninh Hòa, Khánh Hòa",
+        "parent_id": 501643,
+        "base_id": 144497,
+        "newLocation": "Ninh Hòa, Khánh Hòa",
+        "distance": 48.14862149271849
+      }
+    ]
+  }
+}

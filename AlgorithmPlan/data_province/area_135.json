@@ -1,0 +1,99 @@
+{
+  "message": "success",
+  "data": {
+    "id": "135",
+    "base_id": "8",
+    "longitude": 108.7823721,
+    "latitude": 14.1136528,
+    "name": "Vĩnh Thạnh",
+    "english_name": "Vinh Thanh",
+    "code": "vt",
+    "x_migrate_key": "72",
+    "city_id": "135",
+    "city_name": "Vĩnh Thạnh",
+    "city_english_name": "Vinh Thanh",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "8",
+    "state_name": "Bình Định",
+    "state_english_name": "Binh Dinh",
+    "country_id": "1926",
+    "name_token": "Vĩnh Thạnh",
+    "alias": [
+      "vinhthanh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Vĩnh Thạnh - Bình Định",
+    "full_english_name": "Vinh Thanh - Binh Dinh",
+    "airports": [
+      {
+        "bbox": [
+          109.042267,
+          13.954986,
+          109.042267,
+          13.954986
+        ],
+        "geometry": {
+          "coordinates": [
+            109.042267,
+            13.954986
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135545",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phù Cát",
+          "AirportName_En": "Phu Cat Airport",
+          "CityName_Vi": "Qui Nhơn",
+          "CityName_En": "Qui Nhon",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135545,
+          "CITY": "Phucat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "UIH",
+          "ICAO": "VVPC",
+          "NAME": "Phu Cat Airport",
+          "NAME_SHORT": "Phu Cat",
+          "OF_APT_ID": 6193,
+          "Other": "Domestic / Military",
+          "TYPE": "D / M",
+          "TZ": 7,
+          "X": 109.04227,
+          "Y": 13.954986,
+          "Z__feet_": 80,
+          "total_leng": 3051
+        },
+        "type": "Feature",
+        "oldLocation": "Cát Tân, Phù Cát, Bình Định",
+        "parent_id": 500949,
+        "newLocation": "Phù Cát, Gia Lai",
+        "distance": 43.06339544419716
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Văn Phú",
+        "lat": 14.3143415,
+        "long": 109.0641104,
+        "id": 159,
+        "code": "VPH",
+        "short_name": "Văn Phú",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501862,
+        "newLocation": "Văn Phú, Lào Cai",
+        "distance": 48.99199612077064,
+        "is_station_default": true
+      }
+    ]
+  }
+}

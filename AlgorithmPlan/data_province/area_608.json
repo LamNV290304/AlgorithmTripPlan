@@ -1,0 +1,104 @@
+{
+  "message": "success",
+  "data": {
+    "id": "608",
+    "base_id": "49",
+    "longitude": 107.3201023,
+    "latitude": 21.0718937,
+    "name": "Cẩm Phả",
+    "english_name": "Cam Pha",
+    "code": "cp",
+    "x_migrate_key": null,
+    "city_id": "608",
+    "city_name": "Cẩm Phả",
+    "city_english_name": "Cam Pha",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "49",
+    "state_name": "Quảng Ninh",
+    "state_english_name": "Quang Ninh",
+    "country_id": "1926",
+    "name_token": "Cẩm Phả",
+    "alias": [
+      "campha"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cẩm Phả - Quảng Ninh",
+    "full_english_name": "Cam Pha - Quang Ninh",
+    "airports": [
+      {
+        "geometry": {
+          "coordinates": [
+            107.4166092,
+            21.1163002
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "149325",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vân Đồn",
+          "AirportName_En": "Van Don Airport",
+          "CityName_Vi": "Quảng Ninh",
+          "CityName_En": "Quang Ninh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 149325,
+          "CITY": "Quang Ninh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDO",
+          "ICAO": "VVVD",
+          "NAME": "Van Don Airport",
+          "NAME_SHORT": "Quang Ninh",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 107.4166092,
+          "Y": 21.1163002,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Xã Đoàn Kết, Vân Đồn, Quảng Ninh",
+        "parent_id": 502550,
+        "newLocation": "Vân Đồn, Quảng Ninh",
+        "distance": 14.512430289442813
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Minh Cầm",
+        "lat": 21.2285464,
+        "long": 107.0598491,
+        "id": 84,
+        "code": "MCA",
+        "short_name": "Minh Cầm",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502622,
+        "newLocation": "Tuyên Bình, Quảng Trị",
+        "distance": 41.759158663045696
+      },
+      {
+        "name": "Ga Hạ Long",
+        "lat": 20.9719208,
+        "long": 107.0100097,
+        "id": 52,
+        "code": "HLO",
+        "short_name": "Hạ Long",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502551,
+        "newLocation": "Việt Hưng, Quảng Ninh",
+        "distance": 44.266885095425714
+      }
+    ]
+  }
+}

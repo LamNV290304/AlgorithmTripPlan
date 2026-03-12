@@ -1,0 +1,82 @@
+{
+  "message": "success",
+  "data": {
+    "id": "200",
+    "base_id": "15",
+    "name": "Sơn Trà",
+    "english_name": "Son Tra",
+    "code": "st",
+    "x_migrate_key": null,
+    "city_id": "200",
+    "city_name": "Sơn Trà",
+    "city_english_name": "Son Tra",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "18",
+    "is_search_on_fe": null,
+    "state_id": "15",
+    "state_name": "Đà Nẵng",
+    "state_english_name": "Da Nang",
+    "country_id": "1926",
+    "name_token": "Sơn Trà",
+    "alias": [
+      "sontra"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Sơn Trà - Đà Nẵng",
+    "full_english_name": "Son Tra - Da Nang",
+    "airports": [
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng"
+      }
+    ],
+    "train_stations": []
+  }
+}

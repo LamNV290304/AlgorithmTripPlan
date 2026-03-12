@@ -1,0 +1,151 @@
+{
+  "message": "success",
+  "data": {
+    "id": "959",
+    "parent_id": 500852,
+    "name": "Bến xe thị xã An Khê",
+    "english_name": "An Khe Bus Station",
+    "code": "ANK",
+    "address": "523 Quang Trung",
+    "english_address": "523 Quang Trung, Tay Son Ward, An Khe Town, Gia Lai Province",
+    "note": "",
+    "is_prg_status": 1,
+    "suggestion": "",
+    "english_suggestion": "",
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": null,
+    "phone_info": "|",
+    "url_info": "https://goo.gl/RL6Gtn",
+    "longitude": 108.6759042,
+    "latitude": 13.9708193,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 1,
+    "base_id": "144885",
+    "root_id": "2597",
+    "city_id": "258",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "An Khê",
+    "city_english_name": "An Khe",
+    "city_migrate_key": "197",
+    "state_id": "21",
+    "state_type": 3,
+    "state_code": "GLI",
+    "state_name": "Gia Lai",
+    "state_english_name": "Gia Lai",
+    "state_migrate_key": 21,
+    "ward_id": "144885",
+    "ward_name": "Phường Tây Sơn",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe thị xã An Khê",
+    "alias": [
+      "benxethixaankhe"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe thị xã An Khê - Phường Tây Sơn - An Khê - Gia Lai",
+    "airports": [
+      {
+        "bbox": [
+          109.042267,
+          13.954986,
+          109.042267,
+          13.954986
+        ],
+        "geometry": {
+          "coordinates": [
+            109.042267,
+            13.954986
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135545",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phù Cát",
+          "AirportName_En": "Phu Cat Airport",
+          "CityName_Vi": "Qui Nhơn",
+          "CityName_En": "Qui Nhon",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135545,
+          "CITY": "Phucat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "UIH",
+          "ICAO": "VVPC",
+          "NAME": "Phu Cat Airport",
+          "NAME_SHORT": "Phu Cat",
+          "OF_APT_ID": 6193,
+          "Other": "Domestic / Military",
+          "TYPE": "D / M",
+          "TZ": 7,
+          "X": 109.04227,
+          "Y": 13.954986,
+          "Z__feet_": 80,
+          "total_leng": 3051
+        },
+        "type": "Feature",
+        "oldLocation": "Cát Tân, Phù Cát, Bình Định",
+        "parent_id": 500949,
+        "newLocation": "Phù Cát, Gia Lai",
+        "distance": 51.44509887762175
+      },
+      {
+        "bbox": [
+          108.017158,
+          14.004522,
+          108.017158,
+          14.004522
+        ],
+        "geometry": {
+          "coordinates": [
+            108.017158,
+            14.004522
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135550",
+        "properties": {
+          "AirportName_Vi": "Sân bay Pleiku",
+          "AirportName_En": "Pleiku Airport",
+          "CityName_Vi": "PleiKu",
+          "CityName_En": "Pleiku",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135550,
+          "CITY": "Pleiku",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "PXU",
+          "ICAO": "VVPK",
+          "NAME": "Pleiku Airport",
+          "NAME_SHORT": "Pleiku",
+          "OF_APT_ID": 6194,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 108.01716,
+          "Y": 14.004522,
+          "Z__feet_": 2434,
+          "total_leng": 1817
+        },
+        "type": "Feature",
+        "oldLocation": "Thống Nhất, Pleiku, Gia Lai",
+        "parent_id": 500968,
+        "newLocation": "Thống Nhất, Gia Lai",
+        "distance": 92.52871539103613
+      }
+    ],
+    "train_stations": []
+  }
+}

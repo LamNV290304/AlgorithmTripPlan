@@ -1,0 +1,143 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1251",
+    "parent_id": 500671,
+    "name": "Bến xe Dầu Giây",
+    "english_name": "Dau Giay Station",
+    "code": "bxdg",
+    "address": "1A, Thống Nhất, Đồng Nai, Việt Nam",
+    "english_address": "National Route 1A",
+    "note": "",
+    "is_prg_status": 1,
+    "suggestion": "",
+    "english_suggestion": "",
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1465,
+    "phone_info": "|",
+    "url_info": "https://goo.gl/CPDDgE",
+    "longitude": 107.1538062,
+    "latitude": 10.9434499,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": null,
+    "base_id": "242",
+    "root_id": "2540",
+    "city_id": "242",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Thống Nhất",
+    "city_english_name": "Thong Nhat",
+    "city_migrate_key": "181",
+    "state_id": "19",
+    "state_type": 3,
+    "state_code": "DNI",
+    "state_name": "Đồng Nai",
+    "state_english_name": "Dong Nai",
+    "state_migrate_key": 19,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Dầu Giây",
+    "alias": [
+      "benxedaugiay"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Dầu Giây - Thống Nhất - Đồng Nai",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 73.49710455992378
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Long Khánh",
+        "lat": 10.9337177,
+        "long": 107.2444058,
+        "id": 75,
+        "code": "LKH",
+        "short_name": "Long Khánh",
+        "oldLocation": "Long Khánh, Đồng Nai",
+        "parent_id": 500688,
+        "newLocation": "Long Khánh, Đồng Nai",
+        "distance": 12.935262279866356
+      },
+      {
+        "name": "Ga Gia Ray",
+        "lat": 10.9643906,
+        "long": 107.4029171,
+        "id": 49,
+        "code": "GRA",
+        "short_name": "Gia Ray",
+        "oldLocation": "Xuân Lộc, Đồng Nai",
+        "parent_id": 500742,
+        "newLocation": "Xuân Lộc, Đồng Nai",
+        "distance": 35.48309405900619
+      },
+      {
+        "name": "Ga Biên Hòa",
+        "lat": 10.9508183,
+        "long": 106.8263404,
+        "id": 9,
+        "code": "BHO",
+        "short_name": "Biên Hòa",
+        "oldLocation": "Biên Hòa, Đồng Nai",
+        "parent_id": 500734,
+        "newLocation": "Trấn Biên, Đồng Nai",
+        "distance": 46.48711083319814,
+        "is_station_default": true
+      }
+    ]
+  }
+}

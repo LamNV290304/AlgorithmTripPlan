@@ -1,0 +1,151 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1336",
+    "parent_id": 500093,
+    "name": "Bến xe Vĩnh Thuận",
+    "english_name": "Vinh Thuan bus station",
+    "code": "BXVT",
+    "address": "943 Quốc lộ 63",
+    "english_address": "943 National Road 63",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1550,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 105.25445421426389,
+    "latitude": 9.512380819056533,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 1,
+    "base_id": "147509",
+    "root_id": "3147",
+    "city_id": "435",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Vĩnh Thuận",
+    "city_english_name": "Vinh Thuan",
+    "city_migrate_key": "377",
+    "state_id": "33",
+    "state_type": 3,
+    "state_code": "KGG",
+    "state_name": "Kiên Giang",
+    "state_english_name": "Kien Giang",
+    "state_migrate_key": 33,
+    "ward_id": "147509",
+    "ward_name": "Thị trấn Vĩnh Thuận",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Vĩnh Thuận",
+    "alias": [
+      "benxevinhthuan"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Vĩnh Thuận - Thị trấn Vĩnh Thuận - Vĩnh Thuận - Kiên Giang",
+    "airports": [
+      {
+        "bbox": [
+          105.174721,
+          9.188049,
+          105.174721,
+          9.188049
+        ],
+        "geometry": {
+          "coordinates": [
+            105.174721,
+            9.188049
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135546",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cà Mau",
+          "AirportName_En": "Ca Mau Airport",
+          "CityName_Vi": "Ca Mau",
+          "CityName_En": "Ca Mau",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135546,
+          "CITY": "Ca Mau",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CAH",
+          "ICAO": "VVCM",
+          "NAME": "Ca Mau  Airport",
+          "NAME_SHORT": "Ca Mau",
+          "OF_APT_ID": 4156,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.17472,
+          "Y": 9.188049,
+          "Z__feet_": 6,
+          "total_leng": 1500
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 6, Cà Mau, Cà Mau",
+        "parent_id": 500248,
+        "newLocation": "Tân Thành, Cà Mau",
+        "distance": 48.242884853367826
+      },
+      {
+        "bbox": [
+          105.1325,
+          9.958056,
+          105.1325,
+          9.958056
+        ],
+        "geometry": {
+          "coordinates": [
+            105.1325,
+            9.958056
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135553",
+        "properties": {
+          "AirportName_Vi": "Sân bay Rạch Giá",
+          "AirportName_En": "Rach Gia Airport",
+          "CityName_Vi": "Kiên Giang",
+          "CityName_En": "Rach Gia",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135553,
+          "CITY": "Rach Gia",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VKG",
+          "ICAO": "VVRG",
+          "NAME": "Rach Gia  Airport",
+          "NAME_SHORT": "Rach Gia",
+          "OF_APT_ID": 4155,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.1325,
+          "Y": 9.958056,
+          "Z__feet_": 7,
+          "total_leng": 1500
+        },
+        "type": "Feature",
+        "oldLocation": "Vĩnh Lợi, Rạch Giá, Kiên Giang",
+        "parent_id": 500062,
+        "newLocation": "Rạch Giá, An Giang",
+        "distance": 66.72574135704316
+      }
+    ],
+    "train_stations": []
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "message": "success",
+  "data": {
+    "id": "27",
+    "longitude": 106.682825,
+    "base_id": "1926",
+    "latitude": 20.846059,
+    "name": "Hải Phòng",
+    "english_name": "Hai Phong",
+    "code": "HPG",
+    "x_migrate_key": 27,
+    "state_id": "27",
+    "state_name": "Hải Phòng",
+    "state_english_name": "Hai Phong",
+    "type": 3,
+    "sub_type_id": "1",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Hải Phòng",
+    "alias": [
+      "haiphong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hải Phòng",
+    "full_english_name": "Hai Phong",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 6.878668492639878
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Hải Phòng",
+        "lat": 20.8560491,
+        "long": 106.6875036,
+        "id": 55,
+        "code": "HPH",
+        "short_name": "Hải Phòng",
+        "oldLocation": "Ngô Quyền, Hải Phòng",
+        "parent_id": 501249,
+        "newLocation": "Ngô Quyền, Hải Phòng",
+        "distance": 1.5763492227925078,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Thượng Lý",
+        "lat": 20.8656191,
+        "long": 106.6584867,
+        "id": 139,
+        "code": "THL",
+        "short_name": "Thượng Lý",
+        "oldLocation": "Hồng Bàng, Hải Phòng",
+        "parent_id": 501220,
+        "newLocation": "Hồng Bàng, Hải Phòng",
+        "distance": 4.336289871012744
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "message": "success",
+  "data": {
+    "id": "758",
+    "base_id": "63",
+    "longitude": 104.5062651,
+    "latitude": 21.6018769,
+    "name": "Nghĩa Lộ",
+    "english_name": "Nghia Lo",
+    "code": "nl",
+    "x_migrate_key": "700",
+    "city_id": "758",
+    "city_name": "Nghĩa Lộ",
+    "city_english_name": "Nghia Lo",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "20",
+    "is_search_on_fe": 1,
+    "state_id": "63",
+    "state_name": "Yên Bái",
+    "state_english_name": "Yen Bai",
+    "country_id": "1926",
+    "name_token": "Nghĩa Lộ",
+    "alias": [
+      "nghialo"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Nghĩa Lộ - Yên Bái",
+    "full_english_name": "Nghia Lo - Yen Bai",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 183.51640668048677
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Ngòi Hóp",
+        "lat": 21.8225903,
+        "long": 104.7548532,
+        "id": 96,
+        "code": "NHP",
+        "short_name": "Ngòi Hóp",
+        "oldLocation": "Trấn Yên, Yên Bái",
+        "parent_id": 501856,
+        "newLocation": "Trấn Yên, Lào Cai",
+        "distance": 46.17864114890012
+      },
+      {
+        "name": "Ga Mậu A",
+        "lat": 21.8775804,
+        "long": 104.6940941,
+        "id": 82,
+        "code": "MAA",
+        "short_name": "Mậu A",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501816,
+        "newLocation": "Mậu A, Lào Cai",
+        "distance": 47.16342670674849
+      },
+      {
+        "name": "Ga Cổ Phúc",
+        "lat": 21.76116,
+        "long": 104.8309607,
+        "id": 24,
+        "code": "CPH",
+        "short_name": "Cổ Phúc",
+        "oldLocation": "Trấn Yên, Yên Bái",
+        "parent_id": 501856,
+        "newLocation": "Trấn Yên, Lào Cai",
+        "distance": 49.31969372056389
+      }
+    ]
+  }
+}

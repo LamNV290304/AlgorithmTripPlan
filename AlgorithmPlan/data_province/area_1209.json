@@ -1,0 +1,142 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1209",
+    "parent_id": 500853,
+    "name": "Bến xe An Lão",
+    "english_name": null,
+    "code": "BXAL",
+    "address": "Thôn Hưng Nhơn, xã An Tân",
+    "english_address": "",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1423,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 108.9001894,
+    "latitude": 14.5598947,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "144190",
+    "root_id": "2194",
+    "city_id": "125",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "An Lão",
+    "city_english_name": "An Lao",
+    "city_migrate_key": "62",
+    "state_id": "8",
+    "state_type": 3,
+    "state_code": "BDH",
+    "state_name": "Bình Định",
+    "state_english_name": "Binh Dinh",
+    "state_migrate_key": 8,
+    "ward_id": "144190",
+    "ward_name": "Xã An Tân",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe An Lão",
+    "alias": [
+      "benxeanlao"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe An Lão - Xã An Tân - An Lão - Bình Định",
+    "airports": [
+      {
+        "bbox": [
+          109.042267,
+          13.954986,
+          109.042267,
+          13.954986
+        ],
+        "geometry": {
+          "coordinates": [
+            109.042267,
+            13.954986
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135545",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phù Cát",
+          "AirportName_En": "Phu Cat Airport",
+          "CityName_Vi": "Qui Nhơn",
+          "CityName_En": "Qui Nhon",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135545,
+          "CITY": "Phucat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "UIH",
+          "ICAO": "VVPC",
+          "NAME": "Phu Cat Airport",
+          "NAME_SHORT": "Phu Cat",
+          "OF_APT_ID": 6193,
+          "Other": "Domestic / Military",
+          "TYPE": "D / M",
+          "TZ": 7,
+          "X": 109.04227,
+          "Y": 13.954986,
+          "Z__feet_": 80,
+          "total_leng": 3051
+        },
+        "type": "Feature",
+        "oldLocation": "Cát Tân, Phù Cát, Bình Định",
+        "parent_id": 500949,
+        "newLocation": "Phù Cát, Gia Lai",
+        "distance": 89.67858545734155
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Bồng Sơn",
+        "lat": 14.4379995,
+        "long": 109.0193054,
+        "id": 12,
+        "code": "BSN",
+        "short_name": "Bồng Sơn",
+        "oldLocation": "Hoài Nhơn, Bình Định",
+        "parent_id": 500875,
+        "newLocation": "Bồng Sơn, Gia Lai",
+        "distance": 24.256429382648502
+      },
+      {
+        "name": "Ga Đức Phổ",
+        "lat": 14.8098323,
+        "long": 108.9468432,
+        "id": 39,
+        "code": "DPH",
+        "short_name": "Đức Phổ",
+        "oldLocation": "Phường Nguyễn Nghiêm, Quảng Ngãi, Quảng Ngãi",
+        "parent_id": 502419,
+        "newLocation": "Cẩm Thành, Quảng Ngãi",
+        "distance": 36.71357759623354
+      },
+      {
+        "name": "Ga Văn Phú",
+        "lat": 14.3143415,
+        "long": 109.0641104,
+        "id": 159,
+        "code": "VPH",
+        "short_name": "Văn Phú",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501862,
+        "newLocation": "Văn Phú, Lào Cai",
+        "distance": 42.26702977137427
+      }
+    ]
+  }
+}

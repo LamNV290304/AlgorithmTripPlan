@@ -1,0 +1,194 @@
+{
+  "message": "success",
+  "data": {
+    "id": "553",
+    "base_id": "44",
+    "longitude": 105.1405147,
+    "latitude": 21.500473,
+    "name": "Thanh Ba",
+    "english_name": "Thanh Ba",
+    "code": "tb",
+    "x_migrate_key": null,
+    "city_id": "553",
+    "city_name": "Thanh Ba",
+    "city_english_name": "Thanh Ba",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "44",
+    "state_name": "Phú Thọ",
+    "state_english_name": "Phu Tho",
+    "country_id": "1926",
+    "name_token": "Thanh Ba",
+    "alias": [
+      "thanhba"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Thanh Ba - Phú Thọ",
+    "full_english_name": "Thanh Ba - Phu Tho",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 98.41017789470058
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Vũ Ẻn",
+        "lat": 21.4870753,
+        "long": 105.0867391,
+        "id": 157,
+        "code": "VEN",
+        "short_name": "Vũ Ẻn",
+        "oldLocation": "Thanh Ba, Phú Thọ",
+        "parent_id": 502293,
+        "newLocation": "Hoàng Cương, Phú Thọ",
+        "distance": 7.4876571167337795
+      },
+      {
+        "name": "Ga Chí Chủ",
+        "lat": 21.4295708,
+        "long": 105.1532069,
+        "id": 15,
+        "code": "CCH",
+        "short_name": "Chí Chủ",
+        "oldLocation": "Thanh Ba, Phú Thọ",
+        "parent_id": 502273,
+        "newLocation": "Chí Tiên, Phú Thọ",
+        "distance": 10.390406347182914
+      },
+      {
+        "name": "Ga Phú Thọ",
+        "lat": 21.4022884,
+        "long": 105.2240548,
+        "id": 115,
+        "code": "PTO",
+        "short_name": "Phú Thọ",
+        "oldLocation": "Phú Thọ, Phú Thọ",
+        "parent_id": 502330,
+        "newLocation": "Phong Châu, Phú Thọ",
+        "distance": 18.104275223456856
+      },
+      {
+        "name": "Ga Ấm Thượng",
+        "lat": 21.5600239,
+        "long": 105.0057195,
+        "id": 2,
+        "code": "ATH",
+        "short_name": "Ấm Thượng",
+        "oldLocation": "Hạ Hòa, Phú Thọ",
+        "parent_id": 502287,
+        "newLocation": "Hạ Hòa, Phú Thọ",
+        "distance": 20.065808648521205
+      },
+      {
+        "name": "Ga Tiên Kiên",
+        "lat": 21.3666977,
+        "long": 105.2931266,
+        "id": 142,
+        "code": "TKE",
+        "short_name": "Tiên Kiên",
+        "oldLocation": "Lâm Thao, Phú Thọ",
+        "parent_id": 502307,
+        "newLocation": "Lâm Thao, Phú Thọ",
+        "distance": 28.206869314251996
+      },
+      {
+        "name": "Ga Đoan Thượng",
+        "lat": 21.61997211,
+        "long": 104.9502527,
+        "id": 42,
+        "code": "DTH",
+        "short_name": "Đoan Thượng",
+        "oldLocation": "Hạ Hòa, Phú Thọ",
+        "parent_id": 502280,
+        "newLocation": "Đan Thượng, Phú Thọ",
+        "distance": 30.86518798323764
+      },
+      {
+        "name": "Ga Phủ Đức",
+        "lat": 21.3382548,
+        "long": 105.3663688,
+        "id": 104,
+        "code": "PDU",
+        "short_name": "Phủ Đức",
+        "oldLocation": "Phường Vân Cơ, Việt Trì, Phú Thọ",
+        "parent_id": 502380,
+        "newLocation": "Vân Phú, Phú Thọ",
+        "distance": 38.387522454577066
+      },
+      {
+        "name": "Ga Yên Bái",
+        "lat": 21.7022497,
+        "long": 104.8799419,
+        "id": 165,
+        "code": "YBA",
+        "short_name": "Yên Bái",
+        "oldLocation": "Yên Bái, Yên Bái",
+        "parent_id": 501869,
+        "newLocation": "Yên Bái, Lào Cai",
+        "distance": 45.576646488692724
+      },
+      {
+        "name": "Ga Việt Trì",
+        "lat": 21.3004032,
+        "long": 105.4322591,
+        "id": 161,
+        "code": "VTR",
+        "short_name": "Việt Trì",
+        "oldLocation": "Việt Trì, Phú Thọ",
+        "parent_id": null,
+        "newLocation": "Việt Trì, Phú Thọ",
+        "distance": 48.76623949444877
+      }
+    ]
+  }
+}

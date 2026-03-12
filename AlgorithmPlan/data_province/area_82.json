@@ -1,0 +1,131 @@
+{
+  "message": "success",
+  "data": {
+    "id": "82",
+    "base_id": "2",
+    "longitude": 107.2104935,
+    "latitude": 10.4812576,
+    "name": "Long Điền",
+    "english_name": "Long Dien",
+    "code": "ld",
+    "x_migrate_key": "19",
+    "city_id": "82",
+    "city_name": "Long Điền",
+    "city_english_name": "Long Dien",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "2",
+    "state_name": "Bà Rịa-Vũng Tàu",
+    "state_english_name": "Ba Ria-Vung Tau",
+    "country_id": "1926",
+    "name_token": "Long Điền",
+    "alias": [
+      "longdien"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Long Điền - Bà Rịa-Vũng Tàu",
+    "full_english_name": "Long Dien - Ba Ria-Vung Tau",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 93.1611472145736
+      },
+      {
+        "bbox": [
+          106.632589,
+          8.731831,
+          106.632589,
+          8.731831
+        ],
+        "geometry": {
+          "coordinates": [
+            106.632589,
+            8.731831
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135544",
+        "properties": {
+          "AirportName_Vi": "Sân bay Côn Đảo",
+          "AirportName_En": "Con Dao Airport",
+          "CityName_Vi": "Côn Đảo",
+          "CityName_En": "Con Dao",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135544,
+          "CITY": "Con Son/ Con dao",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCS",
+          "ICAO": "VVCS",
+          "NAME": "Con Dao Airport",
+          "NAME_SHORT": "Con Dao",
+          "OF_APT_ID": 6190,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.63259,
+          "Y": 8.731831,
+          "Z__feet_": 20,
+          "total_leng": 1830
+        },
+        "type": "Feature",
+        "oldLocation": "Côn Đảo, Bà Rịa-Vũng Tàu",
+        "parent_id": null,
+        "newLocation": null,
+        "distance": 265.9601401261494
+      }
+    ],
+    "train_stations": []
+  }
+}

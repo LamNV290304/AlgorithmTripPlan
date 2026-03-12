@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "268",
+    "base_id": "21",
+    "longitude": 108.5700636,
+    "latitude": 13.5261514,
+    "name": "Ia Pa",
+    "english_name": "Ia Pa",
+    "code": "ip",
+    "x_migrate_key": "207",
+    "city_id": "268",
+    "city_name": "Ia Pa",
+    "city_english_name": "Ia Pa",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "21",
+    "state_name": "Gia Lai",
+    "state_english_name": "Gia Lai",
+    "country_id": "1926",
+    "name_token": "Ia Pa",
+    "alias": [
+      "iapa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Ia Pa - Gia Lai",
+    "full_english_name": "Ia Pa - Gia Lai",
+    "airports": [
+      {
+        "bbox": [
+          108.017158,
+          14.004522,
+          108.017158,
+          14.004522
+        ],
+        "geometry": {
+          "coordinates": [
+            108.017158,
+            14.004522
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135550",
+        "properties": {
+          "AirportName_Vi": "Sân bay Pleiku",
+          "AirportName_En": "Pleiku Airport",
+          "CityName_Vi": "PleiKu",
+          "CityName_En": "Pleiku",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135550,
+          "CITY": "Pleiku",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "PXU",
+          "ICAO": "VVPK",
+          "NAME": "Pleiku Airport",
+          "NAME_SHORT": "Pleiku",
+          "OF_APT_ID": 6194,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 108.01716,
+          "Y": 14.004522,
+          "Z__feet_": 2434,
+          "total_leng": 1817
+        },
+        "type": "Feature",
+        "oldLocation": "Thống Nhất, Pleiku, Gia Lai",
+        "parent_id": 500968,
+        "newLocation": "Thống Nhất, Gia Lai",
+        "distance": 103.96118372687654
+      }
+    ],
+    "train_stations": []
+  }
+}

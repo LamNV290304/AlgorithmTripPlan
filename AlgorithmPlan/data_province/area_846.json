@@ -1,0 +1,199 @@
+{
+  "message": "success",
+  "data": {
+    "id": "846",
+    "parent_id": 500583,
+    "name": "Bến xe Sông Cầu",
+    "english_name": "Song Cau Bus Station",
+    "code": "SCPY",
+    "address": "Thị trấn Sông Cầu",
+    "english_address": "",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": null,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 109.2094351,
+    "latitude": 13.4598044,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "561",
+    "root_id": "3551",
+    "city_id": "561",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Sông Cầu",
+    "city_english_name": "Song Cau",
+    "city_migrate_key": "503",
+    "state_id": "45",
+    "state_type": 3,
+    "state_code": "PYN",
+    "state_name": "Phú Yên",
+    "state_english_name": "Phu Yen",
+    "state_migrate_key": 45,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Sông Cầu",
+    "alias": [
+      "benxesongcau"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Sông Cầu - Sông Cầu - Phú Yên",
+    "airports": [
+      {
+        "bbox": [
+          109.333706,
+          13.04955,
+          109.333706,
+          13.04955
+        ],
+        "geometry": {
+          "coordinates": [
+            109.333706,
+            13.04955
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135556",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tuy Hòa",
+          "AirportName_En": "Tuy Hoa Airport",
+          "CityName_Vi": "Phú Yên",
+          "CityName_En": "Tuy Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135556,
+          "CITY": "Tuy Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "TBB",
+          "ICAO": "VVTH",
+          "NAME": "Dong Tac  Airport",
+          "NAME_SHORT": "Dong Tac",
+          "OF_APT_ID": 4158,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 109.33371,
+          "Y": 13.04955,
+          "Z__feet_": 20,
+          "total_leng": 5700
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Thạnh, Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 61.82764162919053
+      },
+      {
+        "bbox": [
+          109.042267,
+          13.954986,
+          109.042267,
+          13.954986
+        ],
+        "geometry": {
+          "coordinates": [
+            109.042267,
+            13.954986
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135545",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phù Cát",
+          "AirportName_En": "Phu Cat Airport",
+          "CityName_Vi": "Qui Nhơn",
+          "CityName_En": "Qui Nhon",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135545,
+          "CITY": "Phucat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "UIH",
+          "ICAO": "VVPC",
+          "NAME": "Phu Cat Airport",
+          "NAME_SHORT": "Phu Cat",
+          "OF_APT_ID": 6193,
+          "Other": "Domestic / Military",
+          "TYPE": "D / M",
+          "TZ": 7,
+          "X": 109.04227,
+          "Y": 13.954986,
+          "Z__feet_": 80,
+          "total_leng": 3051
+        },
+        "type": "Feature",
+        "oldLocation": "Cát Tân, Phù Cát, Bình Định",
+        "parent_id": 500949,
+        "newLocation": "Phù Cát, Gia Lai",
+        "distance": 75.3316912778947
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga La Hai",
+        "lat": 13.3814054,
+        "long": 109.1058389,
+        "id": 72,
+        "code": "LHA",
+        "short_name": "La Hai",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500528,
+        "newLocation": "Đồng Xuân, Đắk Lắk",
+        "distance": 18.45559158774073
+      },
+      {
+        "name": "Ga Phước Lãnh",
+        "lat": 13.4863314,
+        "long": 109.0312447,
+        "id": 109,
+        "code": "PLA",
+        "short_name": "Phước Lãnh",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500604,
+        "newLocation": "Xuân Lãnh, Đắk Lắk",
+        "distance": 25.340957053255917
+      },
+      {
+        "name": "Ga Vân Canh",
+        "lat": 13.620556,
+        "long": 108.996944,
+        "id": 155,
+        "code": "VCA",
+        "short_name": "Vân Canh",
+        "oldLocation": "Vân Canh, Bình Định",
+        "parent_id": 500976,
+        "newLocation": "Vân Canh, Gia Lai",
+        "distance": 37.838341730302716
+      },
+      {
+        "name": "Ga Quy Nhơn",
+        "lat": 13.7781251,
+        "long": 109.2236174,
+        "id": 122,
+        "code": "QNH",
+        "short_name": "Quy Nhơn",
+        "oldLocation": "Quy Nhơn, Bình Định",
+        "newLocation": "Quy Nhơn, Gia Lai",
+        "distance": 46.05745810882732
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "message": "success",
+  "data": {
+    "id": "572",
+    "base_id": "46",
+    "longitude": 106.3934777,
+    "latitude": 17.8640126,
+    "name": "Quảng Trạch",
+    "english_name": "Quang Trach",
+    "code": "qt",
+    "x_migrate_key": "514",
+    "city_id": "572",
+    "city_name": "Quảng Trạch",
+    "city_english_name": "Quang Trach",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "46",
+    "state_name": "Quảng Bình",
+    "state_english_name": "Quang Binh",
+    "country_id": "1926",
+    "name_token": "Quảng Trạch",
+    "alias": [
+      "quangtrach"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Quảng Trạch - Quảng Bình",
+    "full_english_name": "Quang Trach - Quang Binh",
+    "airports": [
+      {
+        "bbox": [
+          106.590556,
+          17.515,
+          106.590556,
+          17.515
+        ],
+        "geometry": {
+          "coordinates": [
+            106.590556,
+            17.515
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135557",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đồng Hới",
+          "AirportName_En": "Dong Hoi Airport",
+          "CityName_Vi": "Quảng Bình",
+          "CityName_En": "Quang Binh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135557,
+          "CITY": "Dong Hoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDH",
+          "ICAO": "VVDH",
+          "NAME": "Dong Hoi  Airport",
+          "NAME_SHORT": "Dong Hoi",
+          "OF_APT_ID": 4154,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.59055,
+          "Y": 17.515,
+          "Z__feet_": 59,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Lộc Ninh, Đồng Hới, Quảng Bình",
+        "parent_id": 502572,
+        "newLocation": "Đồng Hới, Quảng Trị",
+        "distance": 57.2882888736218
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Lạc Giao",
+        "lat": 17.755506,
+        "long": 106.300485,
+        "id": 63,
+        "code": "LAG",
+        "short_name": "Lạc Giao",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502556,
+        "newLocation": "Ba Đồn, Quảng Trị",
+        "distance": 20.24384876627144
+      },
+      {
+        "name": "Ga Minh Lệ",
+        "lat": 17.7128551,
+        "long": 106.3695591,
+        "id": 89,
+        "code": "MLE",
+        "short_name": "Minh Lệ",
+        "oldLocation": "Phường Ba Đồn, Ba Đồn, Quảng Bình",
+        "parent_id": 502556,
+        "newLocation": "Ba Đồn, Quảng Trị",
+        "distance": 22.09696014601065
+      },
+      {
+        "name": "Ga Lệ Sơn",
+        "lat": 17.7787032,
+        "long": 106.2576925,
+        "id": 70,
+        "code": "LES",
+        "short_name": "Lệ Sơn",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": null,
+        "newLocation": "Tuyên Hóa, Quảng Bình",
+        "distance": 22.38866627577425
+      },
+      {
+        "name": "Ga Ngân Sơn",
+        "lat": 17.6697339,
+        "long": 106.3943052,
+        "id": 99,
+        "code": "NSO",
+        "short_name": "Ngân Sơn",
+        "oldLocation": "Bố Trạch, Quảng Bình",
+        "parent_id": 502559,
+        "newLocation": "Bắc Trạch, Quảng Trị",
+        "distance": 28.083878559147205
+      },
+      {
+        "name": "Ga Lạc Sơn",
+        "lat": 17.8113437,
+        "long": 106.1893255,
+        "id": 65,
+        "code": "LAS",
+        "short_name": "Lạc Sơn",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502623,
+        "newLocation": "Tuyên Hóa, Quảng Trị",
+        "distance": 29.105659361261168
+      },
+      {
+        "name": "Ga Thọ Lộc",
+        "lat": 17.6192548,
+        "long": 106.4588628,
+        "id": 146,
+        "code": "TLC",
+        "short_name": "Thọ Lộc",
+        "oldLocation": "Bố Trạch, Quảng Bình",
+        "parent_id": 502562,
+        "newLocation": "Bố Trạch, Quảng Trị",
+        "distance": 36.50784849189823
+      },
+      {
+        "name": "Ga Ngọc Lâm",
+        "lat": 17.8289483,
+        "long": 106.1215769,
+        "id": 98,
+        "code": "NLA",
+        "short_name": "Ngọc Lâm",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502625,
+        "newLocation": "Tuyên Phú, Quảng Trị",
+        "distance": 37.754695217570294
+      },
+      {
+        "name": "Ga Hoàn Lão",
+        "lat": 17.575532,
+        "long": 106.5232383,
+        "id": 51,
+        "code": "HLA",
+        "short_name": "Hoàn Lão",
+        "oldLocation": "Bố Trạch, Quảng Bình",
+        "parent_id": 502581,
+        "newLocation": "Hòan Lão, Quảng Trị",
+        "distance": 45.36744472591785
+      },
+      {
+        "name": "Ga Phúc Tự",
+        "lat": 17.551667,
+        "long": 106.542778,
+        "id": 117,
+        "code": "PTU",
+        "short_name": "Phúc Tự",
+        "oldLocation": "Bố Trạch, Quảng Bình",
+        "parent_id": 502581,
+        "newLocation": "Hòan Lão, Quảng Trị",
+        "distance": 49.61111291169284
+      },
+      {
+        "name": "Ga Đồng Lê",
+        "lat": 17.8881489,
+        "long": 106.0221715,
+        "id": 34,
+        "code": "DLE",
+        "short_name": "Đồng Lê",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502573,
+        "newLocation": "Đồng Lê, Quảng Trị",
+        "distance": 51.20135978583267
+      }
+    ]
+  }
+}

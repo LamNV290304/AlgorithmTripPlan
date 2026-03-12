@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "435",
+    "base_id": "33",
+    "longitude": 105.2428853,
+    "latitude": 9.5384134,
+    "name": "Vĩnh Thuận",
+    "english_name": "Vinh Thuan",
+    "code": "vt",
+    "x_migrate_key": "377",
+    "city_id": "435",
+    "city_name": "Vĩnh Thuận",
+    "city_english_name": "Vinh Thuan",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "33",
+    "state_name": "Kiên Giang",
+    "state_english_name": "Kien Giang",
+    "country_id": "1926",
+    "name_token": "Vĩnh Thuận",
+    "alias": [
+      "vinhthuan"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Vĩnh Thuận - Kiên Giang",
+    "full_english_name": "Vinh Thuan - Kien Giang",
+    "airports": [
+      {
+        "bbox": [
+          105.1325,
+          9.958056,
+          105.1325,
+          9.958056
+        ],
+        "geometry": {
+          "coordinates": [
+            105.1325,
+            9.958056
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135553",
+        "properties": {
+          "AirportName_Vi": "Sân bay Rạch Giá",
+          "AirportName_En": "Rach Gia Airport",
+          "CityName_Vi": "Kiên Giang",
+          "CityName_En": "Rach Gia",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135553,
+          "CITY": "Rach Gia",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VKG",
+          "ICAO": "VVRG",
+          "NAME": "Rach Gia  Airport",
+          "NAME_SHORT": "Rach Gia",
+          "OF_APT_ID": 4155,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.1325,
+          "Y": 9.958056,
+          "Z__feet_": 7,
+          "total_leng": 1500
+        },
+        "type": "Feature",
+        "oldLocation": "Vĩnh Lợi, Rạch Giá, Kiên Giang",
+        "parent_id": 500062,
+        "newLocation": "Rạch Giá, An Giang",
+        "distance": 62.666099940710545
+      }
+    ],
+    "train_stations": []
+  }
+}

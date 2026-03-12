@@ -1,0 +1,142 @@
+{
+  "message": "success",
+  "data": {
+    "id": "923",
+    "parent_id": null,
+    "name": "Chợ Phủ Lý ",
+    "english_name": "Phu Ly Market",
+    "code": "CPL",
+    "address": "Đường Lê Lợi, Minh Khai",
+    "english_address": "Le Loi Street",
+    "note": "http://bit.ly/2Wi4VkO",
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "9",
+    "x_migrate_key": 646,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 105.9154826,
+    "latitude": 20.5465256,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "290",
+    "root_id": "2631",
+    "city_id": "290",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Phủ Lý",
+    "city_english_name": "Phu Ly",
+    "city_migrate_key": "229",
+    "state_id": "23",
+    "state_type": 3,
+    "state_code": "HNM",
+    "state_name": "Hà Nam",
+    "state_english_name": "Ha Nam",
+    "state_migrate_key": 23,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Chợ Phủ Lý ",
+    "alias": [
+      "chophuly"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Chợ Phủ Lý  - Phủ Lý - Hà Nam",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 98.61614011381381
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phủ Lý",
+        "lat": 20.5406354,
+        "long": 105.9129935,
+        "id": 111,
+        "code": "PLY",
+        "short_name": "Phủ Lý",
+        "oldLocation": "Phủ Lý, Hà Nam",
+        "parent_id": null,
+        "newLocation": "Phủ Lý, Ninh Bình",
+        "distance": 0.9156875421758698
+      },
+      {
+        "name": "Ga Nam Định",
+        "lat": 20.4214523,
+        "long": 106.1644397,
+        "id": 94,
+        "code": "NDI",
+        "short_name": "Nam Định",
+        "oldLocation": "Nam Định, Nam Định",
+        "parent_id": null,
+        "newLocation": "Nam Định, Ninh Bình",
+        "distance": 38.25418991340738
+      },
+      {
+        "name": "Ga Ninh Bình",
+        "lat": 20.2421,
+        "long": 105.9745234,
+        "id": 93,
+        "code": "NBI",
+        "short_name": "Ninh Bình",
+        "oldLocation": "Phường Nam Bình, Ninh Bình, Ninh Bình",
+        "parent_id": 502174,
+        "newLocation": "Hoa Lư, Ninh Bình",
+        "distance": 44.72694505731158
+      }
+    ]
+  }
+}

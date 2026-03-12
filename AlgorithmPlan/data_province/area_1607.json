@@ -1,0 +1,131 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1607",
+    "parent_id": 500585,
+    "name": "Bến xe Sơn Hòa",
+    "english_name": "Son Hoa Bus Station",
+    "code": "BXSH",
+    "address": "189 Trần Phú",
+    "english_address": "Son Hoa Bus Station",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1829,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 108.9745006,
+    "latitude": 13.0481735,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "144374",
+    "root_id": "3580",
+    "city_id": "563",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Sơn Hòa",
+    "city_english_name": "Son Hoa",
+    "city_migrate_key": "505",
+    "state_id": "45",
+    "state_type": 3,
+    "state_code": "PYN",
+    "state_name": "Phú Yên",
+    "state_english_name": "Phu Yen",
+    "state_migrate_key": 45,
+    "ward_id": "144374",
+    "ward_name": "Thị trấn Củng Sơn",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Sơn Hòa",
+    "alias": [
+      "benxesonhoa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Sơn Hòa - Thị trấn Củng Sơn - Sơn Hòa - Phú Yên",
+    "airports": [
+      {
+        "bbox": [
+          109.333706,
+          13.04955,
+          109.333706,
+          13.04955
+        ],
+        "geometry": {
+          "coordinates": [
+            109.333706,
+            13.04955
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135556",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tuy Hòa",
+          "AirportName_En": "Tuy Hoa Airport",
+          "CityName_Vi": "Phú Yên",
+          "CityName_En": "Tuy Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135556,
+          "CITY": "Tuy Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "TBB",
+          "ICAO": "VVTH",
+          "NAME": "Dong Tac  Airport",
+          "NAME_SHORT": "Dong Tac",
+          "OF_APT_ID": 4158,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 109.33371,
+          "Y": 13.04955,
+          "Z__feet_": 20,
+          "total_leng": 5700
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Thạnh, Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 50.58395313160017
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Tuy Hoà",
+        "lat": 13.0881191,
+        "long": 109.2972793,
+        "id": 138,
+        "code": "THA",
+        "short_name": "Tuy Hoà",
+        "oldLocation": "Tuy Hòa, Phú Yên",
+        "parent_id": 500599,
+        "newLocation": "Tuy Hòa, Đắk Lắk",
+        "distance": 45.815708918668925,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Ðông Tác",
+        "lat": 13.0555768,
+        "long": 109.3220812,
+        "id": 41,
+        "code": "DTA",
+        "short_name": "Ðông Tác",
+        "oldLocation": "Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 48.95765055528018
+      }
+    ]
+  }
+}

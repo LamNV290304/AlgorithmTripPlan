@@ -1,0 +1,168 @@
+{
+  "message": "success",
+  "data": {
+    "id": "32",
+    "longitude": 109.0691865,
+    "base_id": "1926",
+    "latitude": 12.318715,
+    "name": "Khánh Hòa",
+    "english_name": "Khanh Hoa",
+    "code": "KHA",
+    "x_migrate_key": 32,
+    "state_id": "32",
+    "state_name": "Khánh Hòa",
+    "state_english_name": "Khanh Hoa",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Khánh Hòa",
+    "alias": [
+      "khanhhoa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Khánh Hòa",
+    "full_english_name": "Khanh Hoa",
+    "airports": [
+      {
+        "bbox": [
+          109.219372,
+          11.998153,
+          109.219372,
+          11.998153
+        ],
+        "geometry": {
+          "coordinates": [
+            109.219372,
+            11.998153
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135552",
+        "properties": {
+          "CITY": "Nha Trang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CXR",
+          "ICAO": "VVCR",
+          "NAME": "Cam Ranh Airport",
+          "NAME_SHORT": "Cam Ranh",
+          "OF_APT_ID": 6189,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 109.219376,
+          "Y": 11.998153,
+          "Z__feet_": 40,
+          "total_leng": 3048,
+          "AirportName_Vi": "Sân bay Cam Ranh",
+          "AirportName_En": "Cam Ranh Airport",
+          "CityName_Vi": "Nha Trang",
+          "CityName_En": "Nha Trang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135552
+        },
+        "type": "Feature",
+        "oldLocation": "Cam Nghĩa, Cam Ranh, Khánh Hòa",
+        "parent_id": 501609,
+        "newLocation": "Bắc Cam Ranh, Khánh Hòa",
+        "distance": 50.96713397679132
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Lương Sơn",
+        "lat": 12.3375343,
+        "long": 109.1944619,
+        "id": 80,
+        "code": "LUS",
+        "short_name": "Lương Sơn",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501611,
+        "newLocation": "Bắc Nha Trang, Khánh Hòa",
+        "distance": 17.899342632594028
+      },
+      {
+        "name": "Ga Nha Trang",
+        "lat": 12.2484625,
+        "long": 109.1842369,
+        "id": 101,
+        "code": "NTR",
+        "short_name": "Nha Trang",
+        "oldLocation": "Nha Trang, Khánh Hòa",
+        "parent_id": 501656,
+        "newLocation": "Tây Nha Trang, Khánh Hòa",
+        "distance": 19.16239601183784,
+        "is_station_default": true
+      },
+      {
+        "es_id": 171693,
+        "name": "Ga Ninh Hoà",
+        "lat": 12.489559,
+        "long": 109.1239841,
+        "id": 95,
+        "code": "NHO",
+        "short_name": "Ninh Hoà",
+        "oldLocation": "Phường Ninh Hiệp, Ninh Hòa, Khánh Hòa",
+        "parent_id": 501643,
+        "base_id": 144497,
+        "newLocation": "Ninh Hòa, Khánh Hòa",
+        "distance": 25.879457870043876
+      },
+      {
+        "name": "Ga Ngã Ba",
+        "lat": 11.9259721,
+        "long": 109.1212084,
+        "id": 92,
+        "code": "NBA",
+        "short_name": "Ngã Ba",
+        "oldLocation": "Xã Cam Phước Đông, Cam Ranh, Khánh Hòa",
+        "parent_id": 501604,
+        "newLocation": "Ba Ngòi, Khánh Hòa",
+        "distance": 57.246416172131546
+      },
+      {
+        "name": "Ga Giã",
+        "lat": 12.70003574,
+        "long": 109.2236767,
+        "id": 47,
+        "code": "GIA",
+        "short_name": "Giã",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501664,
+        "newLocation": "Vạn Ninh, Khánh Hòa",
+        "distance": 59.27621959298939
+      },
+      {
+        "name": "Ga Tu Bông",
+        "lat": 12.7779475,
+        "long": 109.3009695,
+        "id": 134,
+        "code": "TBO",
+        "short_name": "Tu Bông",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501662,
+        "newLocation": "Tu Bông, Khánh Hòa",
+        "distance": 74.00253578147394
+      },
+      {
+        "name": "Ga Ðại Lãnh",
+        "lat": 12.8348561,
+        "long": 109.3613118,
+        "id": 33,
+        "code": "DLA",
+        "short_name": "Ðại Lãnh",
+        "oldLocation": "Vạn Ninh, Khánh Hòa",
+        "parent_id": 501625,
+        "newLocation": "Đại Lãnh, Khánh Hòa",
+        "distance": 85.23651276859869
+      }
+    ]
+  }
+}

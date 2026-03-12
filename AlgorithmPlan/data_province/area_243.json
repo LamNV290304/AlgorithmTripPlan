@@ -1,0 +1,135 @@
+{
+  "message": "success",
+  "data": {
+    "id": "243",
+    "base_id": "19",
+    "longitude": 107.0126076,
+    "latitude": 10.9513704,
+    "name": "Trảng Bom",
+    "english_name": "Trang Bom",
+    "code": "tb",
+    "x_migrate_key": "182",
+    "city_id": "243",
+    "city_name": "Trảng Bom",
+    "city_english_name": "Trang Bom",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "19",
+    "state_name": "Đồng Nai",
+    "state_english_name": "Dong Nai",
+    "country_id": "1926",
+    "name_token": "Trảng Bom",
+    "alias": [
+      "trangbom"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Trảng Bom - Đồng Nai",
+    "full_english_name": "Trang Bom - Dong Nai",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 54.67796910329573
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Biên Hòa",
+        "lat": 10.9508183,
+        "long": 106.8263404,
+        "id": 9,
+        "code": "BHO",
+        "short_name": "Biên Hòa",
+        "oldLocation": "Biên Hòa, Đồng Nai",
+        "parent_id": 500734,
+        "newLocation": "Trấn Biên, Đồng Nai",
+        "distance": 26.435355322860463,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Long Khánh",
+        "lat": 10.9337177,
+        "long": 107.2444058,
+        "id": 75,
+        "code": "LKH",
+        "short_name": "Long Khánh",
+        "oldLocation": "Long Khánh, Đồng Nai",
+        "parent_id": 500688,
+        "newLocation": "Long Khánh, Đồng Nai",
+        "distance": 32.996806991599065
+      },
+      {
+        "name": "Ga Dĩ An",
+        "lat": 10.9079211,
+        "long": 106.7694136,
+        "id": 32,
+        "code": "DIA",
+        "short_name": "Dĩ An",
+        "oldLocation": "Dĩ An, Bình Dương",
+        "parent_id": 501348,
+        "newLocation": "Dĩ An, Hồ Chí Minh",
+        "distance": 35.08361611743671
+      },
+      {
+        "name": "Ga Sóng Thần",
+        "lat": 10.8779164,
+        "long": 106.7511083,
+        "id": 131,
+        "code": "STH",
+        "short_name": "Sóng Thần",
+        "oldLocation": "Dĩ An, Bình Dương",
+        "parent_id": 501348,
+        "newLocation": "Dĩ An, Hồ Chí Minh",
+        "distance": 38.60570013285044
+      }
+    ]
+  }
+}

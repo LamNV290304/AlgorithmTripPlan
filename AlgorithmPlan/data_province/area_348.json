@@ -1,0 +1,182 @@
+{
+  "message": "success",
+  "data": {
+    "id": "348",
+    "base_id": "27",
+    "longitude": 106.8945456,
+    "latitude": 20.7953459,
+    "name": "Cát Hải",
+    "english_name": "Cat Hai",
+    "code": "ch",
+    "x_migrate_key": "288",
+    "city_id": "348",
+    "city_name": "Cát Hải",
+    "city_english_name": "Cat Hai",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "21",
+    "is_search_on_fe": 1,
+    "state_id": "27",
+    "state_name": "Hải Phòng",
+    "state_english_name": "Hai Phong",
+    "country_id": "1926",
+    "name_token": "Cát Hải",
+    "alias": [
+      "cathai"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cát Hải - Hải Phòng",
+    "full_english_name": "Cat Hai - Hai Phong",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 23.17348340014997
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Yên Cư",
+        "lat": 20.9840239,
+        "long": 106.9153373,
+        "id": 166,
+        "code": "YCU",
+        "short_name": "Yên Cư",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502547,
+        "newLocation": "Tuần Châu, Quảng Ninh",
+        "distance": 27.41821028287337
+      },
+      {
+        "name": "Ga Hải Phòng",
+        "lat": 20.8560491,
+        "long": 106.6875036,
+        "id": 55,
+        "code": "HPH",
+        "short_name": "Hải Phòng",
+        "oldLocation": "Ngô Quyền, Hải Phòng",
+        "parent_id": 501249,
+        "newLocation": "Ngô Quyền, Hải Phòng",
+        "distance": 29.317267408668904,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Hạ Long",
+        "lat": 20.9719208,
+        "long": 107.0100097,
+        "id": 52,
+        "code": "HLO",
+        "short_name": "Hạ Long",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502551,
+        "newLocation": "Việt Hưng, Quảng Ninh",
+        "distance": 29.91121383424424
+      },
+      {
+        "name": "Ga Thượng Lý",
+        "lat": 20.8656191,
+        "long": 106.6584867,
+        "id": 139,
+        "code": "THL",
+        "short_name": "Thượng Lý",
+        "oldLocation": "Hồng Bàng, Hải Phòng",
+        "parent_id": 501220,
+        "newLocation": "Hồng Bàng, Hải Phòng",
+        "distance": 33.471399327798096
+      },
+      {
+        "name": "Ga Nam Khê",
+        "lat": 21.0230507,
+        "long": 106.8119382,
+        "id": 97,
+        "code": "NKH",
+        "short_name": "Nam Khê",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": null,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 34.754283108882504
+      },
+      {
+        "name": "Ga Bàn Cờ",
+        "lat": 21.03246193,
+        "long": 106.7778597,
+        "id": 5,
+        "code": "BCO",
+        "short_name": "Bàn Cờ",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 37.72390643967774
+      },
+      {
+        "name": "Ga Uông Bí",
+        "lat": 21.0347666,
+        "long": 106.7558082,
+        "id": 154,
+        "code": "UBI",
+        "short_name": "Uông Bí",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": 502548,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 39.35395274299472
+      },
+      {
+        "name": "Ga Yên Dưỡng",
+        "lat": 21.045549,
+        "long": 106.7012302,
+        "id": 168,
+        "code": "YED",
+        "short_name": "Yên Dưỡng",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502525,
+        "newLocation": "Hoàng Quế, Quảng Ninh",
+        "distance": 44.6030007492877
+      }
+    ]
+  }
+}

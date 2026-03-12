@@ -1,0 +1,218 @@
+{
+  "message": "success",
+  "data": {
+    "id": "351",
+    "base_id": "27",
+    "longitude": 106.7219631,
+    "latitude": 20.8300935,
+    "name": "Hải An",
+    "english_name": "Hai An",
+    "code": "ha",
+    "x_migrate_key": "291",
+    "city_id": "351",
+    "city_name": "Hải An",
+    "city_english_name": "Hai An",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "18",
+    "is_search_on_fe": 1,
+    "state_id": "27",
+    "state_name": "Hải Phòng",
+    "state_english_name": "Hai Phong",
+    "country_id": "1926",
+    "name_token": "Hải An",
+    "alias": [
+      "haian"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hải An - Hải Phòng",
+    "full_english_name": "Hai An - Hai Phong",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 1.6008884092975313
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Hải Phòng",
+        "lat": 20.8560491,
+        "long": 106.6875036,
+        "id": 55,
+        "code": "HPH",
+        "short_name": "Hải Phòng",
+        "oldLocation": "Ngô Quyền, Hải Phòng",
+        "parent_id": 501249,
+        "newLocation": "Ngô Quyền, Hải Phòng",
+        "distance": 5.979022467049791,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Thượng Lý",
+        "lat": 20.8656191,
+        "long": 106.6584867,
+        "id": 139,
+        "code": "THL",
+        "short_name": "Thượng Lý",
+        "oldLocation": "Hồng Bàng, Hải Phòng",
+        "parent_id": 501220,
+        "newLocation": "Hồng Bàng, Hải Phòng",
+        "distance": 9.995104589745123
+      },
+      {
+        "name": "Ga Uông Bí",
+        "lat": 21.0347666,
+        "long": 106.7558082,
+        "id": 154,
+        "code": "UBI",
+        "short_name": "Uông Bí",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": 502548,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 29.93699169060907
+      },
+      {
+        "name": "Ga Bàn Cờ",
+        "lat": 21.03246193,
+        "long": 106.7778597,
+        "id": 5,
+        "code": "BCO",
+        "short_name": "Bàn Cờ",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 30.210848360105278
+      },
+      {
+        "name": "Ga Nam Khê",
+        "lat": 21.0230507,
+        "long": 106.8119382,
+        "id": 97,
+        "code": "NKH",
+        "short_name": "Nam Khê",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": null,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 30.423335456160075
+      },
+      {
+        "name": "Ga Yên Dưỡng",
+        "lat": 21.045549,
+        "long": 106.7012302,
+        "id": 168,
+        "code": "YED",
+        "short_name": "Yên Dưỡng",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502525,
+        "newLocation": "Hoàng Quế, Quảng Ninh",
+        "distance": 31.27035693038754
+      },
+      {
+        "name": "Ga Yên Cư",
+        "lat": 20.9840239,
+        "long": 106.9153373,
+        "id": 166,
+        "code": "YCU",
+        "short_name": "Yên Cư",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502547,
+        "newLocation": "Tuần Châu, Quảng Ninh",
+        "distance": 34.30708343946488
+      },
+      {
+        "name": "Ga Phú Thái",
+        "lat": 20.9658755,
+        "long": 106.5119282,
+        "id": 113,
+        "code": "PTA",
+        "short_name": "Phú Thái",
+        "oldLocation": "Kim Thành, Hải Dương",
+        "parent_id": 501259,
+        "newLocation": "Phú Thái, Hải Phòng",
+        "distance": 34.49296675549396
+      },
+      {
+        "name": "Ga Mạo Khê",
+        "lat": 21.0628357,
+        "long": 106.6036463,
+        "id": 83,
+        "code": "MAK",
+        "short_name": "Mạo Khê",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502533,
+        "newLocation": "Mạo Khê, Quảng Ninh",
+        "distance": 37.24282479897287
+      },
+      {
+        "name": "Ga Hạ Long",
+        "lat": 20.9719208,
+        "long": 107.0100097,
+        "id": 52,
+        "code": "HLO",
+        "short_name": "Hạ Long",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502551,
+        "newLocation": "Việt Hưng, Quảng Ninh",
+        "distance": 43.970319767848395
+      },
+      {
+        "name": "Ga Ðông Triều",
+        "lat": 21.0953974,
+        "long": 106.5329046,
+        "id": 38,
+        "code": "DOT",
+        "short_name": "Ðông Triều",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502500,
+        "newLocation": "An Sinh, Quảng Ninh",
+        "distance": 46.065686395425864
+      }
+    ]
+  }
+}

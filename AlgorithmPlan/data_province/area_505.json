@@ -1,0 +1,110 @@
+{
+  "message": "success",
+  "data": {
+    "id": "505",
+    "base_id": "40",
+    "longitude": 106.1610343,
+    "latitude": 20.0318124,
+    "name": "Nghĩa Hưng",
+    "english_name": "Nghia Hung",
+    "code": "nh",
+    "x_migrate_key": "447",
+    "city_id": "505",
+    "city_name": "Nghĩa Hưng",
+    "city_english_name": "Nghia Hung",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "40",
+    "state_name": "Nam Định",
+    "state_english_name": "Nam Dinh",
+    "country_id": "1926",
+    "name_token": "Nghĩa Hưng",
+    "alias": [
+      "nghiahung"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Nghĩa Hưng - Nam Định",
+    "full_english_name": "Nghia Hung - Nam Dinh",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 178.46894295262547
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Ninh Bình",
+        "lat": 20.2421,
+        "long": 105.9745234,
+        "id": 93,
+        "code": "NBI",
+        "short_name": "Ninh Bình",
+        "oldLocation": "Phường Nam Bình, Ninh Bình, Ninh Bình",
+        "parent_id": 502174,
+        "newLocation": "Hoa Lư, Ninh Bình",
+        "distance": 39.55703656015308
+      },
+      {
+        "name": "Ga Bỉm Sơn",
+        "lat": 20.0816818,
+        "long": 105.8550823,
+        "id": 13,
+        "code": "BSO",
+        "short_name": "Bỉm Sơn",
+        "oldLocation": "Bỉm Sơn, Thanh Hóa",
+        "parent_id": 502985,
+        "newLocation": "Quang Trung, Thanh Hóa",
+        "distance": 42.16501512045046
+      }
+    ]
+  }
+}

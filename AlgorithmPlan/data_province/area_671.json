@@ -1,0 +1,148 @@
+{
+  "message": "success",
+  "data": {
+    "id": "671",
+    "base_id": "55",
+    "longitude": 105.8994956,
+    "latitude": 21.6286393,
+    "name": "Đồng Hỷ",
+    "english_name": "Dong Hy",
+    "code": "dh",
+    "x_migrate_key": "613",
+    "city_id": "671",
+    "city_name": "Đồng Hỷ",
+    "city_english_name": "Dong Hy",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "55",
+    "state_name": "Thái Nguyên",
+    "state_english_name": "Thai Nguyen",
+    "country_id": "1926",
+    "name_token": "Đồng Hỷ",
+    "alias": [
+      "donghy"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đồng Hỷ - Thái Nguyên",
+    "full_english_name": "Dong Hy - Thai Nguyen",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 60.1937157443488
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Thái Nguyên",
+        "lat": 21.5868579,
+        "long": 105.8237712,
+        "id": 150,
+        "code": "TNG",
+        "short_name": "Thái Nguyên",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502846,
+        "newLocation": "Phan Đình Phùng, Thái Nguyên",
+        "distance": 11.834207535753565
+      },
+      {
+        "name": "Ga Lưu Xá",
+        "lat": 21.5622511,
+        "long": 105.8466888,
+        "id": 81,
+        "code": "LXA",
+        "short_name": "Lưu Xá",
+        "oldLocation": "Phường Phú Xá, Thái Nguyên, Thái Nguyên",
+        "parent_id": 502876,
+        "newLocation": "Tích Lương, Thái Nguyên",
+        "distance": 11.936128493333458
+      },
+      {
+        "name": "Ga Quán Triều",
+        "lat": 21.6038132,
+        "long": 105.8032245,
+        "id": 124,
+        "code": "QTR",
+        "short_name": "Quán Triều",
+        "oldLocation": "Thái Nguyên, Thái Nguyên",
+        "parent_id": 502859,
+        "newLocation": "Quan Triều, Thái Nguyên",
+        "distance": 13.426113618552254
+      },
+      {
+        "name": "Ga Phổ Yên",
+        "lat": 21.4119225,
+        "long": 105.8766818,
+        "id": 108,
+        "code": "PHY",
+        "short_name": "Phổ Yên",
+        "oldLocation": "Phổ Yên, Thái Nguyên",
+        "parent_id": 502848,
+        "newLocation": "Phổ Yên, Thái Nguyên",
+        "distance": 31.47701528391254
+      },
+      {
+        "es_id": 171735,
+        "name": "Ga Trung Giã",
+        "lat": 21.3148237,
+        "long": 105.8711565,
+        "id": 137,
+        "code": "TGI",
+        "short_name": "Trung Giã",
+        "oldLocation": "Xã Trung Giã, Sóc Sơn, Hà Nội",
+        "base_id": 136974,
+        "parent_id": 501089,
+        "newLocation": "Trung Giã, Hà Nội",
+        "distance": 45.52301546549822
+      }
+    ]
+  }
+}

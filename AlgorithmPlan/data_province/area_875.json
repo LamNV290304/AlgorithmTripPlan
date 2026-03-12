@@ -1,0 +1,119 @@
+{
+  "message": "success",
+  "data": {
+    "id": "875",
+    "parent_id": 501383,
+    "name": "Suối Nghệ",
+    "english_name": "",
+    "code": "sn",
+    "address": "Suối Nghệ, Ba Ria, Ba Ria - Vung Tau, Vietnam",
+    "english_address": "",
+    "note": "",
+    "is_prg_status": 1,
+    "suggestion": "",
+    "english_suggestion": "",
+    "type": 15,
+    "sub_type_id": null,
+    "x_migrate_key": 504,
+    "phone_info": "|",
+    "url_info": "https://goo.gl/bjNzn1",
+    "longitude": 107.1898113,
+    "latitude": 10.6043384,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": null,
+    "base_id": "79",
+    "root_id": "2054",
+    "city_id": "79",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Châu Đức",
+    "city_english_name": "Chau Duc",
+    "city_migrate_key": "16",
+    "state_id": "2",
+    "state_type": 3,
+    "state_code": "VTU",
+    "state_name": "Bà Rịa-Vũng Tàu",
+    "state_english_name": "Ba Ria-Vung Tau",
+    "state_migrate_key": 2,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Suối Nghệ",
+    "alias": [
+      "suoinghe"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Suối Nghệ - Châu Đức - Bà Rịa-Vũng Tàu",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 82.45761974456971
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Long Khánh",
+        "lat": 10.9337177,
+        "long": 107.2444058,
+        "id": 75,
+        "code": "LKH",
+        "short_name": "Long Khánh",
+        "oldLocation": "Long Khánh, Đồng Nai",
+        "parent_id": 500688,
+        "newLocation": "Long Khánh, Đồng Nai",
+        "distance": 48.239966967060504,
+        "is_station_default": true
+      }
+    ]
+  }
+}

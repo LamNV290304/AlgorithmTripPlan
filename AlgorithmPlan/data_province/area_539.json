@@ -1,0 +1,157 @@
+{
+  "message": "success",
+  "data": {
+    "id": "539",
+    "base_id": "43",
+    "longitude": 109.1642208,
+    "latitude": 11.7032481,
+    "name": "Ninh Hải",
+    "english_name": "Ninh Hai",
+    "code": "nh",
+    "x_migrate_key": "481",
+    "city_id": "539",
+    "city_name": "Ninh Hải",
+    "city_english_name": "Ninh Hai",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "43",
+    "state_name": "Ninh Thuận",
+    "state_english_name": "Ninh Thuan",
+    "country_id": "1926",
+    "name_token": "Ninh Hải",
+    "alias": [
+      "ninhhai"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Ninh Hải - Ninh Thuận",
+    "full_english_name": "Ninh Hai - Ninh Thuan",
+    "airports": [
+      {
+        "bbox": [
+          109.219372,
+          11.998153,
+          109.219372,
+          11.998153
+        ],
+        "geometry": {
+          "coordinates": [
+            109.219372,
+            11.998153
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135552",
+        "properties": {
+          "CITY": "Nha Trang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CXR",
+          "ICAO": "VVCR",
+          "NAME": "Cam Ranh Airport",
+          "NAME_SHORT": "Cam Ranh",
+          "OF_APT_ID": 6189,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 109.219376,
+          "Y": 11.998153,
+          "Z__feet_": 40,
+          "total_leng": 3048,
+          "AirportName_Vi": "Sân bay Cam Ranh",
+          "AirportName_En": "Cam Ranh Airport",
+          "CityName_Vi": "Nha Trang",
+          "CityName_En": "Nha Trang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135552
+        },
+        "type": "Feature",
+        "oldLocation": "Cam Nghĩa, Cam Ranh, Khánh Hòa",
+        "parent_id": 501609,
+        "newLocation": "Bắc Cam Ranh, Khánh Hòa",
+        "distance": 43.33764832808468
+      },
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 378.42519833765476
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Ngã Ba",
+        "lat": 11.9259721,
+        "long": 109.1212084,
+        "id": 92,
+        "code": "NBA",
+        "short_name": "Ngã Ba",
+        "oldLocation": "Xã Cam Phước Đông, Cam Ranh, Khánh Hòa",
+        "parent_id": 501604,
+        "newLocation": "Ba Ngòi, Khánh Hòa",
+        "distance": 32.76566483978167
+      },
+      {
+        "name": "Ga Tháp Chàm",
+        "lat": 11.5973105,
+        "long": 108.9500331,
+        "id": 136,
+        "code": "TCH",
+        "short_name": "Tháp Chàm",
+        "oldLocation": "Phan Rang-Tháp Chàm, Ninh Thuận",
+        "parent_id": 501626,
+        "newLocation": "Đô Vinh, Khánh Hòa",
+        "distance": 33.97108016044869,
+        "is_station_default": true
+      }
+    ]
+  }
+}

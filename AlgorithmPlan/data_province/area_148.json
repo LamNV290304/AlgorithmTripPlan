@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "148",
+    "base_id": "10",
+    "longitude": 106.9905473,
+    "latitude": 11.5123355,
+    "name": "Đồng Phú",
+    "english_name": "Dong Phu",
+    "code": "dp",
+    "x_migrate_key": "85",
+    "city_id": "148",
+    "city_name": "Đồng Phú",
+    "city_english_name": "Dong Phu",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "10",
+    "state_name": "Bình Phước",
+    "state_english_name": "Binh Phuoc",
+    "country_id": "1926",
+    "name_token": "Đồng Phú",
+    "alias": [
+      "dongphu"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đồng Phú - Bình Phước",
+    "full_english_name": "Dong Phu - Binh Phuoc",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 111.16565022226719
+      }
+    ],
+    "train_stations": []
+  }
+}

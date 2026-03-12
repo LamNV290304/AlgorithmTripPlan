@@ -1,0 +1,188 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1457",
+    "parent_id": 500493,
+    "name": "Bến xe Thăng Bình",
+    "english_name": null,
+    "code": "BXTB",
+    "address": "Thị trấn Hà Lam",
+    "english_address": "",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1671,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 108.3588187,
+    "latitude": 15.7428937,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "590",
+    "root_id": "3648",
+    "city_id": "590",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Thăng Bình",
+    "city_english_name": "Thang Binh",
+    "city_migrate_key": "532",
+    "state_id": "47",
+    "state_type": 3,
+    "state_code": "QNM",
+    "state_name": "Quảng Nam",
+    "state_english_name": "Quang Nam",
+    "state_migrate_key": 47,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Thăng Bình",
+    "alias": [
+      "benxethangbinh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Thăng Bình - Thăng Bình - Quảng Nam",
+    "airports": [
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng",
+        "distance": 48.83514500782158
+      },
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 68.61477650828306
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phú Cang",
+        "lat": 15.7048246,
+        "long": 108.3415769,
+        "id": 102,
+        "code": "PCG",
+        "short_name": "Phú Cang",
+        "oldLocation": "Thăng Bình, Quảng Nam",
+        "parent_id": 500493,
+        "newLocation": "Thăng Bình, Đà Nẵng",
+        "distance": 6.003237462121833
+      },
+      {
+        "name": "Ga Trà Kiệu",
+        "lat": 15.810144,
+        "long": 108.2312778,
+        "id": 143,
+        "code": "TKI",
+        "short_name": "Trà Kiệu",
+        "oldLocation": "Duy Xuyên, Quảng Nam",
+        "parent_id": 500431,
+        "newLocation": "Duy Xuyên, Đà Nẵng",
+        "distance": 20.230669559424097
+      },
+      {
+        "name": "Ga Tam Kỳ",
+        "lat": 15.5577426,
+        "long": 108.4829676,
+        "id": 144,
+        "code": "TKY",
+        "short_name": "Tam Kỳ",
+        "oldLocation": "Phường An Xuân, Tam Kỳ, Quảng Nam",
+        "parent_id": 500483,
+        "newLocation": "Tam Kỳ, Đà Nẵng",
+        "distance": 31.858274892968733
+      }
+    ]
+  }
+}

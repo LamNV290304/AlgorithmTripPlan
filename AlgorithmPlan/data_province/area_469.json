@@ -1,0 +1,99 @@
+{
+  "message": "success",
+  "data": {
+    "id": "469",
+    "base_id": "37",
+    "longitude": 107.0923331,
+    "latitude": 21.5511448,
+    "name": "Đình Lập",
+    "english_name": "Dinh Lap",
+    "code": "dl",
+    "x_migrate_key": "411",
+    "city_id": "469",
+    "city_name": "Đình Lập",
+    "city_english_name": "Dinh Lap",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "37",
+    "state_name": "Lạng Sơn",
+    "state_english_name": "Lang Son",
+    "country_id": "1926",
+    "name_token": "Đình Lập",
+    "alias": [
+      "dinhlap"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đình Lập - Lạng Sơn",
+    "full_english_name": "Dinh Lap - Lang Son",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 179.43616960133468
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Minh Cầm",
+        "lat": 21.2285464,
+        "long": 107.0598491,
+        "id": 84,
+        "code": "MCA",
+        "short_name": "Minh Cầm",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502622,
+        "newLocation": "Tuyên Bình, Quảng Trị",
+        "distance": 46.83721615582571,
+        "is_station_default": true
+      }
+    ]
+  }
+}

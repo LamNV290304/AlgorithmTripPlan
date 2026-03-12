@@ -1,0 +1,110 @@
+{
+  "message": "success",
+  "data": {
+    "id": "736",
+    "base_id": "60",
+    "longitude": 105.4009508,
+    "latitude": 21.6939553,
+    "name": "Sơn Dương",
+    "english_name": "Son Duong",
+    "code": "sd",
+    "x_migrate_key": "678",
+    "city_id": "736",
+    "city_name": "Sơn Dương",
+    "city_english_name": "Son Duong",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "60",
+    "state_name": "Tuyên Quang",
+    "state_english_name": "Tuyen Quang",
+    "country_id": "1926",
+    "name_token": "Sơn Dương",
+    "alias": [
+      "sonduong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Sơn Dương - Tuyên Quang",
+    "full_english_name": "Son Duong - Tuyen Quang",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 87.50456510856955
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phú Thọ",
+        "lat": 21.4022884,
+        "long": 105.2240548,
+        "id": 115,
+        "code": "PTO",
+        "short_name": "Phú Thọ",
+        "oldLocation": "Phú Thọ, Phú Thọ",
+        "parent_id": 502330,
+        "newLocation": "Phong Châu, Phú Thọ",
+        "distance": 48.407151859839566
+      },
+      {
+        "name": "Ga Tiên Kiên",
+        "lat": 21.3666977,
+        "long": 105.2931266,
+        "id": 142,
+        "code": "TKE",
+        "short_name": "Tiên Kiên",
+        "oldLocation": "Lâm Thao, Phú Thọ",
+        "parent_id": 502307,
+        "newLocation": "Lâm Thao, Phú Thọ",
+        "distance": 49.478184478749625
+      }
+    ]
+  }
+}

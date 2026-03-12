@@ -1,0 +1,218 @@
+{
+  "message": "success",
+  "data": {
+    "id": "468",
+    "base_id": "37",
+    "longitude": 106.6055534,
+    "latitude": 21.6506944,
+    "name": "Chi Lăng",
+    "english_name": "Chi Lang",
+    "code": "cl",
+    "x_migrate_key": "410",
+    "city_id": "468",
+    "city_name": "Chi Lăng",
+    "city_english_name": "Chi Lang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "37",
+    "state_name": "Lạng Sơn",
+    "state_english_name": "Lang Son",
+    "country_id": "1926",
+    "name_token": "Chi Lăng",
+    "alias": [
+      "chilang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Chi Lăng - Lạng Sơn",
+    "full_english_name": "Chi Lang - Lang Son",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 124.07516645598292
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Đồng Mỏ",
+        "lat": 21.651533,
+        "long": 106.576721,
+        "id": 36,
+        "code": "DMO",
+        "short_name": "Đồng Mỏ",
+        "oldLocation": "Chi Lăng, Lạng Sơn",
+        "parent_id": 501714,
+        "newLocation": "Chi Lăng, Lạng Sơn",
+        "distance": 3.8756684771425207
+      },
+      {
+        "name": "Ga Chi Lăng",
+        "lat": 21.6017494,
+        "long": 106.5348129,
+        "id": 18,
+        "code": "CLA",
+        "short_name": "Chi Lăng",
+        "oldLocation": "Chi Lăng, Lạng Sơn",
+        "parent_id": 501714,
+        "newLocation": "Chi Lăng, Lạng Sơn",
+        "distance": 11.849951968276141
+      },
+      {
+        "name": "Ga Bắc Thủy",
+        "lat": 21.7137231,
+        "long": 106.6651215,
+        "id": 4,
+        "code": "BAT",
+        "short_name": "Bắc Thủy",
+        "oldLocation": "Chi Lăng, Lạng Sơn",
+        "parent_id": 501741,
+        "newLocation": "Nhân Lý, Lạng Sơn",
+        "distance": 12.125804699111626
+      },
+      {
+        "name": "Ga Sông Hóa",
+        "lat": 21.5564818,
+        "long": 106.4900547,
+        "id": 130,
+        "code": "SOH",
+        "short_name": "Sông Hóa",
+        "oldLocation": "Chi Lăng, Lạng Sơn",
+        "parent_id": 501748,
+        "newLocation": "Tân Đoàn, Lạng Sơn",
+        "distance": 20.650208987660974
+      },
+      {
+        "name": "Ga Bản Thí",
+        "lat": 21.7653371,
+        "long": 106.7321051,
+        "id": 14,
+        "code": "BTH",
+        "short_name": "Bản Thí",
+        "oldLocation": "Chi Lăng, Lạng Sơn",
+        "parent_id": 501715,
+        "newLocation": "Chiến Thắng, Lạng Sơn",
+        "distance": 23.73813184771607
+      },
+      {
+        "name": "Ga Bắc Lệ",
+        "lat": 21.5152682,
+        "long": 106.4313393,
+        "id": 10,
+        "code": "BLE",
+        "short_name": "Bắc Lệ",
+        "oldLocation": "Hữu Lũng, Lạng Sơn",
+        "parent_id": 501749,
+        "newLocation": "Tân Thành, Lạng Sơn",
+        "distance": 30.52233446982762
+      },
+      {
+        "name": "Ga Yên Trạch",
+        "lat": 21.8102696,
+        "long": 106.7624786,
+        "id": 169,
+        "code": "YET",
+        "short_name": "Yên Trạch",
+        "oldLocation": "Lạng Sơn, Lạng Sơn",
+        "parent_id": 501721,
+        "newLocation": "Đông Kinh, Lạng Sơn",
+        "distance": 31.242975089022135
+      },
+      {
+        "name": "Ga Lạng Sơn",
+        "lat": 21.8556948,
+        "long": 106.7688565,
+        "id": 78,
+        "code": "LSO",
+        "short_name": "Lạng Sơn",
+        "oldLocation": "Lạng Sơn, Lạng Sơn",
+        "parent_id": 501721,
+        "newLocation": "Đông Kinh, Lạng Sơn",
+        "distance": 36.862580621626655
+      },
+      {
+        "name": "Ga Phố Vị",
+        "lat": 21.47295398,
+        "long": 106.3782128,
+        "id": 119,
+        "code": "PVI",
+        "short_name": "Phố Vị",
+        "oldLocation": "Hữu Lũng, Lạng Sơn",
+        "parent_id": 501763,
+        "newLocation": "Tuấn Sơn, Lạng Sơn",
+        "distance": 39.927875337238675
+      },
+      {
+        "name": "Ga Đồng Đăng",
+        "lat": 21.9438019,
+        "long": 106.6971159,
+        "id": 29,
+        "code": "DDA",
+        "short_name": "Đồng Đăng",
+        "oldLocation": "Cao Lộc, Lạng Sơn",
+        "parent_id": 501720,
+        "newLocation": "Đồng Đăng, Lạng Sơn",
+        "distance": 44.1159662901867
+      },
+      {
+        "name": "Ga Voi Xô",
+        "lat": 21.4392733,
+        "long": 106.3382756,
+        "id": 163,
+        "code": "VXO",
+        "short_name": "Voi Xô",
+        "oldLocation": "Hữu Lũng, Lạng Sơn",
+        "parent_id": 501763,
+        "newLocation": "Tuấn Sơn, Lạng Sơn",
+        "distance": 47.17453421866449
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1067",
+    "parent_id": 501608,
+    "name": "Bến xe khách tỉnh Ninh Thuận",
+    "english_name": "Ninh Thuan Bus Station",
+    "code": "BXNT",
+    "address": "Số 52 QL1A, Đài Sơn",
+    "english_address": "52 1A High Way",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": null,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 108.9864168,
+    "latitude": 11.5860027,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 1,
+    "base_id": "542",
+    "root_id": "3509",
+    "city_id": "542",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Phan Rang-Tháp Chàm",
+    "city_english_name": "Phan Rang-Thap Cham",
+    "city_migrate_key": "484",
+    "state_id": "43",
+    "state_type": 3,
+    "state_code": "NTN",
+    "state_name": "Ninh Thuận",
+    "state_english_name": "Ninh Thuan",
+    "state_migrate_key": 43,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe khách tỉnh Ninh Thuận",
+    "alias": [
+      "benxekhachtinhninhthuan"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe khách tỉnh Ninh Thuận - Phan Rang-Tháp Chàm - Ninh Thuận",
+    "airports": [
+      {
+        "bbox": [
+          109.219372,
+          11.998153,
+          109.219372,
+          11.998153
+        ],
+        "geometry": {
+          "coordinates": [
+            109.219372,
+            11.998153
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135552",
+        "properties": {
+          "CITY": "Nha Trang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "CXR",
+          "ICAO": "VVCR",
+          "NAME": "Cam Ranh Airport",
+          "NAME_SHORT": "Cam Ranh",
+          "OF_APT_ID": 6189,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 109.219376,
+          "Y": 11.998153,
+          "Z__feet_": 40,
+          "total_leng": 3048,
+          "AirportName_Vi": "Sân bay Cam Ranh",
+          "AirportName_En": "Cam Ranh Airport",
+          "CityName_Vi": "Nha Trang",
+          "CityName_En": "Nha Trang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135552
+        },
+        "type": "Feature",
+        "oldLocation": "Cam Nghĩa, Cam Ranh, Khánh Hòa",
+        "parent_id": 501609,
+        "newLocation": "Bắc Cam Ranh, Khánh Hòa",
+        "distance": 68.08899965361783
+      },
+      {
+        "bbox": [
+          108.367,
+          11.75,
+          108.367,
+          11.75
+        ],
+        "geometry": {
+          "coordinates": [
+            108.367,
+            11.75
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "112068",
+        "properties": {
+          "AirportName_Vi": "Sân bay Liên Khương",
+          "AirportName_En": "Lien Khuong Airport",
+          "CityName_Vi": "Đà Lạt",
+          "CityName_En": "Dalat",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 112068,
+          "CITY": "Dalat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DLI",
+          "ICAO": "VVDL",
+          "NAME": "Lien Khuong  Airport",
+          "NAME_SHORT": "Dalat",
+          "OF_APT_ID": 4153,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.367,
+          "Y": 11.75,
+          "Z__feet_": 3156,
+          "total_leng": 3250
+        },
+        "type": "Feature",
+        "oldLocation": "Liên Nghĩa, Đức Trọng, Lâm Đồng",
+        "parent_id": 501917,
+        "newLocation": "Đức Trọng, Lâm Đồng",
+        "distance": 90.83649108536173
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Tháp Chàm",
+        "lat": 11.5973105,
+        "long": 108.9500331,
+        "id": 136,
+        "code": "TCH",
+        "short_name": "Tháp Chàm",
+        "oldLocation": "Phan Rang-Tháp Chàm, Ninh Thuận",
+        "parent_id": 501626,
+        "newLocation": "Đô Vinh, Khánh Hòa",
+        "distance": 5.405200744497476,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Cà Ná",
+        "lat": 11.3518328,
+        "long": 108.8767111,
+        "id": 23,
+        "code": "CNA",
+        "short_name": "Cà Ná",
+        "oldLocation": "Ninh Phước, Ninh Thuận",
+        "parent_id": 501613,
+        "newLocation": "Cà Ná, Khánh Hòa",
+        "distance": 37.24741456349222
+      }
+    ]
+  }
+}

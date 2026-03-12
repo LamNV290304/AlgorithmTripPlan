@@ -1,0 +1,131 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1446",
+    "parent_id": 502416,
+    "name": "Bến xe Châu Ổ",
+    "english_name": "Châu Ố Bus Station",
+    "code": "BXCỔ",
+    "address": "621 Thị Trấn Châu Ổ",
+    "english_address": "621 Chau O Town",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 1660,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 108.7623981,
+    "latitude": 15.301577,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "144014",
+    "root_id": "3713",
+    "city_id": "593",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Bình Sơn",
+    "city_english_name": "Binh Son",
+    "city_migrate_key": null,
+    "state_id": "48",
+    "state_type": 3,
+    "state_code": "QNI",
+    "state_name": "Quảng Ngãi",
+    "state_english_name": "Quang Ngai",
+    "state_migrate_key": 48,
+    "ward_id": "144014",
+    "ward_name": "Xã Bình Thới",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Châu Ổ",
+    "alias": [
+      "benxechauo"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Châu Ổ - Xã Bình Thới - Bình Sơn - Quảng Ngãi",
+    "airports": [
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 17.019207165014905
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Núi Thành",
+        "lat": 15.422023,
+        "long": 108.6698542,
+        "id": 100,
+        "code": "NTH",
+        "short_name": "Núi Thành",
+        "oldLocation": "Thị trấn Núi Thành, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 21.668824915711912
+      },
+      {
+        "name": "Ga Quảng Ngãi",
+        "lat": 15.1209988,
+        "long": 108.7813511,
+        "id": 121,
+        "code": "QNG",
+        "short_name": "Quảng Ngãi",
+        "oldLocation": "Quảng Ngãi, Quảng Ngãi",
+        "parent_id": 502461,
+        "newLocation": "Nghĩa Lộ, Quảng Ngãi",
+        "distance": 26.236730734062274,
+        "is_station_default": true
+      }
+    ]
+  }
+}

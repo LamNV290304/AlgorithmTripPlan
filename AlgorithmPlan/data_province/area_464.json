@@ -1,0 +1,111 @@
+{
+  "message": "success",
+  "data": {
+    "id": "464",
+    "base_id": "36",
+    "longitude": 108.1903059,
+    "latitude": 11.7906825,
+    "name": "Lâm Hà",
+    "english_name": "Lam Ha",
+    "code": "lh",
+    "x_migrate_key": "406",
+    "city_id": "464",
+    "city_name": "Lâm Hà",
+    "city_english_name": "Lam Ha",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "36",
+    "state_name": "Lâm Đồng",
+    "state_english_name": "Lam Dong",
+    "country_id": "1926",
+    "name_token": "Lâm Hà",
+    "alias": [
+      "lamha"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Lâm Hà - Lâm Đồng",
+    "full_english_name": "Lam Ha - Lam Dong",
+    "airports": [
+      {
+        "bbox": [
+          108.367,
+          11.75,
+          108.367,
+          11.75
+        ],
+        "geometry": {
+          "coordinates": [
+            108.367,
+            11.75
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "112068",
+        "properties": {
+          "AirportName_Vi": "Sân bay Liên Khương",
+          "AirportName_En": "Lien Khuong Airport",
+          "CityName_Vi": "Đà Lạt",
+          "CityName_En": "Dalat",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 112068,
+          "CITY": "Dalat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DLI",
+          "ICAO": "VVDL",
+          "NAME": "Lien Khuong  Airport",
+          "NAME_SHORT": "Dalat",
+          "OF_APT_ID": 4153,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.367,
+          "Y": 11.75,
+          "Z__feet_": 3156,
+          "total_leng": 3250
+        },
+        "type": "Feature",
+        "oldLocation": "Liên Nghĩa, Đức Trọng, Lâm Đồng",
+        "parent_id": 501917,
+        "newLocation": "Đức Trọng, Lâm Đồng",
+        "distance": 25.686907913549593
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Đà Lạt",
+        "lat": 11.9416174,
+        "long": 108.4544647,
+        "id": 35,
+        "code": "DAT",
+        "short_name": "Đà Lạt",
+        "oldLocation": "Đà Lạt, Lâm Đồng",
+        "parent_id": 501996,
+        "newLocation": "Xuân Hương - Đà Lạt, Lâm Đồng",
+        "distance": 43.27213574344105,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Trại Mát",
+        "lat": 11.9462639,
+        "long": 108.5010297,
+        "id": 149,
+        "code": "TMA",
+        "short_name": "Trại Mát",
+        "oldLocation": "Đà Lạt, Lâm Đồng",
+        "parent_id": 501997,
+        "newLocation": "Xuân Trường - Đà Lạt, Lâm Đồng",
+        "distance": 49.37528281792376
+      }
+    ]
+  }
+}

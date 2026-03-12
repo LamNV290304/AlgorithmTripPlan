@@ -1,0 +1,93 @@
+{
+  "message": "success",
+  "data": {
+    "id": "617",
+    "base_id": "49",
+    "longitude": 107.3937536,
+    "latitude": 21.3347973,
+    "name": "Tiên Yên",
+    "english_name": "Tien Yen",
+    "code": "ty",
+    "x_migrate_key": "559",
+    "city_id": "617",
+    "city_name": "Tiên Yên",
+    "city_english_name": "Tien Yen",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "49",
+    "state_name": "Quảng Ninh",
+    "state_english_name": "Quang Ninh",
+    "country_id": "1926",
+    "name_token": "Tiên Yên",
+    "alias": [
+      "tienyen"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Tiên Yên - Quảng Ninh",
+    "full_english_name": "Tien Yen - Quang Ninh",
+    "airports": [
+      {
+        "geometry": {
+          "coordinates": [
+            107.4166092,
+            21.1163002
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "149325",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vân Đồn",
+          "AirportName_En": "Van Don Airport",
+          "CityName_Vi": "Quảng Ninh",
+          "CityName_En": "Quang Ninh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 149325,
+          "CITY": "Quang Ninh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDO",
+          "ICAO": "VVVD",
+          "NAME": "Van Don Airport",
+          "NAME_SHORT": "Quang Ninh",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 107.4166092,
+          "Y": 21.1163002,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Xã Đoàn Kết, Vân Đồn, Quảng Ninh",
+        "parent_id": 502550,
+        "newLocation": "Vân Đồn, Quảng Ninh",
+        "distance": 31.73429278087448
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Minh Cầm",
+        "lat": 21.2285464,
+        "long": 107.0598491,
+        "id": 84,
+        "code": "MCA",
+        "short_name": "Minh Cầm",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502622,
+        "newLocation": "Tuyên Bình, Quảng Trị",
+        "distance": 47.52575751088778,
+        "is_station_default": true
+      }
+    ]
+  }
+}

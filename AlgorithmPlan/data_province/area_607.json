@@ -1,0 +1,79 @@
+{
+  "message": "success",
+  "data": {
+    "id": "607",
+    "base_id": "49",
+    "longitude": 107.398189,
+    "latitude": 21.5259304,
+    "name": "Bình Liêu",
+    "english_name": "Binh Lieu",
+    "code": "bl",
+    "x_migrate_key": null,
+    "city_id": "607",
+    "city_name": "Bình Liêu",
+    "city_english_name": "Binh Lieu",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "49",
+    "state_name": "Quảng Ninh",
+    "state_english_name": "Quang Ninh",
+    "country_id": "1926",
+    "name_token": "Bình Liêu",
+    "alias": [
+      "binhlieu"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bình Liêu - Quảng Ninh",
+    "full_english_name": "Binh Lieu - Quang Ninh",
+    "airports": [
+      {
+        "geometry": {
+          "coordinates": [
+            107.4166092,
+            21.1163002
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "149325",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vân Đồn",
+          "AirportName_En": "Van Don Airport",
+          "CityName_Vi": "Quảng Ninh",
+          "CityName_En": "Quang Ninh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 149325,
+          "CITY": "Quang Ninh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDO",
+          "ICAO": "VVVD",
+          "NAME": "Van Don Airport",
+          "NAME_SHORT": "Quang Ninh",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 107.4166092,
+          "Y": 21.1163002,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Xã Đoàn Kết, Vân Đồn, Quảng Ninh",
+        "parent_id": 502550,
+        "newLocation": "Vân Đồn, Quảng Ninh",
+        "distance": 59.26537038390537
+      }
+    ],
+    "train_stations": []
+  }
+}

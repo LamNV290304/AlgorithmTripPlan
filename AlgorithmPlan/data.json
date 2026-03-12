@@ -3418,5 +3418,563 @@
                 "CloseTime": "22:00:00"
             }
         ]
+    },
+    {
+        "Id": 129,
+        "Name": "Hanoi La Siesta Hotel & Spa",
+        "Description": "Luxury hotel in Old Quarter with spa and luggage storage",
+        "Latitude": 21.0320,
+        "Longitude": 105.8520,
+        "Destination": "Hanoi",
+        "Tags": ["Hotel", "Accommodation", "Luxury"],
+        "AverageBudget": 850000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 50000,
+        "RoomTypes": [
+            {
+                "Name": "Standard Double",
+                "Description": "Cozy room for couples",
+                "MaxOccupancy": 2,
+                "PricePerNight": 850000,
+                "PricePerHour": 150000,
+                "AvailableRooms": 5,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast"]
+            },
+            {
+                "Name": "Family Suite",
+                "Description": "Spacious room for families",
+                "MaxOccupancy": 4,
+                "PricePerNight": 1500000,
+                "PricePerHour": 250000,
+                "AvailableRooms": 3,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "Bathtub"]
+            },
+            {
+                "Name": "Executive Suite",
+                "Description": "Premium room with city view",
+                "MaxOccupancy": 6,
+                "PricePerNight": 2500000,
+                "PricePerHour": 400000,
+                "AvailableRooms": 2,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "Bathtub", "City View", "Spa Access"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 130,
+        "Name": "Hanoi Budget Guesthouse",
+        "Description": "Affordable accommodation for backpackers",
+        "Latitude": 21.0340,
+        "Longitude": 105.8500,
+        "Destination": "Hanoi",
+        "Tags": ["Guesthouse", "Accommodation", "Budget"],
+        "AverageBudget": 250000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 30000,
+        "RoomTypes": [
+            {
+                "Name": "Twin Room",
+                "Description": "Basic room with two single beds",
+                "MaxOccupancy": 2,
+                "PricePerNight": 250000,
+                "PricePerHour": 50000,
+                "AvailableRooms": 10,
+                "Amenities": ["WiFi", "AC", "Shared Bathroom"]
+            },
+            {
+                "Name": "Quad Room",
+                "Description": "Room for 4 people with bunk beds",
+                "MaxOccupancy": 4,
+                "PricePerNight": 450000,
+                "PricePerHour": 80000,
+                "AvailableRooms": 5,
+                "Amenities": ["WiFi", "AC", "Shared Bathroom"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 131,
+        "Name": "Pho Gia Truyen",
+        "Description": "Famous traditional Vietnamese pho restaurant",
+        "Latitude": 21.0355,
+        "Longitude": 105.8510,
+        "Destination": "Hanoi",
+        "Tags": ["Restaurant", "Food", "Local Cuisine"],
+        "AverageBudget": 50000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 1, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 2, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 3, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 4, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 5, "OpenTime": "06:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 6, "OpenTime": "06:00:00", "CloseTime": "21:00:00"}
+        ]
+    },
+    {
+        "Id": 132,
+        "Name": "Bun Cha Huong Lien",
+        "Description": "Famous bun cha restaurant visited by Obama",
+        "Latitude": 21.0230,
+        "Longitude": 105.8450,
+        "Destination": "Hanoi",
+        "Tags": ["Restaurant", "Food", "Local Cuisine"],
+        "AverageBudget": 60000,
+        "AverageStayDuration": 45,
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 1, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 2, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 3, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 4, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 5, "OpenTime": "09:00:00", "CloseTime": "21:00:00"},
+            {"DayOfWeek": 6, "OpenTime": "09:00:00", "CloseTime": "21:00:00"}
+        ]
+    },
+    {
+        "Id": 133,
+        "Name": "Cong Caphe",
+        "Description": "Iconic Vietnamese coffee chain with communist theme",
+        "Latitude": 21.0315,
+        "Longitude": 105.8505,
+        "Destination": "Hanoi",
+        "Tags": ["Cafe", "Coffee", "RestArea"],
+        "AverageBudget": 45000,
+        "AverageStayDuration": 60,
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 1, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 2, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 3, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 4, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 5, "OpenTime": "07:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 6, "OpenTime": "07:00:00", "CloseTime": "23:00:00"}
+        ]
+    },
+    {
+        "Id": 134,
+        "Name": "Luggage Storage - Hanoi Station",
+        "Description": "Secure luggage storage service near Hanoi Railway Station",
+        "Latitude": 21.0245,
+        "Longitude": 105.8412,
+        "Destination": "Hanoi",
+        "Tags": ["LuggageStorage", "Service"],
+        "AverageBudget": 40000,
+        "AverageStayDuration": 10,
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 40000,
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 1, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 2, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 3, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 4, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 5, "OpenTime": "05:00:00", "CloseTime": "23:00:00"},
+            {"DayOfWeek": 6, "OpenTime": "05:00:00", "CloseTime": "23:00:00"}
+        ]
+    },
+    {
+        "Id": 135,
+        "Name": "Da Nang Beach Resort",
+        "Description": "Beachfront resort with multiple room types",
+        "Latitude": 16.0608,
+        "Longitude": 108.2455,
+        "Destination": "Da Nang",
+        "Tags": ["Hotel", "Accommodation", "Resort", "Beach"],
+        "AverageBudget": 1200000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 60000,
+        "RoomTypes": [
+            {
+                "Name": "Ocean View Double",
+                "Description": "Room with ocean view for couples",
+                "MaxOccupancy": 2,
+                "PricePerNight": 1200000,
+                "PricePerHour": 200000,
+                "AvailableRooms": 8,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "Ocean View", "Pool Access"]
+            },
+            {
+                "Name": "Family Ocean Suite",
+                "Description": "Large suite for families with kids",
+                "MaxOccupancy": 5,
+                "PricePerNight": 2200000,
+                "PricePerHour": 350000,
+                "AvailableRooms": 4,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "Ocean View", "Pool Access", "Kids Area"]
+            },
+            {
+                "Name": "Presidential Villa",
+                "Description": "Luxury villa with private pool",
+                "MaxOccupancy": 8,
+                "PricePerNight": 5000000,
+                "PricePerHour": 800000,
+                "AvailableRooms": 2,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "Ocean View", "Private Pool", "Butler Service"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 136,
+        "Name": "HCMC Luxury Hotel",
+        "Description": "5-star hotel in District 1 with premium services",
+        "Latitude": 10.7769,
+        "Longitude": 106.7009,
+        "Destination": "HCMC",
+        "Tags": ["Hotel", "Accommodation", "Luxury"],
+        "AverageBudget": 1500000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 80000,
+        "RoomTypes": [
+            {
+                "Name": "Deluxe King",
+                "Description": "Luxury king room for couples",
+                "MaxOccupancy": 2,
+                "PricePerNight": 1500000,
+                "PricePerHour": 250000,
+                "AvailableRooms": 10,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "City View", "Gym Access"]
+            },
+            {
+                "Name": "Executive Twin",
+                "Description": "Twin room for business travelers",
+                "MaxOccupancy": 2,
+                "PricePerNight": 1800000,
+                "PricePerHour": 300000,
+                "AvailableRooms": 6,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "City View", "Gym Access", "Lounge Access"]
+            },
+            {
+                "Name": "Presidential Suite",
+                "Description": "Ultimate luxury suite",
+                "MaxOccupancy": 6,
+                "PricePerNight": 8000000,
+                "PricePerHour": 1200000,
+                "AvailableRooms": 1,
+                "Amenities": ["WiFi", "AC", "Mini Bar", "Breakfast", "City View", "Gym Access", "Lounge Access", "Private Butler", "Helipad Access"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 137,
+        "Name": "Hanoi Backpacker Hostel",
+        "Description": "Budget-friendly hostel with dormitory and private rooms",
+        "Latitude": 21.0315,
+        "Longitude": 105.8510,
+        "Destination": "Hanoi",
+        "Tags": ["Hostel", "Accommodation", "Budget"],
+        "AverageBudget": 150000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "11:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 20000,
+        "HasHourlyRate": true,
+        "HourlyRate": 30000,
+        "RoomTypes": [
+            {
+                "Name": "Dorm Bed (6-bed)",
+                "Description": "Shared dormitory with 6 beds",
+                "MaxOccupancy": 1,
+                "PricePerNight": 150000,
+                "PricePerHour": 30000,
+                "AvailableRooms": 24,
+                "Amenities": ["WiFi", "AC", "Locker", "Shared Bathroom"]
+            },
+            {
+                "Name": "Private Double",
+                "Description": "Private room for couples",
+                "MaxOccupancy": 2,
+                "PricePerNight": 400000,
+                "PricePerHour": 70000,
+                "AvailableRooms": 5,
+                "Amenities": ["WiFi", "AC", "Private Bathroom", "TV"]
+            },
+            {
+                "Name": "Group Dorm (10-bed)",
+                "Description": "Large dormitory for groups",
+                "MaxOccupancy": 10,
+                "PricePerNight": 1200000,
+                "PricePerHour": 200000,
+                "AvailableRooms": 3,
+                "Amenities": ["WiFi", "AC", "Lockers", "Shared Bathroom"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 138,
+        "Name": "Hanoi Family Homestay",
+        "Description": "Cozy homestay perfect for families and large groups",
+        "Latitude": 21.0350,
+        "Longitude": 105.8480,
+        "Destination": "Hanoi",
+        "Tags": ["Homestay", "Accommodation", "Family-Friendly"],
+        "AverageBudget": 600000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 0,
+        "HasHourlyRate": true,
+        "HourlyRate": 100000,
+        "RoomTypes": [
+            {
+                "Name": "Family Room",
+                "Description": "Spacious room for family of 4",
+                "MaxOccupancy": 4,
+                "PricePerNight": 600000,
+                "PricePerHour": 100000,
+                "AvailableRooms": 4,
+                "Amenities": ["WiFi", "AC", "Private Bathroom", "Kitchen Access", "Breakfast"]
+            },
+            {
+                "Name": "Large Family Suite",
+                "Description": "Two connected rooms for families of 7-8",
+                "MaxOccupancy": 8,
+                "PricePerNight": 1100000,
+                "PricePerHour": 180000,
+                "AvailableRooms": 2,
+                "Amenities": ["WiFi", "AC", "2 Private Bathrooms", "Kitchen Access", "Breakfast", "Living Area"]
+            },
+            {
+                "Name": "Entire Floor (7 people)",
+                "Description": "Private floor with 3 rooms for groups",
+                "MaxOccupancy": 7,
+                "PricePerNight": 1500000,
+                "PricePerHour": 250000,
+                "AvailableRooms": 1,
+                "Amenities": ["WiFi", "AC", "3 Private Bathrooms", "Full Kitchen", "Breakfast", "Living Area", "Terrace"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 139,
+        "Name": "Saigon Rest Hour Hotel",
+        "Description": "Hourly rental hotel for short rest and layovers",
+        "Latitude": 10.7750,
+        "Longitude": 106.7020,
+        "Destination": "HCMC",
+        "Tags": ["Hotel", "Accommodation", "Hourly-Rental"],
+        "AverageBudget": 200000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "00:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 50000,
+        "HasHourlyRate": true,
+        "HourlyRate": 50000,
+        "RoomTypes": [
+            {
+                "Name": "Standard Hourly Room",
+                "Description": "Compact room for short rest (minimum 2 hours)",
+                "MaxOccupancy": 2,
+                "PricePerNight": 500000,
+                "PricePerHour": 50000,
+                "AvailableRooms": 20,
+                "Amenities": ["WiFi", "AC", "TV", "Private Bathroom", "Shower"]
+            },
+            {
+                "Name": "Deluxe Hourly Room",
+                "Description": "Larger room with better amenities (minimum 3 hours)",
+                "MaxOccupancy": 3,
+                "PricePerNight": 700000,
+                "PricePerHour": 70000,
+                "AvailableRooms": 10,
+                "Amenities": ["WiFi", "AC", "TV", "Private Bathroom", "Bathtub", "Mini Bar"]
+            },
+            {
+                "Name": "Group Rest Room",
+                "Description": "Room for small groups to rest (4-5 people)",
+                "MaxOccupancy": 5,
+                "PricePerNight": 1000000,
+                "PricePerHour": 120000,
+                "AvailableRooms": 5,
+                "Amenities": ["WiFi", "AC", "TV", "Private Bathroom", "Sofa Bed", "Mini Bar"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 140,
+        "Name": "Da Nang Beach Resort",
+        "Description": "Beachfront resort with various room types for all group sizes",
+        "Latitude": 16.0544,
+        "Longitude": 108.2458,
+        "Destination": "Da Nang",
+        "Tags": ["Resort", "Accommodation", "Beach", "Luxury"],
+        "AverageBudget": 1200000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "14:00:00",
+        "CheckOutTime": "12:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 100000,
+        "HasHourlyRate": false,
+        "RoomTypes": [
+            {
+                "Name": "Ocean View Double",
+                "Description": "Romantic room for couples with ocean view",
+                "MaxOccupancy": 2,
+                "PricePerNight": 1200000,
+                "PricePerHour": 0,
+                "AvailableRooms": 15,
+                "Amenities": ["WiFi", "AC", "Ocean View", "Balcony", "Mini Bar", "Breakfast"]
+            },
+            {
+                "Name": "Family Ocean Suite",
+                "Description": "Spacious suite for families of 4",
+                "MaxOccupancy": 4,
+                "PricePerNight": 2200000,
+                "PricePerHour": 0,
+                "AvailableRooms": 8,
+                "Amenities": ["WiFi", "AC", "Ocean View", "Balcony", "Mini Bar", "Breakfast", "Living Area", "Kitchenette"]
+            },
+            {
+                "Name": "Presidential Beach Villa",
+                "Description": "Luxury villa for large groups (up to 7 people)",
+                "MaxOccupancy": 7,
+                "PricePerNight": 5500000,
+                "PricePerHour": 0,
+                "AvailableRooms": 3,
+                "Amenities": ["WiFi", "AC", "Ocean View", "Private Beach", "3 Bedrooms", "Full Kitchen", "Private Pool", "Butler Service"]
+            },
+            {
+                "Name": "Two-Bedroom Suite",
+                "Description": "Perfect for 2 couples or small families",
+                "MaxOccupancy": 6,
+                "PricePerNight": 3500000,
+                "PricePerHour": 0,
+                "AvailableRooms": 5,
+                "Amenities": ["WiFi", "AC", "Ocean View", "2 Bedrooms", "2 Bathrooms", "Living Area", "Breakfast"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
+    },
+    {
+        "Id": 141,
+        "Name": "HCMC Group Stay Villa",
+        "Description": "Private villa designed for large groups and team building",
+        "Latitude": 10.7800,
+        "Longitude": 106.6950,
+        "Destination": "HCMC",
+        "Tags": ["Villa", "Accommodation", "Group-Friendly"],
+        "AverageBudget": 2500000,
+        "AverageStayDuration": 0,
+        "CheckInTime": "15:00:00",
+        "CheckOutTime": "11:00:00",
+        "HasLuggageStorage": true,
+        "LuggageStorageCost": 0,
+        "HasHourlyRate": false,
+        "RoomTypes": [
+            {
+                "Name": "Entire Villa (7 people)",
+                "Description": "Complete villa with 4 bedrooms for groups",
+                "MaxOccupancy": 7,
+                "PricePerNight": 3500000,
+                "PricePerHour": 0,
+                "AvailableRooms": 2,
+                "Amenities": ["WiFi", "AC", "4 Bedrooms", "3 Bathrooms", "Full Kitchen", "Living Room", "BBQ Area", "Pool"]
+            },
+            {
+                "Name": "Villa + Extra Beds (10 people)",
+                "Description": "Villa with extra beds for larger groups",
+                "MaxOccupancy": 10,
+                "PricePerNight": 4500000,
+                "PricePerHour": 0,
+                "AvailableRooms": 1,
+                "Amenities": ["WiFi", "AC", "4 Bedrooms", "4 Bathrooms", "Full Kitchen", "Living Room", "BBQ Area", "Pool", "Extra Beds"]
+            }
+        ],
+        "OpeningHours": [
+            {"DayOfWeek": 0, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 1, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 2, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 3, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 4, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 5, "OpenTime": "00:00:00", "CloseTime": "23:59:59"},
+            {"DayOfWeek": 6, "OpenTime": "00:00:00", "CloseTime": "23:59:59"}
+        ]
     }
 ]

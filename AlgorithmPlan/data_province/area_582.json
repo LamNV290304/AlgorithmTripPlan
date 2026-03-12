@@ -1,0 +1,131 @@
+{
+  "message": "success",
+  "data": {
+    "id": "582",
+    "base_id": "47",
+    "longitude": 108.0954351,
+    "latitude": 15.0826614,
+    "name": "Nam Trà My",
+    "english_name": "Nam Tra My",
+    "code": "ntm",
+    "x_migrate_key": "524",
+    "city_id": "582",
+    "city_name": "Nam Trà My",
+    "city_english_name": "Nam Tra My",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "47",
+    "state_name": "Quảng Nam",
+    "state_english_name": "Quang Nam",
+    "country_id": "1926",
+    "name_token": "Nam Trà My",
+    "alias": [
+      "namtramy"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Nam Trà My - Quảng Nam",
+    "full_english_name": "Nam Tra My - Quang Nam",
+    "airports": [
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 97.12018559349656
+      },
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng",
+        "distance": 139.70448074094844
+      }
+    ],
+    "train_stations": []
+  }
+}

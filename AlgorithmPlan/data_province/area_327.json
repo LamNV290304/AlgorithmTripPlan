@@ -1,0 +1,180 @@
+{
+  "message": "success",
+  "data": {
+    "id": "327",
+    "base_id": "25",
+    "longitude": 105.2662931,
+    "latitude": 18.5118006,
+    "name": "Hương Sơn",
+    "english_name": "Huong Son",
+    "code": "hs",
+    "x_migrate_key": "267",
+    "city_id": "327",
+    "city_name": "Hương Sơn",
+    "city_english_name": "Huong Son",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "25",
+    "state_name": "Hà Tĩnh",
+    "state_english_name": "Ha Tinh",
+    "country_id": "1926",
+    "name_token": "Hương Sơn",
+    "alias": [
+      "huongson"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hương Sơn - Hà Tĩnh",
+    "full_english_name": "Huong Son - Ha Tinh",
+    "airports": [
+      {
+        "bbox": [
+          105.670764,
+          18.737569,
+          105.670764,
+          18.737569
+        ],
+        "geometry": {
+          "coordinates": [
+            105.670764,
+            18.737569
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135555",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vinh",
+          "AirportName_En": "Vinh Airport",
+          "CityName_Vi": "Vinh",
+          "CityName_En": "Vinh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135555,
+          "CITY": "Vinh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VII",
+          "ICAO": "VVVH",
+          "NAME": "Vinh Airport",
+          "NAME_SHORT": "Vinh",
+          "OF_APT_ID": 6195,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 105.67076,
+          "Y": 18.73757,
+          "Z__feet_": 23,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Nghi Liên, Vinh, Nghệ An",
+        "parent_id": 502118,
+        "newLocation": "Vinh Hưng, Nghệ An",
+        "distance": 64.30297094506568
+      },
+      {
+        "bbox": [
+          106.590556,
+          17.515,
+          106.590556,
+          17.515
+        ],
+        "geometry": {
+          "coordinates": [
+            106.590556,
+            17.515
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135557",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đồng Hới",
+          "AirportName_En": "Dong Hoi Airport",
+          "CityName_Vi": "Quảng Bình",
+          "CityName_En": "Quang Binh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135557,
+          "CITY": "Dong Hoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDH",
+          "ICAO": "VVDH",
+          "NAME": "Dong Hoi  Airport",
+          "NAME_SHORT": "Dong Hoi",
+          "OF_APT_ID": 4154,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.59055,
+          "Y": 17.515,
+          "Z__feet_": 59,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Lộc Ninh, Đồng Hới, Quảng Bình",
+        "parent_id": 502572,
+        "newLocation": "Đồng Hới, Quảng Trị",
+        "distance": 232.16565068130114
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Yên Duệ",
+        "lat": 18.4250434,
+        "long": 105.5663063,
+        "id": 167,
+        "code": "YDU",
+        "short_name": "Yên Duệ",
+        "oldLocation": "Vũ Quang, Hà Tĩnh",
+        "parent_id": 501168,
+        "newLocation": "Thượng Đức, Hà Tĩnh",
+        "distance": 43.0036844535376
+      },
+      {
+        "name": "Ga Đức Lạc",
+        "lat": 18.4830981,
+        "long": 105.5827039,
+        "id": 44,
+        "code": "DUL",
+        "short_name": "Đức Lạc",
+        "oldLocation": "Đức Thọ, Hà Tĩnh",
+        "parent_id": 501128,
+        "newLocation": "Đức Thọ, Hà Tĩnh",
+        "distance": 43.57329780601193
+      },
+      {
+        "name": "Ga Yên Trung",
+        "lat": 18.523087,
+        "long": 105.5876509,
+        "id": 170,
+        "code": "YTR",
+        "short_name": "Yên Trung",
+        "oldLocation": "Đức Thọ, Hà Tĩnh",
+        "parent_id": 501128,
+        "newLocation": "Đức Thọ, Hà Tĩnh",
+        "distance": 44.078532133763815
+      },
+      {
+        "name": "Ga Hòa Duyệt",
+        "lat": 18.3822211,
+        "long": 105.602088,
+        "id": 54,
+        "code": "HOD",
+        "short_name": "Hòa Duyệt",
+        "oldLocation": "Thị trấn Vũ Quang, Vũ Quang, Hà Tĩnh",
+        "parent_id": 501176,
+        "newLocation": "Vũ Quang, Hà Tĩnh",
+        "distance": 49.71017071277251
+      }
+    ]
+  }
+}

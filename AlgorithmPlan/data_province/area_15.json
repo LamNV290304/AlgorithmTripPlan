@@ -1,0 +1,106 @@
+{
+  "message": "success",
+  "data": {
+    "id": "15",
+    "longitude": 108.1124498,
+    "base_id": "1926",
+    "latitude": 16.0925464,
+    "name": "Đà Nẵng",
+    "english_name": "Da Nang",
+    "code": "DNA",
+    "x_migrate_key": 15,
+    "state_id": "15",
+    "state_name": "Đà Nẵng",
+    "state_english_name": "Da Nang",
+    "type": 3,
+    "sub_type_id": "1",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Đà Nẵng",
+    "alias": [
+      "danang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Đà Nẵng",
+    "full_english_name": "Da Nang",
+    "airports": [
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng",
+        "distance": 13.971035870222636
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Kim Liên",
+        "lat": 16.13275,
+        "long": 108.120447,
+        "id": 61,
+        "code": "KLI",
+        "short_name": "Kim Liên",
+        "oldLocation": "Phường Hòa Hiệp Nam, Liên Chiểu, Đà Nẵng",
+        "parent_id": 500444,
+        "newLocation": "Hải Vân, Đà Nẵng",
+        "distance": 5.916736589488437
+      },
+      {
+        "name": "Ga Đà Nẵng",
+        "lat": 16.0716481,
+        "long": 108.2093203,
+        "id": 37,
+        "code": "DNA",
+        "short_name": "Đà Nẵng",
+        "oldLocation": "Thanh Khê, Đà Nẵng",
+        "parent_id": 500443,
+        "newLocation": "Hải Châu, Đà Nẵng",
+        "distance": 13.789925538421295,
+        "is_station_default": true
+      }
+    ]
+  }
+}

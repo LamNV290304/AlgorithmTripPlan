@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "431",
+    "base_id": "33",
+    "longitude": 103.98402,
+    "latitude": 10.289879,
+    "name": "Phú Quốc",
+    "english_name": "Phu Quoc",
+    "code": "pq",
+    "x_migrate_key": "373",
+    "city_id": "431",
+    "city_name": "Phú Quốc",
+    "city_english_name": "Phu Quoc",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "21",
+    "is_search_on_fe": 1,
+    "state_id": "33",
+    "state_name": "Kiên Giang",
+    "state_english_name": "Kien Giang",
+    "country_id": "1926",
+    "name_token": "Phú Quốc",
+    "alias": [
+      "phuquoc"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Phú Quốc - Kiên Giang",
+    "full_english_name": "Phu Quoc - Kien Giang",
+    "airports": [
+      {
+        "bbox": [
+          103.967169,
+          10.227025,
+          103.967169,
+          10.227025
+        ],
+        "geometry": {
+          "coordinates": [
+            103.967169,
+            10.227025
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135554",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phú Quốc",
+          "AirportName_En": "Phu Quoc Airport",
+          "CityName_Vi": "Phú Quốc",
+          "CityName_En": "Phu Quoc",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135554,
+          "CITY": "Phuquoc",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "PQC",
+          "ICAO": "VVPQ",
+          "NAME": "Phu Quoc  Airport",
+          "NAME_SHORT": "Phu Quoc",
+          "OF_APT_ID": 3204,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 103.96717,
+          "Y": 10.227025,
+          "Z__feet_": 37,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Dương Tơ, Phú Quốc, Kiên Giang",
+        "parent_id": 500060,
+        "newLocation": "Phú Quốc, An Giang",
+        "distance": 9.396611372787397
+      }
+    ],
+    "train_stations": []
+  }
+}

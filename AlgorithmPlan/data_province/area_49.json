@@ -1,0 +1,170 @@
+{
+  "message": "success",
+  "data": {
+    "id": "49",
+    "longitude": 107.2941778,
+    "base_id": "1926",
+    "latitude": 21.01214039,
+    "name": "Quảng Ninh",
+    "english_name": "Quang Ninh",
+    "code": "QNH",
+    "x_migrate_key": 49,
+    "state_id": "49",
+    "state_name": "Quảng Ninh",
+    "state_english_name": "Quang Ninh",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Quảng Ninh",
+    "alias": [
+      "quangninh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Quảng Ninh",
+    "full_english_name": "Quang Ninh",
+    "airports": [
+      {
+        "geometry": {
+          "coordinates": [
+            107.4166092,
+            21.1163002
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "149325",
+        "properties": {
+          "AirportName_Vi": "Sân bay Vân Đồn",
+          "AirportName_En": "Van Don Airport",
+          "CityName_Vi": "Quảng Ninh",
+          "CityName_En": "Quang Ninh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 149325,
+          "CITY": "Quang Ninh",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDO",
+          "ICAO": "VVVD",
+          "NAME": "Van Don Airport",
+          "NAME_SHORT": "Quang Ninh",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 107.4166092,
+          "Y": 21.1163002,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Xã Đoàn Kết, Vân Đồn, Quảng Ninh",
+        "parent_id": 502550,
+        "newLocation": "Vân Đồn, Quảng Ninh",
+        "distance": 22.348532895635717
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Hạ Long",
+        "lat": 20.9719208,
+        "long": 107.0100097,
+        "id": 52,
+        "code": "HLO",
+        "short_name": "Hạ Long",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502551,
+        "newLocation": "Việt Hưng, Quảng Ninh",
+        "distance": 38.78933647858359
+      },
+      {
+        "name": "Ga Yên Cư",
+        "lat": 20.9840239,
+        "long": 106.9153373,
+        "id": 166,
+        "code": "YCU",
+        "short_name": "Yên Cư",
+        "oldLocation": "Hạ Long, Quảng Ninh",
+        "parent_id": 502547,
+        "newLocation": "Tuần Châu, Quảng Ninh",
+        "distance": 51.28730970679205
+      },
+      {
+        "name": "Ga Nam Khê",
+        "lat": 21.0230507,
+        "long": 106.8119382,
+        "id": 97,
+        "code": "NKH",
+        "short_name": "Nam Khê",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": null,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 65.09071856543446
+      },
+      {
+        "name": "Ga Bàn Cờ",
+        "lat": 21.03246193,
+        "long": 106.7778597,
+        "id": 5,
+        "code": "BCO",
+        "short_name": "Bàn Cờ",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 69.72973514005231
+      },
+      {
+        "name": "Ga Uông Bí",
+        "lat": 21.0347666,
+        "long": 106.7558082,
+        "id": 154,
+        "code": "UBI",
+        "short_name": "Uông Bí",
+        "oldLocation": "Uông Bí, Quảng Ninh",
+        "parent_id": 502548,
+        "newLocation": "Uông Bí, Quảng Ninh",
+        "distance": 72.7163135254531
+      },
+      {
+        "name": "Ga Yên Dưỡng",
+        "lat": 21.045549,
+        "long": 106.7012302,
+        "id": 168,
+        "code": "YED",
+        "short_name": "Yên Dưỡng",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502525,
+        "newLocation": "Hoàng Quế, Quảng Ninh",
+        "distance": 80.14970392083667
+      },
+      {
+        "name": "Ga Mạo Khê",
+        "lat": 21.0628357,
+        "long": 106.6036463,
+        "id": 83,
+        "code": "MAK",
+        "short_name": "Mạo Khê",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502533,
+        "newLocation": "Mạo Khê, Quảng Ninh",
+        "distance": 93.45302812065515
+      },
+      {
+        "name": "Ga Ðông Triều",
+        "lat": 21.0953974,
+        "long": 106.5329046,
+        "id": 38,
+        "code": "DOT",
+        "short_name": "Ðông Triều",
+        "oldLocation": "Đông Triều, Quảng Ninh",
+        "parent_id": 502500,
+        "newLocation": "An Sinh, Quảng Ninh",
+        "distance": 103.40113381799436
+      }
+    ]
+  }
+}

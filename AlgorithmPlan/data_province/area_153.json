@@ -1,0 +1,110 @@
+{
+  "message": "success",
+  "data": {
+    "id": "153",
+    "base_id": "11",
+    "longitude": 108.3801314,
+    "latitude": 11.2551834,
+    "name": "Bắc Bình",
+    "english_name": "Bac Binh",
+    "code": "bb",
+    "x_migrate_key": "90",
+    "city_id": "153",
+    "city_name": "Bắc Bình",
+    "city_english_name": "Bac Binh",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "11",
+    "state_name": "Bình Thuận",
+    "state_english_name": "Binh Thuan",
+    "country_id": "1926",
+    "name_token": "Bắc Bình",
+    "alias": [
+      "bacbinh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bắc Bình - Bình Thuận",
+    "full_english_name": "Bac Binh - Binh Thuan",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 253.19028511266578
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Sông Mao",
+        "lat": 11.2486712,
+        "long": 108.5060097,
+        "id": 129,
+        "code": "SMA",
+        "short_name": "Sông Mao",
+        "oldLocation": "Bắc Bình, Bình Thuận",
+        "parent_id": 501919,
+        "newLocation": "Hải Ninh, Lâm Đồng",
+        "distance": 17.871193791556117
+      },
+      {
+        "name": "Ga Ma Lâm",
+        "lat": 11.0716941,
+        "long": 108.1306145,
+        "id": 88,
+        "code": "MLA",
+        "short_name": "Ma Lâm",
+        "oldLocation": "Thị trấn Ma Lâm, Hàm Thuận Bắc, Bình Thuận",
+        "parent_id": 501925,
+        "newLocation": "Hàm Thuận, Lâm Đồng",
+        "distance": 44.22323830207044
+      }
+    ]
+  }
+}

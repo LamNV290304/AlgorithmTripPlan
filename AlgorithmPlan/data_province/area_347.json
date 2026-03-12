@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "347",
+    "base_id": "27",
+    "longitude": 107.7310526,
+    "latitude": 20.1311435,
+    "name": "Bạch Long Vĩ",
+    "english_name": "Bach Long Vi",
+    "code": "blv",
+    "x_migrate_key": "287",
+    "city_id": "347",
+    "city_name": "Bạch Long Vĩ",
+    "city_english_name": "Bach Long Vi",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "21",
+    "is_search_on_fe": 1,
+    "state_id": "27",
+    "state_name": "Hải Phòng",
+    "state_english_name": "Hai Phong",
+    "country_id": "1926",
+    "name_token": "Bạch Long Vĩ",
+    "alias": [
+      "bachlongvi"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bạch Long Vĩ - Hải Phòng",
+    "full_english_name": "Bach Long Vi - Hai Phong",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 168.69903999645166
+      }
+    ],
+    "train_stations": []
+  }
+}

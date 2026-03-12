@@ -1,0 +1,123 @@
+{
+  "message": "success",
+  "data": {
+    "id": "697",
+    "base_id": "56",
+    "longitude": 105.7851816,
+    "latitude": 19.806692,
+    "name": "Thanh Hóa",
+    "english_name": "Thanh Hoa",
+    "code": "th",
+    "x_migrate_key": "639",
+    "city_id": "697",
+    "city_name": "Thanh Hóa",
+    "city_english_name": "Thanh Hoa",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "56",
+    "state_name": "Thanh Hóa",
+    "state_english_name": "Thanh Hoa",
+    "country_id": "1926",
+    "name_token": "Thanh Hóa",
+    "alias": [
+      "thanhhoa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Thanh Hóa - Thanh Hóa",
+    "full_english_name": "Thanh Hoa - Thanh Hoa",
+    "airports": [
+      {
+        "bbox": [
+          105.467778,
+          19.901667,
+          105.467778,
+          19.901667
+        ],
+        "geometry": {
+          "coordinates": [
+            105.467778,
+            19.901667
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135558",
+        "properties": {
+          "AirportName_Vi": "Sân bay Thọ Xuân",
+          "AirportName_En": "Tho Xuan Airport",
+          "CityName_Vi": "Thanh Hóa",
+          "CityName_En": "Thanh Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135558,
+          "CITY": "Thanh Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": null,
+          "IATA_FAA": "THD",
+          "ICAO": "VVTX",
+          "NAME": "Tho  Xuan  Airport",
+          "NAME_SHORT": "Tho  Xuan",
+          "OF_APT_ID": 0,
+          "Other": "Domestic",
+          "TYPE": "D / M",
+          "TZ": 0,
+          "X": 105.46778,
+          "Y": 19.901667,
+          "Z__feet_": 0,
+          "total_leng": 3200
+        },
+        "type": "Feature",
+        "oldLocation": "Xuân Thắng, Thọ Xuân, Thanh Hóa",
+        "parent_id": 502989,
+        "newLocation": "Sao Vàng, Thanh Hóa",
+        "distance": 45.285751054418135
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Thanh Hóa",
+        "lat": 19.8127987,
+        "long": 105.7677958,
+        "id": 140,
+        "code": "THO",
+        "short_name": "Thanh Hoá",
+        "oldLocation": "Phường Đông Thọ, Thanh Hóa, Thanh Hóa",
+        "parent_id": 502923,
+        "newLocation": "Hạc Thành, Thanh Hóa",
+        "distance": 2.523862793892893,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Minh Khôi",
+        "lat": 19.6331354,
+        "long": 105.701877,
+        "id": 87,
+        "code": "MKH",
+        "short_name": "Minh Khôi",
+        "oldLocation": "Thị trấn Nông Cống, Nông Cống, Thanh Hóa",
+        "parent_id": 502973,
+        "newLocation": "Nông Cống, Thanh Hóa",
+        "distance": 27.530284569626193
+      },
+      {
+        "name": "Ga Bỉm Sơn",
+        "lat": 20.0816818,
+        "long": 105.8550823,
+        "id": 13,
+        "code": "BSO",
+        "short_name": "Bỉm Sơn",
+        "oldLocation": "Bỉm Sơn, Thanh Hóa",
+        "parent_id": 502985,
+        "newLocation": "Quang Trung, Thanh Hóa",
+        "distance": 40.86976899601174
+      }
+    ]
+  }
+}

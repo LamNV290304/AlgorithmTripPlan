@@ -1,0 +1,182 @@
+{
+  "message": "success",
+  "data": {
+    "id": "573",
+    "base_id": "46",
+    "longitude": 105.9722814,
+    "latitude": 17.9319039,
+    "name": "Tuyên Hóa",
+    "english_name": "Tuyen Hoa",
+    "code": "th",
+    "x_migrate_key": "515",
+    "city_id": "573",
+    "city_name": "Tuyên Hóa",
+    "city_english_name": "Tuyen Hoa",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "46",
+    "state_name": "Quảng Bình",
+    "state_english_name": "Quang Binh",
+    "country_id": "1926",
+    "name_token": "Tuyên Hóa",
+    "alias": [
+      "tuyenhoa"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Tuyên Hóa - Quảng Bình",
+    "full_english_name": "Tuyen Hoa - Quang Binh",
+    "airports": [
+      {
+        "bbox": [
+          106.590556,
+          17.515,
+          106.590556,
+          17.515
+        ],
+        "geometry": {
+          "coordinates": [
+            106.590556,
+            17.515
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135557",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đồng Hới",
+          "AirportName_En": "Dong Hoi Airport",
+          "CityName_Vi": "Quảng Bình",
+          "CityName_En": "Quang Binh",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135557,
+          "CITY": "Dong Hoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VDH",
+          "ICAO": "VVDH",
+          "NAME": "Dong Hoi  Airport",
+          "NAME_SHORT": "Dong Hoi",
+          "OF_APT_ID": 4154,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.59055,
+          "Y": 17.515,
+          "Z__feet_": 59,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Lộc Ninh, Đồng Hới, Quảng Bình",
+        "parent_id": 502572,
+        "newLocation": "Đồng Hới, Quảng Trị",
+        "distance": 104.3035101213298
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Kim Lũ",
+        "lat": 17.9506462,
+        "long": 105.9611744,
+        "id": 62,
+        "code": "KLU",
+        "short_name": "Kim Lũ",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502573,
+        "newLocation": "Đồng Lê, Quảng Trị",
+        "distance": 3.1101938040104335
+      },
+      {
+        "name": "Ga Đồng Lê",
+        "lat": 17.8881489,
+        "long": 106.0221715,
+        "id": 34,
+        "code": "DLE",
+        "short_name": "Đồng Lê",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502573,
+        "newLocation": "Đồng Lê, Quảng Trị",
+        "distance": 9.332524910479732
+      },
+      {
+        "name": "Ga Đồng Chuối",
+        "lat": 18.0089362,
+        "long": 105.9034982,
+        "id": 28,
+        "code": "DCH",
+        "short_name": "Đồng Chuối",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502626,
+        "newLocation": "Tuyên Sơn, Quảng Trị",
+        "distance": 14.609733801756764
+      },
+      {
+        "name": "Ga Tân Ấp",
+        "lat": 18.0458198,
+        "long": 105.844648,
+        "id": 133,
+        "code": "TAP",
+        "short_name": "Tân Ấp",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502626,
+        "newLocation": "Tuyên Sơn, Quảng Trị",
+        "distance": 24.064294279948577
+      },
+      {
+        "name": "Ga Ngọc Lâm",
+        "lat": 17.8289483,
+        "long": 106.1215769,
+        "id": 98,
+        "code": "NLA",
+        "short_name": "Ngọc Lâm",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502625,
+        "newLocation": "Tuyên Phú, Quảng Trị",
+        "distance": 25.364008149810697
+      },
+      {
+        "name": "Ga Lạc Sơn",
+        "lat": 17.8113437,
+        "long": 106.1893255,
+        "id": 65,
+        "code": "LAS",
+        "short_name": "Lạc Sơn",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": 502623,
+        "newLocation": "Tuyên Hóa, Quảng Trị",
+        "distance": 34.57404980377947
+      },
+      {
+        "name": "Ga Phúc Trạch",
+        "lat": 18.1111816,
+        "long": 105.7697733,
+        "id": 118,
+        "code": "PUT",
+        "short_name": "Phúc Trạch",
+        "oldLocation": "Hương Khê, Hà Tĩnh",
+        "parent_id": 501154,
+        "newLocation": "Phúc Trạch, Hà Tĩnh",
+        "distance": 38.032891124819244
+      },
+      {
+        "name": "Ga Lệ Sơn",
+        "lat": 17.7787032,
+        "long": 106.2576925,
+        "id": 70,
+        "code": "LES",
+        "short_name": "Lệ Sơn",
+        "oldLocation": "Tuyên Hóa, Quảng Bình",
+        "parent_id": null,
+        "newLocation": "Tuyên Hóa, Quảng Bình",
+        "distance": 45.08390744994266
+      }
+    ]
+  }
+}

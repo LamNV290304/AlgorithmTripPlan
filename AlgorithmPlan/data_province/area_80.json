@@ -1,0 +1,89 @@
+{
+  "message": "success",
+  "data": {
+    "id": "80",
+    "base_id": "2",
+    "longitude": 106.6114474,
+    "latitude": 8.7009282,
+    "name": "Côn Đảo",
+    "english_name": "Con Dao",
+    "code": "cd",
+    "x_migrate_key": "17",
+    "city_id": "80",
+    "city_name": "Côn Đảo",
+    "city_english_name": "Con Dao",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "21",
+    "is_search_on_fe": 1,
+    "state_id": "2",
+    "state_name": "Bà Rịa-Vũng Tàu",
+    "state_english_name": "Ba Ria-Vung Tau",
+    "country_id": "1926",
+    "name_token": "Côn Đảo",
+    "alias": [
+      "co ong",
+      "cỏ ống",
+      "con son",
+      "côn sơn",
+      "condao"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Côn Đảo - Bà Rịa-Vũng Tàu",
+    "full_english_name": "Con Dao - Ba Ria-Vung Tau",
+    "airports": [
+      {
+        "bbox": [
+          106.632589,
+          8.731831,
+          106.632589,
+          8.731831
+        ],
+        "geometry": {
+          "coordinates": [
+            106.632589,
+            8.731831
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135544",
+        "properties": {
+          "AirportName_Vi": "Sân bay Côn Đảo",
+          "AirportName_En": "Con Dao Airport",
+          "CityName_Vi": "Côn Đảo",
+          "CityName_En": "Con Dao",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135544,
+          "CITY": "Con Son/ Con dao",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCS",
+          "ICAO": "VVCS",
+          "NAME": "Con Dao Airport",
+          "NAME_SHORT": "Con Dao",
+          "OF_APT_ID": 6190,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 106.63259,
+          "Y": 8.731831,
+          "Z__feet_": 20,
+          "total_leng": 1830
+        },
+        "type": "Feature",
+        "oldLocation": "Côn Đảo, Bà Rịa-Vũng Tàu",
+        "parent_id": null,
+        "newLocation": null,
+        "distance": 5.39260831146368
+      }
+    ],
+    "train_stations": []
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "message": "success",
+  "data": {
+    "id": "201",
+    "base_id": "15",
+    "longitude": 108.1873407,
+    "latitude": 16.0641802,
+    "name": "Thanh Khê",
+    "english_name": "Thanh Khe",
+    "code": "tk",
+    "x_migrate_key": "139",
+    "city_id": "201",
+    "city_name": "Thanh Khê",
+    "city_english_name": "Thanh Khe",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "18",
+    "is_search_on_fe": 1,
+    "state_id": "15",
+    "state_name": "Đà Nẵng",
+    "state_english_name": "Da Nang",
+    "country_id": "1926",
+    "name_token": "Thanh Khê",
+    "alias": [
+      "thanhkhe"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Thanh Khê - Đà Nẵng",
+    "full_english_name": "Thanh Khe - Da Nang",
+    "airports": [
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng",
+        "distance": 3.3722635023596785
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Đà Nẵng",
+        "lat": 16.0716481,
+        "long": 108.2093203,
+        "id": 37,
+        "code": "DNA",
+        "short_name": "Đà Nẵng",
+        "oldLocation": "Thanh Khê, Đà Nẵng",
+        "parent_id": 500443,
+        "newLocation": "Hải Châu, Đà Nẵng",
+        "distance": 3.2383322178846705,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Kim Liên",
+        "lat": 16.13275,
+        "long": 108.120447,
+        "id": 61,
+        "code": "KLI",
+        "short_name": "Kim Liên",
+        "oldLocation": "Phường Hòa Hiệp Nam, Liên Chiểu, Đà Nẵng",
+        "parent_id": 500444,
+        "newLocation": "Hải Vân, Đà Nẵng",
+        "distance": 13.585346238412075
+      },
+      {
+        "name": "Ga Lăng Cô",
+        "lat": 16.2217772,
+        "long": 108.0820036,
+        "id": 68,
+        "code": "LCO",
+        "short_name": "Lăng Cô",
+        "oldLocation": "Phú Lộc, Thừa Thiên Huế",
+        "parent_id": 501466,
+        "newLocation": "Chân Mây - Lăng Cô, Thừa Thiên Huế",
+        "distance": 27.07240883722304
+      },
+      {
+        "name": "Ga Trà Kiệu",
+        "lat": 15.810144,
+        "long": 108.2312778,
+        "id": 143,
+        "code": "TKI",
+        "short_name": "Trà Kiệu",
+        "oldLocation": "Duy Xuyên, Quảng Nam",
+        "parent_id": 500431,
+        "newLocation": "Duy Xuyên, Đà Nẵng",
+        "distance": 37.226166376082816
+      }
+    ]
+  }
+}

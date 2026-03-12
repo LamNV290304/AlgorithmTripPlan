@@ -1,0 +1,143 @@
+{
+  "message": "success",
+  "data": {
+    "id": "788",
+    "parent_id": 502419,
+    "name": "BX Quảng Ngãi",
+    "english_name": "Quang Ngai Bus Station",
+    "code": "BXQN",
+    "address": "02 Trần Khánh Dư",
+    "english_address": "02 Trần Khánh Dư St",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": 54,
+    "phone_info": "(055) 3824053|(055) 3824053",
+    "url_info": null,
+    "longitude": 108.8187906,
+    "latitude": 15.1079675,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "143982",
+    "root_id": "3690",
+    "city_id": "599",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Quảng Ngãi",
+    "city_english_name": "Quang Ngai",
+    "city_migrate_key": "541",
+    "state_id": "48",
+    "state_type": 3,
+    "state_code": "QNI",
+    "state_name": "Quảng Ngãi",
+    "state_english_name": "Quang Ngai",
+    "state_migrate_key": 48,
+    "ward_id": "143982",
+    "ward_name": "Phường Nghĩa Chánh",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "BX Quảng Ngãi",
+    "alias": [
+      "bxquangngai"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "BX Quảng Ngãi - Phường Nghĩa Chánh - Quảng Ngãi - Quảng Ngãi",
+    "airports": [
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 45.8610470946737
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Quảng Ngãi",
+        "lat": 15.1209988,
+        "long": 108.7813511,
+        "id": 121,
+        "code": "QNG",
+        "short_name": "Quảng Ngãi",
+        "oldLocation": "Quảng Ngãi, Quảng Ngãi",
+        "parent_id": 502461,
+        "newLocation": "Nghĩa Lộ, Quảng Ngãi",
+        "distance": 5.553990346102378,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Đức Phổ",
+        "lat": 14.8098323,
+        "long": 108.9468432,
+        "id": 39,
+        "code": "DPH",
+        "short_name": "Đức Phổ",
+        "oldLocation": "Phường Nguyễn Nghiêm, Quảng Ngãi, Quảng Ngãi",
+        "parent_id": 502419,
+        "newLocation": "Cẩm Thành, Quảng Ngãi",
+        "distance": 46.659518245284985
+      },
+      {
+        "name": "Ga Núi Thành",
+        "lat": 15.422023,
+        "long": 108.6698542,
+        "id": 100,
+        "code": "NTH",
+        "short_name": "Núi Thành",
+        "oldLocation": "Thị trấn Núi Thành, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 49.923318004287914
+      }
+    ]
+  }
+}

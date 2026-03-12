@@ -1,0 +1,171 @@
+{
+  "message": "success",
+  "data": {
+    "id": "713",
+    "base_id": "57",
+    "longitude": 107.5534739,
+    "latitude": 16.5670258,
+    "name": "Quảng Điền",
+    "english_name": "Quang Dien",
+    "code": "qd",
+    "x_migrate_key": "655",
+    "city_id": "713",
+    "city_name": "Quảng Điền",
+    "city_english_name": "Quang Dien",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "57",
+    "state_name": "Thừa Thiên Huế",
+    "state_english_name": "Thua Thien Hue",
+    "country_id": "1926",
+    "name_token": "Quảng Điền",
+    "alias": [
+      "quangdien"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Quảng Điền - Thừa Thiên Huế",
+    "full_english_name": "Quang Dien - Thua Thien Hue",
+    "airports": [
+      {
+        "bbox": [
+          107.702614,
+          16.4015,
+          107.702614,
+          16.4015
+        ],
+        "geometry": {
+          "coordinates": [
+            107.702614,
+            16.4015
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135559",
+        "properties": {
+          "AirportName_Vi": "Sân bay Phú Bài",
+          "AirportName_En": "Phu Bai International Airport",
+          "CityName_Vi": "Huế",
+          "CityName_En": "Hue",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135559,
+          "CITY": "Hue",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HUI",
+          "ICAO": "VVPB",
+          "NAME": "Phubai  Airport",
+          "NAME_SHORT": "Phubai",
+          "OF_APT_ID": 3201,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 107.702614,
+          "Y": 16.4015,
+          "Z__feet_": 48,
+          "total_leng": 2675
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Bài, Hương Thủy, Thừa Thiên Huế",
+        "parent_id": 501485,
+        "newLocation": "Phú Bài, Thừa Thiên Huế",
+        "distance": 31.620759160756744
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Văn Xá",
+        "lat": 16.5083685,
+        "long": 107.5036433,
+        "id": 162,
+        "code": "VXA",
+        "short_name": "Văn Xá",
+        "oldLocation": "Hương Trà, Thừa Thiên Huế",
+        "parent_id": 501472,
+        "newLocation": "Hương Trà, Thừa Thiên Huế",
+        "distance": 10.935136817214751
+      },
+      {
+        "name": "Ga An Hòa",
+        "lat": 16.4820612,
+        "long": 107.5522,
+        "id": 1,
+        "code": "AHO",
+        "short_name": "An Hòa",
+        "oldLocation": "Huế, Thừa Thiên Huế",
+        "parent_id": 501470,
+        "newLocation": "Hương An, Thừa Thiên Huế",
+        "distance": 12.28319094228561
+      },
+      {
+        "name": "Ga Huế",
+        "lat": 16.456436,
+        "long": 107.5780693,
+        "id": 59,
+        "code": "HUE",
+        "short_name": "Huế",
+        "oldLocation": "Phường Thuận Hòa, Huế, Thừa Thiên Huế",
+        "parent_id": 501470,
+        "newLocation": "Hương An, Thừa Thiên Huế",
+        "distance": 16.3455152136895,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Hiền Sỹ",
+        "lat": 16.5293338,
+        "long": 107.4320756,
+        "id": 57,
+        "code": "HSY",
+        "short_name": "Hiền Sỹ",
+        "oldLocation": "Phong Điền, Thừa Thiên Huế",
+        "parent_id": 501484,
+        "newLocation": "Phong Thái, Thừa Thiên Huế",
+        "distance": 17.682063346946734
+      },
+      {
+        "name": "Ga Phò Trạch",
+        "lat": 16.5846086,
+        "long": 107.3615558,
+        "id": 107,
+        "code": "PHR",
+        "short_name": "Phò Trạch",
+        "oldLocation": "Thị trấn Phong Điền, Phong Điền, Thừa Thiên Huế",
+        "parent_id": 501484,
+        "newLocation": "Phong Thái, Thừa Thiên Huế",
+        "distance": 26.71072426173829
+      },
+      {
+        "name": "Ga Mỹ Chánh",
+        "lat": 16.628501,
+        "long": 107.3052333,
+        "id": 85,
+        "code": "MCH",
+        "short_name": "Mỹ Chánh",
+        "oldLocation": "Hải Lăng, Quảng Trị",
+        "parent_id": 502600,
+        "newLocation": "Nam Hải Lăng, Quảng Trị",
+        "distance": 35.518489431065156
+      },
+      {
+        "name": "Ga Diên Sanh",
+        "lat": 16.686926,
+        "long": 107.2479987,
+        "id": 40,
+        "code": "DSA",
+        "short_name": "Diên Sanh",
+        "oldLocation": "Hải Lăng, Quảng Trị",
+        "parent_id": 502569,
+        "newLocation": "Diên Sanh, Quảng Trị",
+        "distance": 45.72342057948425
+      }
+    ]
+  }
+}

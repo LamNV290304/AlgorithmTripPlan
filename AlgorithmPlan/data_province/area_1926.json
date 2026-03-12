@@ -1,0 +1,27 @@
+{
+  "message": "success",
+  "data": {
+    "id": "1926",
+    "base_id": null,
+    "name": "Việt Nam",
+    "code": "VN",
+    "x_migrate_key": 1,
+    "state_id": "1926",
+    "state_name": "Việt Nam",
+    "type": 2,
+    "sub_type_id": null,
+    "is_search_on_fe": null,
+    "country_id": "1926",
+    "name_token": "Việt Nam",
+    "alias": [
+      "vietnam"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Việt Nam",
+    "train_stations": []
+  }
+}

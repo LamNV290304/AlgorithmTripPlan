@@ -1,0 +1,178 @@
+{
+  "message": "success",
+  "data": {
+    "id": "63",
+    "longitude": 104.8981887,
+    "base_id": "1926",
+    "latitude": 21.7257436,
+    "name": "Yên Bái",
+    "english_name": "Yen Bai",
+    "code": "YBI",
+    "x_migrate_key": 63,
+    "state_id": "63",
+    "state_name": "Yên Bái",
+    "state_english_name": "Yen Bai",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Yên Bái",
+    "alias": [
+      "yenbai"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Yên Bái",
+    "full_english_name": "Yen Bai",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 142.3759198371108
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Yên Bái",
+        "lat": 21.7022497,
+        "long": 104.8799419,
+        "id": 165,
+        "code": "YBA",
+        "short_name": "Yên Bái",
+        "oldLocation": "Yên Bái, Yên Bái",
+        "parent_id": 501869,
+        "newLocation": "Yên Bái, Lào Cai",
+        "distance": 4.187897615117363,
+        "is_station_default": true
+      },
+      {
+        "name": "Ga Cổ Phúc",
+        "lat": 21.76116,
+        "long": 104.8309607,
+        "id": 24,
+        "code": "CPH",
+        "short_name": "Cổ Phúc",
+        "oldLocation": "Trấn Yên, Yên Bái",
+        "parent_id": 501856,
+        "newLocation": "Trấn Yên, Lào Cai",
+        "distance": 10.377365085194448
+      },
+      {
+        "name": "Ga Ngòi Hóp",
+        "lat": 21.8225903,
+        "long": 104.7548532,
+        "id": 96,
+        "code": "NHP",
+        "short_name": "Ngòi Hóp",
+        "oldLocation": "Trấn Yên, Yên Bái",
+        "parent_id": 501856,
+        "newLocation": "Trấn Yên, Lào Cai",
+        "distance": 23.795296289861767
+      },
+      {
+        "name": "Ga Mậu A",
+        "lat": 21.8775804,
+        "long": 104.6940941,
+        "id": 82,
+        "code": "MAA",
+        "short_name": "Mậu A",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501816,
+        "newLocation": "Mậu A, Lào Cai",
+        "distance": 35.101005804931155
+      },
+      {
+        "name": "Ga Trái Hút",
+        "lat": 21.9715938,
+        "long": 104.5920968,
+        "id": 141,
+        "code": "THU",
+        "short_name": "Trái Hút",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501799,
+        "newLocation": "Đông Cuông, Lào Cai",
+        "distance": 54.31014925858204
+      },
+      {
+        "name": "Ga Lâm Giang",
+        "lat": 22.018706,
+        "long": 104.5343361,
+        "id": 71,
+        "code": "LGI",
+        "short_name": "Lâm Giang",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501792,
+        "newLocation": "Châu Quế, Lào Cai",
+        "distance": 64.62066800817082
+      },
+      {
+        "name": "Ga Lang Khay",
+        "lat": 22.068889,
+        "long": 104.475833,
+        "id": 74,
+        "code": "LKA",
+        "short_name": "Lang Khay",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501810,
+        "newLocation": "Lâm Giang, Lào Cai",
+        "distance": 75.29571621418911
+      },
+      {
+        "name": "Ga Lang Thíp",
+        "lat": 22.1492424,
+        "long": 104.4373961,
+        "id": 79,
+        "code": "LTH",
+        "short_name": "Lang Thíp",
+        "oldLocation": "Văn Yên, Yên Bái",
+        "parent_id": 501810,
+        "newLocation": "Lâm Giang, Lào Cai",
+        "distance": 86.97793432168906
+      }
+    ]
+  }
+}

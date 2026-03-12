@@ -1,0 +1,105 @@
+{
+  "message": "success",
+  "data": {
+    "id": "62",
+    "longitude": 105.55464112,
+    "base_id": "1926",
+    "latitude": 21.36318906500005,
+    "name": "Vĩnh Phúc",
+    "english_name": "Vinh Phuc",
+    "code": "VPC",
+    "x_migrate_key": 62,
+    "state_id": "62",
+    "state_name": "Vĩnh Phúc",
+    "state_english_name": "Vinh Phuc",
+    "type": 3,
+    "sub_type_id": "2",
+    "is_search_on_fe": 1,
+    "country_id": "1926",
+    "name_token": "Vĩnh Phúc",
+    "alias": [
+      "vinhphuc"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Vĩnh Phúc",
+    "full_english_name": "Vinh Phuc",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 39.72686410751263
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Vĩnh Yên",
+        "lat": 21.3094354,
+        "long": 105.6012537,
+        "id": 164,
+        "code": "VYE",
+        "short_name": "Vĩnh Yên",
+        "oldLocation": "Vĩnh Yên, Vĩnh Phúc",
+        "parent_id": 502387,
+        "newLocation": "Vĩnh Phúc, Phú Thọ",
+        "distance": 9.988379768884876
+      },
+      {
+        "name": "Ga Phúc Yên",
+        "lat": 21.2399885,
+        "long": 105.7124257,
+        "id": 120,
+        "code": "PYE",
+        "short_name": "Phúc Yên",
+        "oldLocation": "Phường Trưng Trắc, Phúc Yên, Vĩnh Phúc",
+        "parent_id": null,
+        "newLocation": "Phúc Yên, Vĩnh Phúc",
+        "distance": 27.725935269377967
+      }
+    ]
+  }
+}

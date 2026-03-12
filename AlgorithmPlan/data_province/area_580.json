@@ -1,0 +1,180 @@
+{
+  "message": "success",
+  "data": {
+    "id": "580",
+    "base_id": "47",
+    "longitude": 108.3380469,
+    "latitude": 15.8800584,
+    "name": "Hội An",
+    "english_name": "Hoi An",
+    "code": "ha",
+    "x_migrate_key": "522",
+    "city_id": "580",
+    "city_name": "Hội An",
+    "city_english_name": "Hoi An",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "47",
+    "state_name": "Quảng Nam",
+    "state_english_name": "Quang Nam",
+    "country_id": "1926",
+    "name_token": "Hội An",
+    "alias": [
+      "hoian"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Hội An - Quảng Nam",
+    "full_english_name": "Hoi An - Quang Nam",
+    "airports": [
+      {
+        "bbox": [
+          108.19937,
+          16.043917,
+          108.19937,
+          16.043917
+        ],
+        "geometry": {
+          "coordinates": [
+            108.19937,
+            16.043917
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135548",
+        "properties": {
+          "AirportName_Vi": "Sân bay Đà Nẵng",
+          "AirportName_En": "Da Nang International Airport",
+          "CityName_Vi": "Đà Nẵng",
+          "CityName_En": "Da Nang",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135548,
+          "CITY": "Danang",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DAD",
+          "ICAO": "VVDN",
+          "NAME": "Danang Intl",
+          "NAME_SHORT": "Danang Intl",
+          "OF_APT_ID": 3196,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.19937,
+          "Y": 16.043917,
+          "Z__feet_": 33,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thuận Tây, Hải Châu, Đà Nẵng",
+        "parent_id": 500446,
+        "newLocation": "Hòa Cường, Đà Nẵng",
+        "distance": 30.536901287186396
+      },
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 85.54991384726479
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Trà Kiệu",
+        "lat": 15.810144,
+        "long": 108.2312778,
+        "id": 143,
+        "code": "TKI",
+        "short_name": "Trà Kiệu",
+        "oldLocation": "Duy Xuyên, Quảng Nam",
+        "parent_id": 500431,
+        "newLocation": "Duy Xuyên, Đà Nẵng",
+        "distance": 17.96062202495931
+      },
+      {
+        "name": "Ga Phú Cang",
+        "lat": 15.7048246,
+        "long": 108.3415769,
+        "id": 102,
+        "code": "PCG",
+        "short_name": "Phú Cang",
+        "oldLocation": "Thăng Bình, Quảng Nam",
+        "parent_id": 500493,
+        "newLocation": "Thăng Bình, Đà Nẵng",
+        "distance": 25.33540087513548
+      },
+      {
+        "name": "Ga Đà Nẵng",
+        "lat": 16.0716481,
+        "long": 108.2093203,
+        "id": 37,
+        "code": "DNA",
+        "short_name": "Đà Nẵng",
+        "oldLocation": "Thanh Khê, Đà Nẵng",
+        "parent_id": 500443,
+        "newLocation": "Hải Châu, Đà Nẵng",
+        "distance": 32.970178425013586
+      },
+      {
+        "name": "Ga Kim Liên",
+        "lat": 16.13275,
+        "long": 108.120447,
+        "id": 61,
+        "code": "KLI",
+        "short_name": "Kim Liên",
+        "oldLocation": "Phường Hòa Hiệp Nam, Liên Chiểu, Đà Nẵng",
+        "parent_id": 500444,
+        "newLocation": "Hải Vân, Đà Nẵng",
+        "distance": 47.41757636018495
+      }
+    ]
+  }
+}

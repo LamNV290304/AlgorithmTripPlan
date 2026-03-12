@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "227",
+    "base_id": "18",
+    "longitude": 103.0321549,
+    "latitude": 21.4063898,
+    "name": "Điện Biên Phủ",
+    "english_name": "Dien Bien Phu",
+    "code": "dbp",
+    "x_migrate_key": "166",
+    "city_id": "227",
+    "city_name": "Điện Biên Phủ",
+    "city_english_name": "Dien Bien Phu",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "18",
+    "state_name": "Điện Biên",
+    "state_english_name": "Dien Bien",
+    "country_id": "1926",
+    "name_token": "Điện Biên Phủ",
+    "alias": [
+      "dienbienphu"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Điện Biên Phủ - Điện Biên",
+    "full_english_name": "Dien Bien Phu - Dien Bien",
+    "airports": [
+      {
+        "bbox": [
+          103.007831,
+          21.397481,
+          103.007831,
+          21.397481
+        ],
+        "geometry": {
+          "coordinates": [
+            103.007831,
+            21.397481
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135549",
+        "properties": {
+          "AirportName_Vi": "Sân bay Điện Biên Phủ",
+          "AirportName_En": "Dien Bien Phu Airport",
+          "CityName_Vi": "Điện Biên Phủ",
+          "CityName_En": "Dien Bien Phu",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135549,
+          "CITY": "Dienbienphu",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DIN",
+          "ICAO": "VVDB",
+          "NAME": "Dien Bien Phu Airport",
+          "NAME_SHORT": "Dien Bien Phu",
+          "OF_APT_ID": 6192,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 103.00783,
+          "Y": 21.397482,
+          "Z__feet_": 1611,
+          "total_leng": 1830
+        },
+        "type": "Feature",
+        "oldLocation": "Thanh Trường, Điện Biên Phủ, Điện Biên",
+        "parent_id": 500612,
+        "newLocation": "Điện Biên Phủ, Điện Biên",
+        "distance": 3.517835934751628
+      }
+    ],
+    "train_stations": []
+  }
+}

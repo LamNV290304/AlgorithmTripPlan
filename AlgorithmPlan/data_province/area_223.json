@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "223",
+    "base_id": "17",
+    "longitude": 107.811,
+    "latitude": 12.3426475,
+    "name": "Krông Nô",
+    "english_name": "Krong No",
+    "code": "kn",
+    "x_migrate_key": "162",
+    "city_id": "223",
+    "city_name": "Krông Nô",
+    "city_english_name": "Krong No",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "17",
+    "state_name": "Đắk Nông",
+    "state_english_name": "Dak Nong",
+    "country_id": "1926",
+    "name_token": "Krông Nô",
+    "alias": [
+      "krongno"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Krông Nô - Đắk Nông",
+    "full_english_name": "Krong No - Dak Nong",
+    "airports": [
+      {
+        "bbox": [
+          108.120272,
+          12.668311,
+          108.120272,
+          12.668311
+        ],
+        "geometry": {
+          "coordinates": [
+            108.120272,
+            12.668311
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "133906",
+        "properties": {
+          "AirportName_Vi": "Sân bay Buôn Ma Thuột",
+          "AirportName_En": "Buon Ma Thuot Airport",
+          "CityName_Vi": "Buôn Ma Thuột",
+          "CityName_En": "Buon Ma Thuot",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 133906,
+          "CITY": "Buonmathuot",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "BMV",
+          "ICAO": "VVBM",
+          "NAME": "Buon Ma Thuot Airport",
+          "NAME_SHORT": "Buon Ma Thuot",
+          "OF_APT_ID": 6187,
+          "Other": null,
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 108.12027,
+          "Y": 12.668311,
+          "Z__feet_": 1729,
+          "total_leng": 3000
+        },
+        "type": "Feature",
+        "oldLocation": "Hoà Thắng, Buôn Ma Thuột, Đắk Lắk",
+        "parent_id": 500590,
+        "newLocation": "Tân Lập, Đắk Lắk",
+        "distance": 64.19553642480663
+      }
+    ],
+    "train_stations": []
+  }
+}

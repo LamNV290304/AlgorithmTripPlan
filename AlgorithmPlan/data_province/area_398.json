@@ -1,0 +1,164 @@
+{
+  "message": "success",
+  "data": {
+    "id": "398",
+    "base_id": "30",
+    "longitude": 105.5181302,
+    "latitude": 20.8936703,
+    "name": "Lương Sơn",
+    "english_name": "Luong Son",
+    "code": "ls",
+    "x_migrate_key": "340",
+    "city_id": "398",
+    "city_name": "Lương Sơn",
+    "city_english_name": "Luong Son",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "30",
+    "state_name": "Hòa Bình",
+    "state_english_name": "Hoa Binh",
+    "country_id": "1926",
+    "name_token": "Lương Sơn",
+    "alias": [
+      "luongson"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Lương Sơn - Hòa Bình",
+    "full_english_name": "Luong Son - Hoa Binh",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 61.33439286808505
+      }
+    ],
+    "train_stations": [
+      {
+        "es_id": 171662,
+        "name": "Ga La Khê",
+        "lat": 20.963731,
+        "long": 105.766815,
+        "id": 64,
+        "code": "LAK",
+        "short_name": "La Khê",
+        "oldLocation": "Phường La Khê, Hà Đông, Hà Nội",
+        "parent_id": 501014,
+        "base_id": 137104,
+        "newLocation": "Hà Đông, Hà Nội",
+        "distance": 35.070676801168695
+      },
+      {
+        "name": "Ga Phú Diễn",
+        "lat": 21.0515228,
+        "long": 105.7649182,
+        "id": 103,
+        "code": "PDI",
+        "short_name": "Phú Diễn",
+        "oldLocation": "Phường Phúc Diễn, Bắc Từ Liêm, Hà Nội",
+        "parent_id": 501050,
+        "newLocation": "Phú Diễn, Hà Nội",
+        "distance": 40.37657777414568
+      },
+      {
+        "es_id": 171754,
+        "name": "Ga Văn Điển",
+        "lat": 20.9441824,
+        "long": 105.8441764,
+        "id": 156,
+        "code": "VDI",
+        "short_name": "Văn Điển",
+        "oldLocation": "Xã Trung Giã, Sóc Sơn, Hà Nội",
+        "base_id": 136974,
+        "parent_id": 501023,
+        "newLocation": "Hoàng Liệt, Hà Nội",
+        "distance": 44.62591212649261
+      },
+      {
+        "name": "Ga Giáp Bát",
+        "lat": 20.9785859,
+        "long": 105.8405042,
+        "id": 45,
+        "code": "GBA",
+        "short_name": "Giáp Bát",
+        "oldLocation": "Phường Định Công, Hoàng Mai, Hà Nội",
+        "parent_id": 501006,
+        "newLocation": "Định Công, Hà Nội",
+        "distance": 45.22146868006438
+      },
+      {
+        "name": "Ga Hà Nội",
+        "lat": 21.0250615,
+        "long": 105.8411814,
+        "id": 53,
+        "code": "HNO",
+        "short_name": "Hà Nội",
+        "oldLocation": "Phường Quốc Tử Giám, Đống Đa, Hà Nội",
+        "parent_id": 501095,
+        "newLocation": "Văn Miếu - Quốc Tử Giám, Hà Nội",
+        "distance": 47.564913460338225
+      },
+      {
+        "es_id": 171664,
+        "name": "Ga Long Biên",
+        "lat": 21.0399252,
+        "long": 105.8501554,
+        "id": 66,
+        "code": "LBI",
+        "short_name": "Long Biên",
+        "oldLocation": "Phường Long Biên, Long Biên, Hà Nội",
+        "base_id": 136891,
+        "parent_id": 501038,
+        "newLocation": "Long Biên, Hà Nội",
+        "distance": 49.55376035531782
+      }
+    ]
+  }
+}

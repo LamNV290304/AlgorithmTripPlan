@@ -1,0 +1,111 @@
+{
+  "message": "success",
+  "data": {
+    "id": "593",
+    "base_id": "48",
+    "longitude": 108.7838572,
+    "latitude": 15.3166491,
+    "name": "Bình Sơn",
+    "english_name": "Binh Son",
+    "code": "bs",
+    "x_migrate_key": null,
+    "city_id": "593",
+    "city_name": "Bình Sơn",
+    "city_english_name": "Binh Son",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "48",
+    "state_name": "Quảng Ngãi",
+    "state_english_name": "Quang Ngai",
+    "country_id": "1926",
+    "name_token": "Bình Sơn",
+    "alias": [
+      "binhson"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bình Sơn - Quảng Ngãi",
+    "full_english_name": "Binh Son - Quang Ngai",
+    "airports": [
+      {
+        "bbox": [
+          108.705889,
+          15.405944,
+          108.705889,
+          15.405944
+        ],
+        "geometry": {
+          "coordinates": [
+            108.705889,
+            15.405944
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135242",
+        "properties": {
+          "AirportName_Vi": "Sân bay Chu Lai",
+          "AirportName_En": "Chu Lai Airport",
+          "CityName_Vi": "Quảng Nam",
+          "CityName_En": "Quang Nam",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135242,
+          "CITY": "Chu Lai",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "VCL",
+          "ICAO": "VVCA",
+          "NAME": "Chu Lai  Airport",
+          "NAME_SHORT": "Chu Lai",
+          "OF_APT_ID": 4157,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 108.70589,
+          "Y": 15.405944,
+          "Z__feet_": 10,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Tam Nghĩa, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 16.873800071027063
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Núi Thành",
+        "lat": 15.422023,
+        "long": 108.6698542,
+        "id": 100,
+        "code": "NTH",
+        "short_name": "Núi Thành",
+        "oldLocation": "Thị trấn Núi Thành, Núi Thành, Quảng Nam",
+        "parent_id": 500465,
+        "newLocation": "Núi Thành, Đà Nẵng",
+        "distance": 22.011724589640355
+      },
+      {
+        "name": "Ga Quảng Ngãi",
+        "lat": 15.1209988,
+        "long": 108.7813511,
+        "id": 121,
+        "code": "QNG",
+        "short_name": "Quảng Ngãi",
+        "oldLocation": "Quảng Ngãi, Quảng Ngãi",
+        "parent_id": 502461,
+        "newLocation": "Nghĩa Lộ, Quảng Ngãi",
+        "distance": 28.28407716066096,
+        "is_station_default": true
+      }
+    ]
+  }
+}

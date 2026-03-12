@@ -1,0 +1,134 @@
+{
+  "message": "success",
+  "data": {
+    "id": "737",
+    "base_id": "60",
+    "longitude": 105.2280196,
+    "latitude": 21.7767246,
+    "name": "Tuyên Quang",
+    "english_name": "Tuyen Quang",
+    "code": "tq",
+    "x_migrate_key": "679",
+    "city_id": "737",
+    "city_name": "Tuyên Quang",
+    "city_english_name": "Tuyen Quang",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "60",
+    "state_name": "Tuyên Quang",
+    "state_english_name": "Tuyen Quang",
+    "country_id": "1926",
+    "name_token": "Tuyên Quang",
+    "alias": [
+      "tuyenquang"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Tuyên Quang - Tuyên Quang",
+    "full_english_name": "Tuyen Quang - Tuyen Quang",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 111.8759442849716
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Ấm Thượng",
+        "lat": 21.5600239,
+        "long": 105.0057195,
+        "id": 2,
+        "code": "ATH",
+        "short_name": "Ấm Thượng",
+        "oldLocation": "Hạ Hòa, Phú Thọ",
+        "parent_id": 502287,
+        "newLocation": "Hạ Hòa, Phú Thọ",
+        "distance": 43.27900953154619
+      },
+      {
+        "name": "Ga Đoan Thượng",
+        "lat": 21.61997211,
+        "long": 104.9502527,
+        "id": 42,
+        "code": "DTH",
+        "short_name": "Đoan Thượng",
+        "oldLocation": "Hạ Hòa, Phú Thọ",
+        "parent_id": 502280,
+        "newLocation": "Đan Thượng, Phú Thọ",
+        "distance": 43.64920501320841
+      },
+      {
+        "name": "Ga Vũ Ẻn",
+        "lat": 21.4870753,
+        "long": 105.0867391,
+        "id": 157,
+        "code": "VEN",
+        "short_name": "Vũ Ẻn",
+        "oldLocation": "Thanh Ba, Phú Thọ",
+        "parent_id": 502293,
+        "newLocation": "Hoàng Cương, Phú Thọ",
+        "distance": 45.97259907939446
+      },
+      {
+        "name": "Ga Yên Bái",
+        "lat": 21.7022497,
+        "long": 104.8799419,
+        "id": 165,
+        "code": "YBA",
+        "short_name": "Yên Bái",
+        "oldLocation": "Yên Bái, Yên Bái",
+        "parent_id": 501869,
+        "newLocation": "Yên Bái, Lào Cai",
+        "distance": 47.96108393685558
+      }
+    ]
+  }
+}

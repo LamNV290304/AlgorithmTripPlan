@@ -1,0 +1,122 @@
+{
+  "message": "success",
+  "data": {
+    "id": "161",
+    "base_id": "11",
+    "longitude": 107.5978577,
+    "latitude": 11.020681,
+    "name": "Tánh Linh",
+    "english_name": "Tanh Linh",
+    "code": "tl",
+    "x_migrate_key": "98",
+    "city_id": "161",
+    "city_name": "Tánh Linh",
+    "city_english_name": "Tanh Linh",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "11",
+    "state_name": "Bình Thuận",
+    "state_english_name": "Binh Thuan",
+    "country_id": "1926",
+    "name_token": "Tánh Linh",
+    "alias": [
+      "tanhlinh"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Tánh Linh - Bình Thuận",
+    "full_english_name": "Tanh Linh - Binh Thuan",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 137.40638457408923
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Gia Huynh",
+        "lat": 10.985514,
+        "long": 107.541704,
+        "id": 46,
+        "code": "GHU",
+        "short_name": "Gia Huynh",
+        "oldLocation": "Tánh Linh, Bình Thuận",
+        "parent_id": 501976,
+        "newLocation": "Suối Kiết, Lâm Đồng",
+        "distance": 9.451503194363227
+      },
+      {
+        "name": "Ga Suối Kiết",
+        "lat": 10.9585711,
+        "long": 107.728092,
+        "id": 127,
+        "code": "SKI",
+        "short_name": "Suối Kiết",
+        "oldLocation": "Tánh Linh, Bình Thuận",
+        "parent_id": 501976,
+        "newLocation": "Suối Kiết, Lâm Đồng",
+        "distance": 20.54604012625999
+      },
+      {
+        "name": "Ga Gia Ray",
+        "lat": 10.9643906,
+        "long": 107.4029171,
+        "id": 49,
+        "code": "GRA",
+        "short_name": "Gia Ray",
+        "oldLocation": "Xuân Lộc, Đồng Nai",
+        "parent_id": 500742,
+        "newLocation": "Xuân Lộc, Đồng Nai",
+        "distance": 28.834227595128226
+      }
+    ]
+  }
+}

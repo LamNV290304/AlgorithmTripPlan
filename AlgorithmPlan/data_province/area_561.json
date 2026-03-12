@@ -1,0 +1,156 @@
+{
+  "message": "success",
+  "data": {
+    "id": "561",
+    "base_id": "45",
+    "longitude": 109.1991932,
+    "latitude": 13.5809065,
+    "name": "Sông Cầu",
+    "english_name": "Song Cau",
+    "code": "sc",
+    "x_migrate_key": "503",
+    "city_id": "561",
+    "city_name": "Sông Cầu",
+    "city_english_name": "Song Cau",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "20",
+    "is_search_on_fe": 1,
+    "state_id": "45",
+    "state_name": "Phú Yên",
+    "state_english_name": "Phu Yen",
+    "country_id": "1926",
+    "name_token": "Sông Cầu",
+    "alias": [
+      "songcau"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Sông Cầu - Phú Yên",
+    "full_english_name": "Song Cau - Phu Yen",
+    "airports": [
+      {
+        "bbox": [
+          109.333706,
+          13.04955,
+          109.333706,
+          13.04955
+        ],
+        "geometry": {
+          "coordinates": [
+            109.333706,
+            13.04955
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135556",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tuy Hòa",
+          "AirportName_En": "Tuy Hoa Airport",
+          "CityName_Vi": "Phú Yên",
+          "CityName_En": "Tuy Hoa",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135556,
+          "CITY": "Tuy Hoa",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "TBB",
+          "ICAO": "VVTH",
+          "NAME": "Dong Tac  Airport",
+          "NAME_SHORT": "Dong Tac",
+          "OF_APT_ID": 4158,
+          "Other": "Domestic",
+          "TYPE": "D",
+          "TZ": 7,
+          "X": 109.33371,
+          "Y": 13.04955,
+          "Z__feet_": 20,
+          "total_leng": 5700
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Thạnh, Tuy Hòa, Phú Yên",
+        "parent_id": 500580,
+        "newLocation": "Phú Yên, Đắk Lắk",
+        "distance": 79.10566100857238
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phước Lãnh",
+        "lat": 13.4863314,
+        "long": 109.0312447,
+        "id": 109,
+        "code": "PLA",
+        "short_name": "Phước Lãnh",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500604,
+        "newLocation": "Xuân Lãnh, Đắk Lắk",
+        "distance": 27.276750398016926
+      },
+      {
+        "name": "Ga Quy Nhơn",
+        "lat": 13.7781251,
+        "long": 109.2236174,
+        "id": 122,
+        "code": "QNH",
+        "short_name": "Quy Nhơn",
+        "oldLocation": "Quy Nhơn, Bình Định",
+        "newLocation": "Quy Nhơn, Gia Lai",
+        "distance": 28.714271741118008
+      },
+      {
+        "name": "Ga Vân Canh",
+        "lat": 13.620556,
+        "long": 108.996944,
+        "id": 155,
+        "code": "VCA",
+        "short_name": "Vân Canh",
+        "oldLocation": "Vân Canh, Bình Định",
+        "parent_id": 500976,
+        "newLocation": "Vân Canh, Gia Lai",
+        "distance": 28.98823168883283
+      },
+      {
+        "name": "Ga La Hai",
+        "lat": 13.3814054,
+        "long": 109.1058389,
+        "id": 72,
+        "code": "LHA",
+        "short_name": "La Hai",
+        "oldLocation": "Đồng Xuân, Phú Yên",
+        "parent_id": 500528,
+        "newLocation": "Đồng Xuân, Đắk Lắk",
+        "distance": 31.68393803565877
+      },
+      {
+        "name": "Ga Diêu Trì",
+        "lat": 13.8072986,
+        "long": 109.1437949,
+        "id": 43,
+        "code": "DTR",
+        "short_name": "Diêu Trì",
+        "oldLocation": "Tuy Phước, Bình Định",
+        "parent_id": 500970,
+        "newLocation": "Tuy Phước, Gia Lai",
+        "distance": 33.63790642383708
+      },
+      {
+        "name": "Ga Bình Định",
+        "lat": 13.8869794,
+        "long": 109.1015097,
+        "id": 6,
+        "code": "BDI",
+        "short_name": "Bình Định",
+        "oldLocation": "An Nhơn, Bình Định",
+        "newLocation": "An Nhơn, Gia Lai",
+        "distance": 46.321375591006564
+      }
+    ]
+  }
+}

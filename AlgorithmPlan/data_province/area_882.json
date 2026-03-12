@@ -1,0 +1,130 @@
+{
+  "message": "success",
+  "data": {
+    "id": "882",
+    "parent_id": 501575,
+    "name": "Thái Thụy",
+    "english_name": "Thai Thuy",
+    "code": "THAITHUY",
+    "address": "Bến xe khách thị trấn Diêm Điền",
+    "english_address": "Bến xe khách thị trấn Diêm Điền",
+    "note": null,
+    "is_prg_status": 1,
+    "suggestion": null,
+    "english_suggestion": null,
+    "type": 15,
+    "sub_type_id": "5",
+    "x_migrate_key": 522,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 106.5556159,
+    "latitude": 20.55536,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 0,
+    "base_id": "141239",
+    "root_id": "3871",
+    "city_id": "666",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Thái Thụy",
+    "city_english_name": "Thai Thuy",
+    "city_migrate_key": null,
+    "state_id": "54",
+    "state_type": 3,
+    "state_code": "TBH",
+    "state_name": "Thái Bình",
+    "state_english_name": "Thai Binh",
+    "state_migrate_key": 54,
+    "ward_id": "141239",
+    "ward_name": "Xã Thụy Hà",
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Thái Thụy",
+    "alias": [
+      "thaithuy"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Thái Thụy - Xã Thụy Hà - Thái Thụy - Thái Bình",
+    "airports": [
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 44.51136570812706
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Thượng Lý",
+        "lat": 20.8656191,
+        "long": 106.6584867,
+        "id": 139,
+        "code": "THL",
+        "short_name": "Thượng Lý",
+        "oldLocation": "Hồng Bàng, Hải Phòng",
+        "parent_id": 501220,
+        "newLocation": "Hồng Bàng, Hải Phòng",
+        "distance": 46.956407207136564
+      },
+      {
+        "name": "Ga Hải Phòng",
+        "lat": 20.8560491,
+        "long": 106.6875036,
+        "id": 55,
+        "code": "HPH",
+        "short_name": "Hải Phòng",
+        "oldLocation": "Ngô Quyền, Hải Phòng",
+        "parent_id": 501249,
+        "newLocation": "Ngô Quyền, Hải Phòng",
+        "distance": 46.981807810522675
+      }
+    ]
+  }
+}

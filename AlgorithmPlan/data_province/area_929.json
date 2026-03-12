@@ -1,0 +1,202 @@
+{
+  "message": "success",
+  "data": {
+    "id": "929",
+    "parent_id": 501559,
+    "name": "Bến xe Hưng Yên",
+    "english_name": "Hung Yen Bus Station",
+    "code": "bxhy",
+    "address": "Phường Hiền Nam",
+    "english_address": "Hien Nam Ward",
+    "note": "",
+    "is_prg_status": 1,
+    "suggestion": "",
+    "english_suggestion": "",
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": null,
+    "phone_info": "|",
+    "url_info": null,
+    "longitude": 106.05805,
+    "latitude": 20.6661126,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 1,
+    "base_id": "403",
+    "root_id": "3069",
+    "city_id": "403",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Hưng Yên",
+    "city_english_name": "Hung Yen",
+    "city_migrate_key": "345",
+    "state_id": "31",
+    "state_type": 3,
+    "state_code": "HYN",
+    "state_name": "Hưng Yên",
+    "state_english_name": "Hung Yen",
+    "state_migrate_key": 31,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Hưng Yên",
+    "alias": [
+      "benxehungyen"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Hưng Yên - Hưng Yên - Hưng Yên",
+    "airports": [
+      {
+        "bbox": [
+          105.807178,
+          21.221192,
+          105.807178,
+          21.221192
+        ],
+        "geometry": {
+          "coordinates": [
+            105.807178,
+            21.221192
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "102188",
+        "properties": {
+          "AirportName_Vi": "Sân bay Nội Bài",
+          "AirportName_En": "Noi Bai International Airport",
+          "CityName_Vi": "Hà Nội",
+          "CityName_En": "Hanoi",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 102188,
+          "CITY": "Hanoi",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HAN",
+          "ICAO": "VVNB",
+          "NAME": "Noibai Intl  Airport",
+          "NAME_SHORT": "Noibai Intl",
+          "OF_APT_ID": 3199,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 105.807175,
+          "Y": 21.221191,
+          "Z__feet_": 39,
+          "total_leng": 7000
+        },
+        "type": "Feature",
+        "oldLocation": "Phú Minh, Sóc Sơn, Hà Nội",
+        "parent_id": 501067,
+        "newLocation": "Sóc Sơn, Hà Nội",
+        "distance": 87.0936153476266
+      },
+      {
+        "bbox": [
+          106.724989,
+          20.819386,
+          106.724989,
+          20.819386
+        ],
+        "geometry": {
+          "coordinates": [
+            106.724989,
+            20.819386
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "135551",
+        "properties": {
+          "AirportName_Vi": "Sân bay Cát Bi",
+          "AirportName_En": "Cat Bi International Airport",
+          "CityName_Vi": "Hải Phòng",
+          "CityName_En": "Haiphong",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 135551,
+          "CITY": "Haiphong",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "HPH",
+          "ICAO": "VVCI",
+          "NAME": "Cat Bi International Airport",
+          "NAME_SHORT": "Cat Bi Intl",
+          "OF_APT_ID": 6188,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.72499,
+          "Y": 20.819386,
+          "Z__feet_": 13,
+          "total_leng": 2400
+        },
+        "type": "Feature",
+        "oldLocation": "Phường Cát Bi, Hải An, Hải Phòng",
+        "parent_id": 501215,
+        "newLocation": "Hải An, Hải Phòng",
+        "distance": 92.84150688625925
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Phủ Lý",
+        "lat": 20.5406354,
+        "long": 105.9129935,
+        "id": 111,
+        "code": "PLY",
+        "short_name": "Phủ Lý",
+        "oldLocation": "Phủ Lý, Hà Nam",
+        "parent_id": null,
+        "newLocation": "Phủ Lý, Ninh Bình",
+        "distance": 26.724918738167915
+      },
+      {
+        "name": "Ga Nam Định",
+        "lat": 20.4214523,
+        "long": 106.1644397,
+        "id": 94,
+        "code": "NDI",
+        "short_name": "Nam Định",
+        "oldLocation": "Nam Định, Nam Định",
+        "parent_id": null,
+        "newLocation": "Nam Định, Ninh Bình",
+        "distance": 38.18605672165784
+      },
+      {
+        "name": "Ga Cẩm Giàng",
+        "lat": 20.9670388,
+        "long": 106.1720671,
+        "id": 16,
+        "code": "CGA",
+        "short_name": "Cẩm Giàng",
+        "oldLocation": "Cẩm Giàng, Hải Dương",
+        "parent_id": 501197,
+        "newLocation": "Cẩm Giang, Hải Phòng",
+        "distance": 46.14733394428668
+      },
+      {
+        "es_id": 171754,
+        "name": "Ga Văn Điển",
+        "lat": 20.9441824,
+        "long": 105.8441764,
+        "id": 156,
+        "code": "VDI",
+        "short_name": "Văn Điển",
+        "oldLocation": "Xã Trung Giã, Sóc Sơn, Hà Nội",
+        "base_id": 136974,
+        "parent_id": 501023,
+        "newLocation": "Hoàng Liệt, Hà Nội",
+        "distance": 49.506910379311485
+      }
+    ]
+  }
+}

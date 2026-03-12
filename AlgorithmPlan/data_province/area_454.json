@@ -1,0 +1,85 @@
+{
+  "message": "success",
+  "data": {
+    "id": "454",
+    "base_id": "36",
+    "longitude": 107.8346924,
+    "latitude": 11.5731051,
+    "name": "Bảo Lộc",
+    "english_name": "Bao Loc",
+    "code": "bl",
+    "x_migrate_key": "396",
+    "city_id": "454",
+    "city_name": "Bảo Lộc",
+    "city_english_name": "Bao Loc",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "17",
+    "is_search_on_fe": 1,
+    "state_id": "36",
+    "state_name": "Lâm Đồng",
+    "state_english_name": "Lam Dong",
+    "country_id": "1926",
+    "name_token": "Bảo Lộc",
+    "alias": [
+      "baoloc"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Bảo Lộc - Lâm Đồng",
+    "full_english_name": "Bao Loc - Lam Dong",
+    "airports": [
+      {
+        "bbox": [
+          108.367,
+          11.75,
+          108.367,
+          11.75
+        ],
+        "geometry": {
+          "coordinates": [
+            108.367,
+            11.75
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "112068",
+        "properties": {
+          "AirportName_Vi": "Sân bay Liên Khương",
+          "AirportName_En": "Lien Khuong Airport",
+          "CityName_Vi": "Đà Lạt",
+          "CityName_En": "Dalat",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 112068,
+          "CITY": "Dalat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DLI",
+          "ICAO": "VVDL",
+          "NAME": "Lien Khuong  Airport",
+          "NAME_SHORT": "Dalat",
+          "OF_APT_ID": 4153,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.367,
+          "Y": 11.75,
+          "Z__feet_": 3156,
+          "total_leng": 3250
+        },
+        "type": "Feature",
+        "oldLocation": "Liên Nghĩa, Đức Trọng, Lâm Đồng",
+        "parent_id": 501917,
+        "newLocation": "Đức Trọng, Lâm Đồng",
+        "distance": 79.57872879240865
+      }
+    ],
+    "train_stations": []
+  }
+}

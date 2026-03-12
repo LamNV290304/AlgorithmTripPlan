@@ -1,0 +1,99 @@
+{
+  "message": "success",
+  "data": {
+    "id": "370",
+    "base_id": "29",
+    "longitude": 106.8635004,
+    "latitude": 10.5083266,
+    "name": "Cần Giờ",
+    "english_name": "Can Gio",
+    "code": "cg",
+    "x_migrate_key": "312",
+    "city_id": "370",
+    "city_name": "Cần Giờ",
+    "city_english_name": "Can Gio",
+    "address": "",
+    "english_address": null,
+    "type": 5,
+    "sub_type_id": "19",
+    "is_search_on_fe": 1,
+    "state_id": "29",
+    "state_name": "Hồ Chí Minh",
+    "state_english_name": "Ho Chi Minh City",
+    "country_id": "1926",
+    "name_token": "Cần Giờ",
+    "alias": [
+      "cangio"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 1,
+    "els_index": "area",
+    "full_name": "Cần Giờ - Hồ Chí Minh",
+    "full_english_name": "Can Gio - Ho Chi Minh City",
+    "airports": [
+      {
+        "bbox": [
+          106.651856,
+          10.818797,
+          106.651856,
+          10.818797
+        ],
+        "geometry": {
+          "coordinates": [
+            106.651856,
+            10.818797
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "28284",
+        "properties": {
+          "AirportName_Vi": "Sân bay Tân Sơn Nhất",
+          "AirportName_En": "Tan Son Nhat International Airport",
+          "CityName_Vi": "Hồ Chí Minh",
+          "CityName_En": "Ho Chi Minh City",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 28284,
+          "CITY": "Ho Chi Minh City",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "SGN",
+          "ICAO": "VVTS",
+          "NAME": "Tansonnhat Intl  Airport",
+          "NAME_SHORT": "Tansonnhat Intl",
+          "OF_APT_ID": 3205,
+          "Other": "International",
+          "TYPE": "I",
+          "TZ": 7,
+          "X": 106.651855,
+          "Y": 10.818797,
+          "Z__feet_": 33,
+          "total_leng": 6850
+        },
+        "type": "Feature",
+        "oldLocation": "Phường 2, Tân Bình, Hồ Chí Minh",
+        "parent_id": 501425,
+        "newLocation": "Tân Sơn Hòa, Hồ Chí Minh",
+        "distance": 54.01954336806955
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Sài Gòn",
+        "lat": 10.7815518,
+        "long": 106.6784072,
+        "id": 125,
+        "code": "SGO",
+        "short_name": "Sài Gòn",
+        "oldLocation": "Quận 3, Hồ Chí Minh",
+        "parent_id": 501386,
+        "newLocation": "Nhiêu Lộc, Hồ Chí Minh",
+        "distance": 47.44841248971406,
+        "is_station_default": true
+      }
+    ]
+  }
+}

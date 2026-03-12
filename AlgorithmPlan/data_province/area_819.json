@@ -1,0 +1,130 @@
+{
+  "message": "success",
+  "data": {
+    "id": "819",
+    "parent_id": 501943,
+    "name": "Bến xe Liên Hương",
+    "english_name": "Lien Huong Bus Station",
+    "code": "BXLH",
+    "address": "Nguyễn Thị Minh Khai, Liên Hương",
+    "english_address": "Nguyen Thi Minh Khai Street, Lien Huong Ward",
+    "note": "",
+    "is_prg_status": 1,
+    "suggestion": "Ngay ngã 4 Nguyễn Thị Minh Khai với Hải Thượng Lãn Ông",
+    "english_suggestion": "Crossroads Nguyen Thi Minh Khai With Hai Thuong Lan Ong",
+    "type": 15,
+    "sub_type_id": "1",
+    "x_migrate_key": null,
+    "phone_info": "|",
+    "url_info": "https://goo.gl/E3tTQp",
+    "longitude": 108.7294693,
+    "latitude": 11.2251334,
+    "link_search_info": null,
+    "images_url": null,
+    "comp_id": null,
+    "duplicated_parent_id": null,
+    "is_search_on_fe": 1,
+    "base_id": "162",
+    "root_id": "2270",
+    "city_id": "162",
+    "city_type": 5,
+    "city_code": "",
+    "city_name": "Tuy Phong",
+    "city_english_name": "Tuy Phong",
+    "city_migrate_key": "99",
+    "state_id": "11",
+    "state_type": 3,
+    "state_code": "BTN",
+    "state_name": "Bình Thuận",
+    "state_english_name": "Binh Thuan",
+    "state_migrate_key": 11,
+    "ward_id": null,
+    "ward_name": null,
+    "ward_code": null,
+    "country_id": "1926",
+    "name_token": "Bến xe Liên Hương",
+    "alias": [
+      "benxelienhuong"
+    ],
+    "children_areas": [],
+    "merged_areas": [],
+    "merged_areas_info": [],
+    "legacy": 0,
+    "els_index": "area",
+    "full_name": "Bến xe Liên Hương - Tuy Phong - Bình Thuận",
+    "airports": [
+      {
+        "bbox": [
+          108.367,
+          11.75,
+          108.367,
+          11.75
+        ],
+        "geometry": {
+          "coordinates": [
+            108.367,
+            11.75
+          ],
+          "type": "Point"
+        },
+        "geometry_name": "the_geom",
+        "id": "112068",
+        "properties": {
+          "AirportName_Vi": "Sân bay Liên Khương",
+          "AirportName_En": "Lien Khuong Airport",
+          "CityName_Vi": "Đà Lạt",
+          "CityName_En": "Dalat",
+          "CountryName_Vi": "Việt nam",
+          "CountryName_En": "Vietnam",
+          "VxrAreaId": 112068,
+          "CITY": "Dalat",
+          "COUNTRY": "Vietnam",
+          "DST": "U",
+          "IATA_FAA": "DLI",
+          "ICAO": "VVDL",
+          "NAME": "Lien Khuong  Airport",
+          "NAME_SHORT": "Dalat",
+          "OF_APT_ID": 4153,
+          "Other": "International / Military",
+          "TYPE": "I / M",
+          "TZ": 7,
+          "X": 108.367,
+          "Y": 11.75,
+          "Z__feet_": 3156,
+          "total_leng": 3250
+        },
+        "type": "Feature",
+        "oldLocation": "Liên Nghĩa, Đức Trọng, Lâm Đồng",
+        "parent_id": 501917,
+        "newLocation": "Đức Trọng, Lâm Đồng",
+        "distance": 91.61275129899383
+      }
+    ],
+    "train_stations": [
+      {
+        "name": "Ga Cà Ná",
+        "lat": 11.3518328,
+        "long": 108.8767111,
+        "id": 23,
+        "code": "CNA",
+        "short_name": "Cà Ná",
+        "oldLocation": "Ninh Phước, Ninh Thuận",
+        "parent_id": 501613,
+        "newLocation": "Cà Ná, Khánh Hòa",
+        "distance": 27.768608446872005
+      },
+      {
+        "name": "Ga Sông Mao",
+        "lat": 11.2486712,
+        "long": 108.5060097,
+        "id": 129,
+        "code": "SMA",
+        "short_name": "Sông Mao",
+        "oldLocation": "Bắc Bình, Bình Thuận",
+        "parent_id": 501919,
+        "newLocation": "Hải Ninh, Lâm Đồng",
+        "distance": 31.86478955507948
+      }
+    ]
+  }
+}
