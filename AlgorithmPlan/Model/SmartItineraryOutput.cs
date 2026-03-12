@@ -28,7 +28,7 @@ namespace AlgorithmPlan.Model
 
     public class TimelineItem
     {
-        public string Type { get; set; } = string.Empty; // "Transport", "Visit", "Rest", "Accommodation", "LuggageStorage", "CheckIn", "CheckOut", "Waiting", "Arrival"
+        public string Type { get; set; } = string.Empty; // "Transport", "Visit", "Rest", "Accommodation", "LuggageStorage", "HotelCheckIn", "HotelCheckOut", "Waiting", "Arrival"
         public string Time { get; set; } = string.Empty; // "HH:mm - HH:mm"
         public string TimeBlock { get; set; } = string.Empty; // "Morning", "Lunch Break", "Afternoon", "Evening"
         public string Description { get; set; } = string.Empty;
