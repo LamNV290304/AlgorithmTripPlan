@@ -1,4 +1,6 @@
 
+using System.Text.Json.Serialization;
+
 namespace AlgorithmPlan
 {
     public class Program
@@ -8,8 +10,13 @@ namespace AlgorithmPlan
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.Never;
+                    options.JsonSerializerOptions.WriteIndented = false;
+                });
+                
             builder.Services.AddScoped<AlgorithmPlan.Services.ItineraryService>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -27,7 +34,6 @@ namespace AlgorithmPlan
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
