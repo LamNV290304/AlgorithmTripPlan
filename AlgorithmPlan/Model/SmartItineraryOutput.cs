@@ -63,6 +63,14 @@ namespace AlgorithmPlan.Model
         // For luggage storage, check-in/out actions
         public double? LuggageStorageCost { get; set; }
         public string Action { get; set; } // "CheckIn", "CheckOut", "LuggageStorage"
+
+        // FIX: Added explicit check-in/out time properties for better JSON output
+        [JsonPropertyName("checkInTime")]
+        public string CheckInTime { get; set; }
+
+        // FIX: Added explicit check-in/out time properties for better JSON output
+        [JsonPropertyName("checkOutTime")]
+        public string CheckOutTime { get; set; }
     }
 
     public class AccommodationOption
