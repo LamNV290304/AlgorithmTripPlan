@@ -81,6 +81,14 @@
             "type": "number",
             "format": "double",
             "nullable": true
+          },
+          "tripSegment": {
+            "type": "string",
+            "nullable": true
+          },
+          "hotelPreference": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

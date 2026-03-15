@@ -1,0 +1,45 @@
+
+{
+  "timeline": [
+    {
+      "Type": "Transport",
+      "Time": "08:00 - 10:30",
+      "TimeBlock": "Morning",
+      "Description": "Take a vehicle to Noi Bai International Airport. Fly from Hanoi to Ho Chi Minh City, landing at Tan Son Nhat International Airport.",
+      "TransportOptions": [
+        {
+          "Method": "Airplane",
+          "Description": "Domestic Flight (Vietnam Airlines/VietJet/Bamboo)",
+          "TotalCost": 2500000,
+          "TravelTimeMinutes": 240,
+          "VehiclesNeeded": 1,
+          "Pros": "Fastest for long distances, most comfortable, time-saving",
+          "Cons": "Most expensive, airport transfers needed, security checks, weather dependent",
+          "Recommended": true,
+          "GroupSize": 1
+        }
+      ],
+      "SelectedTransportIndex": 0
+    },
+    {
+      "Type": "Transport",
+      "Time": "11:00 - 17:00",
+      "TimeBlock": "Afternoon",
+      "Description": "Take a vehicle to Ga Ha Noi. Take a train from Hanoi to Da Nang, arriving at Ga Da Nang.",
+      "TransportOptions": [
+        {
+          "Method": "Train",
+          "Description": "Train (Reunification Express or Regional)",
+          "TotalCost": 800000,
+          "TravelTimeMinutes": 360,
+          "VehiclesNeeded": 1,
+          "Pros": "Comfortable, scenic views, can move around, reliable schedule",
+          "Cons": "Fixed schedule, may be delayed, limited routes",
+          "Recommended": true,
+          "GroupSize": 1
+        }
+      ],
+      "SelectedTransportIndex": 0
+    }
+  ]
+}

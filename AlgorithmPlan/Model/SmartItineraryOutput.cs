@@ -20,10 +20,13 @@ namespace AlgorithmPlan.Model
     public class DailyBudgetStatus
     {
         public double Spent { get; set; }
+
+        [JsonIgnore] // Internal calculation only, not exposed in output
         public double Limit { get; set; }
-        public double Ceiling { get; set; } // Maximum should spend
-        public double Floor { get; set; } // Minimum should spend
-        public double Weight { get; set; } // Weight for budget allocation (first/last day higher)
+
+        public double Ceiling { get; set; } // Maximum per day (Limit × 1.3)
+        public double Floor { get; set; }   // Minimum per day (Limit × 0.7) – spent can go below but never above ceiling
+        public double Weight { get; set; }  // Budget weight (first/last day higher)
     }
 
     public class TimelineItem
@@ -32,9 +35,10 @@ namespace AlgorithmPlan.Model
         public string Time { get; set; } = string.Empty; // "HH:mm - HH:mm"
         public string TimeBlock { get; set; } = string.Empty; // "Morning", "Lunch Break", "Afternoon", "Evening"
         public string Description { get; set; } = string.Empty;
-        public double? Cost { get; set; } // For Transport
-        public double? TicketCost { get; set; } // For Visit
-        public bool? GroupDiscountApplied { get; set; } // For Visit
+        public double? Cost { get; set; }              // For Transport
+        public double? TicketCost { get; set; }          // For Visit – entry/ticket fee
+        public double? ExtraSpendingCost { get; set; }   // For Visit – estimated discretionary spending (food, souvenirs) at this location
+        public bool? GroupDiscountApplied { get; set; }  // For Visit
 
         // Multiple transport options for user to choose (only for Transport type)
         [JsonPropertyName("transportOptions")]
@@ -136,6 +140,23 @@ namespace AlgorithmPlan.Model
         public List<string> UserFavoriteTags { get; set; } = new List<string>();
         public double? StartLatitude { get; set; }
         public double? StartLongitude { get; set; }
+
+        /// <summary>
+        /// Controls discretionary spending at activity/food/entertainment locations.
+        /// "budget" | "midrange" (default) | "luxury"
+        /// Does NOT affect accommodation pricing.
+        /// </summary>
+        public string TripSegment { get; set; } = "midrange";
+
+        /// <summary>
+        /// Controls hotel suggestion behaviour.
+        /// "none" = no hotel suggestions (no CheckIn/CheckOut timeline items).
+        /// "budget" = homestay/nhà nghỉ (AverageBudget ≤ 500k/room/night)
+        /// "midrange" = 3–4 star hotel (500k–2M/room/night)
+        /// "luxury" = 5-star resort/villa (>2M/room/night)
+        /// Default: "midrange"
+        /// </summary>
+        public string HotelPreference { get; set; } = "midrange";
     }
 
     // Transport option with pros/cons for user selection
@@ -143,32 +164,39 @@ namespace AlgorithmPlan.Model
     {
         [JsonPropertyName("method")]
         public string Method { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("description")]
         public string Description { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("totalCost")]
         public double TotalCost { get; set; }
-        
+
         [JsonPropertyName("travelTimeMinutes")]
         public double TravelTimeMinutes { get; set; }
-        
+
         [JsonPropertyName("vehiclesNeeded")]
         public int VehiclesNeeded { get; set; }
-        
+
         [JsonPropertyName("pros")]
         public string Pros { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("cons")]
         public string Cons { get; set; } = string.Empty;
-        
+
         [JsonPropertyName("recommended")]
         public bool Recommended { get; set; }
-        
+
         [JsonPropertyName("costPerPerson")]
         public double CostPerPerson => GroupSize > 0 ? TotalCost / GroupSize : 0;
-        
+
         [JsonPropertyName("groupSize")]
         public int GroupSize { get; set; }
+
+        // Hub information for inter-city transport
+        [JsonPropertyName("departureHub")]
+        public string DepartureHub { get; set; } = string.Empty;
+
+        [JsonPropertyName("arrivalHub")]
+        public string ArrivalHub { get; set; } = string.Empty;
     }
 }
