@@ -11,6 +11,7 @@ namespace AlgorithmPlan.Services
     {
         private readonly string _dataPath = Path.Combine(AppContext.BaseDirectory, "data.json");
         private readonly string _dataProvincePath = Path.Combine(AppContext.BaseDirectory, "data_province");
+        private readonly Dictionary<string, ProvinceData> _provinceDataCache = new Dictionary<string, ProvinceData>();
 
         // Vehicle capacities and costs per km (examples)
         private readonly List<VehicleType> _vehicleTypes = new List<VehicleType>
@@ -20,6 +21,12 @@ namespace AlgorithmPlan.Services
             new VehicleType { Name = "7-seat vehicle", Capacity = 7, CostPerKm = 20000, SpeedKmh = 30 },
             new VehicleType { Name = "16-seat van", Capacity = 16, CostPerKm = 35000, SpeedKmh = 25 }
         };
+
+        // Extra spending multipliers based on trip segment (for service locations)
+        // Budget: 50k-150k, Midrange: 150k-400k, Luxury: 400k-1M+
+        private readonly (double min, double max) _budgetExtraSpending = (50000, 150000);
+        private readonly (double min, double max) _midrangeExtraSpending = (150000, 400000);
+        private readonly (double min, double max) _luxuryExtraSpending = (400000, 1000000);
 
         // Time delay buffers based on transport mode (research-based)
         // Source: IATA recommends arriving 2h before domestic, 3h before international flights
@@ -49,28 +56,29 @@ namespace AlgorithmPlan.Services
         public List<Location> LoadLocationsFromProvinceData()
         {
             var allLocations = new List<Location>();
-            
+
             if (!Directory.Exists(_dataProvincePath))
             {
                 return GetAllLocations(); // Fallback to data.json
             }
 
             var jsonFiles = Directory.GetFiles(_dataProvincePath, "*.json");
-            
+
             foreach (var file in jsonFiles)
             {
                 try
                 {
                     var json = File.ReadAllText(file);
                     using var doc = JsonDocument.Parse(json);
-                    
+
                     if (doc.RootElement.TryGetProperty("data", out var dataElement))
                     {
-                        // Parse province data and convert to Location objects
-                        var province = ParseProvinceData(dataElement);
-                        if (province != null)
+                        // Parse province data and cache it
+                        var provinceData = ParseProvinceDataWithDetails(dataElement);
+                        if (provinceData != null)
                         {
-                            allLocations.Add(province);
+                            _provinceDataCache[provinceData.Name.ToLowerInvariant()] = provinceData;
+                            allLocations.Add(provinceData.Location);
                         }
                     }
                 }
@@ -87,38 +95,93 @@ namespace AlgorithmPlan.Services
             return allLocations;
         }
 
-        private Location ParseProvinceData(JsonElement dataElement)
+        private ProvinceData ParseProvinceDataWithDetails(JsonElement dataElement)
         {
             try
             {
-                var name = dataElement.GetProperty("name").GetString();
+                var name = dataElement.GetProperty("name").GetString()?.ToLowerInvariant();
                 var latitude = dataElement.GetProperty("latitude").GetDouble();
                 var longitude = dataElement.GetProperty("longitude").GetDouble();
                 var englishName = dataElement.GetProperty("english_name").GetString();
 
-                // Extract airports as transportation points
-                var tags = new List<string> { "Province", "Destination" };
-                if (dataElement.TryGetProperty("airports", out var airports))
+                // Extract airports
+                var airports = new List<AirportInfo>();
+                if (dataElement.TryGetProperty("airports", out var airportArray))
                 {
-                    if (airports.GetArrayLength() > 0)
+                    foreach (var airport in airportArray.EnumerateArray())
                     {
-                        tags.Add("Airport");
-                        tags.Add("Transport");
+                        if (airport.TryGetProperty("properties", out var props))
+                        {
+                            var airportNameVi = props.TryGetProperty("AirportName_Vi", out var nameVi) ? nameVi.GetString() : null;
+                            var airportNameEn = props.TryGetProperty("AirportName_En", out var nameEn) ? nameEn.GetString() : null;
+                            var iataCode = props.TryGetProperty("IATA_FAA", out var iata) ? iata.GetString() : null;
+                            var cityName = props.TryGetProperty("CityName_Vi", out var city) ? city.GetString() : null;
+                            
+                            airports.Add(new AirportInfo
+                            {
+                                Name = airportNameVi ?? "City Airport",
+                                EnglishName = airportNameEn ?? "City Airport",
+                                IataCode = iataCode ?? "",
+                                CityName = cityName ?? "",
+                                Distance = airport.TryGetProperty("distance", out var dist) ? dist.GetDouble() : 0
+                            });
+                        }
                     }
                 }
 
-                return new Location
+                // Extract train stations
+                var trainStations = new List<TrainStationInfo>();
+                if (dataElement.TryGetProperty("train_stations", out var stationArray))
                 {
-                    Id = int.Parse(dataElement.GetProperty("id").GetString()),
+                    foreach (var station in stationArray.EnumerateArray())
+                    {
+                        if (station.TryGetProperty("properties", out var props))
+                        {
+                            var stationNameVi = props.TryGetProperty("StationName_Vi", out var nameVi) ? nameVi.GetString() : null;
+                            var stationNameEn = props.TryGetProperty("StationName_En", out var nameEn) ? nameEn.GetString() : null;
+                            var stationCity = props.TryGetProperty("CityName_Vi", out var city) ? city.GetString() : null;
+                            
+                            trainStations.Add(new TrainStationInfo
+                            {
+                                Name = stationNameVi ?? "Train Station",
+                                EnglishName = stationNameEn ?? "Train Station",
+                                CityName = stationCity ?? englishName
+                            });
+                        }
+                    }
+                }
+
+                var tags = new List<string> { "Province", "Destination" };
+                if (airports.Any())
+                {
+                    tags.Add("Airport");
+                    tags.Add("Transport");
+                }
+                if (trainStations.Any())
+                {
+                    tags.Add("TrainStation");
+                    tags.Add("Transport");
+                }
+
+                return new ProvinceData
+                {
                     Name = name,
-                    Description = $"{name} ({englishName})",
-                    Latitude = latitude,
-                    Longitude = longitude,
-                    Destination = name,
-                    Tags = tags,
-                    AverageBudget = 0,
-                    AverageStayDuration = 0,
-                    OpeningHours = new List<OpeningHours>()
+                    EnglishName = englishName,
+                    Location = new Location
+                    {
+                        Id = int.Parse(dataElement.GetProperty("id").GetString()),
+                        Name = englishName,
+                        Description = $"{englishName}",
+                        Latitude = latitude,
+                        Longitude = longitude,
+                        Destination = englishName,
+                        Tags = tags,
+                        AverageBudget = 0,
+                        AverageStayDuration = 0,
+                        OpeningHours = new List<OpeningHours>()
+                    },
+                    Airports = airports,
+                    TrainStations = trainStations
                 };
             }
             catch
@@ -218,9 +281,14 @@ namespace AlgorithmPlan.Services
             );
 
             var output = new SmartItineraryOutput();
-            var visitedIds = new HashSet<int>();
+            // Task 5: Replace HashSet with Dictionary to track visit count (max 1 per itinerary)
+            var visitedCountMap = new Dictionary<int, int>();
             double totalSpent = 0;
             double rolloverBudget = 0;
+
+            bool wantHotel = !string.Equals(request.HotelPreference, "none", StringComparison.OrdinalIgnoreCase);
+            string tripSegment = request.TripSegment ?? "midrange";
+            string hotelSegment = request.HotelPreference ?? "midrange";
 
             double currentLat = request.StartLatitude ?? 21.0285;
             double currentLon = request.StartLongitude ?? 105.8522;
@@ -242,38 +310,80 @@ namespace AlgorithmPlan.Services
 
                     var currentDate = request.StartDate.AddDays(dayCounter);
                     var dailyBudgetInfo = dailyBudgets[dayCounter];
-                    
-                    double dailyLimit = dailyBudgetInfo.Limit + rolloverBudget;
-                    bool needHotelTonight = d < daysInThisDest - 1 || destAlloc.Key != destinationDayAllocation.Last().Key;
+
+                    // Task 1: Use ceiling as hard cap; rollover can lift the floor but not the ceiling
+                    double dailyCeiling = dailyBudgetInfo.Ceiling + rolloverBudget;
+                    double dailyFloor   = dailyBudgetInfo.Floor;
+                    bool needHotelTonight = wantHotel &&
+                        (d < daysInThisDest - 1 || destAlloc.Key != destinationDayAllocation.Last().Key);
 
                     double accommodationBudgetTonight = needHotelTonight ? destinationHotelCosts[destinationName] : 0;
-                    double totalDailyLimit = dailyLimit + accommodationBudgetTonight;
+                    double totalDailyCeiling = dailyCeiling + accommodationBudgetTonight;
 
                     var dailyPlan = new DailyItinerary
                     {
                         Day = $"Day {dayCounter + 1} – {destinationName}",
-                        DailyBudgetStatus = new DailyBudgetStatus 
-                        { 
-                            Limit = Math.Round(totalDailyLimit, 0), 
-                            Spent = 0,
-                            Ceiling = Math.Round(dailyBudgetInfo.Ceiling + accommodationBudgetTonight, 0),
-                            Floor = Math.Round(dailyBudgetInfo.Floor, 0),
-                            Weight = dailyBudgetInfo.Weight
+                        DailyBudgetStatus = new DailyBudgetStatus
+                        {
+                            Limit   = Math.Round(dailyBudgetInfo.Limit + accommodationBudgetTonight, 0), // internal only, hidden from JSON
+                            Spent   = 0,
+                            Ceiling = Math.Round(totalDailyCeiling, 0),
+                            Floor   = Math.Round(dailyFloor, 0),
+                            Weight  = dailyBudgetInfo.Weight
                         }
                     };
 
                     TimeSpan currentTime = MorningStart;
 
+<<<<<<< HEAD
+=======
+                    // Issue 3: On Day 1, add hotel check-in at the VERY beginning before any activities
+                    // Customers need to drop luggage before they can start sightseeing
+                    if (dayCounter == 0 && wantHotel && currentHotel == null)
+                    {
+                        var hotelResult = FindNextBestAccommodationWithDetails(
+                            currentLat, currentLon, destCandidates, request.GroupSize, accommodationBudgetTonight, null);
+                        if (hotelResult != null)
+                        {
+                            currentHotel = hotelResult.Location;
+                            double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
+                            if (actualCheckinDuration < 15) actualCheckinDuration = 15;
+
+                            TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
+                            dailyPlan.Timeline.Insert(0, new TimelineItem
+                            {
+                                Type = "CheckIn",
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
+                                TimeBlock = "Morning",
+                                Description = $"Hotel Check-in: {currentHotel.Name} (Drop luggage before sightseeing)" +
+                                              $" | Check-in: {currentHotel.CheckInTime ?? "14:00"}" +
+                                              $" | Check-out: {currentHotel.CheckOutTime ?? "12:00"}",
+                                Action = "CheckIn",
+                                // Fix 2: Add options directly on day 1 CheckIn
+                                AccommodationOptions = hotelResult?.Options,
+                                SelectedAccommodationIndex = hotelResult != null ? hotelResult.SelectedIndex : null,
+                                AlternativeAccommodations = hotelResult?.AlternativeAccommodations
+                            });
+                            currentTime = checkinEnd;
+                        }
+                    }
+
+>>>>>>> origin/feature-itinerary-fix
                     // Handle inter-city movement and Hotel Check-in/out
                     if (currentDestination != destinationName)
                     {
                         if (currentDestination != null)
                         {
+<<<<<<< HEAD
                             // 1. Standalone Hotel Check-out (from previous city hotel)
+=======
+                            // 1. Hotel Check-out (from previous city hotel)
+>>>>>>> origin/feature-itinerary-fix
                             if (currentHotel != null)
                             {
                                 double actualCheckoutDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
                                 if (actualCheckoutDuration < 15) actualCheckoutDuration = 15;
+<<<<<<< HEAD
                                 
                                 TimeSpan checkoutEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckoutDuration));
                                 dailyPlan.Timeline.Add(new TimelineItem
@@ -281,12 +391,22 @@ namespace AlgorithmPlan.Services
                                     Type = "HotelCheckOut",
                                     Time = $"{FormatTime(currentTime)} - {FormatTime(checkoutEnd)}",
                                     TimeBlock = "Morning",
+=======
+
+                                TimeSpan checkoutEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckoutDuration));
+                                dailyPlan.Timeline.Add(new TimelineItem
+                                {
+                                    Type = "CheckOut",
+                                    Time = $"{FormatTime(currentTime)} - {FormatTime(checkoutEnd)}",
+                                    TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+>>>>>>> origin/feature-itinerary-fix
                                     Description = $"Hotel Check-out: {currentHotel.Name}",
                                     Action = "CheckOut"
                                 });
                                 currentTime = checkoutEnd;
                             }
 
+<<<<<<< HEAD
                             // 2. Local Transfer: Hotel to Departure Terminal
                             double distanceToTerminal = 15.0; // Estimated 15km to hub
                             var localToTerminalOptions = GetTransportOptions(distanceToTerminal, request.GroupSize);
@@ -328,13 +448,62 @@ namespace AlgorithmPlan.Services
 
                             // 4. Main Inter-City Journey
                             TimeSpan journeyEnd = currentTime.Add(TimeSpan.FromMinutes(mainJourneyTransport.TravelTimeMinutes));
+=======
+                            // 2. Local Transfer: Hotel to Terminal
+                            double distanceToTerminal = 15.0; // Estimated 15km to hub (Airport/Station)
+                            var localToTerminalOptions = GetTransportOptions(distanceToTerminal, request.GroupSize);
+                            var toTerminalTransport = localToTerminalOptions.FirstOrDefault(o => o.Recommended) ?? localToTerminalOptions.FirstOrDefault();
+
+                            TimeSpan toTerminalEnd = currentTime.Add(TimeSpan.FromMinutes(toTerminalTransport.TravelTimeMinutes + 10)); // +10 min local buffer
+>>>>>>> origin/feature-itinerary-fix
+
+                            dailyPlan.Timeline.Add(new TimelineItem
+                            {
+                                Type = "Transport",
+<<<<<<< HEAD
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(journeyEnd)}",
+                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+                                Description = $"{mainJourneyTransport.Description} from {currentDestination} to {destinationName} ({Math.Round(distance, 2)} km)",
+=======
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(toTerminalEnd)}",
+                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+                                Description = $"Local Transfer: {toTerminalTransport.Description} from Hotel to Departure Terminal",
+                                TransportOptions = localToTerminalOptions,
+                                SelectedTransportIndex = localToTerminalOptions.IndexOf(toTerminalTransport),
+                                Cost = toTerminalTransport.TotalCost
+                            });
+                            currentTime = toTerminalEnd;
+                            dailyPlan.DailyBudgetStatus.Spent += toTerminalTransport.TotalCost;
+
+                            // 3. Terminal Waiting (1.5 - 2 hours)
+                            var destCenter = GetDestinationCenter(destCandidates);
+                            double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
+                            var mainJourneyOptions = GetInterCityTransportOptions(distance, request.GroupSize, currentDestination, destinationName, candidateLocations);
+                            var mainJourneyTransport = mainJourneyOptions.FirstOrDefault(o => o.Recommended) ?? mainJourneyOptions.FirstOrDefault();
+
+                            double waitingTime = GetDelayBufferForTransport(mainJourneyTransport?.Method ?? "");
+                            waitingTime = Math.Max(waitingTime, 90); // At least 1.5 hours per requirement
+
+                            TimeSpan waitingEnd = currentTime.Add(TimeSpan.FromMinutes(waitingTime));
+                            dailyPlan.Timeline.Add(new TimelineItem
+                            {
+                                Type = "Waiting",
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(waitingEnd)}",
+                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+                                Description = $"Terminal Waiting: {mainJourneyTransport?.Method} Boarding & Security buffer at {mainJourneyTransport?.DepartureHub ?? "Terminal"}"
+                            });
+                            currentTime = waitingEnd;
+
+                            // 4. Main Inter-City Journey
+                            TimeSpan journeyEnd = currentTime.Add(TimeSpan.FromMinutes(mainJourneyTransport.TravelTimeMinutes));
 
                             dailyPlan.Timeline.Add(new TimelineItem
                             {
                                 Type = "Transport",
                                 Time = $"{FormatTime(currentTime)} - {FormatTime(journeyEnd)}",
                                 TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"{mainJourneyTransport.Description} from {currentDestination} to {destinationName} ({Math.Round(distance, 2)} km)",
+                                Description = $"{mainJourneyTransport.Description} from {mainJourneyTransport.DepartureHub ?? currentDestination} to {mainJourneyTransport.ArrivalHub ?? destinationName} ({Math.Round(distance, 2)} km)",
+>>>>>>> origin/feature-itinerary-fix
                                 TransportOptions = mainJourneyOptions,
                                 SelectedTransportIndex = mainJourneyOptions.IndexOf(mainJourneyTransport),
                                 Cost = mainJourneyTransport.TotalCost
@@ -350,6 +519,7 @@ namespace AlgorithmPlan.Services
                                 Type = "Arrival",
                                 Time = $"{FormatTime(currentTime)} - {FormatTime(arrivalTerminalEnd)}",
                                 TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+<<<<<<< HEAD
                                 Description = $"Arrive at {destinationName} Terminal"
                             });
                             currentTime = arrivalTerminalEnd;
@@ -373,6 +543,11 @@ namespace AlgorithmPlan.Services
                             });
                             currentTime = toHotelEnd;
                             dailyPlan.DailyBudgetStatus.Spent += toHotelTransport.TotalCost;
+=======
+                                Description = $"Arrive at {mainJourneyTransport?.ArrivalHub ?? destinationName + " Terminal"}"
+                            });
+                            currentTime = arrivalTerminalEnd;
+>>>>>>> origin/feature-itinerary-fix
                         }
 
                         // Set up for new city
@@ -382,14 +557,23 @@ namespace AlgorithmPlan.Services
                         currentLon = newDestCenter.Lon;
                         currentDestination = destinationName;
 
+<<<<<<< HEAD
                         // 7. Standalone Hotel Check-in
                         if (currentHotel == null)
                         {
                             var hotelResult = FindNextBestAccommodationWithDetails(
+=======
+                        // 6. Hotel Check-in (for new city) - NOT on day 1 as it's handled above
+                        AccommodationResult hotelResult = null;
+                        if (dayCounter > 0 && currentHotel == null)
+                        {
+                            hotelResult = FindNextBestAccommodationWithDetails(
+>>>>>>> origin/feature-itinerary-fix
                                 currentLat, currentLon, destCandidates, request.GroupSize, accommodationBudgetTonight, null);
                             if (hotelResult != null) currentHotel = hotelResult.Location;
                         }
 
+<<<<<<< HEAD
                         if (currentHotel != null)
                         {
                             double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
@@ -406,6 +590,31 @@ namespace AlgorithmPlan.Services
                                 TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
                                 Description = checkinDesc,
                                 Action = "CheckIn"
+=======
+                        if (currentHotel != null && dayCounter > 0)
+                        {
+                            double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
+                            if (actualCheckinDuration < 15) actualCheckinDuration = 15;
+
+                            TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
+                            string checkinDesc = $"Hotel Check-in: {currentHotel.Name}" +
+                                                 $" | Check-in: {currentHotel.CheckInTime ?? "14:00"}" +
+                                                 $" | Check-out: {currentHotel.CheckOutTime ?? "12:00"}";
+
+                            if (currentTime.Hours < 14) checkinDesc += " (Drop luggage if room not ready)";
+
+                            dailyPlan.Timeline.Add(new TimelineItem
+                            {
+                                Type = "CheckIn",
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
+                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
+                                Description = checkinDesc,
+                                Action = "CheckIn",
+                                // Fix 2: Add options directly on CheckIn for new cities
+                                AccommodationOptions = hotelResult?.Options,
+                                SelectedAccommodationIndex = hotelResult != null ? hotelResult.SelectedIndex : null,
+                                AlternativeAccommodations = hotelResult?.AlternativeAccommodations
+>>>>>>> origin/feature-itinerary-fix
                             });
                             currentTime = checkinEnd;
                         }
@@ -442,18 +651,18 @@ namespace AlgorithmPlan.Services
                     while (currentTime < morningActualEnd)
                     {
                         var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek,
-                            morningActualEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
+                            currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek,
+                            morningActualEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
 
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyLimit, visitedIds, ref currentLat, ref currentLon);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
 
                     // Fill gap before lunch if any
                     if (currentTime < LunchStart - TimeSpan.FromMinutes(30))
                     {
-                        FillTimeGap(currentTime, LunchStart - TimeSpan.FromMinutes(30), dailyPlan, "Morning", 
-                            currentLat, currentLon, destCandidates, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                        FillTimeGap(currentTime, LunchStart - TimeSpan.FromMinutes(30), dailyPlan, "Morning",
+                            currentLat, currentLon, destCandidates, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent);
                         currentTime = LunchStart - TimeSpan.FromMinutes(30);
                     }
 
@@ -463,9 +672,9 @@ namespace AlgorithmPlan.Services
                         if (currentTime < LunchStart) currentTime = LunchStart;
 
                         var lunchPlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, 
-                            new[] { "Restaurant", "LunchRest", "Food" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                            new[] { "Restaurant", "LunchRest", "Food" }, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent);
                         var cafePlace = FindNextBestRestLocation(currentLat, currentLon, destCandidates, 
-                            new[] { "Cafe", "Coffee", "RestArea" }, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                            new[] { "Cafe", "Coffee", "RestArea" }, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent);
 
                         string lunchDesc = lunchPlace != null ? $"Lunch at {lunchPlace.Location.Name}" : "Lunch at local restaurant";
                         string cafeDesc = cafePlace != null ? $"Rest at {cafePlace.Location.Name}" : "Rest at nearby café";
@@ -484,9 +693,10 @@ namespace AlgorithmPlan.Services
                             Description = $"Lunch: {lunchDesc}{hotelOption} | Optional: {cafeDesc}"
                         });
 
-                        if (lunchPlace != null) 
+                        if (lunchPlace != null)
                         {
-                            dailyPlan.DailyBudgetStatus.Spent += lunchPlace.Location.AverageBudget * request.GroupSize;
+                            var lunchExtraSpend = lunchPlace.Location.AverageBudget * request.GroupSize;
+                            dailyPlan.DailyBudgetStatus.Spent += lunchExtraSpend;
                         }
                         currentTime = LunchEnd;
                     }
@@ -495,18 +705,18 @@ namespace AlgorithmPlan.Services
                     while (currentTime < AfternoonEnd)
                     {
                         var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek,
-                            AfternoonEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
+                            currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek,
+                            AfternoonEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
 
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyLimit, visitedIds, ref currentLat, ref currentLon);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
 
                     // Fill gap before evening if any
                     if (currentTime < EveningStart - TimeSpan.FromMinutes(30))
                     {
                         FillTimeGap(currentTime, EveningStart - TimeSpan.FromMinutes(30), dailyPlan, "Late Afternoon",
-                            currentLat, currentLon, destCandidates, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent);
+                            currentLat, currentLon, destCandidates, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent);
                         currentTime = EveningStart - TimeSpan.FromMinutes(30);
                     }
 
@@ -515,11 +725,11 @@ namespace AlgorithmPlan.Services
                     while (currentTime < eveningActualEnd)
                     {
                         var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedIds, currentTime, currentDate.DayOfWeek,
-                            eveningActualEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, true);
+                            currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek,
+                            eveningActualEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, true);
 
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyLimit, visitedIds, ref currentLat, ref currentLon);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
 
                     // --- STANDALONE SLEEP BLOCK (22:00 - 07:00) ---
@@ -532,7 +742,8 @@ namespace AlgorithmPlan.Services
 
                     if (d < daysInThisDest - 1)
                     {
-                        var remainingCandidates = destCandidates.Where(c => !visitedIds.Contains(c.Location.Id)).ToList();
+                        // Task 5: use visitedCountMap to find unvisited candidates for next-day planning
+                        var remainingCandidates = destCandidates.Where(c => !visitedCountMap.ContainsKey(c.Location.Id)).ToList();
                         if (remainingCandidates.Any())
                         {
                             var nextDayCenter = GetDestinationCenter(remainingCandidates);
@@ -541,8 +752,9 @@ namespace AlgorithmPlan.Services
                         }
                     }
 
-                    bool needNewHotel = currentHotel == null ||
-                        CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0;
+                    // Task 4: Only search for hotel if user wants one
+                    bool needNewHotel = wantHotel && (currentHotel == null ||
+                        CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0);
 
                     List<AccommodationOption> accommodationOptions = null;
                     int selectedAccommodationIndex = 0;
@@ -551,15 +763,14 @@ namespace AlgorithmPlan.Services
                     if (needNewHotel)
                     {
                         var accommodationResult = FindNextBestAccommodationWithDetails(
-                            searchLat, searchLon, destCandidates, request.GroupSize, accommodationBudgetTonight, currentHotel);
+                            searchLat, searchLon, destCandidates, request.GroupSize, accommodationBudgetTonight, currentHotel, hotelSegment);
 
                         if (accommodationResult != null)
                         {
                             currentHotel = accommodationResult.Location;
                             accommodationOptions = accommodationResult.Options;
                             selectedAccommodationIndex = accommodationResult.SelectedIndex;
-                            
-                            // Convert alternative accommodations to display format
+
                             if (accommodationResult.AlternativeAccommodations != null && accommodationResult.AlternativeAccommodations.Any())
                             {
                                 alternativeAccommodations = accommodationResult.AlternativeAccommodations.Select(a => new AlternativeAccommodationDisplay
@@ -588,8 +799,18 @@ namespace AlgorithmPlan.Services
                         {
                             Type = "Sleep",
                             Time = $"{FormatTime(nightStart)} - {FormatTime(nightEnd)}",
+<<<<<<< HEAD
                             TimeBlock = "Night",
                             Description = $"Sleep/Rest at {currentHotel.Name}",
+=======
+                            TimeBlock = "Night Rest",
+                            Description = $"Accommodation: {currentHotel.Name}" +
+                                          $" | Check-in: {currentHotel.CheckInTime ?? "14:00"}" +
+                                          $" | Check-out: {currentHotel.CheckOutTime ?? "12:00"}" +
+                                          (currentHotel.HasLuggageStorage ? $" | Luggage storage available: {currentHotel.LuggageStorageCost:N0} VND/bag" : ""),
+                            // Fix 2: expose accommodation cost explicitly in timeline
+                            Cost = Math.Round(hotelCost, 0),
+>>>>>>> origin/feature-itinerary-fix
                             AccommodationOptions = accommodationOptions,
                             SelectedAccommodationIndex = accommodationOptions != null ? selectedAccommodationIndex : null,
                             AlternativeAccommodations = alternativeAccommodations
@@ -598,16 +819,27 @@ namespace AlgorithmPlan.Services
                         // Show continuing stay info
                         if (d > 0 && currentDestination == destinationName)
                         {
+<<<<<<< HEAD
                             sleepItem.Description += " (Continuing stay)";
                         }
 
                         // Add luggage storage info if available
+=======
+                            accommodationItem.Description += " (Continuing stay)";
+                        }
+
+>>>>>>> origin/feature-itinerary-fix
                         if (currentHotel.HasLuggageStorage)
                         {
                             sleepItem.LuggageStorageCost = currentHotel.LuggageStorageCost;
                         }
 
+<<<<<<< HEAD
                         dailyPlan.Timeline.Add(sleepItem);
+=======
+                        dailyPlan.Timeline.Add(accommodationItem);
+
+>>>>>>> origin/feature-itinerary-fix
                         dailyPlan.DailyBudgetStatus.Spent += hotelCost;
 
                         currentLat = currentHotel.Latitude;
@@ -621,11 +853,12 @@ namespace AlgorithmPlan.Services
                     output.Days.Add(dailyPlan);
                     totalSpent += dailyPlan.DailyBudgetStatus.Spent;
 
-                    // Rollover calculation
-                    rolloverBudget = dailyLimit - (dailyPlan.DailyBudgetStatus.Spent - accommodationBudgetTonight);
-                    double maxRollover = dailyBudgets[Math.Min(dayCounter + 1, dailyBudgets.Count - 1)].Limit * 0.5;
+                    // Task 1: Rollover = ceiling minus activity spent (exclude accommodation from rollover calc)
+                    double activitySpentToday = dailyPlan.DailyBudgetStatus.Spent - accommodationBudgetTonight;
+                    rolloverBudget = dailyBudgetInfo.Ceiling - activitySpentToday;
+                    double maxRollover = dailyBudgets[Math.Min(dayCounter + 1, dailyBudgets.Count - 1)].Ceiling * 0.5;
                     if (rolloverBudget > maxRollover) rolloverBudget = maxRollover;
-                    if (rolloverBudget < -maxRollover) rolloverBudget = -maxRollover;
+                    if (rolloverBudget < 0) rolloverBudget = 0; // never carry-over debt
 
                     dayCounter++;
                 }
@@ -732,67 +965,47 @@ namespace AlgorithmPlan.Services
             double lat, double lon, List<ScoredLocation> candidates, int groupSize, double remainingBudget)
         {
             if (startTime >= endTime) return;
-            
-            // Only fill gaps that are at least 15 minutes
-            var gapDuration = endTime - startTime;
-            if (gapDuration.TotalMinutes < 15) return;
 
-            // Find a nearby activity to fill the gap
+            // Only fill gaps >= 30 minutes to avoid trivial Rest items
+            var gapDuration = endTime - startTime;
+            if (gapDuration.TotalMinutes < 30) return;
+
+            // Find a nearby, non-accommodation activity to label the free time
             var nearbyActivity = candidates
-                .Where(c => !c.Location.Tags.Contains("Hotel", StringComparer.OrdinalIgnoreCase) && 
-                           !c.Location.Tags.Contains("Guesthouse", StringComparer.OrdinalIgnoreCase))
-                .Select(c => new { 
-                    Location = c, 
-                    Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) 
-                })
+                .Select(c => new { Location = c, Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) })
                 .Where(x => x.Distance <= 1.0)
                 .OrderBy(x => x.Distance)
                 .FirstOrDefault();
 
-            if (nearbyActivity != null && gapDuration.TotalMinutes >= 30)
+            string description = nearbyActivity != null
+                ? $"Free time / Rest near {nearbyActivity.Location.Location.Name}"
+                : "Free time / Rest";
+
+            dailyPlan.Timeline.Add(new TimelineItem
             {
-                string description = $"Free time / Rest near {nearbyActivity.Location.Location.Name}";
-                
-                dailyPlan.Timeline.Add(new TimelineItem
-                {
-                    Type = "Rest",
-                    Time = $"{FormatTime(startTime)} - {FormatTime(endTime)}",
-                    TimeBlock = timeBlock,
-                    Description = description
-                });
-            }
-            else
-            {
-                dailyPlan.Timeline.Add(new TimelineItem
-                {
-                    Type = "Rest",
-                    Time = $"{FormatTime(startTime)} - {FormatTime(endTime)}",
-                    TimeBlock = timeBlock,
-                    Description = "Free time / Rest"
-                });
-            }
+                Type = "Rest",
+                Time = $"{FormatTime(startTime)} - {FormatTime(endTime)}",
+                TimeBlock = timeBlock,
+                Description = description
+            });
         }
 
         private void FillRemainingTimeGaps(DailyItinerary dailyPlan, int groupSize, double lat, double lon, List<ScoredLocation> candidates)
         {
-            // Sort timeline by start time
+            // Sort timeline by start time, skip already-tagged gap blocks
             var sortedTimeline = dailyPlan.Timeline
                 .Where(t => !t.TimeBlock.Equals("Gap") && !t.TimeBlock.Equals("Early Morning") && !t.TimeBlock.Equals("Late Night"))
                 .OrderBy(t => ParseTime(t.Time.Split(" - ")[0]))
                 .ToList();
-            
-            // Remove any existing Gap, Early Morning, Late Night items
+
+            // Remove stale gap items
             var itemsToRemove = dailyPlan.Timeline
                 .Where(t => t.TimeBlock.Equals("Gap") || t.TimeBlock.Equals("Early Morning") || t.TimeBlock.Equals("Late Night"))
                 .ToList();
-            
-            foreach (var item in itemsToRemove)
-            {
-                dailyPlan.Timeline.Remove(item);
-            }
-            
+            foreach (var item in itemsToRemove) dailyPlan.Timeline.Remove(item);
+
             TimeSpan? previousEndTime = null;
-            
+
             foreach (var item in sortedTimeline)
             {
                 var times = item.Time.Split(" - ");
@@ -801,35 +1014,39 @@ namespace AlgorithmPlan.Services
 
                 if (previousEndTime.HasValue && startTime > previousEndTime.Value)
                 {
-                    // Found a gap - only fill if >= 15 minutes
                     var gapDuration = startTime - previousEndTime.Value;
-                    if (gapDuration.TotalMinutes >= 15)
+                    // Issue 4: Only add FREE TIME gap if >= 90 minutes (suppress minor gaps, maximize activities)
+                    if (gapDuration.TotalMinutes >= 90)
                     {
-                        FillTimeGap(previousEndTime.Value, startTime, dailyPlan, "Free Time", lat, lon, candidates, groupSize, 1000000);
+                        FillTimeGap(previousEndTime.Value, startTime, dailyPlan, "Free Time", lat, lon, candidates, groupSize, 1_000_000);
                     }
                 }
 
                 previousEndTime = endTime;
             }
 
-            // Fill gap from last activity to end of day (23:00) - not 23:59
-            if (previousEndTime.HasValue && previousEndTime.Value < new TimeSpan(23, 0, 0))
+            // Issue 4: Fill gap from last activity to 22:00 only if gap >= 2 hours (reduce rest time)
+            // Skip this if the last block is Night Rest (accommodation) to avoid giant "08:00-23:00" rest
+            var lastNonRestItem = sortedTimeline.LastOrDefault(t => t.Type != "Rest" || t.TimeBlock == "Night Rest");
+            if (previousEndTime.HasValue
+                && previousEndTime.Value < new TimeSpan(22, 0, 0)
+                && lastNonRestItem?.TimeBlock != "Night Rest")
             {
-                var gapDuration = new TimeSpan(23, 0, 0) - previousEndTime.Value;
-                if (gapDuration.TotalMinutes >= 15)
+                var gapDuration = new TimeSpan(22, 0, 0) - previousEndTime.Value;
+                if (gapDuration.TotalMinutes >= 120)
                 {
-                    FillTimeGap(previousEndTime.Value, new TimeSpan(23, 0, 0), dailyPlan, "Evening", lat, lon, candidates, groupSize, 500000);
+                    FillTimeGap(previousEndTime.Value, new TimeSpan(22, 0, 0), dailyPlan, "Evening Free Time", lat, lon, candidates, groupSize, 1_000_000);
                 }
             }
 
-            // Fill gap from start of day (08:00) to first activity if first activity is after 08:00
+            // Issue 4: Fill gap from start of day (08:00) to first activity only if gap >= 60 minutes
             if (sortedTimeline.Any())
             {
                 var firstStartTime = ParseTime(sortedTimeline.First().Time.Split(" - ")[0]);
                 if (firstStartTime > MorningStart)
                 {
                     var gapDuration = firstStartTime - MorningStart;
-                    if (gapDuration.TotalMinutes >= 15)
+                    if (gapDuration.TotalMinutes >= 60)
                     {
                         FillTimeGap(MorningStart, firstStartTime, dailyPlan, "Morning", lat, lon, candidates, groupSize, 0);
                     }
@@ -851,9 +1068,17 @@ namespace AlgorithmPlan.Services
 
         private AccommodationResult FindNextBestAccommodationWithDetails(
             double lat, double lon, List<ScoredLocation> candidates, int groupSize,
-            double accommodationBudget, Location currentHotel)
+            double accommodationBudget, Location currentHotel, string hotelSegment = "midrange")
         {
             var accommodationTags = new[] { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation", "Resort", "Villa" };
+
+            // Task 4: apply segment-based price filter per room per night
+            (double minPrice, double maxPrice) = hotelSegment?.ToLowerInvariant() switch
+            {
+                "budget"  => (0,          500_000),
+                "luxury"  => (2_000_000,  double.MaxValue),
+                _         => (500_000,    2_000_000)  // midrange default
+            };
 
             var accommodations = candidates
                 .Where(c => c.Location.Tags.Any(t => accommodationTags.Contains(t, StringComparer.OrdinalIgnoreCase)))
@@ -865,10 +1090,17 @@ namespace AlgorithmPlan.Services
                 })
                 .ToList();
 
-            if (!accommodations.Any()) return null;
+            // Task 4: filter by segment price range; fallback to all if no match
+            var segmentFiltered = accommodations
+                .Where(a => a.Location.AverageBudget >= minPrice && a.Location.AverageBudget <= maxPrice)
+                .ToList();
+            if (!segmentFiltered.Any())
+                segmentFiltered = accommodations; // fallback: use all
 
-            // Generate room options for each accommodation
-            var accommodationWithOptions = accommodations.Select(a => new
+            if (!segmentFiltered.Any()) return null;
+
+            // Generate room options for each segment-filtered accommodation
+            var accommodationWithOptions = segmentFiltered.Select(a => new
             {
                 a.Location,
                 a.Distance,
@@ -927,7 +1159,7 @@ namespace AlgorithmPlan.Services
                 Location = bestChoice.Location,
                 Options = bestChoice.Options.OrderBy(o => o.Recommended ? 0 : 1).ThenBy(o => o.TotalCost).ToList(),
                 SelectedIndex = bestChoice.Options.FindIndex(o => o.Recommended),
-                AlternativeAccommodations = topCandidates.Skip(1).Take(4).Select(a => new AlternativeAccommodation
+                AlternativeAccommodations = topCandidates.Skip(1).Take(4).Select(a => new AlternativeAccommodationDisplay
                 {
                     Name = a.Location.Name,
                     Distance = Math.Round(a.Distance, 2),
@@ -1213,22 +1445,16 @@ namespace AlgorithmPlan.Services
             public Location Location { get; set; }
             public List<AccommodationOption> Options { get; set; }
             public int SelectedIndex { get; set; }
-            public List<AlternativeAccommodation> AlternativeAccommodations { get; set; }
-        }
-
-        private class AlternativeAccommodation
-        {
-            public string Name { get; set; }
-            public double Distance { get; set; }
-            public string RecommendedRoomType { get; set; }
-            public double TotalCost { get; set; }
-            public List<AccommodationOption> Options { get; set; }
+            public List<AlternativeAccommodationDisplay> AlternativeAccommodations { get; set; }
         }
 
         // ... rest of the existing methods (ProcessAttraction, IsEveningActivity, etc.)
         // Keeping them unchanged for brevity but they would be included in the actual file
 
-        private void ProcessAttraction(BestAttraction bestAttraction, ref TimeSpan currentTime, string block, DailyItinerary dailyPlan, int groupSize, double dailyLimit, HashSet<int> visitedIds, ref double currentLat, ref double currentLon)
+        private void ProcessAttraction(BestAttraction bestAttraction, ref TimeSpan currentTime, string block,
+            DailyItinerary dailyPlan, int groupSize, double dailyCeiling,
+            Dictionary<int, int> visitedCountMap, ref double currentLat, ref double currentLon,
+            string tripSegment)
         {
             var transportOptions = GetTransportOptions(bestAttraction.Distance, groupSize);
             var defaultTransport = transportOptions.FirstOrDefault(o => o.Recommended) ?? transportOptions.FirstOrDefault();
@@ -1256,21 +1482,56 @@ namespace AlgorithmPlan.Services
             double actualStayTimeMinutes = bestAttraction.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
             TimeSpan visitEndTime = arrivalTime.Add(TimeSpan.FromMinutes(actualStayTimeMinutes));
 
+            // Task 3: Separate ticket cost from discretionary extra spending
+            double ticketCost = bestAttraction.Location.AverageBudget * groupSize;
+            double extraSpendingCost = CalculateLocationSpendingBudget(bestAttraction.Location, groupSize, tripSegment);
+
             dailyPlan.Timeline.Add(new TimelineItem
             {
                 Type = "Visit",
                 Time = $"{FormatTime(arrivalTime)} - {FormatTime(visitEndTime)}",
                 TimeBlock = block,
                 Description = $"Visit {bestAttraction.Location.Name}",
-                TicketCost = Math.Round(bestAttraction.Location.AverageBudget * groupSize, 2),
+                TicketCost = Math.Round(ticketCost, 2),
+                ExtraSpendingCost = Math.Round(extraSpendingCost, 2),
                 GroupDiscountApplied = groupSize >= 5
             });
 
-            dailyPlan.DailyBudgetStatus.Spent += defaultTransport.TotalCost + bestAttraction.Location.AverageBudget * groupSize;
-            visitedIds.Add(bestAttraction.Location.Id);
+            dailyPlan.DailyBudgetStatus.Spent += defaultTransport.TotalCost + ticketCost + extraSpendingCost;
+
+            // Task 5: Track visit count (max 1 per location across entire itinerary)
+            visitedCountMap.TryGetValue(bestAttraction.Location.Id, out int currentCount);
+            visitedCountMap[bestAttraction.Location.Id] = currentCount + 1;
+
             currentLat = bestAttraction.Location.Latitude;
             currentLon = bestAttraction.Location.Longitude;
             currentTime = visitEndTime;
+        }
+
+        /// <summary>
+        /// Task 3: Calculate estimated discretionary spending (food, souvenirs, incidentals)
+        /// at a location based on trip segment and location type tags.
+        /// Does NOT include ticket/entry cost (that is AverageBudget).
+        /// </summary>
+        private double CalculateLocationSpendingBudget(Location loc, int groupSize, string tripSegment)
+        {
+            // Base spending per person per visit by segment
+            double basePerson = tripSegment?.ToLowerInvariant() switch
+            {
+                "budget"   => 50_000,
+                "luxury"   => 400_000,
+                _          => 150_000   // midrange default
+            };
+
+            // Multiplier by location type
+            bool isShopping = loc.Tags.Any(t => new[] { "Shopping", "Food", "Market", "Restaurant" }
+                                                    .Contains(t, StringComparer.OrdinalIgnoreCase));
+            bool isMuseumPark = loc.Tags.Any(t => new[] { "Museum", "History", "Park", "Nature", "Religion" }
+                                                      .Contains(t, StringComparer.OrdinalIgnoreCase));
+
+            double multiplier = isShopping ? 1.5 : isMuseumPark ? 0.5 : 1.0;
+
+            return Math.Round(basePerson * multiplier * groupSize, 0);
         }
 
         private bool IsEveningActivity(Location loc)
@@ -1402,9 +1663,27 @@ namespace AlgorithmPlan.Services
         /// - 600-1000km: Train or Airplane (depends on budget preference)
         /// - &gt; 1000km: Airplane (fastest, time-saving)
         /// </summary>
-        private List<TransportOption> GetInterCityTransportOptions(double distance, int groupSize)
+        /// <returns>List of transport options</returns>
+        private List<TransportOption> GetInterCityTransportOptions(double distance, int groupSize, string fromDest, string toDest, List<ScoredLocation> candidates = null)
         {
             var options = new List<TransportOption>();
+
+            // Get airport/station info from province data cache
+            string fromAirportName = "City Airport";
+            string toAirportName = "City Airport";
+            string fromStationName = "Central Station";
+            string toStationName = "Central Station";
+
+            // Use province data cache for airport/station names
+            var fromAirports = GetAirportsForDestination(fromDest);
+            var toAirports = GetAirportsForDestination(toDest);
+            var fromStations = GetTrainStationsForDestination(fromDest);
+            var toStations = GetTrainStationsForDestination(toDest);
+
+            if (fromAirports.Any()) fromAirportName = fromAirports.First().Name;
+            if (toAirports.Any()) toAirportName = toAirports.First().Name;
+            if (fromStations.Any()) fromStationName = fromStations.First().Name;
+            if (toStations.Any()) toStationName = toStations.First().Name;
 
             // Bus/Coach: Best for short distances (< 300km)
             if (distance < 300)
@@ -1414,14 +1693,16 @@ namespace AlgorithmPlan.Services
                 options.Add(new TransportOption
                 {
                     Method = "Bus/Coach",
-                    Description = "Bus / Coach",
+                    Description = $"Bus / Coach from {fromDest} to {toDest}",
                     TotalCost = Math.Round(busCost, 2),
                     TravelTimeMinutes = Math.Round(busTime, 2),
                     VehiclesNeeded = 1,
                     Pros = "Most economical, direct route, frequent departures",
                     Cons = "Slower, less comfortable for long distances",
                     Recommended = distance < 150 || groupSize > 10,
-                    GroupSize = groupSize
+                    GroupSize = groupSize,
+                    DepartureHub = $"{fromDest} Bus Station",
+                    ArrivalHub = $"{toDest} Bus Station"
                 });
             }
 
@@ -1444,14 +1725,16 @@ namespace AlgorithmPlan.Services
                 options.Add(new TransportOption
                 {
                     Method = "Train",
-                    Description = "Train (Reunification Express or Regional)",
+                    Description = $"Train from {fromStationName} ({fromDest}) to {toStationName} ({toDest})",
                     TotalCost = Math.Round(trainCost, 2),
                     TravelTimeMinutes = Math.Round(trainTime, 2),
                     VehiclesNeeded = 1,
-                    Pros = "Comfortable, scenic views, can move around, reliable schedule",
+                    Pros = $"Comfortable, scenic views, departs from {fromStationName}, arrives at {toStationName}",
                     Cons = "Fixed schedule, may be delayed, limited routes",
                     Recommended = (distance >= 200 && distance <= 500) || (distance > 600 && groupSize <= 4),
-                    GroupSize = groupSize
+                    GroupSize = groupSize,
+                    DepartureHub = fromStationName,
+                    ArrivalHub = toStationName
                 });
             }
 
@@ -1471,14 +1754,16 @@ namespace AlgorithmPlan.Services
                 options.Add(new TransportOption
                 {
                     Method = "Airplane",
-                    Description = "Domestic Flight (Vietnam Airlines/VietJet/Bamboo)",
+                    Description = $"Flight from {fromAirportName} ({fromDest}) to {toAirportName} ({toDest})",
                     TotalCost = Math.Round(flightCost, 2),
                     TravelTimeMinutes = Math.Round(flightTime, 2),
                     VehiclesNeeded = 1,
-                    Pros = "Fastest for long distances, most comfortable, time-saving",
+                    Pros = $"Fastest option, departs from {fromAirportName}, arrives at {toAirportName}",
                     Cons = "Most expensive, airport transfers needed, security checks, weather dependent",
                     Recommended = distance > 700 || (distance > 500 && groupSize <= 4),
-                    GroupSize = groupSize
+                    GroupSize = groupSize,
+                    DepartureHub = fromAirportName,
+                    ArrivalHub = toAirportName
                 });
             }
 
@@ -1492,14 +1777,16 @@ namespace AlgorithmPlan.Services
                 options.Add(new TransportOption
                 {
                     Method = "Private Van",
-                    Description = $"{vansNeeded} x 16-seat van",
+                    Description = $"{vansNeeded} x 16-seat van from {fromDest} to {toDest}",
                     TotalCost = Math.Round(vanCost, 2),
                     TravelTimeMinutes = Math.Round(vanTime, 2),
                     VehiclesNeeded = vansNeeded,
                     Pros = "Flexible schedule, door-to-door, group stays together, luggage space",
                     Cons = "Driver fatigue on long trips, road conditions dependent",
                     Recommended = (groupSize > 4 && groupSize <= 16) && distance < 250,
-                    GroupSize = groupSize
+                    GroupSize = groupSize,
+                    DepartureHub = fromDest,
+                    ArrivalHub = toDest
                 });
             }
 
@@ -1520,14 +1807,42 @@ namespace AlgorithmPlan.Services
 
         private List<ScoredLocation> FilterAndScoreLocations(List<Location> allLocations, List<string> destinations, List<string> favoriteTags)
         {
-            var normalizedDestinations = destinations.Select(d => 
+            var normalizedDestinations = destinations.Select(d =>
                 d.Equals("Ho Chi Minh City", StringComparison.OrdinalIgnoreCase) ? "HCMC" : d).ToList();
+
+            // Exclude accommodation-type locations from the activity candidate pool
+            // (hotels/hostels should only appear via FindNextBestAccommodationWithDetails)
+            var accommodationTags = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                { "Hotel", "Guesthouse", "Hostel", "Homestay", "Accommodation", "Resort", "Villa", "Province", "Destination" };
+
+            // Requirement 1: Score locations to maximize number of visits
+            // - Prefer locations with shorter stay durations (more locations can be visited)
+            // - Still consider quality (tag matches with user favorites)
+            // - Prefer locations with lower cost (fit more within budget)
             return allLocations
                 .Where(l => normalizedDestinations.Contains(l.Destination, StringComparer.OrdinalIgnoreCase))
-                .Select(l => new ScoredLocation
+                .Where(l => !l.Tags.Any(t => accommodationTags.Contains(t))) // exclude hotels from activity pool
+                .Select(l =>
                 {
-                    Location = l,
-                    Score = favoriteTags == null ? 1 : l.Tags.Intersect(favoriteTags, StringComparer.OrdinalIgnoreCase).Count() + 1
+                    // Base score from tag matching
+                    int tagScore = favoriteTags == null ? 50 : l.Tags.Intersect(favoriteTags, StringComparer.OrdinalIgnoreCase).Count() * 10 + 50;
+
+                    // Time efficiency score: prefer shorter stays (allows more locations to be visited)
+                    // Normalize: assume 30min-4hr range, shorter = higher score
+                    double stayDurationMinutes = l.AverageStayDuration > 0 ? l.AverageStayDuration : 60;
+                    double timeEfficiencyScore = Math.Max(0, 100 - (stayDurationMinutes - 30) / 3);
+
+                    // Cost efficiency: prefer lower cost locations (more locations within budget)
+                    double costEfficiencyScore = Math.Max(0, 100 - l.AverageBudget / 5000);
+
+                    // Composite score: 40% quality, 35% time efficiency, 25% cost efficiency
+                    double compositeScore = tagScore * 0.4 + timeEfficiencyScore * 0.35 + costEfficiencyScore * 0.25;
+
+                    return new ScoredLocation
+                    {
+                        Location = l,
+                        Score = (int)Math.Round(compositeScore)
+                    };
                 })
                 .ToList();
         }
@@ -1558,16 +1873,18 @@ namespace AlgorithmPlan.Services
             double totalBudget = 0;
             double currentLat = startLat;
             double currentLon = startLon;
+            string previousDest = null;
 
             foreach (var dest in orderedDestinations)
             {
-                var destCenter = GetDestinationCenter(candidates.Where(c => 
+                var destCenter = GetDestinationCenter(candidates.Where(c =>
                     c.Location.Destination.Equals(dest, StringComparison.OrdinalIgnoreCase)).ToList());
                 double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
-                
-                var options = GetInterCityTransportOptions(distance, groupSize);
+
+                // For budget calculation, candidate exact hubs don't matter, passing null is fine
+                var options = GetInterCityTransportOptions(distance, groupSize, previousDest, dest, null);
                 var recommended = options.FirstOrDefault(o => o.Recommended) ?? options.FirstOrDefault();
-                
+
                 if (recommended != null)
                 {
                     totalBudget += recommended.TotalCost;
@@ -1575,6 +1892,7 @@ namespace AlgorithmPlan.Services
 
                 currentLat = destCenter.Lat;
                 currentLon = destCenter.Lon;
+                previousDest = dest;
             }
 
             return totalBudget;
@@ -1606,9 +1924,9 @@ namespace AlgorithmPlan.Services
         }
 
         private BestAttraction FindNextBestAttraction(
-            double lat, double lon, List<ScoredLocation> candidates, HashSet<int> visitedIds,
+            double lat, double lon, List<ScoredLocation> candidates, Dictionary<int, int> visitedCountMap,
             TimeSpan currentTime, DayOfWeek dayOfWeek, TimeSpan dayEndTime, int groupSize,
-            double remainingDailyBudget, bool isEvening)
+            double remainingCeilingBudget, bool isEvening)
         {
             double r = 2.0;
             List<ScoredLocation> nearby = new List<ScoredLocation>();
@@ -1616,7 +1934,8 @@ namespace AlgorithmPlan.Services
             while (r <= 15.0)
             {
                 nearby = candidates
-                    .Where(c => !visitedIds.Contains(c.Location.Id))
+                    // Task 5: only allow locations not yet visited (count == 0)
+                    .Where(c => !visitedCountMap.ContainsKey(c.Location.Id))
                     .Where(c => !isEvening || IsEveningActivity(c.Location))
                     .Where(c => isEvening || !IsEveningActivity(c.Location) || c.Location.Tags.Contains("Relax", StringComparer.OrdinalIgnoreCase))
                     .Select(c => new { ScoredLocation = c, Distance = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude) })
@@ -1630,6 +1949,8 @@ namespace AlgorithmPlan.Services
 
             if (!nearby.Any()) return null;
 
+            double remainingMinutes = (dayEndTime - currentTime).TotalMinutes;
+
             var validAttractions = nearby
                 .Select(c => {
                     double dist = CalculateDistance(lat, lon, c.Location.Latitude, c.Location.Longitude);
@@ -1641,6 +1962,24 @@ namespace AlgorithmPlan.Services
                     double actualStayTime = c.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
                     TimeSpan visitEndTime = arrivalTime.Add(TimeSpan.FromMinutes(actualStayTime));
 
+                    double totalTime = transport.TravelTimeMinutes + delayBuffer + actualStayTime;
+
+                    // Requirement 1: time-efficiency score — prefer shorter activities to maximize number of locations
+                    double timeEfficiency = remainingMinutes > 0
+                        ? Math.Min(1.0, (remainingMinutes - totalTime) / Math.Max(remainingMinutes, 1))
+                        : 0;
+
+                    // Normalize distance score: 0-100, closer = higher
+                    double distanceScore = Math.Max(0, 100 - dist * 10);
+
+                    // Requirement 2: Calculate extra spending cost for service locations
+                    double ticketCost = c.Location.AverageBudget * groupSize;
+                    double extraSpendingCost = CalculateLocationSpendingBudget(c.Location, groupSize, "midrange");
+                    double totalActivityCost = ticketCost + extraSpendingCost;
+
+                    // Composite score: 40% quality, 30% distance, 30% time-efficiency
+                    double compositeScore = c.Score * 0.4 + distanceScore * 0.3 + timeEfficiency * 100 * 0.3;
+
                     return new {
                         ScoredLocation = c,
                         Distance = dist,
@@ -1648,12 +1987,14 @@ namespace AlgorithmPlan.Services
                         ArrivalTime = arrivalTime,
                         VisitEndTime = visitEndTime,
                         IsOpen = IsLocationOpen(c.Location, dayOfWeek, arrivalTime, visitEndTime),
-                        Cost = transport.TotalCost + c.Location.AverageBudget * groupSize
+                        Cost = transport.TotalCost + totalActivityCost,
+                        CompositeScore = compositeScore
                     };
                 })
-                .Where(x => x.IsOpen && x.VisitEndTime <= dayEndTime && x.Cost <= remainingDailyBudget * 1.2)
-                .OrderByDescending(x => x.ScoredLocation.Score)
-                .ThenBy(x => x.Distance)
+                // Task 1: enforce ceiling — cost must fit within remaining ceiling budget
+                .Where(x => x.IsOpen && x.VisitEndTime <= dayEndTime && x.Cost <= remainingCeilingBudget)
+                // Task 2: order by composite score (quality + proximity + time-fit)
+                .OrderByDescending(x => x.CompositeScore)
                 .FirstOrDefault();
 
             if (validAttractions == null) return null;
@@ -1681,7 +2022,9 @@ namespace AlgorithmPlan.Services
                     Pros = "Free, eco-friendly, good for health",
                     Cons = "Slow, only for short distances",
                     Recommended = true,
-                    GroupSize = groupSize
+                    GroupSize = groupSize,
+                    DepartureHub = "",
+                    ArrivalHub = ""
                 });
             }
             else
@@ -1698,7 +2041,9 @@ namespace AlgorithmPlan.Services
                         Pros = "Free, eco-friendly",
                         Cons = "Slow",
                         Recommended = distance <= 1.0,
-                        GroupSize = groupSize
+                        GroupSize = groupSize,
+                        DepartureHub = "",
+                        ArrivalHub = ""
                     });
                 }
 
@@ -1741,7 +2086,9 @@ namespace AlgorithmPlan.Services
                         Pros = pros,
                         Cons = cons,
                         Recommended = recommended,
-                        GroupSize = groupSize
+                        GroupSize = groupSize,
+                        DepartureHub = "",
+                        ArrivalHub = ""
                     });
                 }
             }
@@ -1853,19 +2200,119 @@ namespace AlgorithmPlan.Services
             };
         }
 
-        private class ScoredLocation
+        /// <summary>
+        /// Get extra spending cost based on trip segment and location type.
+        /// This is for discretionary spending at service locations (food, souvenirs, activities).
+        /// </summary>
+        private double GetExtraSpendingCost(string tripSegment, Location location)
+        {
+            // Base amount depends on segment
+            (double min, double max) = tripSegment.ToLowerInvariant() switch
+            {
+                "budget" => _budgetExtraSpending,
+                "luxury" => _luxuryExtraSpending,
+                _ => _midrangeExtraSpending // midrange default
+            };
+
+            // Adjust based on location type
+            double multiplier = location.Tags.Any(t => 
+                new[] { "Restaurant", "Cafe", "Food", "Entertainment", "Shopping", "Market" }
+                .Contains(t, StringComparer.OrdinalIgnoreCase)) 
+                ? 1.2 : 1.0;
+
+            // Return random value within range * multiplier
+            var random = new Random(Guid.NewGuid().GetHashCode());
+            return (min + random.NextDouble() * (max - min)) * multiplier;
+        }
+
+        /// <summary>
+        /// Get airports for a destination with flexible key lookup
+        /// </summary>
+        private List<AirportInfo> GetAirportsForDestination(string destination)
+        {
+            if (string.IsNullOrEmpty(destination)) return new List<AirportInfo>();
+            
+            // Try multiple key formats
+            var keys = new[] { 
+                destination.ToLowerInvariant(),
+                destination.ToLowerInvariant().Replace(" ", ""),
+                destination.ToLowerInvariant().Replace(" ", "_"),
+                NormalizeDestinationName(destination)
+            };
+
+            foreach (var key in keys)
+            {
+                if (_provinceDataCache.TryGetValue(key, out var data) && data.Airports.Any())
+                {
+                    return data.Airports;
+                }
+            }
+
+            return new List<AirportInfo>();
+        }
+
+        /// <summary>
+        /// Get train stations for a destination with flexible key lookup
+        /// </summary>
+        private List<TrainStationInfo> GetTrainStationsForDestination(string destination)
+        {
+            if (string.IsNullOrEmpty(destination)) return new List<TrainStationInfo>();
+            
+            // Try multiple key formats
+            var keys = new[] { 
+                destination.ToLowerInvariant(),
+                destination.ToLowerInvariant().Replace(" ", ""),
+                destination.ToLowerInvariant().Replace(" ", "_"),
+                NormalizeDestinationName(destination)
+            };
+
+            foreach (var key in keys)
+            {
+                if (_provinceDataCache.TryGetValue(key, out var data) && data.TrainStations.Any())
+                {
+                    return data.TrainStations;
+                }
+            }
+
+            return new List<TrainStationInfo>();
+        }
+
+        /// <summary>
+        /// Normalize destination name for cache lookup
+        /// </summary>
+        private string NormalizeDestinationName(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return name;
+            
+            // Handle common destination name variations
+            var normalized = name.ToLowerInvariant();
+            if (normalized.Contains("ho chi minh") || normalized.Contains("hcmc") || normalized.Contains("saigon"))
+                return "hcmc";
+            if (normalized.Contains("ha noi") || normalized.Contains("hanoi"))
+                return "hanoi";
+            if (normalized.Contains("da nang"))
+                return "da nang";
+            if (normalized.Contains("hue"))
+                return "hue";
+            if (normalized.Contains("hoi an"))
+                return "hoi an";
+            
+            return normalized;
+        }
+
+public class ScoredLocation
         {
             public Location Location { get; set; }
             public int Score { get; set; }
         }
 
-        private class BestAttraction
+public class BestAttraction
         {
             public Location Location { get; set; }
             public double Distance { get; set; }
         }
 
-        private class VehicleType
+        public class VehicleType
         {
             public string Name { get; set; }
             public int Capacity { get; set; }
@@ -1874,11 +2321,36 @@ namespace AlgorithmPlan.Services
             public bool IsWalking { get; set; }
         }
 
-        private class TransportOptimization
+public class TransportOptimization
         {
             public string Description { get; set; }
             public double TotalCost { get; set; }
             public double TravelTimeMinutes { get; set; }
+        }
+
+        public class ProvinceData
+        {
+            public string Name { get; set; }
+            public string EnglishName { get; set; }
+            public Location Location { get; set; }
+            public List<AirportInfo> Airports { get; set; } = new List<AirportInfo>();
+            public List<TrainStationInfo> TrainStations { get; set; } = new List<TrainStationInfo>();
+        }
+
+        public class AirportInfo
+        {
+            public string Name { get; set; }
+            public string EnglishName { get; set; }
+            public string IataCode { get; set; }
+            public string CityName { get; set; }
+            public double Distance { get; set; }
+        }
+
+        public class TrainStationInfo
+        {
+            public string Name { get; set; }
+            public string EnglishName { get; set; }
+            public string CityName { get; set; }
         }
     }
 }
