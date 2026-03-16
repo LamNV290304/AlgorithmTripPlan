@@ -13,6 +13,7 @@ namespace AlgorithmPlan.Model
     public class DailyItinerary
     {
         public string Day { get; set; } = string.Empty;
+        public double TotalTransportCost { get; set; }
         public DailyBudgetStatus DailyBudgetStatus { get; set; } = new DailyBudgetStatus();
         public List<TimelineItem> Timeline { get; set; } = new List<TimelineItem>();
     }
@@ -22,10 +23,10 @@ namespace AlgorithmPlan.Model
         public double Spent { get; set; }
 
         [JsonIgnore] // Internal calculation only, not exposed in output
-        public double Limit { get; set; }
+        public double AverageBudget { get; set; }
 
-        public double Ceiling { get; set; } // Maximum per day (Limit × 1.3)
-        public double Floor { get; set; }   // Minimum per day (Limit × 0.7) – spent can go below but never above ceiling
+        public double Limit { get; set; } // Maximum per day (AverageBudget × 1.3)
+        public double Floor { get; set; }   // Minimum per day (AverageBudget × 0.7) – spent can go below but never above limit
         public double Weight { get; set; }  // Budget weight (first/last day higher)
     }
 

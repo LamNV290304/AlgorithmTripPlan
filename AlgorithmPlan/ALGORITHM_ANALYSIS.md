@@ -123,7 +123,7 @@ double weight = days × √(attractionCount);
 destinationBudget = (weight / totalWeight) × activityBudget;
 ```
 
-### 5. Daily Budget với Ceiling/Floor
+### 5. Daily Budget với Limit/Floor
 
 **Cơ chế linh hoạt theo ngày:**
 
@@ -133,8 +133,8 @@ if (d == 0) weight = 1.3;  // +30% (háo hức, mua sắm)
 if (d == 1) weight = 1.1;  // +10% (vẫn còn năng lượng)
 if (d == last) weight = 1.2; // +20% (quà lưu niệm)
 
-// Ceiling: giới hạn trên (+30%)
-ceiling = weightedBudget × 1.3
+// Limit: giới hạn trên (+30%)
+limit = weightedBudget × 1.3
 
 // Floor: giới hạn dưới (-30%)
 floor = weightedBudget × 0.7
@@ -142,8 +142,8 @@ floor = weightedBudget × 0.7
 
 **Rollover Budget (cuộn sang ngày sau):**
 ```
-rollover = ceiling - activitySpentToday
-maxRollover = nextDayCeiling × 0.5  // Tối đa 50% ngân sách ngày hôm sau
+rollover = limit - activitySpentToday
+maxRollover = nextDayLimit × 0.5  // Tối đa 50% ngân sách ngày hôm sau
 ```
 
 ---
@@ -624,8 +624,8 @@ visitedCountMap[location.Id] = count + 1;  // Đánh dấu đã thăm
 | **Cost Efficiency** | `100 - averageBudget / 5000` | Ưu tiên địa điểm rẻ |
 | **Hotel Score** | `25% Dist + 35% Budget + 25% Group + 15% Amenities` | |
 | **Daily Weight** | `1.3 (day 1), 1.1 (day 2), 1.2 (last day)` | |
-| **Ceiling/Floor** | `weightedBudget × 1.3 / × 0.7` | Giới hạn chi tiêu |
-| **Rollover** | `Min(ceiling - spent, nextDayCeiling × 0.5)` | Cuộn sang ngày sau |
+| **Limit/Floor** | `weightedBudget × 1.3 / × 0.7` | Giới hạn chi tiêu |
+| **Rollover** | `Min(limit - spent, nextDayLimit × 0.5)` | Cuộn sang ngày sau |
 
 ---
 

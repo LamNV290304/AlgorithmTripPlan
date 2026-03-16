@@ -356,7 +356,7 @@ namespace AlgorithmPlan.Services
             // Allocate activity budgets per destination
             var destinationActivityBudgets = AllocateBudgetToDestinations(destinationDayAllocation, candidateLocations, activityBudget);
 
-            // Create daily budgets with ceiling/floor values and front-loaded spending
+            // Create daily budgets with limit/floor values and front-loaded spending
             var dailyBudgets = CreateDailyBudgetsWithWeights(
                 destinationDayAllocation, 
                 destinationActivityBudgets, 
@@ -401,22 +401,23 @@ namespace AlgorithmPlan.Services
                     var currentDate = request.StartDate.AddDays(dayCounter);
                     var dailyBudgetInfo = dailyBudgets[dayCounter];
 
-                    // Task 1: Use ceiling as hard cap; rollover can lift the floor but not the ceiling
-                    double dailyCeiling = dailyBudgetInfo.Ceiling + rolloverBudget;
+                    // Task 1: Use limit as hard cap; rollover can lift the floor but not the limit
+                    double dailyLimit = dailyBudgetInfo.Limit + rolloverBudget;
                     double dailyFloor   = dailyBudgetInfo.Floor;
                     bool needHotelTonight = wantHotel && (dayCounter < totalDays - 1);
 
                     double accommodationBudgetTonight = needHotelTonight ? destinationHotelCosts[destinationName] : 0;
-                    double totalDailyCeiling = dailyCeiling + accommodationBudgetTonight;
+                    double totalDailyLimit = dailyLimit + accommodationBudgetTonight;
 
                     var dailyPlan = new DailyItinerary
                     {
-                        Day = $"Day {dayCounter + 1} – {destinationName}",
+                        Day = $"{currentDate:dd/MM/yyyy} – {destinationName}",
+                        TotalTransportCost = 0,
                         DailyBudgetStatus = new DailyBudgetStatus
                         {
-                            Limit   = Math.Round(dailyBudgetInfo.Limit + accommodationBudgetTonight, 0),
+                            AverageBudget = Math.Round(dailyBudgetInfo.AverageBudget + accommodationBudgetTonight, 0),
                             Spent   = 0,
-                            Ceiling = Math.Round(totalDailyCeiling, 0),
+                            Limit = Math.Round(totalDailyLimit, 0),
                             Floor   = Math.Round(dailyFloor, 0),
                             Weight  = dailyBudgetInfo.Weight
                         }
@@ -508,6 +509,7 @@ namespace AlgorithmPlan.Services
                         });
                         currentTime = toTerminalEnd;
                         dailyPlan.DailyBudgetStatus.Spent += toTerminalTransport.TotalCost;
+                        dailyPlan.TotalTransportCost += toTerminalTransport.TotalCost;
 
                         // 3. Terminal Waiting
                         var destCenter = GetDestinationCenter(destCandidates);
@@ -540,6 +542,7 @@ namespace AlgorithmPlan.Services
                         });
                         currentTime = journeyEnd;
                         dailyPlan.DailyBudgetStatus.Spent += mainJourneyTransport.TotalCost;
+                        dailyPlan.TotalTransportCost += mainJourneyTransport.TotalCost;
 
                         // 5. Arrival Terminal
                         TimeSpan arrivalEnd = currentTime.Add(TimeSpan.FromMinutes(15));
@@ -569,6 +572,7 @@ namespace AlgorithmPlan.Services
                         });
                         currentTime = toHotelEnd;
                         dailyPlan.DailyBudgetStatus.Spent += toHotelTransport.TotalCost;
+                        dailyPlan.TotalTransportCost += toHotelTransport.TotalCost;
 
                         // 7. Hotel Check-in for new city
                         if (wantHotel)
@@ -614,9 +618,9 @@ namespace AlgorithmPlan.Services
                     // --- MORNING BLOCK ---
                     while (currentTime < MorningEnd - TimeSpan.FromMinutes(30))
                     {
-                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, MorningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, MorningEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyLimit, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
                     if (currentTime < LunchStart) currentTime = LunchStart;
 
@@ -624,10 +628,10 @@ namespace AlgorithmPlan.Services
                     if (currentTime < AfternoonStart)
                     {
                         var lunchCandidates = destCandidates.Where(c => c.Location.Tags.Contains("Food", StringComparer.OrdinalIgnoreCase)).ToList();
-                        var lunchSpot = FindNextBestAttraction(currentLat, currentLon, lunchCandidates.Any() ? lunchCandidates : destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonStart, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
+                        var lunchSpot = FindNextBestAttraction(currentLat, currentLon, lunchCandidates.Any() ? lunchCandidates : destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonStart, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
                         if (lunchSpot != null)
                         {
-                            ProcessAttraction(lunchSpot, ref currentTime, "Lunch Break", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
+                            ProcessAttraction(lunchSpot, ref currentTime, "Lunch Break", dailyPlan, request.GroupSize, dailyLimit, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                         }
                         if (currentTime < AfternoonStart) currentTime = AfternoonStart;
                     }
@@ -635,18 +639,18 @@ namespace AlgorithmPlan.Services
                     // --- AFTERNOON BLOCK ---
                     while (currentTime < AfternoonEnd - TimeSpan.FromMinutes(30))
                     {
-                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, false);
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyLimit, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
                     if (currentTime < EveningStart) currentTime = EveningStart;
 
                     // --- EVENING BLOCK ---
                     while (currentTime < EveningEnd)
                     {
-                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, EveningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, true);
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, EveningEnd, request.GroupSize, dailyLimit - dailyPlan.DailyBudgetStatus.Spent, true);
                         if (bestAttraction == null) break;
-                        ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
+                        ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyLimit, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
 
                     // --- NIGHT REST / SLEEP BLOCK ---
@@ -735,10 +739,10 @@ namespace AlgorithmPlan.Services
                     output.Days.Add(dailyPlan);
                     totalSpent += dailyPlan.DailyBudgetStatus.Spent;
 
-                    // Task 1: Rollover = ceiling minus activity spent (exclude accommodation from rollover calc)
+                    // Task 1: Rollover = limit minus activity spent (exclude accommodation from rollover calc)
                     double activitySpentToday = dailyPlan.DailyBudgetStatus.Spent - accommodationBudgetTonight;
-                    rolloverBudget = dailyBudgetInfo.Ceiling - activitySpentToday;
-                    double maxRollover = dailyBudgets[Math.Min(dayCounter + 1, dailyBudgets.Count - 1)].Ceiling * 0.5;
+                    rolloverBudget = dailyBudgetInfo.Limit - activitySpentToday;
+                    double maxRollover = dailyBudgets[Math.Min(dayCounter + 1, dailyBudgets.Count - 1)].Limit * 0.5;
                     if (rolloverBudget > maxRollover) rolloverBudget = maxRollover;
                     if (rolloverBudget < 0) rolloverBudget = 0; 
 
@@ -816,14 +820,14 @@ namespace AlgorithmPlan.Services
 
                     double weightedBudget = dailyAvg * weight;
                     
-                    // Calculate ceiling and floor (±30% from weighted average)
-                    double ceiling = weightedBudget * 1.3;
+                    // Calculate limit and floor (±30% from weighted average)
+                    double limit = weightedBudget * 1.3;
                     double floor = weightedBudget * 0.7;
 
                     dailyBudgets.Add(new DailyBudgetInfo
                     {
-                        Limit = weightedBudget,
-                        Ceiling = ceiling,
+                        AverageBudget = weightedBudget,
+                        Limit = limit,
                         Floor = floor,
                         Weight = weight
                     });
@@ -837,8 +841,8 @@ namespace AlgorithmPlan.Services
 
         private class DailyBudgetInfo
         {
+            public double AverageBudget { get; set; }
             public double Limit { get; set; }
-            public double Ceiling { get; set; }
             public double Floor { get; set; }
             public double Weight { get; set; }
         }
@@ -1334,7 +1338,7 @@ namespace AlgorithmPlan.Services
         // Keeping them unchanged for brevity but they would be included in the actual file
 
         private void ProcessAttraction(BestAttraction bestAttraction, ref TimeSpan currentTime, string block,
-            DailyItinerary dailyPlan, int groupSize, double dailyCeiling,
+            DailyItinerary dailyPlan, int groupSize, double dailyLimit,
             Dictionary<int, int> visitedCountMap, ref double currentLat, ref double currentLon,
             string tripSegment)
         {
@@ -1357,8 +1361,10 @@ namespace AlgorithmPlan.Services
                     TimeBlock = block,
                     Description = $"{defaultTransport.Description} to {bestAttraction.Location.Name}",
                     TransportOptions = transportOptions,
-                    SelectedTransportIndex = transportOptions.IndexOf(defaultTransport)
+                    SelectedTransportIndex = transportOptions.IndexOf(defaultTransport),
+                    Cost = defaultTransport.TotalCost
                 });
+                dailyPlan.TotalTransportCost += defaultTransport.TotalCost;
             }
 
             double actualStayTimeMinutes = bestAttraction.Location.AverageStayDuration * (1 + 0.05 * (groupSize - 2));
@@ -1838,7 +1844,7 @@ namespace AlgorithmPlan.Services
         private BestAttraction FindNextBestAttraction(
             double lat, double lon, List<ScoredLocation> candidates, Dictionary<int, int> visitedCountMap,
             TimeSpan currentTime, DayOfWeek dayOfWeek, TimeSpan dayEndTime, int groupSize,
-            double remainingCeilingBudget, bool isEvening)
+            double remainingLimit, bool isEvening)
         {
             double r = 2.0;
             List<ScoredLocation> nearby = new List<ScoredLocation>();
@@ -1903,8 +1909,8 @@ namespace AlgorithmPlan.Services
                         CompositeScore = compositeScore
                     };
                 })
-                // Task 1: enforce ceiling — cost must fit within remaining ceiling budget
-                .Where(x => x.IsOpen && x.VisitEndTime <= dayEndTime && x.Cost <= remainingCeilingBudget)
+                // Task 1: enforce limit — cost must fit within remaining limit budget
+                .Where(x => x.IsOpen && x.VisitEndTime <= dayEndTime && x.Cost <= remainingLimit)
                 // Task 2: order by composite score (quality + proximity + time-fit)
                 .OrderByDescending(x => x.CompositeScore)
                 .FirstOrDefault();

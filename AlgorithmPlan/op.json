@@ -4,7 +4,7 @@
       "day": "Day 1 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 3178379.19,
-        "ceiling": 3514030,
+        "limit": 3514030,
         "floor": 1407555,
         "weight": 1.3
       },
@@ -781,7 +781,7 @@
       "day": "Day 2 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 2975936.33,
-        "ceiling": 3447522,
+        "limit": 3447522,
         "floor": 1191008,
         "weight": 1.1
       },
@@ -1419,7 +1419,7 @@
       "day": "Day 3 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 2222500.18,
-        "ceiling": 3046728,
+        "limit": 3046728,
         "floor": 1082734,
         "weight": 1
       },
@@ -2016,7 +2016,7 @@
       "day": "Day 4 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 3222043.89,
-        "ceiling": 3599084,
+        "limit": 3599084,
         "floor": 1082734,
         "weight": 1
       },
@@ -2795,7 +2795,7 @@
       "day": "Day 5 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 1976543.3,
-        "ceiling": 2910792,
+        "limit": 2910792,
         "floor": 1082734,
         "weight": 1
       },
@@ -3244,7 +3244,7 @@
       "day": "Day 6 – Hanoi",
       "dailyBudgetStatus": {
         "spent": 3378437.01,
-        "ceiling": 4247200,
+        "limit": 4247200,
         "floor": 1299281,
         "weight": 1.2
       },
@@ -3833,7 +3833,7 @@
       "day": "Day 7 – Da Nang",
       "dailyBudgetStatus": {
         "spent": 2515968.51,
-        "ceiling": 4302363,
+        "limit": 4302363,
         "floor": 629478,
         "weight": 1.3
       },
@@ -4602,7 +4602,7 @@
       "day": "Day 8 – HCMC",
       "dailyBudgetStatus": {
         "spent": 5885351.84,
-        "ceiling": 4903895,
+        "limit": 4903895,
         "floor": 1090287,
         "weight": 1.3
       },
@@ -5486,7 +5486,7 @@
       "day": "Day 9 – HCMC",
       "dailyBudgetStatus": {
         "spent": 4700000,
-        "ceiling": 3579975,
+        "limit": 3579975,
         "floor": 922551,
         "weight": 1.1
       },
@@ -5780,7 +5780,7 @@
       "day": "Day 10 – HCMC",
       "dailyBudgetStatus": {
         "spent": 4122270.62,
-        "ceiling": 1869064,
+        "limit": 1869064,
         "floor": 1006419,
         "weight": 1.2
       },

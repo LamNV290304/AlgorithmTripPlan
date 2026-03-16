@@ -112,19 +112,15 @@ try {
         $day = $response.days[$i]
         Write-Host "`nDay $($i + 1): $($day.day)" -ForegroundColor Green
         Write-Host "  Spent: $($day.dailyBudgetStatus.spent.ToString('N0')) / Limit: $($day.dailyBudgetStatus.limit.ToString('N0'))"
-        Write-Host "  Ceiling: $($day.dailyBudgetStatus.ceiling.ToString('N0')) | Floor: $($day.dailyBudgetStatus.floor.ToString('N0'))"
-        Write-Host "  Weight: $($day.dailyBudgetStatus.weight)"
+        Write-Host "  Floor: $($day.dailyBudgetStatus.floor.ToString('N0')) | Weight: $($day.dailyBudgetStatus.weight)"
         Write-Host "  Timeline Items: $($day.timeline.Count)"
         
         # Check budget status
         $spent = [double]$day.dailyBudgetStatus.spent
         $limit = [double]$day.dailyBudgetStatus.limit
-        $ceiling = [double]$day.dailyBudgetStatus.ceiling
         
-        if ($spent -gt $ceiling) {
-            Write-Host "  ⚠️  WARNING: Over ceiling!" -ForegroundColor Red
-        } elseif ($spent -gt $limit) {
-            Write-Host "  ⚠️  WARNING: Over limit!" -ForegroundColor Yellow
+        if ($spent -gt $limit) {
+            Write-Host "  ⚠️  WARNING: Over limit!" -ForegroundColor Red
         } else {
             Write-Host "  ✅ Budget OK" -ForegroundColor Green
         }
@@ -151,16 +147,16 @@ try {
     $overBudgetDays = 0
     foreach ($day in $response.days) {
         $spent = [double]$day.dailyBudgetStatus.spent
-        $ceiling = [double]$day.dailyBudgetStatus.ceiling
-        if ($spent -gt $ceiling) {
+        $limit = [double]$day.dailyBudgetStatus.limit
+        if ($spent -gt $limit) {
             $overBudgetDays++
         }
     }
     
     if ($overBudgetDays -gt 0) {
-        Write-Host "Days Over Ceiling: ❌ $overBudgetDays day(s)" -ForegroundColor Yellow
+        Write-Host "Days Over Limit: ❌ $overBudgetDays day(s)" -ForegroundColor Yellow
     } else {
-        Write-Host "Days Over Ceiling: ✅ None" -ForegroundColor Green
+        Write-Host "Days Over Limit: ✅ None" -ForegroundColor Green
     }
 
 } catch {
