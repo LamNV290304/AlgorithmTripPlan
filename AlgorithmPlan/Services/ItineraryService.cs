@@ -381,6 +381,7 @@ namespace AlgorithmPlan.Services
             int dayCounter = 0;
             string currentDestination = null;
             Location currentHotel = null;
+            
             // FIX: Persist hotel details for "Night Rest" block (Bug 2, Fix 2)
             List<AccommodationOption> currentSavedHotelOptions = null;
             int? currentSavedHotelIndex = null;
@@ -403,8 +404,7 @@ namespace AlgorithmPlan.Services
                     // Task 1: Use ceiling as hard cap; rollover can lift the floor but not the ceiling
                     double dailyCeiling = dailyBudgetInfo.Ceiling + rolloverBudget;
                     double dailyFloor   = dailyBudgetInfo.Floor;
-                    bool needHotelTonight = wantHotel &&
-                        (d < daysInThisDest - 1 || destAlloc.Key != destinationDayAllocation.Last().Key);
+                    bool needHotelTonight = wantHotel && (dayCounter < totalDays - 1);
 
                     double accommodationBudgetTonight = needHotelTonight ? destinationHotelCosts[destinationName] : 0;
                     double totalDailyCeiling = dailyCeiling + accommodationBudgetTonight;
@@ -414,7 +414,7 @@ namespace AlgorithmPlan.Services
                         Day = $"Day {dayCounter + 1} – {destinationName}",
                         DailyBudgetStatus = new DailyBudgetStatus
                         {
-                            Limit   = Math.Round(dailyBudgetInfo.Limit + accommodationBudgetTonight, 0), // internal only, hidden from JSON
+                            Limit   = Math.Round(dailyBudgetInfo.Limit + accommodationBudgetTonight, 0),
                             Spent   = 0,
                             Ceiling = Math.Round(totalDailyCeiling, 0),
                             Floor   = Math.Round(dailyFloor, 0),
@@ -424,17 +424,15 @@ namespace AlgorithmPlan.Services
 
                     TimeSpan currentTime = MorningStart;
 
-<<<<<<< HEAD
-=======
                     // Issue 3: On Day 1, add hotel check-in at the VERY beginning before any activities
-                    // Customers need to drop luggage before they can start sightseeing
                     if (dayCounter == 0 && wantHotel && currentHotel == null)
                     {
                         // FIX: Use hotelCandidates instead of destCandidates (which excludes hotels)
                         var destHotelCandidates = hotelCandidates.Where(c =>
                             c.Location.Destination.Equals(destinationName, StringComparison.OrdinalIgnoreCase)).ToList();
                         var hotelResult = FindNextBestAccommodationWithDetails(
-                            currentLat, currentLon, destHotelCandidates, request.GroupSize, accommodationBudgetTonight, null);
+                            currentLat, currentLon, destHotelCandidates, request.GroupSize, accommodationBudgetTonight, null, hotelSegment);
+                        
                         if (hotelResult != null)
                         {
                             currentHotel = hotelResult.Location;
@@ -447,7 +445,7 @@ namespace AlgorithmPlan.Services
                             if (actualCheckinDuration < 15) actualCheckinDuration = 15;
 
                             TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
-                            dailyPlan.Timeline.Insert(0, new TimelineItem
+                            dailyPlan.Timeline.Add(new TimelineItem
                             {
                                 Type = "CheckIn",
                                 Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
@@ -460,387 +458,207 @@ namespace AlgorithmPlan.Services
                                 CheckOutTime = currentHotel.CheckOutTime ?? "12:00",
                                 Action = "CheckIn",
                                 // Fix 2: Add options directly on day 1 CheckIn
-                                AccommodationOptions = hotelResult?.Options,
-                                SelectedAccommodationIndex = hotelResult != null ? hotelResult.SelectedIndex : null,
-                                AlternativeAccommodations = hotelResult?.AlternativeAccommodations
+                                AccommodationOptions = hotelResult.Options,
+                                SelectedAccommodationIndex = hotelResult.SelectedIndex,
+                                AlternativeAccommodations = hotelResult.AlternativeAccommodations
                             });
                             currentTime = checkinEnd;
+                            currentLat = currentHotel.Latitude;
+                            currentLon = currentHotel.Longitude;
                         }
                     }
 
->>>>>>> origin/feature-itinerary-fix
-                    // Handle inter-city movement and Hotel Check-in/out
-                    if (currentDestination != destinationName)
+                    // Handle inter-city movement and Hotel Check-in/out for new cities
+                    if (currentDestination != null && currentDestination != destinationName)
                     {
-                        if (currentDestination != null)
+                        // 1. Hotel Check-out (from previous city hotel)
+                        if (currentHotel != null)
                         {
-<<<<<<< HEAD
-                            // 1. Standalone Hotel Check-out (from previous city hotel)
-=======
-                            // 1. Hotel Check-out (from previous city hotel)
->>>>>>> origin/feature-itinerary-fix
-                            if (currentHotel != null)
-                            {
-                                double actualCheckoutDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
-                                if (actualCheckoutDuration < 15) actualCheckoutDuration = 15;
-<<<<<<< HEAD
-                                
-                                TimeSpan checkoutEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckoutDuration));
-                                dailyPlan.Timeline.Add(new TimelineItem
-                                {
-                                    Type = "HotelCheckOut",
-                                    Time = $"{FormatTime(currentTime)} - {FormatTime(checkoutEnd)}",
-                                    TimeBlock = "Morning",
-=======
-
-                                TimeSpan checkoutEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckoutDuration));
-                                dailyPlan.Timeline.Add(new TimelineItem
-                                {
-                                    Type = "CheckOut",
-                                    Time = $"{FormatTime(currentTime)} - {FormatTime(checkoutEnd)}",
-                                    TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
->>>>>>> origin/feature-itinerary-fix
-                                    Description = $"Hotel Check-out: {currentHotel.Name}",
-                                    // FIX: Assign explicit check-out time (Bug 2, Fix 1)
-                                    CheckOutTime = currentHotel.CheckOutTime ?? "12:00",
-                                    Action = "CheckOut"
-                                });
-                                currentTime = checkoutEnd;
-                            }
-
-<<<<<<< HEAD
-                            // 2. Local Transfer: Hotel to Departure Terminal
-                            double distanceToTerminal = 15.0; // Estimated 15km to hub
-                            var localToTerminalOptions = GetTransportOptions(distanceToTerminal, request.GroupSize);
-                            var toTerminalTransport = localToTerminalOptions.FirstOrDefault(o => o.Recommended) ?? localToTerminalOptions.FirstOrDefault();
-                            
-                            TimeSpan toTerminalEnd = currentTime.Add(TimeSpan.FromMinutes(toTerminalTransport.TravelTimeMinutes + 10));
-                            
+                            double actualCheckoutDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
+                            TimeSpan checkoutEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckoutDuration));
                             dailyPlan.Timeline.Add(new TimelineItem
                             {
-                                Type = "Transport",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(toTerminalEnd)}",
+                                Type = "CheckOut",
+                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkoutEnd)}",
                                 TimeBlock = "Morning",
-                                Description = $"Local Transfer: {toTerminalTransport.Description} from Hotel to Departure Terminal",
-                                TransportOptions = localToTerminalOptions,
-                                SelectedTransportIndex = localToTerminalOptions.IndexOf(toTerminalTransport),
-                                Cost = toTerminalTransport.TotalCost
+                                Description = $"Hotel Check-out: {currentHotel.Name}",
+                                // FIX: Assign explicit check-out time (Bug 2, Fix 1)
+                                CheckOutTime = currentHotel.CheckOutTime ?? "12:00",
+                                Action = "CheckOut"
                             });
-                            currentTime = toTerminalEnd;
-                            dailyPlan.DailyBudgetStatus.Spent += toTerminalTransport.TotalCost;
-
-                            // 3. Terminal Waiting
-                            var destCenter = GetDestinationCenter(destCandidates);
-                            double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
-                            var mainJourneyOptions = GetInterCityTransportOptions(distance, request.GroupSize);
-                            var mainJourneyTransport = mainJourneyOptions.FirstOrDefault(o => o.Recommended) ?? mainJourneyOptions.FirstOrDefault();
-                            
-                            double waitingTime = GetDelayBufferForTransport(mainJourneyTransport?.Method ?? "");
-                            waitingTime = Math.Max(waitingTime, 90); 
-                            
-                            TimeSpan waitingEnd = currentTime.Add(TimeSpan.FromMinutes(waitingTime));
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Waiting",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(waitingEnd)}",
-                                TimeBlock = "Morning",
-                                Description = $"Terminal Waiting: {mainJourneyTransport?.Method} Boarding & Security buffer"
-                            });
-                            currentTime = waitingEnd;
-
-                            // 4. Main Inter-City Journey
-                            TimeSpan journeyEnd = currentTime.Add(TimeSpan.FromMinutes(mainJourneyTransport.TravelTimeMinutes));
-=======
-                            // 2. Local Transfer: Hotel to Terminal
-                            double distanceToTerminal = 15.0; // Estimated 15km to hub (Airport/Station)
-                            var localToTerminalOptions = GetTransportOptions(distanceToTerminal, request.GroupSize);
-                            var toTerminalTransport = localToTerminalOptions.FirstOrDefault(o => o.Recommended) ?? localToTerminalOptions.FirstOrDefault();
-
-                            TimeSpan toTerminalEnd = currentTime.Add(TimeSpan.FromMinutes(toTerminalTransport.TravelTimeMinutes + 10)); // +10 min local buffer
->>>>>>> origin/feature-itinerary-fix
-
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Transport",
-<<<<<<< HEAD
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(journeyEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"{mainJourneyTransport.Description} from {currentDestination} to {destinationName} ({Math.Round(distance, 2)} km)",
-=======
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(toTerminalEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"Local Transfer: {toTerminalTransport.Description} from Hotel to Departure Terminal",
-                                TransportOptions = localToTerminalOptions,
-                                SelectedTransportIndex = localToTerminalOptions.IndexOf(toTerminalTransport),
-                                Cost = toTerminalTransport.TotalCost
-                            });
-                            currentTime = toTerminalEnd;
-                            dailyPlan.DailyBudgetStatus.Spent += toTerminalTransport.TotalCost;
-
-                            // 3. Terminal Waiting (1.5 - 2 hours)
-                            var destCenter = GetDestinationCenter(destCandidates);
-                            double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
-                            var mainJourneyOptions = GetInterCityTransportOptions(distance, request.GroupSize, currentDestination, destinationName, candidateLocations);
-                            var mainJourneyTransport = mainJourneyOptions.FirstOrDefault(o => o.Recommended) ?? mainJourneyOptions.FirstOrDefault();
-
-                            double waitingTime = GetDelayBufferForTransport(mainJourneyTransport?.Method ?? "");
-                            waitingTime = Math.Max(waitingTime, 90); // At least 1.5 hours per requirement
-
-                            TimeSpan waitingEnd = currentTime.Add(TimeSpan.FromMinutes(waitingTime));
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Waiting",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(waitingEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"Terminal Waiting: {mainJourneyTransport?.Method} Boarding & Security buffer at {mainJourneyTransport?.DepartureHub ?? "Terminal"}"
-                            });
-                            currentTime = waitingEnd;
-
-                            // 4. Main Inter-City Journey
-                            TimeSpan journeyEnd = currentTime.Add(TimeSpan.FromMinutes(mainJourneyTransport.TravelTimeMinutes));
-
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Transport",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(journeyEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"{mainJourneyTransport.Description} from {mainJourneyTransport.DepartureHub ?? currentDestination} to {mainJourneyTransport.ArrivalHub ?? destinationName} ({Math.Round(distance, 2)} km)",
->>>>>>> origin/feature-itinerary-fix
-                                TransportOptions = mainJourneyOptions,
-                                SelectedTransportIndex = mainJourneyOptions.IndexOf(mainJourneyTransport),
-                                Cost = mainJourneyTransport.TotalCost
-                            });
-
-                            currentTime = journeyEnd;
-                            dailyPlan.DailyBudgetStatus.Spent += mainJourneyTransport.TotalCost;
-
-                            // 5. Arrival Terminal
-                            TimeSpan arrivalTerminalEnd = currentTime.Add(TimeSpan.FromMinutes(15));
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Arrival",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(arrivalTerminalEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-<<<<<<< HEAD
-                                Description = $"Arrive at {destinationName} Terminal"
-                            });
-                            currentTime = arrivalTerminalEnd;
-
-                            // 6. Local Transfer: Terminal to New Hotel
-                            double distanceToHotel = 10.0; // Estimated 10km to new hotel
-                            var terminalToHotelOptions = GetTransportOptions(distanceToHotel, request.GroupSize);
-                            var toHotelTransport = terminalToHotelOptions.FirstOrDefault(o => o.Recommended) ?? terminalToHotelOptions.FirstOrDefault();
-                            
-                            TimeSpan toHotelEnd = currentTime.Add(TimeSpan.FromMinutes(toHotelTransport.TravelTimeMinutes + 10));
-                            
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "Transport",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(toHotelEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = $"Local Transfer: {toHotelTransport.Description} from Terminal to Hotel",
-                                TransportOptions = terminalToHotelOptions,
-                                SelectedTransportIndex = terminalToHotelOptions.IndexOf(toHotelTransport),
-                                Cost = toHotelTransport.TotalCost
-                            });
-                            currentTime = toHotelEnd;
-                            dailyPlan.DailyBudgetStatus.Spent += toHotelTransport.TotalCost;
-=======
-                                Description = $"Arrive at {mainJourneyTransport?.ArrivalHub ?? destinationName + " Terminal"}"
-                            });
-                            currentTime = arrivalTerminalEnd;
->>>>>>> origin/feature-itinerary-fix
+                            currentTime = checkoutEnd;
+                            currentHotel = null;
                         }
 
-                        // Set up for new city
-                        currentHotel = null;
-                        var newDestCenter = GetDestinationCenter(destCandidates);
-                        currentLat = newDestCenter.Lat;
-                        currentLon = newDestCenter.Lon;
-                        currentDestination = destinationName;
+                        // 2. Local Transfer: Hotel to Departure Terminal
+                        double distanceToTerminal = 15.0; 
+                        var localToTerminalOptions = GetTransportOptions(distanceToTerminal, request.GroupSize);
+                        var toTerminalTransport = localToTerminalOptions.FirstOrDefault(o => o.Recommended) ?? localToTerminalOptions.FirstOrDefault();
+                        
+                        TimeSpan toTerminalEnd = currentTime.Add(TimeSpan.FromMinutes(toTerminalTransport.TravelTimeMinutes + 10));
+                        dailyPlan.Timeline.Add(new TimelineItem
+                        {
+                            Type = "Transport",
+                            Time = $"{FormatTime(currentTime)} - {FormatTime(toTerminalEnd)}",
+                            TimeBlock = "Morning",
+                            Description = $"Local Transfer: {toTerminalTransport.Description} from Hotel to Departure Terminal",
+                            TransportOptions = localToTerminalOptions,
+                            SelectedTransportIndex = localToTerminalOptions.IndexOf(toTerminalTransport),
+                            Cost = toTerminalTransport.TotalCost
+                        });
+                        currentTime = toTerminalEnd;
+                        dailyPlan.DailyBudgetStatus.Spent += toTerminalTransport.TotalCost;
 
-<<<<<<< HEAD
-                        // 7. Standalone Hotel Check-in
-                        if (currentHotel == null)
+                        // 3. Terminal Waiting
+                        var destCenter = GetDestinationCenter(destCandidates);
+                        double distance = CalculateDistance(currentLat, currentLon, destCenter.Lat, destCenter.Lon);
+                        var mainJourneyOptions = GetInterCityTransportOptions(distance, request.GroupSize, currentDestination, destinationName, candidateLocations);
+                        var mainJourneyTransport = mainJourneyOptions.FirstOrDefault(o => o.Recommended) ?? mainJourneyOptions.FirstOrDefault();
+                        
+                        double waitingTime = Math.Max(GetDelayBufferForTransport(mainJourneyTransport?.Method ?? ""), 90); 
+                        TimeSpan waitingEnd = currentTime.Add(TimeSpan.FromMinutes(waitingTime));
+                        dailyPlan.Timeline.Add(new TimelineItem
                         {
-                            var hotelResult = FindNextBestAccommodationWithDetails(
-=======
-                        // 6. Hotel Check-in (for new city) - NOT on day 1 as it's handled above
-                        AccommodationResult hotelResult = null;
-                        if (dayCounter > 0 && currentHotel == null)
+                            Type = "Waiting",
+                            Time = $"{FormatTime(currentTime)} - {FormatTime(waitingEnd)}",
+                            TimeBlock = "Morning",
+                            Description = $"Terminal Waiting: {mainJourneyTransport?.Method} Boarding & Security buffer at {mainJourneyTransport?.DepartureHub ?? "Terminal"}"
+                        });
+                        currentTime = waitingEnd;
+
+                        // 4. Main Inter-City Journey
+                        TimeSpan journeyEnd = currentTime.Add(TimeSpan.FromMinutes(mainJourneyTransport.TravelTimeMinutes));
+                        dailyPlan.Timeline.Add(new TimelineItem
                         {
-                            // FIX: Use hotelCandidates instead of destCandidates (which excludes hotels)
+                            Type = "Transport",
+                            Time = $"{FormatTime(currentTime)} - {FormatTime(journeyEnd)}",
+                            TimeBlock = "Morning",
+                            Description = $"{mainJourneyTransport.Description} from {mainJourneyTransport.DepartureHub ?? currentDestination} to {mainJourneyTransport.ArrivalHub ?? destinationName} ({Math.Round(distance, 2)} km)",
+                            TransportOptions = mainJourneyOptions,
+                            SelectedTransportIndex = mainJourneyOptions.IndexOf(mainJourneyTransport),
+                            Cost = mainJourneyTransport.TotalCost
+                        });
+                        currentTime = journeyEnd;
+                        dailyPlan.DailyBudgetStatus.Spent += mainJourneyTransport.TotalCost;
+
+                        // 5. Arrival Terminal
+                        TimeSpan arrivalEnd = currentTime.Add(TimeSpan.FromMinutes(15));
+                        dailyPlan.Timeline.Add(new TimelineItem
+                        {
+                            Type = "Arrival",
+                            Time = $"{FormatTime(currentTime)} - {FormatTime(arrivalEnd)}",
+                            TimeBlock = "Morning",
+                            Description = $"Arrive at {mainJourneyTransport?.ArrivalHub ?? destinationName + " Terminal"}"
+                        });
+                        currentTime = arrivalEnd;
+
+                        // 6. Local Transfer: Terminal to New Hotel
+                        double distanceToHotel = 10.0;
+                        var toHotelOptions = GetTransportOptions(distanceToHotel, request.GroupSize);
+                        var toHotelTransport = toHotelOptions.FirstOrDefault(o => o.Recommended) ?? toHotelOptions.FirstOrDefault();
+                        TimeSpan toHotelEnd = currentTime.Add(TimeSpan.FromMinutes(toHotelTransport.TravelTimeMinutes + 10));
+                        dailyPlan.Timeline.Add(new TimelineItem
+                        {
+                            Type = "Transport",
+                            Time = $"{FormatTime(currentTime)} - {FormatTime(toHotelEnd)}",
+                            TimeBlock = "Morning",
+                            Description = $"Local Transfer to new Hotel",
+                            TransportOptions = toHotelOptions,
+                            SelectedTransportIndex = toHotelOptions.IndexOf(toHotelTransport),
+                            Cost = toHotelTransport.TotalCost
+                        });
+                        currentTime = toHotelEnd;
+                        dailyPlan.DailyBudgetStatus.Spent += toHotelTransport.TotalCost;
+
+                        // 7. Hotel Check-in for new city
+                        if (wantHotel)
+                        {
                             var destHotelCandidates = hotelCandidates.Where(c =>
                                 c.Location.Destination.Equals(destinationName, StringComparison.OrdinalIgnoreCase)).ToList();
-                            hotelResult = FindNextBestAccommodationWithDetails(
->>>>>>> origin/feature-itinerary-fix
-                                currentLat, currentLon, destCandidates, request.GroupSize, accommodationBudgetTonight, null);
-                            if (hotelResult != null) currentHotel = hotelResult.Location;
-                        }
-
-<<<<<<< HEAD
-                        if (currentHotel != null)
-                        {
-                            double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
-                            if (actualCheckinDuration < 15) actualCheckinDuration = 15;
-                            
-                            TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
-                            string checkinDesc = $"Hotel Check-in: {currentHotel.Name}";
-                            if (currentTime < new TimeSpan(14, 0, 0)) checkinDesc += " (Drop luggage if room not ready)";
-
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "HotelCheckIn",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = checkinDesc,
-                                Action = "CheckIn"
-=======
-                        if (currentHotel != null && dayCounter > 0)
-                        {
-                            double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
-                            if (actualCheckinDuration < 15) actualCheckinDuration = 15;
-
-                            TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
-                            string checkinDesc = $"Hotel Check-in: {currentHotel.Name}" +
-                                                 $" | Check-in: {currentHotel.CheckInTime ?? "14:00"}" +
-                                                 $" | Check-out: {currentHotel.CheckOutTime ?? "12:00"}";
-
-                            if (currentTime.Hours < 14) checkinDesc += " (Drop luggage if room not ready)";
-
-                            dailyPlan.Timeline.Add(new TimelineItem
-                            {
-                                Type = "CheckIn",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
-                                TimeBlock = currentTime < LunchStart ? "Morning" : "Afternoon",
-                                Description = checkinDesc,
-                                Action = "CheckIn",
-                                // Fix 2: Add options directly on CheckIn for new cities
-                                AccommodationOptions = hotelResult?.Options,
-                                SelectedAccommodationIndex = hotelResult != null ? hotelResult.SelectedIndex : null,
-                                AlternativeAccommodations = hotelResult?.AlternativeAccommodations
->>>>>>> origin/feature-itinerary-fix
-                            });
-                            currentTime = checkinEnd;
-                        }
-                    }
-                    else if (dayCounter == 0) // Day 1, same city
-                    {
-                        if (currentHotel == null)
-                        {
                             var hotelResult = FindNextBestAccommodationWithDetails(
-                                currentLat, currentLon, destCandidates, request.GroupSize, accommodationBudgetTonight, null);
-                            if (hotelResult != null) currentHotel = hotelResult.Location;
-                        }
-
-                        if (currentHotel != null)
-                        {
-                            double actualCheckinDuration = 30 * (1 + 0.05 * (request.GroupSize - 2));
-                            TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(actualCheckinDuration));
+                                destCenter.Lat, destCenter.Lon, destHotelCandidates, request.GroupSize, accommodationBudgetTonight, null, hotelSegment);
                             
-                            dailyPlan.Timeline.Add(new TimelineItem
+                            if (hotelResult != null)
                             {
-                                Type = "HotelCheckIn",
-                                Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
-                                TimeBlock = "Morning",
-                                Description = $"Hotel Check-in: {currentHotel.Name}",
-                                Action = "CheckIn"
-                            });
-                            currentTime = checkinEnd;
+                                currentHotel = hotelResult.Location;
+                                currentSavedHotelOptions = hotelResult.Options;
+                                currentSavedHotelIndex = hotelResult.SelectedIndex;
+                                currentSavedAlternatives = hotelResult.AlternativeAccommodations;
+
+                                double checkinDur = 30;
+                                TimeSpan checkinEnd = currentTime.Add(TimeSpan.FromMinutes(checkinDur));
+                                dailyPlan.Timeline.Add(new TimelineItem
+                                {
+                                    Type = "CheckIn",
+                                    Time = $"{FormatTime(currentTime)} - {FormatTime(checkinEnd)}",
+                                    TimeBlock = "Morning",
+                                    Description = $"Hotel Check-in: {currentHotel.Name}",
+                                    CheckInTime = currentHotel.CheckInTime ?? "14:00",
+                                    CheckOutTime = currentHotel.CheckOutTime ?? "12:00",
+                                    Action = "CheckIn",
+                                    AccommodationOptions = hotelResult.Options,
+                                    SelectedAccommodationIndex = hotelResult.SelectedIndex,
+                                    AlternativeAccommodations = hotelResult.AlternativeAccommodations
+                                });
+                                currentTime = checkinEnd;
+                            }
                         }
+                        
+                        currentDestination = destinationName;
+                        currentLat = destCenter.Lat;
+                        currentLon = destCenter.Lon;
                     }
 
+                    if (currentDestination == null) currentDestination = destinationName;
 
-                    // --- MORNING BLOCK (8:00 - 12:00) ---
-                    TimeSpan morningActualEnd = MorningEnd - TimeSpan.FromMinutes(30);
-                    while (currentTime < morningActualEnd)
+                    // --- MORNING BLOCK ---
+                    while (currentTime < MorningEnd - TimeSpan.FromMinutes(30))
                     {
-                        while (currentTime < MorningEnd)
-                        {
-                            var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, request.StartDate.AddDays(dayCounter).DayOfWeek, MorningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
-                            if (bestAttraction == null) break;
-                            ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, request.TripSegment);
-                        }
-                        if (currentTime < LunchStart) currentTime = LunchStart;
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, MorningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
+                        if (bestAttraction == null) break;
+                        ProcessAttraction(bestAttraction, ref currentTime, "Morning", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
+                    if (currentTime < LunchStart) currentTime = LunchStart;
 
-                    // --- LUNCH TARGET (12:00 - 13:00) ---
+                    // --- LUNCH BREAK ---
                     if (currentTime < AfternoonStart)
                     {
                         var lunchCandidates = destCandidates.Where(c => c.Location.Tags.Contains("Food", StringComparer.OrdinalIgnoreCase)).ToList();
-                        var lunchSpot = FindNextBestAttraction(currentLat, currentLon, lunchCandidates.Any() ? lunchCandidates : destCandidates, visitedCountMap, currentTime, request.StartDate.AddDays(dayCounter).DayOfWeek, AfternoonStart, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
+                        var lunchSpot = FindNextBestAttraction(currentLat, currentLon, lunchCandidates.Any() ? lunchCandidates : destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonStart, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
                         if (lunchSpot != null)
                         {
-                            ProcessAttraction(lunchSpot, ref currentTime, "Lunch Break", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, request.TripSegment);
+                            ProcessAttraction(lunchSpot, ref currentTime, "Lunch Break", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                         }
                         if (currentTime < AfternoonStart) currentTime = AfternoonStart;
                     }
 
-                    // --- AFTERNOON TARGET (13:00 - 18:00) ---
-                    if (currentTime < EveningStart)
+                    // --- AFTERNOON BLOCK ---
+                    while (currentTime < AfternoonEnd - TimeSpan.FromMinutes(30))
                     {
-                        while (currentTime < EveningStart)
-                        {
-                            var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, request.StartDate.AddDays(dayCounter).DayOfWeek, EveningStart, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
-                            if (bestAttraction == null) break;
-                            ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, request.TripSegment);
-                        }
-                        if (currentTime < EveningStart) currentTime = EveningStart;
-                    }
-
-                    // --- EVENING TARGET (18:00 - 23:59) ---
-                    if (currentTime < EveningEnd)
-                    {
-                        while (currentTime < EveningEnd)
-                        {
-                            var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, request.StartDate.AddDays(dayCounter).DayOfWeek, EveningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, true);
-                            if (bestAttraction == null) break;
-                            ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, request.TripSegment);
-                        }
-                    }
-
-                    // --- AFTERNOON BLOCK (13:00 - 18:00) ---
-                    while (currentTime < AfternoonEnd)
-                    {
-                        var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek,
-                            AfternoonEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
-
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, AfternoonEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, false);
                         if (bestAttraction == null) break;
                         ProcessAttraction(bestAttraction, ref currentTime, "Afternoon", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
+                    if (currentTime < EveningStart) currentTime = EveningStart;
 
-                    // Fill gap before evening if any
-                    if (currentTime < EveningStart - TimeSpan.FromMinutes(30))
+                    // --- EVENING BLOCK ---
+                    while (currentTime < EveningEnd)
                     {
-                        FillTimeGap(currentTime, EveningStart - TimeSpan.FromMinutes(30), dailyPlan, "Late Afternoon",
-                            currentLat, currentLon, destCandidates, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent);
-                        currentTime = EveningStart - TimeSpan.FromMinutes(30);
-                    }
-
-                    // --- EVENING BLOCK (18:00 - 23:59) ---
-                    TimeSpan eveningActualEnd = EveningEnd;
-                    while (currentTime < eveningActualEnd)
-                    {
-                        var bestAttraction = FindNextBestAttraction(
-                            currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek,
-                            eveningActualEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, true);
-
+                        var bestAttraction = FindNextBestAttraction(currentLat, currentLon, destCandidates, visitedCountMap, currentTime, currentDate.DayOfWeek, EveningEnd, request.GroupSize, dailyCeiling - dailyPlan.DailyBudgetStatus.Spent, true);
                         if (bestAttraction == null) break;
                         ProcessAttraction(bestAttraction, ref currentTime, "Evening", dailyPlan, request.GroupSize, dailyCeiling, visitedCountMap, ref currentLat, ref currentLon, tripSegment);
                     }
 
-                    // --- STANDALONE SLEEP BLOCK (22:00 - 07:00) ---
+                    // --- NIGHT REST / SLEEP BLOCK ---
                     TimeSpan nightStart = currentTime > EveningEnd ? EveningEnd : currentTime;
                     if (nightStart < EveningStart) nightStart = EveningStart;
-                    TimeSpan nightEnd = MorningStart; // Next day morning
+                    TimeSpan nightEnd = MorningStart; 
 
                     double searchLat = currentLat;
                     double searchLon = currentLon;
 
                     if (d < daysInThisDest - 1)
                     {
-                        // Task 5: use visitedCountMap to find unvisited candidates for next-day planning
                         var remainingCandidates = destCandidates.Where(c => !visitedCountMap.ContainsKey(c.Location.Id)).ToList();
                         if (remainingCandidates.Any())
                         {
@@ -850,13 +668,11 @@ namespace AlgorithmPlan.Services
                         }
                     }
 
-                    // Task 4: Only search for hotel if user wants one
                     bool needNewHotel = wantHotel && (currentHotel == null ||
                         CalculateDistance(searchLat, searchLon, currentHotel.Latitude, currentHotel.Longitude) > 8.0);
 
                     if (needNewHotel)
                     {
-                        // FIX: Use hotelCandidates instead of destCandidates (which excludes hotels)
                         var destHotelCandidates = hotelCandidates.Where(c =>
                             c.Location.Destination.Equals(destinationName, StringComparison.OrdinalIgnoreCase)).ToList();
                         var accommodationResult = FindNextBestAccommodationWithDetails(
@@ -868,24 +684,12 @@ namespace AlgorithmPlan.Services
                             // FIX: Save hotel details for later (Bug 2, Fix 2)
                             currentSavedHotelOptions = accommodationResult.Options;
                             currentSavedHotelIndex = accommodationResult.SelectedIndex;
-
-                            if (accommodationResult.AlternativeAccommodations != null && accommodationResult.AlternativeAccommodations.Any())
-                            {
-                                currentSavedAlternatives = accommodationResult.AlternativeAccommodations.Select(a => new AlternativeAccommodationDisplay
-                                {
-                                    Name = a.Name,
-                                    Distance = a.Distance,
-                                    RecommendedRoomType = a.RecommendedRoomType,
-                                    TotalCost = a.TotalCost,
-                                    Options = a.Options
-                                }).ToList();
-                            }
+                            currentSavedAlternatives = accommodationResult.AlternativeAccommodations;
                         }
                     }
 
                     if (currentHotel != null)
                     {
-                        // Use the recommended option's cost instead of average budget
                         double hotelCost = currentHotel.AverageBudget * request.GroupSize;
                         if (currentSavedHotelOptions != null && currentSavedHotelOptions.Any())
                         {
@@ -895,12 +699,8 @@ namespace AlgorithmPlan.Services
 
                         var sleepItem = new TimelineItem
                         {
-                            Type = "Sleep",
+                            Type = "Accommodation",
                             Time = $"{FormatTime(nightStart)} - {FormatTime(nightEnd)}",
-<<<<<<< HEAD
-                            TimeBlock = "Night",
-                            Description = $"Sleep/Rest at {currentHotel.Name}",
-=======
                             TimeBlock = "Night Rest",
                             Description = $"Accommodation: {currentHotel.Name}" +
                                           $" | Check-in: {currentHotel.CheckInTime ?? "14:00"}" +
@@ -908,45 +708,29 @@ namespace AlgorithmPlan.Services
                                           (currentHotel.HasLuggageStorage ? $" | Luggage storage available: {currentHotel.LuggageStorageCost:N0} VND/bag" : ""),
                             // Fix 2: expose accommodation cost explicitly in timeline
                             Cost = Math.Round(hotelCost, 0),
->>>>>>> origin/feature-itinerary-fix
-                            AccommodationOptions = accommodationOptions,
-                            SelectedAccommodationIndex = accommodationOptions != null ? selectedAccommodationIndex : null,
-                            AlternativeAccommodations = alternativeAccommodations
+                            AccommodationOptions = currentSavedHotelOptions,
+                            SelectedAccommodationIndex = currentSavedHotelIndex,
+                            AlternativeAccommodations = currentSavedAlternatives
                         };
 
-                        // Show continuing stay info
                         if (d > 0 && currentDestination == destinationName)
                         {
-<<<<<<< HEAD
                             sleepItem.Description += " (Continuing stay)";
                         }
 
-                        // Add luggage storage info if available
-=======
-                            accommodationItem.Description += " (Continuing stay)";
-                        }
-
->>>>>>> origin/feature-itinerary-fix
                         if (currentHotel.HasLuggageStorage)
                         {
                             sleepItem.LuggageStorageCost = currentHotel.LuggageStorageCost;
                         }
 
-<<<<<<< HEAD
                         dailyPlan.Timeline.Add(sleepItem);
-=======
-                        dailyPlan.Timeline.Add(accommodationItem);
-
->>>>>>> origin/feature-itinerary-fix
                         dailyPlan.DailyBudgetStatus.Spent += hotelCost;
 
                         currentLat = currentHotel.Latitude;
                         currentLon = currentHotel.Longitude;
                     }
 
-                    // Fill any remaining time gaps to ensure 24h coverage
                     FillRemainingTimeGaps(dailyPlan, request.GroupSize, currentLat, currentLon, destCandidates);
-
                     dailyPlan.DailyBudgetStatus.Spent = Math.Round(dailyPlan.DailyBudgetStatus.Spent, 2);
                     output.Days.Add(dailyPlan);
                     totalSpent += dailyPlan.DailyBudgetStatus.Spent;
@@ -956,11 +740,11 @@ namespace AlgorithmPlan.Services
                     rolloverBudget = dailyBudgetInfo.Ceiling - activitySpentToday;
                     double maxRollover = dailyBudgets[Math.Min(dayCounter + 1, dailyBudgets.Count - 1)].Ceiling * 0.5;
                     if (rolloverBudget > maxRollover) rolloverBudget = maxRollover;
-                    if (rolloverBudget < 0) rolloverBudget = 0; // never carry-over debt
+                    if (rolloverBudget < 0) rolloverBudget = 0; 
 
                     dayCounter++;
-                } // closes: for (int d = 0; d < daysInThisDest; d++)
-            } // closes: foreach (var destAlloc in destinationDayAllocation)
+                }
+            }
 
             // Set trip summary with budget warnings
             output.TripSummary = new TripSummary
